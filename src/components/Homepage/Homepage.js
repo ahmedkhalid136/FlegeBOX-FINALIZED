@@ -6,14 +6,10 @@ function Homepage() {
             <div className="left">
             </div>
             <div className="right">
-               <div className="centerDiv">
-                   <div  className="para">
-                   <p>
-                       The way to your free care box
-                   </p>
-                   </div>
+              
+               <div className="d-inline-flex p-2 col-example">I'm an inline flexbox container!</div>
                 
-               </div>
+             
             </div>
             <div>
 
