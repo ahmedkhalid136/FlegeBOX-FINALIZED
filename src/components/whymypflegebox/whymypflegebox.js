@@ -1,25 +1,16 @@
 import React from 'react'
 import "./styles.css"
-function Homepage() {
+import Title from "./Title"
+import ImageSection from "./ImageSection"
+import Body from "./Body"
+function whymypflegebox() {
     return (
-        <div className="container">
-            <div className="left">
-            </div>
-            <div className="right">
-               <div className="centerDiv">
-                   <div  className="para">
-                   <p>
-                       The way to your free care box
-                   </p>
-                   </div>
-                
-               </div>
-            </div>
-            <div>
-
-            </div>
+        <div>
+           <Title />
+           <Body />
+           <ImageSection />
         </div>
     )
 }
 
-export default Homepage
+export default whymypflegebox
