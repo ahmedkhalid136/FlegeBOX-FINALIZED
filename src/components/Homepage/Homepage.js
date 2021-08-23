@@ -4,10 +4,14 @@ function Homepage() {
     return (
         <div className="container">
             <div className="left">
-                1stbox
+               
             </div>
             <div className="right">
-               2ndbox
+               <div className="centerDiv">
+                   <p>
+                       The way to your free care box
+                   </p>
+               </div>
             </div>
             <div>
 
