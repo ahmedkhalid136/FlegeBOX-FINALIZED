@@ -33,5 +33,12 @@
   text-align: center;
   display: inline-block;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 90px;
+  border-radius: 20px;
+}
+
+/* button styling */
+.button{
+  background-color:#F98501;
+  border-radius: 10px;
 }
