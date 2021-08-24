@@ -8,11 +8,12 @@ function Benefits() {
         <div className="box">
           Cost absorption
         </div>
-        <div>
+        <div className="box">
           Relaiable Delivery
         </div>
-        <div>Quality</div>
+        <div className="box">Quality</div>
       </div>
+      
       <div></div>
     </div>
   );
