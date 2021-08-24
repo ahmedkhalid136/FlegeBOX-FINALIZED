@@ -3,7 +3,7 @@ import "./Homepage.css";
 function FledgeboxWorks() {
   return (
     <div>
-      <h1>How your MyPflegebox Works</h1>
+      <p className="heading">How your MyPflegebox Works</p>
       <div className="d-flex justify-content-center">
         <div>
           <p className="text">1.Wish core box select</p>

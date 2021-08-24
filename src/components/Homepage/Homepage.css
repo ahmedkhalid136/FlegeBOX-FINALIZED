@@ -61,7 +61,7 @@
 /* benefits section */
 .benefits {
   background-color: #d3edf6;
-  height: 900px;
+  height: 800px;
 }
 .row1 {
   display: flex;
@@ -70,22 +70,60 @@
 }
 .box {
   background-color: #fff;
-  padding:50px;
+  padding: 50px;
   margin: 40px;
   border-radius: 12px;
 }
-.heading{
+.heading {
   font-weight: bold;
-  color:black;
+  color: black;
   margin-left: 49px;
   padding-top: 30px;
 }
 /* Paragraph  in the box*/
-.Text{
-  padding:20px;
+.Text {
+  padding: 20px;
   font-size: 12px;
-line-height: 20px;
-/* or 167% */
+  line-height: 20px;
+  /* or 167% */
 
-text-align: center;
+  text-align: center;
+}
+/* Relieve you page */
+.block1{
+  background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
+  height: 200px;
+  background-size: 100% 100%;
+  padding: 25px;
+  margin: 30px;
+  border-radius: 12px;
+}
+.block2{
+  background-image: url(../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg);
+  height: 200px;
+  background-size: 100% 100%;
+  padding: 25px;
+  margin: 30px;
+  border-radius: 12px;
+}
+.block3{
+  background-image: url(../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg);
+  height: 200px;
+  background-size: 100% 100%;
+  padding: 25px;
+  margin: 30px;
+  border-radius: 12px;
+}
+.block4{
+  background-image: url(../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg);
+  height: 200px;
+  background-size: 100% 100%;
+  padding: 25px;
+  margin:30px;
+  border-radius: 12px;
+}
+.Relievepara{
+  font-size: 13px;
+  line-height: 20px;
+  padding: 25px;
 }
