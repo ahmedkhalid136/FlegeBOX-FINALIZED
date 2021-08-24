@@ -5,7 +5,7 @@ export default function Body() {
     <div>
       <div className="bodySection">
         <h1>Why MyPflegebox ?</h1>
-        <div style={{ marginTop: "70px" }}>
+        <div>
           <p>
             Batteries are nothing more than devices that store chemical energy
             and convert it into electrical energy. They have four <br />

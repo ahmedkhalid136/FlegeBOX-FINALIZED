@@ -2,6 +2,7 @@ import React from "react";
 import "./Homepage.css";
 import Button from "../button/Button";
 import FledgeboxWorks from "./fledgeboxWorks";
+import Benefits from "./Benefits";
 function Homepage() {
   return (
     <div>
@@ -15,6 +16,7 @@ function Homepage() {
         </div>
       </div>
       <FledgeboxWorks />
+      <Benefits />
     </div>
   );
 }
