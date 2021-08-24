@@ -59,3 +59,15 @@
 
 
 }
+
+/* benefits section */
+.benefits{
+  background-color: #D3EDF6;
+}
+.row1{
+display:flex;
+flex-direction: row;
+}
+.box{
+  background-color: #fff;
+}

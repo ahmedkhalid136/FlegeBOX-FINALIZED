@@ -19,7 +19,7 @@ const para = {
  
   height: "20px",
   
-  
+  padding:"7px",
   fontFamily: "Nunito Sans",
   fontStyle: "normal",
   fontWeight: " 600",
