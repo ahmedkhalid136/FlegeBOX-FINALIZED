@@ -5,7 +5,7 @@ const button = {
 flexDirection:" row",
 justifyContent: "center",
 alignItems: "center",
-padding: "14px 35px",
+ padding: "5px ",
 marginRight:"50px",
 marginLeft:"49px",
 borderRadius:"12px"
@@ -23,7 +23,7 @@ const para = {
   fontFamily: "Nunito Sans",
   fontStyle: "normal",
   fontWeight: " 600",
-  fontSize: "10px",
+  fontSize: "12px",
   lineHeight: "20px",
   /* identical to box height */
 

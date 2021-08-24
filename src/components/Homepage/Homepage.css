@@ -14,10 +14,7 @@
   height: 300px;
   background-color: #0099ff;
 }
-.container {
-  width: 100%;
-  margin: auto;
-}
+
 /* the box in the right div */
 .centerDiv {
   background-color: white;
