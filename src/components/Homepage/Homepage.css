@@ -43,36 +43,33 @@
   line-height: 52px;
   letter: 0.5%;
   align: Center;
-  color:black
+  color: black;
 }
 /* Second Div of fledge box */
-.d-flex div{
+.d-flex div {
   padding: 1rem;
   border: 2px solid #fff;
   color: black;
   text-align: center;
 }
-.text{
-    weight:900px;
-    size:46px;
-    color: black;
-
-
+.text {
+  weight: 900px;
+  size: 46px;
+  color: black;
 }
 
 /* benefits section */
-.benefits{
-  background-color: #D3EDF6;
-  height:900px
+.benefits {
+  background-color: #d3edf6;
+  height: 900px;
 }
-.row1{
-display:flex;
-flex-direction: row;
-justify-content: center;
+.row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.box{
+.box {
   background-color: #fff;
-
   padding:50px;
   margin: 40px;
   border-radius: 12px;

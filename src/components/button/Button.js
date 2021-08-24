@@ -18,7 +18,7 @@ const para = {
   position: "static",
  
   height: "20px",
-  
+  color:"white",
   padding:"7px",
   fontFamily: "Nunito Sans",
   fontStyle: "normal",
@@ -28,7 +28,7 @@ const para = {
   /* identical to box height */
 
   textTransform: "uppercase",
-  color: "black",
+  
 };
 function Button() {
   return (
