@@ -38,5 +38,12 @@
   height: 150px;
 }
 
-
-
+.Para {
+  font: Merriweather;
+  weight: 400;
+  style: normal;
+  size: 36px;
+  line-height: 52px;
+  letter: 0.5%;
+  align: Center;
+}
