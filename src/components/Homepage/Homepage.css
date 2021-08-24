@@ -22,23 +22,21 @@
 .centerDiv {
   background-color: white;
   height: 200px;
-  width: 300px;
+  width: 30%;
   text-align: center;
 }
-.col-example{
-  padding: 1rem;
+.col-example {
   background-color: white;
   border: 2px solid #fff;
-  color:black;
-  text-align: center;
+  color: black;
+  justify-content: center;
   display: inline-block;
   margin: 0 auto;
   margin-top: 90px;
-  border-radius: 20px;
+  border-radius: 5px;
+  width: 400px;
+  height: 150px;
 }
 
-/* button styling */
-.button{
-  background-color:#F98501;
-  border-radius: 10px;
-}
+
+
