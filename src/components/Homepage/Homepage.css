@@ -14,31 +14,46 @@
   height: 300px;
   background-color: #0099ff;
 }
-.container {
-  width: 100%;
-  margin: auto;
-}
+
 /* the box in the right div */
 .centerDiv {
   background-color: white;
   height: 200px;
-  width: 300px;
+  width: 30%;
   text-align: center;
 }
-.col-example{
-  padding: 1rem;
+.col-example {
   background-color: white;
   border: 2px solid #fff;
-  color:black;
-  text-align: center;
+  color: black;
+  justify-content: center;
   display: inline-block;
   margin: 0 auto;
   margin-top: 90px;
-  border-radius: 20px;
+  border-radius: 5px;
+  width: 300px;
+  height: 150px;
 }
 
-/* button styling */
-.button{
-  background-color:#F98501;
-  border-radius: 10px;
+.Para {
+  font: Merriweather;
+  weight: 400;
+  style: normal;
+  size: 36px;
+  line-height: 52px;
+  letter: 0.5%;
+  align: Center;
+  color: black;
+}
+/* Second Div of fledge box */
+.d-flex div {
+  padding: 1rem;
+  border: 2px solid #fff;
+  color: black;
+  text-align: center;
+}
+.text {
+  weight: 900px;
+  size: 46px;
+  color: black;
 }

@@ -51,6 +51,10 @@ p {
   border-radius: 10px;
 }
 
+.icon-section {
+  padding-top: 90px;
+}
+
 .icon-section h3 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;

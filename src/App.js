@@ -12,7 +12,7 @@ function App() {
         <body>
           <BrowserRouter>
             <Switch>
-              <Route path="/" component={Homepage}></Route>
+              <Route path="/homepage" component={Homepage}></Route>
               <Route path="/whymypflegebox" component={whymypflegebox}></Route>
             </Switch>
           </BrowserRouter>
