@@ -12,8 +12,8 @@ function App() {
         <body>
           <BrowserRouter>
             <Switch>
-              <Route path="/Homepage" component={Homepage}></Route>
-              <Route path ="/whymypflegebox" component={whymypflegebox}></Route>
+              <Route path="/" component={Homepage}></Route>
+              <Route path="/whymypflegebox" component={whymypflegebox}></Route>
             </Switch>
           </BrowserRouter>
         </body>
