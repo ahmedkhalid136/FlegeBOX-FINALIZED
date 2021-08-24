@@ -45,3 +45,17 @@
   align: Center;
   color:black
 }
+/* Second Div of fledge box */
+.d-flex div{
+  padding: 1rem;
+  border: 2px solid #fff;
+  color: black;
+  text-align: center;
+}
+.text{
+    weight:900px;
+    size:46px;
+    color: black;
+
+
+}
