@@ -72,7 +72,22 @@ justify-content: center;
 }
 .box{
   background-color: #fff;
-  height:"300px";
+
   padding:50px;
-  margin: auto;
+  margin: 40px;
+  border-radius: 12px;
+}
+.heading{
+  font-weight: bold;
+  color:black;
+  margin-left: 49px;
+}
+/* Paragraph  in the box*/
+.Text{
+  padding:20px;
+  font-size: 12px;
+line-height: 20px;
+/* or 167% */
+
+text-align: center;
 }
