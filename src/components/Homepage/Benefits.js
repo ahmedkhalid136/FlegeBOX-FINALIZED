@@ -2,7 +2,7 @@ import React from "react";
 import "./Homepage.css";
 function Benefits() {
   return (
-    <div className="benefits container">
+    <div className="benefits container-fluid">
       <p className="heading">Your benefits</p>
       <div className="row">
         <div className="col-sm box">
