@@ -3,6 +3,7 @@ import "./Homepage.css";
 import Button from "../button/Button";
 import FledgeboxWorks from "./fledgeboxWorks";
 import Benefits from "./Benefits";
+import Relieveyou from "./Relieveyou";
 function Homepage() {
   return (
     <div>
@@ -17,6 +18,7 @@ function Homepage() {
       </div>
       <FledgeboxWorks />
       <Benefits />
+      <Relieveyou />
     </div>
   );
 }
