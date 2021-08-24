@@ -7,6 +7,7 @@
   height: 300px;
   background-repeat: no-repeat;
 }
+
 /* this is the right div */
 .right {
   width: 50%;
@@ -70,22 +71,15 @@
 }
 .box {
   background-color: #fff;
-<<<<<<< HEAD
-
-=======
->>>>>>> 1b82cc5f952cc267ff68ca0854ca2f99001e60da
   padding: 50px;
-  margin: 40px;
+  margin: 10px;
   border-radius: 12px;
 }
 .heading {
   font-weight: bold;
   color: black;
   margin-left: 49px;
-<<<<<<< HEAD
-=======
   padding-top: 30px;
->>>>>>> 1b82cc5f952cc267ff68ca0854ca2f99001e60da
 }
 /* Paragraph  in the box*/
 .Text {
@@ -96,10 +90,8 @@
 
   text-align: center;
 }
-<<<<<<< HEAD
-=======
 /* Relieve you page */
-.block1{
+.block1 {
   background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
@@ -107,7 +99,7 @@
   margin: 30px;
   border-radius: 12px;
 }
-.block2{
+.block2 {
   background-image: url(../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
@@ -115,7 +107,7 @@
   margin: 30px;
   border-radius: 12px;
 }
-.block3{
+.block3 {
   background-image: url(../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
@@ -123,17 +115,16 @@
   margin: 30px;
   border-radius: 12px;
 }
-.block4{
+.block4 {
   background-image: url(../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
   padding: 25px;
-  margin:30px;
+  margin: 30px;
   border-radius: 12px;
 }
-.Relievepara{
+.Relievepara {
   font-size: 13px;
   line-height: 20px;
   padding: 25px;
 }
->>>>>>> 1b82cc5f952cc267ff68ca0854ca2f99001e60da

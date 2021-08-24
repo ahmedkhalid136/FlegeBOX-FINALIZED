@@ -7,7 +7,7 @@ import Relieveyou from "./Relieveyou";
 function Homepage() {
   return (
     <div>
-      <div className="container-fluid">
+      <div>
         <div className="left"></div>
         <div className="right">
           <div className=" p-2 col-example">
