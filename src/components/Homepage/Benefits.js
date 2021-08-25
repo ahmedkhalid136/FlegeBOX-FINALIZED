@@ -4,7 +4,7 @@ function Benefits() {
   return (
     <div className="benefits container-fluid">
       <p className="heading">Your benefits</p>
-      <div className="row rowclass">
+      <div className="row1 row rowclass">
         <div className="col-lg-4  col-md-4 box">
          <b>Cost absorption</b> 
          <p className="Text">
@@ -24,7 +24,7 @@ function Benefits() {
         </p>
         </div>
       </div>
-      <div className="row rowclass">
+      <div className="row1 row rowclass">
       <div className="col-lg-4  col-md-4 box">
          <b>No Formalities</b> 
          <p className="Text">

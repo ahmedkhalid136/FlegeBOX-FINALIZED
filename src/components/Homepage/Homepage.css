@@ -32,13 +32,13 @@
   .left {
     background-image: url(../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg);
     background-size: 100% 100%;
-    width: 40%;
+    width: 50%;
     float: left;
     height: 200px;
     background-repeat: no-repeat;
   }
   .right {
-    width: 60%;
+    width: 50%;
     float: left;
     height: 200px;
     background-color: #0099ff;
@@ -46,11 +46,11 @@
   .centerDiv {
     justify-content: center;
     background-color: white;
-    height: 100px;
+    height: 50px;
     margin-top: 50px;
     border-radius: 5px;
     width: 50%;
-    margin-left: 10%;
+    margin-left: 15%;
     text-align: center;
   }
   .Para {
@@ -103,6 +103,7 @@
   align: Center;
   color: black;
 }
+/* ********************************************************************************** */
 /* Second Div of fledge box */
 .d-flex div {
   padding: 1rem;
@@ -115,6 +116,7 @@
   size: 46px;
   color: black;
 }
+/* *************************************************************************************** */
 
 /* benefits section */
 .rowclass {
@@ -132,8 +134,12 @@
 }
 .box {
   background-color: #fff;
-  padding-left: 10px;
-  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 15px;
+  height: 200px;
+  width: 300px;
+  margin:20px
 }
 .heading {
   font-weight: bold;
@@ -141,23 +147,29 @@
   margin-left: 49px;
   padding-top: 30px;
 }
-@media (max-width: 600px) {
-  .heading {
-    font-weight: bold;
-    color: black;
-    margin-left: 30px;
-    padding-top: 30px;
-  }
-}
 /* Paragraph  in the box*/
 .Text {
-  padding: 4px;
+  padding: 10px;
   font-size: 12px;
   line-height: 20px;
   /* or 167% */
 
   text-align: center;
 }
+@media (min-width:300px)and (max-width: 800px) {
+  .benefits {
+    background-color: #d3edf6;
+    height: 1600px;
+    
+  }
+  .heading {
+    font-weight: bold;
+    color: black;
+    margin-left: 20px;
+    padding-top: 30px;
+  }
+}
+/* ********************************************************************* */
 /* Relieve you page */
 .block1 {
   background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
