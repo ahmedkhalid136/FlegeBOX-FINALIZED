@@ -26,9 +26,8 @@
   margin-left: 20%;
   text-align: center;
 }
-/* making responsive */
-@media (max-width: 400px) {
- 
+/***************************** making 1st Div responsive *****************************/
+@media (max-width: 600px) {
   .left {
     background-image: url(../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg);
     background-size: 100% 100%;
@@ -58,27 +57,26 @@
     weight: 400;
     style: normal;
     font-size: 10px;
-    line-height: 29px;
-    letter: 0.5%;
+    line-height: 0cm;
+
     align: Center;
     color: black;
   }
   /* Button */
-.buttonDiv {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 100px;
-}
+  .buttonDiv {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+  }
 
-.buttonDiv button {
-  background-color: #f87433;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
+  .buttonDiv button {
+    background-color: #f87433;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
 }
 /* .centerdiv {
   background-color: rgb(114, 102, 102);
@@ -139,7 +137,7 @@
   border-radius: 15px;
   height: 200px;
   width: 300px;
-  margin:20px
+  margin: 20px;
 }
 .heading {
   font-weight: bold;
@@ -156,51 +154,99 @@
 
   text-align: center;
 }
-@media (min-width:300px)and (max-width: 800px) {
+@media (min-width: 300px) and (max-width: 800px) {
   .benefits {
     background-color: #d3edf6;
     height: 1600px;
-    
   }
   .heading {
     font-weight: bold;
     color: black;
-    margin-left: 20px;
+    margin-left: 5px;
     padding-top: 30px;
   }
 }
 /* ********************************************************************* */
+/* Media queries */
+@media (min-width: 300px) and (max-width: 800px) {
+  .relievepara {
+    margin: 40px;
+    justify-content: center;
+  }
+  .box {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+    margin-right: 40px;
+  }
+  .block1 {
+    background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+  }
+  .block2 {
+    background-image: url(../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 12px;
+  }
+  .block3 {
+    background-image: url(../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 12px;
+  }
+  .block4 {
+    background-image: url(../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 12px;
+  }
+}
+
 /* Relieve you page */
 .block1 {
   background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .block2 {
   background-image: url(../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .block3 {
   background-image: url(../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .block4 {
   background-image: url(../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .Relievepara {
