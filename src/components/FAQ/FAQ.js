@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./FAQ.css";
 
 function Faq() {
+
   const [getIcon, setIcon] = useState(true);
   const [getIcon2, setIcon2] = useState(true);
   const [getIcon3, setIcon3] = useState(true);
@@ -32,7 +33,7 @@ function Faq() {
           class="btn question"
           onClick={()=>setIcon2(!getIcon2)}
           data-bs-toggle="collapse"
-          href="#collapseExample"
+          href="#collapseExample1"
           role="button"
           aria-expanded="false"
           aria-controls="collapseExample"
@@ -40,7 +41,7 @@ function Faq() {
           <i class={getIcon2===true ?"fas fa-plus":"fas fa-minus"}></i> Link with href
         </a>
       </p>
-      <div class="collapse" id="collapseExample">
+      <div class="collapse" id="collapseExample1">
         <div class="card card-body">
           Some placeholder content for the collapse component. This panel is
           hidden by default but revealed when the user activates the relevant
@@ -52,7 +53,7 @@ function Faq() {
           class="btn question"
           onClick={()=>setIcon3(!getIcon3)}
           data-bs-toggle="collapse"
-          href="#collapseExample"
+          href="#collapseExample2"
           role="button"
           aria-expanded="false"
           aria-controls="collapseExample"
@@ -60,13 +61,14 @@ function Faq() {
           <i class={getIcon3===true ?"fas fa-plus":"fas fa-minus"}></i> Link with href
         </a>
       </p>
-      <div class="collapse" id="collapseExample">
+      <div class="collapse" id="collapseExample2">
         <div class="card card-body">
           Some placeholder content for the collapse component. This panel is
           hidden by default but revealed when the user activates the relevant
           trigger.
         </div>
       </div>
+      
     </div>
   );
 }
