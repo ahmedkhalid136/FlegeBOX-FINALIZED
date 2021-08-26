@@ -7,10 +7,10 @@ import Relieveyou from "./Relieveyou";
 function Homepage() {
   return (
     <div>
-      <div>
-        <div className="left"></div>
-        <div className="right">
-          <div className=" p-2 col-example">
+      <div className="row ">
+        <div className=" col-lg-6 col-sm-6 left"></div>
+        <div className=" col-lg-6 col-sm-6 right">
+          <div className="  centerDiv">
             <p className="Para">The way to your free care box!</p>
             <Button />
           </div>

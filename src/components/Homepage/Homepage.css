@@ -18,34 +18,91 @@
 
 /* the box in the right div */
 .centerDiv {
-  background-color: white;
-  height: 200px;
-  width: 30%;
-  text-align: center;
-}
-.col-example {
-  background-color: white;
-  border: 2px solid #fff;
-  color: black;
   justify-content: center;
-  display: inline-block;
-  margin: 0 auto;
+  background-color: white;
+  height: 150px;
   margin-top: 90px;
   border-radius: 5px;
-  width: 300px;
-  height: 150px;
+  width: 50%;
+  margin-left: 20%;
+  text-align: center;
 }
+/***************************** making 1st Div responsive *****************************/
+@media (max-width: 600px) {
+  .left {
+    background-image: url(../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg);
+    background-size: 100% 100%;
+    width: 50%;
+    float: left;
+    height: 200px;
+    background-repeat: no-repeat;
+  }
+  .right {
+    width: 50%;
+    float: left;
+    height: 200px;
+    background-color: #0099ff;
+  }
+  .centerDiv {
+    justify-content: center;
+    background-color: white;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 15%;
+    text-align: center;
+  }
+  .Para {
+    font: Merriweather;
+    weight: 400;
+    style: normal;
+    font-size: 10px;
+    line-height: 0cm;
+
+    align: Center;
+    color: black;
+  }
+  /* Button */
+  .buttonDiv {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+  }
+
+  .buttonDiv button {
+    background-color: #f87433;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+}
+/* .centerdiv {
+  background-color: rgb(114, 102, 102);
+  border: 2px solid #fff;
+
+  justify-content: center;
+  display: inline-block;
+
+  margin-top: 90px;
+  border-radius: 5px;
+  width: 50%;
+  height: 100px;
+} */
 
 .Para {
   font: Merriweather;
   weight: 400;
   style: normal;
-  size: 36px;
-  line-height: 52px;
+  size: 25px;
+  line-height: 29px;
   letter: 0.5%;
   align: Center;
   color: black;
 }
+/* ********************************************************************************** */
 /* Second Div of fledge box */
 .d-flex div {
   padding: 1rem;
@@ -58,8 +115,13 @@
   size: 46px;
   color: black;
 }
+/* *************************************************************************************** */
 
 /* benefits section */
+.rowclass {
+  padding: 19px;
+  margin: auto;
+}
 .benefits {
   background-color: #d3edf6;
   height: 800px;
@@ -71,9 +133,12 @@
 }
 .box {
   background-color: #fff;
-  padding: 50px;
-  margin: 10px;
-  border-radius: 12px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 15px;
+  height: 200px;
+  width: 300px;
+  margin: 20px;
 }
 .heading {
   font-weight: bold;
@@ -83,48 +148,124 @@
 }
 /* Paragraph  in the box*/
 .Text {
-  padding: 20px;
+  padding: 10px;
   font-size: 12px;
   line-height: 20px;
   /* or 167% */
 
   text-align: center;
 }
+@media (min-width: 300px) and (max-width: 800px) {
+  .benefits {
+    background-color: #d3edf6;
+    height: 1600px;
+  }
+  .heading {
+    font-weight: bold;
+    color: black;
+    margin-left: 5px;
+    padding-top: 30px;
+  }
+}
+/* ********************************************************************* */
+/* Media queries */
+@media (min-width: 300px) and (max-width: 800px) {
+  .relievepara {
+    margin: 40px;
+    justify-content: center;
+  }
+  .box {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+    margin-right: 40px;
+  }
+  .block1 {
+    background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+  }
+  .block2 {
+    background-image: url(../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 12px;
+  }
+  .block3 {
+    background-image: url(../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 12px;
+  }
+  .block4 {
+    background-image: url(../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg);
+    height: 200px;
+    background-size: 90% 90%;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 12px;
+  }
+}
+
 /* Relieve you page */
 .block1 {
   background-image: url(../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .block2 {
   background-image: url(../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .block3 {
   background-image: url(../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .block4 {
   background-image: url(../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg);
   height: 200px;
   background-size: 100% 100%;
-  padding: 25px;
-  margin: 30px;
+  padding: 10px;
+ 
   border-radius: 12px;
 }
 .Relievepara {
   font-size: 13px;
   line-height: 20px;
   padding: 25px;
+}
+/* Button */
+.buttonDiv {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonDiv button {
+  background-color: #f87433;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
 }
