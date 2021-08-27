@@ -1,0 +1,15 @@
+/* image of the page */
+.Myimage{
+    background-image: url("../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg");
+    height: 500px;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+.paraText{
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: black;
+}

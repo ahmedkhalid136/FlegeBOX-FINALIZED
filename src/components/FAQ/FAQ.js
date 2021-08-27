@@ -179,7 +179,7 @@ function Faq() {
           </div>
         </div>
       </p>
-
+{/* seventh div */}
       <p className="questionDiv">
         <h6
           className={Color7 === true ?"text1":"activeText1"}
@@ -196,7 +196,7 @@ function Faq() {
           <i class={getIcon6 === true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
           Link with href
         </h6>
-        <div class="collapse" id="collapseExample6">
+        <div class="collapse" id="collapseExample">
           <div class="answerDiv">
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
