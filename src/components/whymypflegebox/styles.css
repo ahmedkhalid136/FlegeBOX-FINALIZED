@@ -74,14 +74,14 @@ p {
   margin-top: 80px;
 }
 
-img {
+.why-my-img {
   height: 466px;
   width: 440px;
   border-radius: 20px;
 }
 
 @media (max-width: 400px) {
-  img {
+  .why-my-img {
     width: 100%;
     height: 312px;
   }

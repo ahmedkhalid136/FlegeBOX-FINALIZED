@@ -7,7 +7,7 @@ import Header from "../Header/Header";
 function whymypflegebox() {
   return (
     <div>
-      <Header active="whymypflegebox" />
+      {/* <Header active="whymypflegebox" /> */}
       <Title />
       <Body />
       <ImageSection />

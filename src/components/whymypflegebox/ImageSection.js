@@ -7,10 +7,10 @@ export default function ImageSection() {
     <div className="container ImageSection">
       <div className="row">
         <div className="col-lg-6" style={{ textAlign: "right" }}>
-          <img src={Image1} style={{}} />
+          <img className="why-my-img" src={Image1} style={{}} />
         </div>
         <div className="col-lg-6" style={{ textAlign: "left" }}>
-          <img src={Image2} className="secondImage" />
+          <img src={Image2} className="secondImage why-my-img" />
         </div>
       </div>
     </div>

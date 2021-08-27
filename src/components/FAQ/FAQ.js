@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import "./FAQ.css";
 
 function Faq() {
-  const [Color, setColor] = useState(true);
+  const [Color, setColor] = useState("black");
   const [getIcon, setIcon] = useState(true);
   const [getIcon2, setIcon2] = useState(true);
   const [getIcon3, setIcon3] = useState(true);
+  function changeOnClick() {
+    if (Color === "black") {
+      setColor("#f87433");
+    } else {
+      setColor("black");
+    }
+  }
   return (
     <div className="mainDiv">
       <p className="questionDiv">
@@ -13,19 +20,20 @@ function Faq() {
           className="text1"
           onClick={() => {
             setIcon(!getIcon);
-            setColor(!Color);
+            changeOnClick();
           }}
+          style={{ color: Color }}
           data-bs-toggle="collapse"
           href="#collapseExample"
           role="button"
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon === true ? "fas fa-plus " : "fas fa-minus"}></i>{" "} 
+          <i class={getIcon === true ? "fas fa-plus " : "fas fa-minus"}></i>{" "}
           click
         </h6>
         <div class="collapse" id="collapseExample">
-          <div class="answerDiv" >
+          <div class="answerDiv">
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
             trigger.
@@ -47,7 +55,7 @@ function Faq() {
           Link with href
         </h6>
         <div class="collapse" id="collapseExample1">
-          <div  class="answerDiv">
+          <div class="answerDiv">
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
             trigger.
@@ -69,7 +77,7 @@ function Faq() {
           Link with href
         </h6>
         <div class="collapse" id="collapseExample2">
-          <div  class="answerDiv">
+          <div class="answerDiv">
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
             trigger.
