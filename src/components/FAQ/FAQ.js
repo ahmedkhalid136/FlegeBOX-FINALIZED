@@ -2,25 +2,21 @@ import React, { useState } from "react";
 import "./FAQ.css";
 
 function Faq() {
-  const [Color, setColor] = useState("black");
+  const [Color, setColor] = useState(true);
+
   const [getIcon, setIcon] = useState(true);
   const [getIcon2, setIcon2] = useState(true);
   const [getIcon3, setIcon3] = useState(true);
-  function changeOnClick() {
-    if (Color === "black") {
-      setColor("#f87433");
-    } else {
-      setColor("black");
-    }
-  }
+  
   return (
     <div className="mainDiv">
       <p className="questionDiv">
         <h6
-          className="text1"
+          className={Color === true ?"text1":"activeText1"}
           onClick={() => {
             setIcon(!getIcon);
-            changeOnClick();
+            setColor(!Color)
+           
           }}
           style={{ color: Color }}
           data-bs-toggle="collapse"
@@ -44,7 +40,11 @@ function Faq() {
       <p className="questionDiv">
         <h6
           className="text1"
-          onClick={() => setIcon2(!getIcon2)}
+          onClick={() => {
+            setIcon2(!getIcon2);
+         
+          }}
+          style={{ color: Color }}
           data-bs-toggle="collapse"
           href="#collapseExample1"
           role="button"
