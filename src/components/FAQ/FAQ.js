@@ -21,11 +21,11 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon === true ? "fas fa-plus " : "fas fa-minus"}></i>
+          <i class={getIcon === true ? "fas fa-plus " : "fas fa-minus"}></i>{" "} 
           click
         </h6>
         <div class="collapse" id="collapseExample">
-          <div className="answerDiv">
+          <div class="answerDiv" >
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
             trigger.
@@ -47,7 +47,7 @@ function Faq() {
           Link with href
         </h6>
         <div class="collapse" id="collapseExample1">
-          <div class="card card-body">
+          <div  class="answerDiv">
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
             trigger.
@@ -69,7 +69,7 @@ function Faq() {
           Link with href
         </h6>
         <div class="collapse" id="collapseExample2">
-          <div class="card card-body answerDiv">
+          <div  class="answerDiv">
             Some placeholder content for the collapse component. This panel is
             hidden by default but revealed when the user activates the relevant
             trigger.
