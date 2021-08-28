@@ -1,10 +1,12 @@
 /* image of the page */
 .Myimage{
-    background-image: url("../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg");
-    height: 500px;
-    background-size: 100% 100%;
+  
+    height: 900px;
+   width:100%;
     border-radius: 20px;
+
 }
+/* Paragraph Texts */
 .paraText{
     font-family: Nunito Sans;
     font-style: normal;
@@ -12,4 +14,36 @@
     font-size: 18px;
     line-height: 30px;
     color: black;
+}
+.styleHeader{
+    font-family: Nunito Sans;
+    line-height: 56px;
+   padding: 15px;
+    text-align: center; 
+}
+.datee{
+   padding: 25px;    
+   font-family: Manrope;
+}
+.articleImgdiv{
+    display: flex;
+    
+
+}
+.articleImg{
+    display: inline-block;
+    width: 90%;
+    height: 250px;
+    border-radius: 20px;
+}
+/* Text under divs */
+.texts{
+    width:100%;
+    padding:15px;
+    color: black;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
 }
