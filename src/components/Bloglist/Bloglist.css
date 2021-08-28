@@ -1,0 +1,22 @@
+.texts1{
+    width:100%;
+    padding:15px;
+    color: black;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.datee{
+    padding: 25px;    
+    font-family: Manrope;
+ }
+ .Myimage1{
+  
+    height: 300px;
+    width:90%;
+    border-radius: 20px;
+
+}

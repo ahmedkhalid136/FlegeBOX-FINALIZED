@@ -57,6 +57,7 @@ function Blogdetails() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry'
             </p>
+            <p className="datee">4 Min | july 20,2021</p>
           </div>
           <div className="col-lg-4 col-md-4 col-xs-4  ">
             <img src={BannerImage} className="articleImg" />
@@ -68,6 +69,7 @@ function Blogdetails() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry'
             </p>
+            <p className="datee">4 Min | july 20,2021</p>
           </div>
           <div className="col-lg-4 col-md-4 col-xs-4  ">
             <img src={Image} className="articleImg" />
@@ -79,6 +81,7 @@ function Blogdetails() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry'
             </p>
+            <p className="datee">4 Min | july 20,2021</p>
           </div>
         </div>
       </div>

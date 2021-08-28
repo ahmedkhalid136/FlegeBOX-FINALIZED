@@ -6,6 +6,7 @@ import whymypflegebox from "./components/whymypflegebox/whymypflegebox";
 import Faq from "./components/FAQ/FAQ";
 import contact from "./components/contact/contact";
 import Blogdetails from "./components/Blogdetails/Blogdetails";
+import Bloglist from "./components/Bloglist/Bloglist";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
               <Route path="/FAQ" component={Faq}></Route>
               <Route path="/contact" component={contact}></Route>
               <Route path="/Blogdetails" component={Blogdetails}></Route>
+              <Route path="/Bloglist" component={Bloglist}></Route>
             </Switch>
           </BrowserRouter>
         </body>
