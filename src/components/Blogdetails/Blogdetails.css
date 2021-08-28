@@ -1,0 +1,54 @@
+/* image of the page */
+.Myimage {
+  height: 700px;
+  width: 100%;
+  border-radius: 20px;
+}
+/* Paragraph Texts */
+.paraText {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+  text-align: center;
+}
+.styleHeader {
+  font-family: Nunito Sans;
+  line-height: 56px;
+  padding: 15px;
+  text-align: center;
+}
+.datee {
+  padding: 25px;
+  font-family: Manrope;
+}
+.articleImgdiv {
+  display: flex;
+}
+.articleImg {
+  display: inline-block;
+  width: 90%;
+  height: 250px;
+  border-radius: 20px;
+}
+/* Text under divs */
+.texts {
+  width: 100%;
+  padding: 20px;
+  color: black;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  
+}
+/* styling bloglist header */
+.styleHeader1 {
+    font-family: Nunito Sans;
+    line-height: 56px;
+    padding: 15px;
+    text-align: center;
+  }
