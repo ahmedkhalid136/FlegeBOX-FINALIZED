@@ -3,6 +3,7 @@
   height: 700px;
   width: 100%;
   border-radius: 20px;
+  padding:20px;
 }
 /* Paragraph Texts */
 .paraText {
@@ -12,7 +13,8 @@
   font-size: 18px;
   line-height: 30px;
   color: black;
-  text-align: center;
+  text-align: left;
+  padding: 40px;
 }
 .styleHeader {
   font-family: Nunito Sans;
