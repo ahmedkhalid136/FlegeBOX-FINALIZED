@@ -1,14 +1,62 @@
 .personalInfo {
   background: #f6fbfe;
-
-  position: absolute;
+  float: left;
+ text-align: left;
   width: 1160px;
   height: 319px;
   margin-left: 80px;
 }
-.mainDiv {
-}
+
 .checkboxes{
-    float: left;
-    margin-left: 20px;
+   
+    margin-left: 40px;
+}
+.input{
+  background: #f6fbfe;  
+  width:80%;
+  border: 1px solid #DADADD;
+box-sizing: border-box;
+border-radius: 10px;
+margin-left: 20px;
+height:50px;
+}
+/* Second Row */
+.secondDiv{
+  margin-top: 1%;
+}
+.input1{
+  background: #f6fbfe;  
+  width:90%;
+  border: 1px solid #DADADD;
+box-sizing: border-box;
+border-radius: 10px;
+margin-left: 20px;
+height:50px;
+}
+.input2{
+  background: #f6fbfe;  
+  width:45%;
+  border: 1px solid #DADADD;
+box-sizing: border-box;
+border-radius: 10px;
+margin-left: 20px;
+height:50px;
+}
+.input3{
+  background: #f6fbfe;  
+  width:45%;
+  border: 1px solid #DADADD;
+box-sizing: border-box;
+border-radius: 10px;
+margin-left: 20px;
+height:50px;
+}
+.input4{
+  background: #f6fbfe;  
+  width:90%;
+  border: 1px solid #DADADD;
+box-sizing: border-box;
+border-radius: 10px;
+margin-left: 20px;
+height:50px;
 }
