@@ -139,9 +139,23 @@
   padding-top: 50px;
 }
 
+.down-arrow {
+  display: none;
+}
+
 @media (max-width: 400px) {
   .home-banner div {
     display: block;
     width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .right-arrow {
+    display: none;
+  }
+  .down-arrow {
+    display: block;
+    margin-top: 70px;
   }
 }
