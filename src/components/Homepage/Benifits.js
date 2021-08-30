@@ -15,8 +15,6 @@ export default function Benifits() {
           <div className="col-lg-4 benifits-columns">
             <i class="fas fa-euro-sign"></i>
           </div>
-        </div>
-        <div className="row">
           <div className="col-lg-4 benifits-columns">
             <i class="fas fa-euro-sign"></i>
           </div>
