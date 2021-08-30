@@ -1,0 +1,14 @@
+.personalInfo {
+  background: #f6fbfe;
+
+  position: absolute;
+  width: 1160px;
+  height: 319px;
+  margin-left: 80px;
+}
+.mainDiv {
+}
+.checkboxes{
+    float: left;
+    margin-left: 20px;
+}
