@@ -22,9 +22,12 @@
 }
 .articleImg1 {
     display: inline-block;
-    width: 90%;
-    height: 250px;
+    width: 30%;
+    height: 150px;
     border-radius: 20px;
   }
-
+  .articleImgdiv {
+    display: flex;
+    flex-direction: row;
+  }
   

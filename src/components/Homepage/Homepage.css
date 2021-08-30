@@ -37,9 +37,102 @@
   border-radius: 10px;
 }
 
+.Works {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.Works h2 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.Works h3 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.benifits-section {
+  text-align: center;
+  background-color: #dbf0fa;
+}
+
+.benifits-section h1 {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.icons-container {
+  margin-top: -80px;
+}
+
+.icon-background {
+  background-color: #f1f9fd;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.icons {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+
+.arrow {
+  font-size: 50px;
+  margin-top: 30px;
+  color: #f87433;
+}
+
+.benifits-columns {
+  background-color: #ffffff;
+  flex-direction: row;
+  display: inline-block;
+ 
+  margin: 5px;
+  width: 25%;
+  height: 150px;
+  border-radius: 20px;
+}
+
+
+.Works .row {
+  padding-top: 100px;
+}
+
 @media (max-width: 400px) {
   .home-banner div {
     display: block;
     width: 100%;
   }
+  
+}
+@media (min-width:300px) and (max-width:500px) {
+  .benifits-columns {
+    background-color: #ffffff;
+    flex-direction: row;
+    display: inline-block;
+   
+    margin: 5px;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+  }
+  
 }
