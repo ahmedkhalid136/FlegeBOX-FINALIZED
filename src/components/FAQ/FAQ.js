@@ -1,5 +1,9 @@
+
 import React, { useState } from "react";
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 import "./FAQ.css";
+import Add from "@material-ui/icons/Add";
 
 function Faq() {
   const [Color, setColor] = useState(true);
@@ -39,7 +43,8 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon === true ? "fas fa-plus " : "fas fa-minus"}></i>{" "}
+          {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
+          
           click
         </h6>
         <div class="collapse" id="collapseExample">
@@ -67,7 +72,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon2 === true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
+      {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
           Link with href
         </h6>
         <div class="collapse" id="collapseExample1">
@@ -92,7 +97,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon3 === true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
+          {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
           Link with href
         </h6>
         <div class="collapse" id="collapseExample2">
@@ -117,7 +122,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon4=== true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
+          {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
           Link with href
         </h6>
         <div class="collapse" id="collapseExample3">
@@ -142,7 +147,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon5 === true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
+          {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
           Link with href
         </h6>
         <div class="collapse" id="collapseExample4">
@@ -168,7 +173,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon6 === true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
+          {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
           Link with href
         </h6>
         <div class="collapse" id="collapseExample5">
@@ -193,7 +198,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <i class={getIcon6 === true ? "fas fa-plus" : "fas fa-minus"}></i>{" "}
+      {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
           Link with href
         </h6>
         <div class="collapse" id="collapseExample">
