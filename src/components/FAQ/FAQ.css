@@ -6,7 +6,7 @@
 .questionDiv{
     justify-content:center;
     width:70%;
-    background-color: #E3EFF2;
+    background-color: #F6FBFE;;
     margin-left: 15%;
     box-sizing: border-box;
 border-radius: 10px;
@@ -17,9 +17,11 @@ border-radius: 10px;
 }
 .answerDiv{
     width:100%;
-   padding: 1px;
+   padding: 2px;
     text-align: left;
-    background-color: #E7EDEE;
+    background-color: #FAFDFE;
+    color:#70717B;
+    
 
 }
 .text1{  
@@ -33,7 +35,7 @@ border-radius: 10px;
     padding:2px;
     margin:3px;
     margin-left: 5px;
-    color:orange;
+    color:#F87433;
 }
 .styleQuestion{
     font-family: Nunito Sans;
