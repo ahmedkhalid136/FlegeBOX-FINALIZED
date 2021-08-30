@@ -59,6 +59,7 @@
 .benifits-section {
   text-align: center;
   background-color: #dbf0fa;
+  padding-bottom: 150px;
 }
 
 .benifits-section h1 {
@@ -102,6 +103,25 @@
 
 .benifits-columns {
   background-color: #ffffff;
+  height: 415px;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.benifits-columns h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  padding-top: 50px;
+}
+
+.benifits-columns p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  padding-top: 20px;
 }
 
 .Works .row {
@@ -135,6 +155,10 @@
   height: 290px;
 }
 
+.blue-icons {
+  color: #2faae4;
+}
+
 .relieve-image-section {
   padding-top: 50px;
 }
@@ -156,6 +180,5 @@
   }
   .down-arrow {
     display: block;
-    margin-top: 70px;
   }
 }

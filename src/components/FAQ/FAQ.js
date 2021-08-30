@@ -64,7 +64,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
+          {getIcon2 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample1">
@@ -90,7 +90,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
+          {getIcon3 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample2">
@@ -116,7 +116,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
+          {getIcon4 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample3">
@@ -142,7 +142,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
+          {getIcon5 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample4">
@@ -169,7 +169,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
+          {getIcon6 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample5">
@@ -195,7 +195,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
+          {getIcon7 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample">

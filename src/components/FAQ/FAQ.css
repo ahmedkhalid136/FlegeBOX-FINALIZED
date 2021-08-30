@@ -11,27 +11,36 @@
   box-sizing: border-box;
   border-radius: 10px;
   text-align: left;
-  color: black;
-  border: 1px solid black;
+
+  border: 1px solid #dadadd;
 }
 .answerDiv {
   width: 100%;
   padding: 2px;
+  margin: 5px;
   text-align: left;
   background-color: #fafdfe;
   color: #70717b;
 }
 .text1 {
-  padding: 2px;
-  margin: 3px;
-  margin-left: 5px;
+  padding: 5px;
+  margin: 8px;
+  margin-left: 7px;
   color: #1f3347;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
 }
 .activeText1 {
-  padding: 2px;
-  margin: 3px;
-  margin-left: 5px;
+  padding: 5px;
+  margin: 8px;
+  margin-left: 7px;
   color: #f87433;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
 }
 .styleQuestion {
   font-family: Nunito Sans;
