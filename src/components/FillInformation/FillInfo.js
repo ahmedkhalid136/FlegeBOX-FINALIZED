@@ -53,6 +53,14 @@ function FillInfo() {
           </div>
         
         </div>
+          <div className="checkboxes">
+        <FormControlLabel
+          value="Ms"
+          control={<Checkbox color="primary" />}
+          label="Different address"
+          labelPlacement="End"
+        />
+        </div>
       </div>
     </div>
   );
