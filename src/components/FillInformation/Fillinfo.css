@@ -1,160 +1,236 @@
 .personalInfo {
   background: #f6fbfe;
   float: left;
- text-align: left;
-  width: 1160px;
+  text-align: left;
+  width: 90%;
   height: 319px;
   margin-left: 80px;
   border-radius: 20px;
 }
-.styleHeading{
+.styleHeading {
   margin-top: 30px;
 }
-.checkboxes{
-   
-    margin-left: 40px;
+.checkboxes {
+  margin-left: 40px;
 }
-.input{
-  background: #f6fbfe;  
-  width:80%;
-  border: 1px solid #DADADD;
-box-sizing: border-box;
-border-radius: 10px;
-margin-left: 20px;
-height:50px;
+.input {
+  background: #f6fbfe;
+  width: 80%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
 }
 /* Second Row */
-.secondDiv{
+.secondDiv {
   margin-top: 1%;
 }
-.input1{
-  background: #f6fbfe;  
-  width:90%;
-  border: 1px solid #DADADD;
-box-sizing: border-box;
-border-radius: 10px;
-margin-left: 20px;
-height:50px;
+.input1 {
+  background: #f6fbfe;
+  width: 90%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
 }
-.input2{
-  background: #f6fbfe;  
-  width:45%;
-  border: 1px solid #DADADD;
-box-sizing: border-box;
-border-radius: 10px;
-margin-left: 20px;
-height:50px;
+.input2 {
+  background: #f6fbfe;
+  width: 45%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
 }
-.input3{
-  background: #f6fbfe;  
-  width:45%;
-  border: 1px solid #DADADD;
-box-sizing: border-box;
-border-radius: 10px;
-margin-left: 20px;
-height:50px;
+.input3 {
+  background: #f6fbfe;
+  width: 45%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
 }
-.input4{
-  background: #f6fbfe;  
-  width:90%;
-  border: 1px solid #DADADD;
-box-sizing: border-box;
-border-radius: 10px;
-margin-left: 20px;
-height:50px;
+.input4 {
+  background: #f6fbfe;
+  width: 90%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
 }
 /* Care level box */
 .Carelevel {
   background: #f6fbfe;
   float: left;
- text-align: left;
-  width: 1160px;
+  text-align: left;
+  width: 90%;
   height: 200px;
   margin-left: 80px;
   border-radius: 20px;
   margin-top: 9px;
 }
-.Carelevelinner{
-   
+.Carelevelinner {
   margin-left: 40px;
 }
-.Buttoncontainer{
+.Buttoncontainer {
   margin-top: 3%;
 }
 
 /* button component */
-.buttonDiv2{
+.buttonDiv2 {
   border-radius: 15px;
-  background: #f6fbfe;  
-  width:100%;
+  background: #f6fbfe;
+  width: 100%;
   height: 50px;
-  border: 1px solid #DADADD;
+  border: 1px solid #dadadd;
   font-family: Nunito Sans;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-color: #1F3347;
-text-transform: uppercase;
-
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f3347;
+  text-transform: uppercase;
 }
-.buttonDiv3{
+.buttonDiv3 {
   border-radius: 15px;
-  background: #2FAAE5;
-  width:100%;
+  background: #2faae5;
+  width: 100%;
   height: 50px;
-  border: 1px solid #DADADD;
+  border: 1px solid #dadadd;
   font-family: Nunito Sans;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-color: #1F3347;
-text-transform: uppercase;
-
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f3347;
+  text-transform: uppercase;
 }
 
 /* Contact Info */
 .ContactInfo {
   background: #f6fbfe;
   float: left;
- text-align: left;
-  width: 1160px;
+  text-align: left;
+  width: 90%;
   height: 200px;
   margin-left: 80px;
   border-radius: 20px;
   margin-top: 9px;
 }
-.contactContainer{
+.contactContainer {
   margin-top: 3%;
 }
-.innercontact{
-  
+.innercontact {
   margin-left: 40px;
 }
 
 /* Note Div */
-.NoteDiv{
+.NoteDiv {
   background: #f6fbfe;
   float: left;
- text-align: left;
-  width: 1160px;
+  text-align: left;
+  width: 90%;
   height: 400px;
   margin-left: 80px;
   border-radius: 20px;
   margin-top: 9px;
 }
 
-.area{
-  background: #f6fbfe;  
-  width:90%;
-  border: 1px solid #DADADD;
-box-sizing: border-box;
-border-radius: 10px;
-margin-left: 20px;
-height:300px;
+.area {
+  background: #f6fbfe;
+  width: 90%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 300px;
 }
-.separateCheckbox{
+.separateCheckbox {
   margin-top: 5%;
 }
-@media (min-width:300px) and (max-width:600px) {
-  
+@media (min-width: 300px) and (max-width: 600px) {
+  .personalInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 90%;
+    height: 500px;
+    margin-left: 10px;
+    border-radius: 20px;
+  }
+  .Carelevel {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 90%;
+    height: 400px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .ContactInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 90%;
+    height: 200px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .NoteDiv {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 90%;
+    height: 300px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .area {
+    background: #f6fbfe;
+    width: 80%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    height: 200px;
+  }
+  .innercontact {
+    margin-left: 20px;
+  }
+  .separateCheckbox {
+    margin-top: 15%;
+  }
+
+  /* button component */
+  .buttonDiv2 {
+    border-radius: 15px;
+    background: #f6fbfe;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+  }
+  .buttonDiv3 {
+    border-radius: 15px;
+    background: #2faae5;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+  }
 }

@@ -43,16 +43,16 @@ function FillInfo() {
             </div>
           </div>
           <div className="row secondDiv">
-            <div className="col-lg-3 col-sm-12">
+            <div className="col-lg-3 col-sm-8">
               <input className="input1" placeholder="Streetname" />
             </div>
-            <div className="col-lg-3 col-sm-12">
+            <div className="col-lg-3 col-sm-4">
               <input className="input2" placeholder="N*" />
             </div>
-            <div className="col-lg-3 col-sm-12">
+            <div className="col-lg-3 col-sm-8">
               <input className="input3" placeholder="ZIP Code" />
             </div>
-            <div className="col-lg-3 col-sm-12">
+            <div className="col-lg-3 col-sm-4">
               <input className="input4" placeholder="Country" />
             </div>
           </div>
@@ -73,9 +73,9 @@ function FillInfo() {
           <div className="container">
             <h6 className="styleHeading">Care Level</h6>
             <div className="row Buttoncontainer">
-              <div className="col-lg-2">
+              <div className="col-lg-2 col-sm-6">
                 <button
-                  className="Carelevelbutton"
+                 
                   onClick={() => {
                     setbutton1(!getbutton1);
                   }}
@@ -86,9 +86,9 @@ function FillInfo() {
                   LEVEL1
                   </button>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2  col-sm-6">
                 <button
-                  className="Carelevelbutton"
+                 
                   onClick={() => {
                     setbutton2(!getbutton2);
                   }}
@@ -99,9 +99,9 @@ function FillInfo() {
                   LEVEL2
                 </button>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2  col-sm-6">
                 <button
-                  className="Carelevelbutton"
+                 
                   onClick={() => {
                     setbutton3(!getbutton3);
                   }}
@@ -112,7 +112,7 @@ function FillInfo() {
                   LEVEL3
                 </button>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2  col-sm-6">
                 <button
                   onClick={() => {
                     setbutton4(!getbutton4);
@@ -124,9 +124,9 @@ function FillInfo() {
                   LEVEL4
                 </button>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2  col-sm-6">
                 <button
-                  className="Carelevelbutton"
+                 
                   onClick={() => {
                     setbutton5(!getbutton5);
                   }}
@@ -136,9 +136,9 @@ function FillInfo() {
                   LEVEL5
                 </button>
               </div>
-              <div className="col-lg-2">
+              <div className="col-lg-2  col-sm-6">
                 <button
-                  className="Carelevelbutton"
+                 
                   onClick={() => {
                     setbutton6(!getbutton6);
                   }}
