@@ -1,7 +1,25 @@
 /* Question div */
 /* the div about the question */
+.titleSection1 {
+    background-image: url("../../Pictures/nurse-talking-with-senior-woman-with-walking-disabilities-sitting-wheelchair-into-private-modern-recovery-clinic-hospital-handicapped-old-retired-patient-medical-consultation-advice.jpg");
+    height: 400px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(17, 97, 136, 0.5);
+    background-position-y: -90px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 200px;
+  }
+  .breadcrumbs1 {
+    font-family: "Merriweather", serif;
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+  }
+  
+  
 .mainDiv {
-  margin-top: 15%;
+  margin-top: 5%;
 }
 .questionDiv {
   justify-content: center;

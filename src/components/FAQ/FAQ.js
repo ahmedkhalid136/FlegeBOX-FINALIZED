@@ -22,6 +22,10 @@ function Faq() {
   const [getIcon7, setIcon7] = useState(true);
 
   return (
+    <div>
+      <div className="titleSection1">
+            <h1 className="breadcrumbs1">Hello can we help you?</h1>
+        </div>
     <div className="mainDiv">
       <p className="questionDiv">
         <h6
@@ -206,6 +210,7 @@ function Faq() {
           </div>
         </div>
       </p>
+    </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Faq from "./components/FAQ/FAQ";
 import contact from "./components/contact/contact";
 import Blogdetails from "./components/Blogdetails/Blogdetails";
 import Bloglist from "./components/Bloglist/Bloglist";
+import FillInfo from "./components/FillInformation/FillInfo";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
               <Route path="/contact" component={contact}></Route>
               <Route path="/Blogdetails" component={Blogdetails}></Route>
               <Route path="/Bloglist" component={Bloglist}></Route>
+              <Route path="/Fillinformation" component={FillInfo}></Route>
             </Switch>
           </BrowserRouter>
         </body>
