@@ -35,7 +35,7 @@ function FillInfo() {
 
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-lg-6 col-sm-12 ">
               <input className="input" placeholder="Firstname" />
             </div>
             <div className="col-lg-6 col-sm-12">
@@ -43,16 +43,16 @@ function FillInfo() {
             </div>
           </div>
           <div className="row secondDiv">
-            <div className="col-lg-3 col-sm-8">
+            <div className="col-lg-3 col-sm-8 col-xs-8">
               <input className="input1" placeholder="Streetname" />
             </div>
-            <div className="col-lg-3 col-sm-4">
+            <div className="col-lg-3 col-sm-4 col-xs-4">
               <input className="input2" placeholder="N*" />
             </div>
-            <div className="col-lg-3 col-sm-8">
+            <div className="col-lg-3 col-sm-8  col-xs-8">
               <input className="input3" placeholder="ZIP Code" />
             </div>
-            <div className="col-lg-3 col-sm-4">
+            <div className="col-lg-3 col-sm-4 col-xs-4">
               <input className="input4" placeholder="Country" />
             </div>
           </div>
@@ -73,7 +73,7 @@ function FillInfo() {
           <div className="container">
             <h6 className="styleHeading">Care Level</h6>
             <div className="row Buttoncontainer">
-              <div className="col-lg-2 col-sm-6">
+              <div className="col-lg-2 col-sm-6 col-xs-6">
                 <button
                  
                   onClick={() => {
@@ -86,7 +86,7 @@ function FillInfo() {
                   LEVEL1
                   </button>
               </div>
-              <div className="col-lg-2  col-sm-6">
+              <div className="col-lg-2  col-sm-6 col-xs-6">
                 <button
                  
                   onClick={() => {
@@ -99,7 +99,7 @@ function FillInfo() {
                   LEVEL2
                 </button>
               </div>
-              <div className="col-lg-2  col-sm-6">
+              <div className="col-lg-2  col-sm-6 col-xs-6">
                 <button
                  
                   onClick={() => {
@@ -124,7 +124,7 @@ function FillInfo() {
                   LEVEL4
                 </button>
               </div>
-              <div className="col-lg-2  col-sm-6">
+              <div className="col-lg-2  col-sm-6 ">
                 <button
                  
                   onClick={() => {

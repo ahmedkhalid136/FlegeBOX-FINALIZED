@@ -16,6 +16,7 @@ function Note() {
           </div>
         </div>
         <div className="row separateCheckbox">
+          
         <FormControlLabel
             
             control={<Checkbox color="primary" />}

@@ -150,12 +150,16 @@
 .separateCheckbox {
   margin-top: 5%;
 }
-@media (min-width: 300px) and (max-width: 600px) {
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .mainDiv{
+    margin-left: 15px;
+  }
   .personalInfo {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 90%;
+    width: 85%;
     height: 500px;
     margin-left: 10px;
     border-radius: 20px;
@@ -164,7 +168,7 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 90%;
+    width: 85%;
     height: 400px;
     margin-left: 10px;
     border-radius: 20px;
@@ -174,7 +178,7 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 90%;
+    width: 85%;
     height: 200px;
     margin-left: 10px;
     border-radius: 20px;
@@ -184,7 +188,144 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
+    width: 85%;
+    height: 300px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .area {
+    background: #f6fbfe;
+    width: 80%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    height: 200px;
+  }
+  .innercontact {
+    margin-left: 20px;
+  }
+  .separateCheckbox {
+    margin-top: 15%;
+  }
+
+  /* ******************All the input fields in information tab*************************** */
+  .input {
+    background: #f6fbfe;
+    width: 80%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input1 {
+    background: #f6fbfe;
     width: 90%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin:15px;
+    height: 50px;
+  }
+  .input2 {
+    background: #f6fbfe;
+    width: 45%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input3 {
+    background: #f6fbfe;
+    width: 45%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input4 {
+    background: #f6fbfe;
+    width: 90%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+
+  /* button component */
+  .buttonDiv2 {
+    border-radius: 15px;
+    background: #f6fbfe;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+    margin:15px;
+  }
+  .buttonDiv3 {
+    border-radius: 15px;
+    background: #2faae5;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+  }
+  
+}
+
+@media (min-width:300px) and (max-width:499px) {
+  .mainDiv{
+    margin-left: 15px;
+  }
+  .personalInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 85%;
+    height: 600px;
+    margin-left: 10px;
+    border-radius: 20px;
+  }
+  .Carelevel {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 85%;
+    height: 600px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .ContactInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 85%;
+    height: 210px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .NoteDiv {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 85%;
     height: 300px;
     margin-left: 10px;
     border-radius: 20px;
@@ -219,6 +360,7 @@
     font-size: 16px;
     color: #1f3347;
     text-transform: uppercase;
+    margin:15px;
   }
   .buttonDiv3 {
     border-radius: 15px;
@@ -232,5 +374,51 @@
     font-size: 16px;
     color: #1f3347;
     text-transform: uppercase;
+  }
+   /* ******************All the input fields in information tab*************************** */
+   .input {
+    background: #f6fbfe;
+    width: 80%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input1 {
+    background: #f6fbfe;
+    width: 90%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin:10px;
+    height: 50px;
+  }
+  .input2 {
+    background: #f6fbfe;
+    width: 45%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input3 {
+    background: #f6fbfe;
+    width: 45%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input4 {
+    background: #f6fbfe;
+    width: 90%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
   }
 }
