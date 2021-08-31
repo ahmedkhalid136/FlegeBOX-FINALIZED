@@ -152,6 +152,9 @@ border-radius: 10px;
 margin-left: 20px;
 height:300px;
 }
+.separateCheckbox{
+  margin-top: 5%;
+}
 @media (min-width:300px) and (max-width:600px) {
   
 }

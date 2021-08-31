@@ -1,5 +1,7 @@
 import React from "react";
 import "./Fillinfo.css";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
 function Note() {
   return (
     <div className="NoteDiv">
@@ -13,6 +15,21 @@ function Note() {
             
           </div>
         </div>
+        <div className="row separateCheckbox">
+        <FormControlLabel
+            
+            control={<Checkbox color="primary" />}
+            label="Confirm first check box"
+            labelPlacement="End"
+          />
+          <FormControlLabel
+            
+            control={<Checkbox color="primary" />}
+            label="Confirm second check box"
+            labelPlacement="End"
+          />
+        </div>
+      
       </div>
     </div>
   );
