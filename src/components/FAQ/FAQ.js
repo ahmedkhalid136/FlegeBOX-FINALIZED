@@ -3,6 +3,7 @@ import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import "./FAQ.css";
 import Add from "@material-ui/icons/Add";
+import Header from "../Header/Header";
 
 function Faq() {
   const [Color, setColor] = useState(true);
@@ -23,6 +24,7 @@ function Faq() {
 
   return (
     <div>
+      <Header title="FAQ" />
       <div className="titleSection1">
             <h1 className="breadcrumbs1">Hello can we help you?</h1>
         </div>

@@ -1,45 +1,42 @@
-import React from "react";
-import { useState } from "react";
-
+import React, { useEffect } from "react";
+import { Link, } from "react-router-dom";
+import  { useState } from "react";
+import whymypflegebox from "../whymypflegebox/whymypflegebox";
+import Homepage from "../Homepage/Homepage"
+import "./Header.css"
 export default function Header(props) {
-  const [active, setActive] = useState("");
-  function activeMap() {
-    if (props.active == "whymypflegebox") {
-      setActive("whymypflegebox");
-    }
-  }
+  const [Active, setActive] = useState("");
+useEffect(()=>{
+  if (props.title == "whymypflegebox")  setActive("2");
+  else if(props.title=="Home") setActive("1")
+  else if(props.title== "BLOG")setActive("3")
+  else if(props.title=="FAQ") setActive("4")
+})
+    
+  
 
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-          Navbar
+          myPflegebox
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        
+       
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-item nav-link" href="#">
-              HOME
-            </a>
-            <a class="nav-item nav-link" href="#">
-              WHY MY PFLEGE BOX
-            </a>
-            <a class="nav-item nav-link" href="#">
-              BLOG
-            </a>
-            <a class="nav-item nav-link" href="#">
-              FAQ
-            </a>
+            <Link className={Active=="1"?"nav-item nav-link class-active":"nav-item nav-link"}  href={Homepage} to={Homepage}>
+            <p>Home</p> 
+            </Link>
+            <Link className={Active=="2"?"nav-item nav-link class-active":"nav-item nav-link"} to={ whymypflegebox}>
+            <p> WHY MY PFLEGE BOX</p> 
+            </Link>
+            <Link className={Active=="3"?"nav-item nav-link class-active":"nav-item nav-link"} href="#">
+            <p>BLOG</p>  
+            </Link>
+            <Link className={Active=="4"?"nav-item nav-link class-active":"nav-item nav-link"}  href="#">
+           <p>FAQ</p>   
+            </Link>
           </div>
         </div>
       </nav>

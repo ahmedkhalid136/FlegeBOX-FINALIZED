@@ -9,6 +9,7 @@ function whymypflegebox() {
   return (
     <div>
       {/* <Header active="whymypflegebox" /> */}
+      <Header title="whymypflegebox"/>
       <Title />
       <Body />
       <ImageSection />

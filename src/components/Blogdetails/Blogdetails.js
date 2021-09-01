@@ -4,9 +4,13 @@ import mainImage from "../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg";
 import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
 import Image from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
 import Image2 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
+import Header from "../Header/Header";
 function Blogdetails() {
   return (
+    <div>
+    <Header title="BLOG" />
     <div class="container">
+    
       <div>
         <h1 className="styleHeader">
           Lorem ipsum dolor sit amet, consetutor dolor consectetur adipiscing
@@ -105,6 +109,7 @@ function Blogdetails() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
