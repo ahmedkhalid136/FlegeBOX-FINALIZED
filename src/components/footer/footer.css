@@ -1,0 +1,79 @@
+.footer-title {
+  height: 260px;
+
+  transform: scaleX(-1);
+  background: linear-gradient(
+      0deg,
+      rgba(17, 97, 136, 0.6),
+      rgba(17, 97, 136, 0.6)
+    ),
+    url("../../Pictures/attractive-business-woman-asian-suits-headsets-are-smiling-while-working-with-computer-office-customer-service-assistant-working-office.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.footer-title h1 {
+  color: #ffffff;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 45px;
+  padding-top: 50px;
+}
+
+.footer-title span {
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  font-size: 22px;
+}
+
+.revert {
+  transform: scaleX(-1);
+}
+
+.social-icon-background {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.social-icon-background i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.footer-base {
+  background-color: #0c415a;
+  padding: 100px 0;
+  text-align: left;
+}
+
+.footer-base h5 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+.footer-base hr {
+  background-color: #f87433;
+  width: 20%;
+  height: 2px;
+}
+
+.footer-base a {
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
