@@ -14,7 +14,8 @@ export default function Works() {
               1. Wish core box <br /> select
             </h3>
           </div>
-          <i class="fas fa-arrow-right arrow col-lg-2"></i>
+          <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
+          <i class="fas fa-arrow-down arrow down-arrow col-lg-2"></i>
         </div>
 
         <div className="col-lg-3 row">
@@ -26,7 +27,8 @@ export default function Works() {
               2. Request online fill out <br /> and send{" "}
             </h3>
           </div>
-          <i class="fas fa-arrow-right arrow col-lg-2"></i>
+          <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
+          <i class="fas fa-arrow-down arrow down-arrow col-lg-2"></i>
         </div>
         <div className="col-lg-3 row">
           <div className="col-lg-10">
@@ -39,7 +41,8 @@ export default function Works() {
               nursing care insurance
             </h3>
           </div>
-          <i class="fas fa-arrow-right arrow col-lg-2"></i>
+          <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
+          <i class="fas fa-arrow-down arrow down-arrow col-lg-2"></i>
         </div>
         <div className="col-lg-3 row">
           <div className="col-lg-12">

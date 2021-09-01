@@ -4,6 +4,7 @@ import Button from "../button/Button";
 import Title from "./Title.js";
 import Works from "./Works.js";
 import Benifits from "./Benifits";
+import Relieve from "./Relieve";
 
 function Homepage() {
   return (
@@ -11,6 +12,7 @@ function Homepage() {
       <Title />
       <Works />
       <Benifits />
+      <Relieve />
     </div>
   );
 }

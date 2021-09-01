@@ -1,21 +1,17 @@
-
 import React, { useState } from "react";
-import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove';
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 import "./FAQ.css";
 import Add from "@material-ui/icons/Add";
 
 function Faq() {
   const [Color, setColor] = useState(true);
-  const [Color2,setColor2] = useState(true)
-  const [Color3,setColor3]=useState(true)
-  const [Color4,setColor4] =useState(true)
-  const [Color5,setColor5]=useState(true)
-  const [Color6,setColor6]=useState(true)
-  const [Color7,setColor7]=useState(true)
-  
-
-
+  const [Color2, setColor2] = useState(true);
+  const [Color3, setColor3] = useState(true);
+  const [Color4, setColor4] = useState(true);
+  const [Color5, setColor5] = useState(true);
+  const [Color6, setColor6] = useState(true);
+  const [Color7, setColor7] = useState(true);
 
   const [getIcon, setIcon] = useState(true);
   const [getIcon2, setIcon2] = useState(true);
@@ -24,8 +20,7 @@ function Faq() {
   const [getIcon5, setIcon5] = useState(true);
   const [getIcon6, setIcon6] = useState(true);
   const [getIcon7, setIcon7] = useState(true);
-  
-  
+
   return (
     <div>
       <div className="titleSection1">
@@ -34,11 +29,10 @@ function Faq() {
     <div className="mainDiv">
       <p className="questionDiv">
         <h6
-          className={Color === true ?"text1":"activeText1"}
+          className={Color === true ? "text1" : "activeText1"}
           onClick={() => {
             setIcon(!getIcon);
-            setColor(!Color)
-           
+            setColor(!Color);
           }}
           style={{ color: Color }}
           data-bs-toggle="collapse"
@@ -47,8 +41,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon === true ? <AddIcon /> : <RemoveIcon /> }
-          
+          {getIcon === true ? <AddIcon /> : <RemoveIcon />}
           click
         </h6>
         <div class="collapse" id="collapseExample">
@@ -63,11 +56,10 @@ function Faq() {
 
       <p className="questionDiv">
         <h6
-           className={Color2 === true ?"text1":"activeText1"}
+          className={Color2 === true ? "text1" : "activeText1"}
           onClick={() => {
             setIcon2(!getIcon2);
-            setColor2(!Color2)
-           
+            setColor2(!Color2);
           }}
           style={{ color: Color2 }}
           data-bs-toggle="collapse"
@@ -76,7 +68,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-      {getIcon2 === true ? <AddIcon /> : <RemoveIcon /> }
+          {getIcon2 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample1">
@@ -87,12 +79,13 @@ function Faq() {
           </div>
         </div>
       </p>
-{/* THIRD DIVV */}
+      {/* THIRD DIVV */}
       <p className="questionDiv">
         <h6
-          className={Color3 === true ?"text1":"activeText1"}
-          onClick={() => {setIcon3(!getIcon3)
-            setColor3(!Color3)
+          className={Color3 === true ? "text1" : "activeText1"}
+          onClick={() => {
+            setIcon3(!getIcon3);
+            setColor3(!Color3);
           }}
           style={{ color: Color3 }}
           data-bs-toggle="collapse"
@@ -101,7 +94,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon3 === true ? <AddIcon /> : <RemoveIcon /> }
+          {getIcon3 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample2">
@@ -115,9 +108,10 @@ function Faq() {
       {/* Fourth div */}
       <p className="questionDiv">
         <h6
-          className={Color4 === true ?"text1":"activeText1"}
-          onClick={() => {setIcon4(!getIcon4)
-            setColor4(!Color4)
+          className={Color4 === true ? "text1" : "activeText1"}
+          onClick={() => {
+            setIcon4(!getIcon4);
+            setColor4(!Color4);
           }}
           style={{ color: Color4 }}
           data-bs-toggle="collapse"
@@ -126,7 +120,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon4 === true ? <AddIcon /> : <RemoveIcon /> }
+          {getIcon4 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample3">
@@ -140,9 +134,10 @@ function Faq() {
       {/* Fifth div */}
       <p className="questionDiv">
         <h6
-          className={Color5 === true ?"text1":"activeText1"}
-          onClick={() => {setIcon5(!getIcon5)
-            setColor5(!Color5)
+          className={Color5 === true ? "text1" : "activeText1"}
+          onClick={() => {
+            setIcon5(!getIcon5);
+            setColor5(!Color5);
           }}
           style={{ color: Color5 }}
           data-bs-toggle="collapse"
@@ -151,7 +146,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon5 === true ? <AddIcon /> : <RemoveIcon /> }
+          {getIcon5 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample4">
@@ -166,9 +161,10 @@ function Faq() {
       {/* sixth div */}
       <p className="questionDiv">
         <h6
-          className={Color6 === true ?"text1":"activeText1"}
-          onClick={() => {setIcon6(!getIcon6)
-            setColor6(!Color6)
+          className={Color6 === true ? "text1" : "activeText1"}
+          onClick={() => {
+            setIcon6(!getIcon6);
+            setColor6(!Color6);
           }}
           style={{ color: Color6 }}
           data-bs-toggle="collapse"
@@ -177,7 +173,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          {getIcon6 === true ? <AddIcon /> : <RemoveIcon /> }
+          {getIcon6 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample5">
@@ -188,12 +184,13 @@ function Faq() {
           </div>
         </div>
       </p>
-{/* seventh div */}
+      {/* seventh div */}
       <p className="questionDiv">
         <h6
-          className={Color7 === true ?"text1":"activeText1"}
-          onClick={() => {setIcon7(!getIcon7)
-            setColor7(!Color7)
+          className={Color7 === true ? "text1" : "activeText1"}
+          onClick={() => {
+            setIcon7(!getIcon7);
+            setColor7(!Color7);
           }}
           style={{ color: Color7 }}
           data-bs-toggle="collapse"
@@ -202,7 +199,7 @@ function Faq() {
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-      {getIcon7 === true ? <AddIcon /> : <RemoveIcon /> }
+          {getIcon7 === true ? <AddIcon /> : <RemoveIcon />}
           Link with href
         </h6>
         <div class="collapse" id="collapseExample">
