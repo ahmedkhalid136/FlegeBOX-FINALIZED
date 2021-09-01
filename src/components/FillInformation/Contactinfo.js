@@ -3,10 +3,10 @@ import "./Fillinfo.css"
 function Contactinfo() {
   return (
     <div className="ContactInfo">
-        <div className="innercontact">
-
+        <div>
+        <h6 className="styleHeadingContact">Contact Info</h6>
         <div className="container">
-        <h6 className="styleHeading">Contact Info</h6>
+        
         <div className="row contactContainer">
           <div className="col-lg-6 col-md-12 col-sm-12">
           <input className="input1" placeholder="Phone Number" />
