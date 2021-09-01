@@ -43,17 +43,25 @@ function FillInfo() {
             </div>
           </div>
           <div className="row secondDiv">
-            <div className="col-lg-3 col-sm-8 col-xs-8">
-              <input className="input1" placeholder="Streetname" />
+            <div className="col-lg-6">
+              <div className="row">
+                <div className="col-lg-6 col-sm-8 col-xs-8">
+                  <input className="input1" placeholder="Streetname" />
+                </div>
+                <div className="col-lg63 col-sm-4 col-xs-4">
+                  <input className="input2" placeholder="N*" />
+                </div>
+              </div>
             </div>
-            <div className="col-lg-3 col-sm-4 col-xs-4">
-              <input className="input2" placeholder="N*" />
-            </div>
-            <div className="col-lg-3 col-sm-8  col-xs-8">
-              <input className="input3" placeholder="ZIP Code" />
-            </div>
-            <div className="col-lg-3 col-sm-4 col-xs-4">
-              <input className="input4" placeholder="Country" />
+            <div className="col-lg-6">
+              <div className="row">
+                <div className="col-lg-6 col-sm-8  col-xs-8">
+                  <input className="input3" placeholder="ZIP Code" />
+                </div>
+                <div className="col-lg-6 col-sm-4 col-xs-4">
+                  <input className="input4" placeholder="Country" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,25 +83,31 @@ function FillInfo() {
             <div className="row Buttoncontainer">
               <div className="col-lg-2 col-sm-6 col-xs-6">
                 <button
-                 
                   onClick={() => {
                     setbutton1(!getbutton1);
+                    setbutton2(true)
+                    setbutton3(true)
+                    setbutton5(true)
+                    setbutton6(true)
+                    setbutton4(true)
                   }}
-                
-                  className={getbutton1?"buttonDiv2":"buttonDiv3"}
+                  className={getbutton1 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
                 >
                   LEVEL1
-                  </button>
+                </button>
               </div>
               <div className="col-lg-2  col-sm-6 col-xs-6">
                 <button
-                 
                   onClick={() => {
                     setbutton2(!getbutton2);
+                    setbutton1(true)
+                    setbutton3(true)
+                    setbutton5(true)
+                    setbutton6(true)
+                    setbutton4(true)
                   }}
-                  
-                  className={getbutton2?"buttonDiv2":"buttonDiv3"}
+                  className={getbutton2 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
                 >
                   LEVEL2
@@ -101,12 +115,15 @@ function FillInfo() {
               </div>
               <div className="col-lg-2  col-sm-6 col-xs-6">
                 <button
-                 
                   onClick={() => {
                     setbutton3(!getbutton3);
+                    setbutton1(true)
+                    setbutton2(true)
+                    setbutton5(true)
+                    setbutton6(true)
+                    setbutton4(true)
                   }}
-                
-                  className={getbutton3?"buttonDiv2":"buttonDiv3"}
+                  className={getbutton3 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
                 >
                   LEVEL3
@@ -116,9 +133,13 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton4(!getbutton4);
+                    setbutton1(true)
+                    setbutton3(true)
+                    setbutton5(true)
+                    setbutton6(true)
+                    setbutton2(true)
                   }}
-                 
-                  className={getbutton4?"buttonDiv2":"buttonDiv3"}
+                  className={getbutton4 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
                 >
                   LEVEL4
@@ -126,11 +147,15 @@ function FillInfo() {
               </div>
               <div className="col-lg-2  col-sm-6 ">
                 <button
-                 
                   onClick={() => {
                     setbutton5(!getbutton5);
+                    setbutton1(true)
+                    setbutton3(true)
+                    setbutton4(true)
+                    setbutton6(true)
+                    setbutton2(true)
                   }}
-                  className={getbutton5?"buttonDiv2":"buttonDiv3"}
+                  className={getbutton5 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
                 >
                   LEVEL5
@@ -138,11 +163,15 @@ function FillInfo() {
               </div>
               <div className="col-lg-2  col-sm-6">
                 <button
-                 
                   onClick={() => {
                     setbutton6(!getbutton6);
+                    setbutton1(true)
+                    setbutton3(true)
+                    setbutton5(true)
+                    setbutton4(true)
+                    setbutton2(true)
                   }}
-                  className={getbutton6?"buttonDiv2":"buttonDiv3"}
+                  className={getbutton6 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
                 >
                   NEITHER
