@@ -64,7 +64,7 @@
 }
 
 .footer-base hr {
-  background-color: #f87433;
+  border: 2px solid #f87433 !important;
   width: 20%;
   height: 2px;
 }
@@ -76,4 +76,22 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
+}
+
+.footer-base a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  line-height: 25px;
+}
+
+.copyright-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.8) !important;
 }

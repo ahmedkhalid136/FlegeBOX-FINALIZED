@@ -14,65 +14,11 @@ function FillInfo() {
   const [getbutton5, setbutton5] = useState(true);
   const [getbutton6, setbutton6] = useState(true);
   return (
-    <div className="mainDiv">
-      <div className="personalInfo">
-        <div className="checkboxes">
-          <h6 className="styleHeading">Personal Information</h6>
+    <div className="mainDiv container">
+      {/* PERSONAL INFO */}
 
-          <FormControlLabel
-            value="Ms"
-            control={<Checkbox color="primary" />}
-            label="Ms"
-            labelPlacement="End"
-          />
-          <FormControlLabel
-            value="Mr"
-            control={<Checkbox color="primary" />}
-            label="Mr"
-            labelPlacement="End"
-          />
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-sm-12 ">
-              <input className="input" placeholder="Firstname" />
-            </div>
-            <div className="col-lg-6 col-sm-12">
-              <input className="input" placeholder="Lastname" />
-            </div>
-          </div>
-          <div className="row secondDiv">
-            <div className="col-lg-6">
-              <div className="row">
-                <div className="col-lg-6 col-sm-8 col-xs-8">
-                  <input className="input1" placeholder="Streetname" />
-                </div>
-                <div className="col-lg63 col-sm-4 col-xs-4">
-                  <input className="input2" placeholder="N*" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="row">
-                <div className="col-lg-6 col-sm-8  col-xs-8">
-                  <input className="input3" placeholder="ZIP Code" />
-                </div>
-                <div className="col-lg-6 col-sm-4 col-xs-4">
-                  <input className="input4" placeholder="Country" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="checkboxes">
-          <FormControlLabel
-            value="Ms"
-            control={<Checkbox color="primary" />}
-            label="Different address"
-            labelPlacement="End"
-          />
-        </div>
+      <div className="personalInfo-section">
+        <h6 className="styleHeading">Personal Information</h6>
       </div>
 
       {/* CARE LEVEL */}
@@ -85,11 +31,11 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton1(!getbutton1);
-                    setbutton2(true)
-                    setbutton3(true)
-                    setbutton5(true)
-                    setbutton6(true)
-                    setbutton4(true)
+                    setbutton2(true);
+                    setbutton3(true);
+                    setbutton5(true);
+                    setbutton6(true);
+                    setbutton4(true);
                   }}
                   className={getbutton1 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
@@ -101,11 +47,11 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton2(!getbutton2);
-                    setbutton1(true)
-                    setbutton3(true)
-                    setbutton5(true)
-                    setbutton6(true)
-                    setbutton4(true)
+                    setbutton1(true);
+                    setbutton3(true);
+                    setbutton5(true);
+                    setbutton6(true);
+                    setbutton4(true);
                   }}
                   className={getbutton2 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
@@ -117,11 +63,11 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton3(!getbutton3);
-                    setbutton1(true)
-                    setbutton2(true)
-                    setbutton5(true)
-                    setbutton6(true)
-                    setbutton4(true)
+                    setbutton1(true);
+                    setbutton2(true);
+                    setbutton5(true);
+                    setbutton6(true);
+                    setbutton4(true);
                   }}
                   className={getbutton3 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
@@ -133,11 +79,11 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton4(!getbutton4);
-                    setbutton1(true)
-                    setbutton3(true)
-                    setbutton5(true)
-                    setbutton6(true)
-                    setbutton2(true)
+                    setbutton1(true);
+                    setbutton3(true);
+                    setbutton5(true);
+                    setbutton6(true);
+                    setbutton2(true);
                   }}
                   className={getbutton4 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
@@ -149,11 +95,11 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton5(!getbutton5);
-                    setbutton1(true)
-                    setbutton3(true)
-                    setbutton4(true)
-                    setbutton6(true)
-                    setbutton2(true)
+                    setbutton1(true);
+                    setbutton3(true);
+                    setbutton4(true);
+                    setbutton6(true);
+                    setbutton2(true);
                   }}
                   className={getbutton5 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"
@@ -165,11 +111,11 @@ function FillInfo() {
                 <button
                   onClick={() => {
                     setbutton6(!getbutton6);
-                    setbutton1(true)
-                    setbutton3(true)
-                    setbutton5(true)
-                    setbutton4(true)
-                    setbutton2(true)
+                    setbutton1(true);
+                    setbutton3(true);
+                    setbutton5(true);
+                    setbutton4(true);
+                    setbutton2(true);
                   }}
                   className={getbutton6 ? "buttonDiv2" : "buttonDiv3"}
                   variant="outlined"

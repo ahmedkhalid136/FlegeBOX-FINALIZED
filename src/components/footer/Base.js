@@ -9,9 +9,9 @@ export default function Base() {
             <h5>MyPflegebox</h5>
             <hr />
             <a>Why MyPflegebox ?</a>
-            <br />
-            <a>Blog</a> <br />
-            <a>FAQ</a> <br />
+            <br /> <br />
+            <a>Blog</a> <br /> <br />
+            <a>FAQ</a> <br /> <br />
             <a>Contact</a>
           </div>
           <div className="col-lg-4">
@@ -22,6 +22,13 @@ export default function Base() {
             <h5>Payment Methods</h5>
             <hr />
           </div>
+        </div>
+
+        <hr style={{ width: "100%", color: "white" }} />
+        <div style={{ textAlign: "center" }}>
+          <h2 className="copyright-text">
+            © 2021 MyPflegebox. All right reserved
+          </h2>
         </div>
       </div>
     </div>

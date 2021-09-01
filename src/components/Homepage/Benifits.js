@@ -29,7 +29,6 @@ export default function Benifits() {
                 care service.
               </p>
             </div>
-            <br />
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">

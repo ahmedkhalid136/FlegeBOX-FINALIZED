@@ -107,6 +107,7 @@
   height: 415px;
   border-radius: 10px;
   padding: 50px;
+  margin-top: 20px;
 }
 
 .benifits-columns h4 {
@@ -181,5 +182,10 @@
   }
   .down-arrow {
     display: block;
+  }
+
+  .benifits-columns {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
