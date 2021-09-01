@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, } from "react-router-dom";
 import  { useState } from "react";
-import whymypflegebox from "../whymypflegebox/whymypflegebox";
-import Homepage from "../Homepage/Homepage"
+
 import "./Header.css"
 export default function Header(props) {
   const [Active, setActive] = useState("");
@@ -25,16 +24,16 @@ useEffect(()=>{
        
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <Link className={Active=="1"?"nav-item nav-link class-active":"nav-item nav-link"}  href={Homepage} to={Homepage}>
-            <p>Home</p> 
+            <Link className={Active=="1"?"nav-item nav-link class-active":"nav-item nav-link"}   to="/Homepage">
+            <p>HOME</p> 
             </Link>
-            <Link className={Active=="2"?"nav-item nav-link class-active":"nav-item nav-link"} to={ whymypflegebox}>
+            <Link className={Active=="2"?"nav-item nav-link class-active":"nav-item nav-link"} to="/whymypflegebox">
             <p> WHY MY PFLEGE BOX</p> 
             </Link>
-            <Link className={Active=="3"?"nav-item nav-link class-active":"nav-item nav-link"} href="#">
+            <Link className={Active=="3"?"nav-item nav-link class-active":"nav-item nav-link"} to="/blogdetails">
             <p>BLOG</p>  
             </Link>
-            <Link className={Active=="4"?"nav-item nav-link class-active":"nav-item nav-link"}  href="#">
+            <Link className={Active=="4"?"nav-item nav-link class-active":"nav-item nav-link"}  to="/FAQ">
            <p>FAQ</p>   
             </Link>
           </div>
