@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Works() {
   return (
-    <div className="container Works">
+    <div className="container-fluid Works">
       <h2>How Your MyPflegebox Works</h2>
       <div className="row icons-container">
         <div className="col-lg-3 row">

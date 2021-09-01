@@ -6,7 +6,7 @@ import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
 import Image from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
 import Image2 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
 import Image12 from "../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg";
-
+import Footer from "../footer/Footer";
 
 function Bloglist() {
   return (
@@ -73,9 +73,9 @@ function Bloglist() {
             </p>
             <p className="datee">4 Min | july 20,2021</p>
           </div>
-        
-  {/* second  */}
-            <div className="col-lg-4 col-md-6 col-sm-6 ">
+
+          {/* second  */}
+          <div className="col-lg-4 col-md-6 col-sm-6 ">
             <img src={Image12} className="articleImg1" />
             <p className="texts1">
               <b>
@@ -115,7 +115,8 @@ function Bloglist() {
             <p className="datee">4 Min | july 20,2021</p>
           </div>
         </div>
-     </div>
+      </div>
+      <Footer />
     </div>
   );
 }

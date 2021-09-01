@@ -5,6 +5,7 @@ import Contactinfo from "./Contactinfo";
 import Carelevel from "./Carelevel";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
+import Footer from "../footer/Footer";
 
 function FillInfo() {
   return (
@@ -22,6 +23,7 @@ function FillInfo() {
           <Note />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

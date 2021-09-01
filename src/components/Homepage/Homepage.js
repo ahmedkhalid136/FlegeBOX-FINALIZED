@@ -6,15 +6,17 @@ import Works from "./Works.js";
 import Benifits from "./Benifits";
 import Relieve from "./Relieve";
 import Header from "../Header/Header";
+import Footer from "../footer/Footer";
 
 function Homepage() {
   return (
     <div>
-      <Header title="Home"/>
+      <Header title="Home" />
       <Title />
       <Works />
       <Benifits />
       <Relieve />
+      <Footer />
     </div>
   );
 }

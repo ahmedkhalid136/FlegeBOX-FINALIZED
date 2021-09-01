@@ -40,6 +40,7 @@
 .Works {
   padding-top: 140px;
   padding-bottom: 140px;
+  padding-left: 100px;
 }
 
 .Works h2 {
@@ -187,5 +188,8 @@
   .benifits-columns {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  .Works {
+    padding-left: 0;
   }
 }
