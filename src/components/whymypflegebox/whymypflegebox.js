@@ -4,6 +4,7 @@ import Title from "./Title";
 import ImageSection from "./ImageSection";
 import Body from "./Body";
 import Header from "../Header/Header";
+import Footer from "../footer/Footer";
 function whymypflegebox() {
   return (
     <div>
@@ -11,6 +12,7 @@ function whymypflegebox() {
       <Title />
       <Body />
       <ImageSection />
+      <Footer />
     </div>
   );
 }

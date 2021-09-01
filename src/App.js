@@ -8,6 +8,8 @@ import contact from "./components/contact/contact";
 import Blogdetails from "./components/Blogdetails/Blogdetails";
 import Bloglist from "./components/Bloglist/Bloglist";
 import FillInfo from "./components/FillInformation/FillInfo";
+import Confirmation from "./components/Confirmation/Confirmation";
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
               <Route path="/Blogdetails" component={Blogdetails}></Route>
               <Route path="/Bloglist" component={Bloglist}></Route>
               <Route path="/Fillinformation" component={FillInfo}></Route>
+              <Route path="/confirmation" component={Confirmation}></Route>
             </Switch>
           </BrowserRouter>
         </body>
