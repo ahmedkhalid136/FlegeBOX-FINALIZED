@@ -9,6 +9,7 @@
 }
 .styleHeading {
   margin-top: 30px;
+  
 }
 .checkboxes {
   margin-left: 40px;
@@ -22,6 +23,7 @@
   margin-left: 20px;
   height: 50px;
 }
+
 /* Second Row */
 .secondDiv {
   margin-top: 1%;
@@ -68,18 +70,21 @@
   float: left;
   text-align: left;
   width: 90%;
-  height: 200px;
+  height:150px;
   margin-left: 80px;
   border-radius: 20px;
   margin-top: 9px;
 }
 .Carelevelinner {
-  margin-left: 40px;
+ text-align: center;
 }
 .Buttoncontainer {
   margin-top: 3%;
 }
-
+.styleHeadingCare {
+  margin-top: 30px;
+ margin-left: 40px;
+}
 /* button component */
 .buttonDiv2 {
   border-radius: 15px;
@@ -123,7 +128,11 @@
   margin-top: 3%;
 }
 .innercontact {
-  margin-left: 40px;
+  margin-left: 0px;
+}
+.styleHeadingContact {
+  margin-top: 30px;
+ margin-left: 40px;
 }
 
 /* Note Div */
@@ -136,6 +145,10 @@
   margin-left: 80px;
   border-radius: 20px;
   margin-top: 9px;
+}
+.styleHeadingNote{
+  margin-top: 30px;
+ margin-left: 40px;
 }
 
 .area {
@@ -203,9 +216,7 @@
 
     height: 200px;
   }
-  .innercontact {
-    margin-left: 20px;
-  }
+
   .separateCheckbox {
     margin-top: 15%;
   }
@@ -261,7 +272,7 @@
   .buttonDiv2 {
     border-radius: 15px;
     background: #f6fbfe;
-    width: 50%;
+    width: 100%;
     height: 50px;
     border: 1px solid #dadadd;
     font-family: Nunito Sans;
@@ -275,40 +286,41 @@
   .buttonDiv3 {
     border-radius: 15px;
     background: #2faae5;
-    width: 50%;
+    width: 100%;
     height: 50px;
     border: 1px solid #dadadd;
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: #1f3347;
+    color: #FFFFFF;
     text-transform: uppercase;
     margin:15px;
+    
   }
   
 }
 
 @media (min-width:300px) and (max-width:499px) {
   .mainDiv{
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .personalInfo {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 85%;
+    width: 78%;
     height: 600px;
-    margin-left: 10px;
+    margin-left: 1px;
     border-radius: 20px;
   }
   .Carelevel {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 85%;
-    height: 600px;
-    margin-left: 10px;
+    width: 78%;
+    height: 400px;
+    margin-left: 1px;
     border-radius: 20px;
     margin-top: 9px;
   }
@@ -316,9 +328,9 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 85%;
+    width: 78%;
     height: 210px;
-    margin-left: 10px;
+    margin-left: 1px;
     border-radius: 20px;
     margin-top: 9px;
   }
@@ -326,9 +338,9 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 85%;
+    width: 78%;
     height: 300px;
-    margin-left: 10px;
+    margin-left: 1px;
     border-radius: 20px;
     margin-top: 9px;
   }
@@ -352,7 +364,7 @@
   .buttonDiv2 {
     border-radius: 15px;
     background: #f6fbfe;
-    width: 50%;
+    width:80%;
     height: 50px;
     border: 1px solid #dadadd;
     font-family: Nunito Sans;
@@ -361,12 +373,12 @@
     font-size: 16px;
     color: #1f3347;
     text-transform: uppercase;
-    margin:15px;
+    margin:15px 15px 15px 0px;
   }
   .buttonDiv3 {
     border-radius: 15px;
     background: #2faae5;
-    width: 50%;
+    width:80%;
     height: 50px;
     border: 1px solid #dadadd;
     font-family: Nunito Sans;
@@ -375,7 +387,7 @@
     font-size: 16px;
     color: #1f3347;
     text-transform: uppercase;
-    margin:15px;
+    margin:15px 15px 15px 0px;
   }
    /* ******************All the input fields in information tab*************************** */
    .input {
