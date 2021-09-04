@@ -23,7 +23,6 @@ function FillInfo() {
           <Note />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

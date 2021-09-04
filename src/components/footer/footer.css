@@ -1,5 +1,6 @@
 .footer-title {
   height: 260px;
+  margin-top: 30px;
 
   transform: scaleX(-1);
   background: linear-gradient(
