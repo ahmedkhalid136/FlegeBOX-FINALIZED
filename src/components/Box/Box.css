@@ -1,0 +1,13 @@
+/* Boxes */
+.boxes{
+    background: #F4F4F5;
+border-radius: 20px;
+height: 100px;
+margin:3px;
+}
+/* Cart */
+.yourCart{
+    height:500px;
+  background-color: #EDF7FD;
+  border-radius: 20px;
+}
