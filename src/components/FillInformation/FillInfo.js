@@ -16,25 +16,7 @@ function FillInfo() {
       <div className="personalInfo">
       
         <div className="checkboxes">
-<<<<<<< HEAD
           <h6 className="styleHeading">Personal Information </h6>
-=======
-        <h6 className="styleHeading">Personal Information</h6>
-
-          <FormControlLabel
-            value="Ms"
-            control={<Checkbox color="primary" />}
-            label="Ms"
-            labelPlacement="End"
-          />
-          <FormControlLabel
-            value="Mr"
-            control={<Checkbox color="primary" />}
-            label="Mr"
-            labelPlacement="End"
-          />
-        </div>
->>>>>>> 2169822a5ea2d6a80f1701145538f9a62467b82c
 
         <div className="container">
           <div className="row">
@@ -77,14 +59,11 @@ function FillInfo() {
           />
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
-      <Carelevel /> 
+     
+    </div>
+    <Carelevel />
       <Contactinfo />
       <Note />
-      
->>>>>>> 2169822a5ea2d6a80f1701145538f9a62467b82c
     </div>
   );
 }
