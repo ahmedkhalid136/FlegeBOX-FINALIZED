@@ -1,0 +1,26 @@
+.product-image {
+  height: 60px;
+  width: 60px;
+}
+
+.increment-buttons {
+  background-color: #2faae5 !important;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 0;
+  
+  color: black;
+  border: none;
+
+}
+
+.sizes1 {    
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 0;
+  background-color: #edf7fd  !important;
+  color: black;
+  border: none;
+}

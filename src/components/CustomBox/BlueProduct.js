@@ -1,14 +1,14 @@
 import React from "react";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
-import "./Whitebox.css";
+import "./BlueProduct.css";
 
-export default function WhiteProduct() {
+export default function BlueProduct() {
   return (
     <div
       className="row"
       style={{
         position: "relative",
-        backgroundColor:"#FFFFFF",
+        backgroundColor: "#EDF7FD",
         borderRadius: "20px",
         padding: "20px 10px 10px",
       }}
@@ -25,12 +25,16 @@ export default function WhiteProduct() {
       </div>
       <div className="col-lg-6" style={{ paddingTop: "20px" }}>
         <div className="row">
-          <div className="col-lg-12">
-            <button className="increment-buttons1 sizes1">S</button>
-            <button className="increment-buttons1 sizes1">M</button>
-            <button className="increment-buttons1 sizes1">L</button>
+          <div className="col-lg-5">
+            <button className="increment-buttons sizes">S</button>
+            <button className="increment-buttons sizes">M</button>
+            <button className="increment-buttons sizes">L</button>
           </div>
-      
+          <div className="col-lg-7">
+            <button className="increment-buttons">-</button>
+            <span className="increment-buttons counter">1</span>
+            <button className="increment-buttons">+</button>
+          </div>
         </div>
       </div>
     </div>

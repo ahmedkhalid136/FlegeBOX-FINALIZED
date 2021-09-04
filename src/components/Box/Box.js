@@ -1,6 +1,7 @@
 import React from "react";
 import "./Box.css";
 import Whiteproducts from "./Whiteproducts";
+import WhiteProduct from "./Whiteproducts";
 function Box() {
   return (
     <div>
@@ -164,7 +165,7 @@ function Box() {
           <div className="col-lg-6 yourCart">
             Your Cart
             <div className="col-lg-12">
-              <Whiteproducts />
+              <WhiteProduct/>
             </div>
           </div>
         </div>

@@ -1,0 +1,33 @@
+.product-image {
+  height: 60px;
+  width: 60px;
+}
+
+.increment-buttons {
+  background-color: #2faae5 !important;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  align-content: center;
+  vertical-align: center;
+  padding-bottom: 10px;
+}
+
+.counter {
+  background: #ffffff !important;
+  color: black;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.sizes {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 0;
+  background: #ffffff !important;
+  color: black;
+}

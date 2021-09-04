@@ -2,21 +2,33 @@ import React, { useState } from "react";
 import "./Fillinfo.css";
 import Checkbox from "@material-ui/core/Checkbox";
 import Contactinfo from "./Contactinfo";
-import Carelevel from "./Carelevel";
+import Carelevel from "./Carelevel"
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
-import Footer from "../footer/Footer"
-
 
 function FillInfo() {
+
   return (
-  
-        <div className="mainDiv">
+    <div className="mainDiv">
       
       <div className="personalInfo">
       
         <div className="checkboxes">
-          <h6 className="styleHeading">Personal Information </h6>
+        <h6 className="styleHeading">Personal Information</h6>
+
+          <FormControlLabel
+            value="Ms"
+            control={<Checkbox color="primary" />}
+            label="Ms"
+            labelPlacement="End"
+          />
+          <FormControlLabel
+            value="Mr"
+            control={<Checkbox color="primary" />}
+            label="Mr"
+            labelPlacement="End"
+          />
+        </div>
 
         <div className="container">
           <div className="row">
@@ -59,9 +71,8 @@ function FillInfo() {
           />
         </div>
       </div>
-     
-    </div>
-    <Carelevel />
+
+      <Carelevel /> 
       <Contactinfo />
       <Note />
     </div>
