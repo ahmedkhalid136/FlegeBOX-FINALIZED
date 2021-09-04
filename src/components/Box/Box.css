@@ -21,3 +21,28 @@
   transform: translate(-50%, -50%);
   font-size: 40px;
 }
+
+/* whitePoducts */
+.textComponent {
+  text-align: left;
+}
+
+/* Icons */
+.Icons {
+  background-color: #f4f4f5;
+  border-radius: 80px;
+
+  width: 50px;
+}
+.RightText {
+  text-align: right;
+  margin-top: 15px;
+}
+.fullLine {
+  padding: 10px;
+}
+@media (min-width:300px) and (max-width:500px) {
+  .chooseboxHead{
+display: none;
+  }
+}
