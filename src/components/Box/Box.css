@@ -2,7 +2,8 @@
 .boxes {
   background: #f4f4f5;
   border-radius: 20px;
-  height: 100px;
+  height: 110px;
+  width:80%;
   margin: 3px;
   position: relative;
 }

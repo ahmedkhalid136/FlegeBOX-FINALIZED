@@ -6,6 +6,19 @@ function Box() {
   return (
     <div>
       <div className="container">
+        {/* Header */}
+        <div className="container-fluid">
+       <div className="row">
+         <div className="col-lg-2">
+           1.ChooseBox
+         </div>
+         <div className="col-lg-2">...........................</div>
+         <div className="col-lg-2">2.Fill information form </div>
+         <div className="col-lg-2">...........................</div>
+         <div className="col-lg-2">3.Confirmation</div>
+       </div>
+        </div>
+        {/* Choose Box Header */}
         <div className="row fullLine">
           <div className="col-lg-3  RightText chooseboxHead">Choose Box:</div>
           <div className="col-lg-3">
@@ -31,7 +44,7 @@ function Box() {
           </div>
           <div className="col-lg-3">
           <div className="row">
-              <div className="col-lg-1 ">
+              <div className="col-lg-2 ">
                 <div className="Icons">
                 <svg
                     width="30"
@@ -47,11 +60,12 @@ function Box() {
                   </svg>
                 </div>
               </div>
-              <div className="col-lg-5 RightText">Custom</div>
+              <div className="col-lg-4 RightText">Custom</div>
             </div>
           </div>
           <div className="col-lg-3"></div>
         </div>
+        {/* 2 Main components box and cart */}
         <div className="row">
           <div className="col-lg-6" style={{ textAlign: "left" }}>
             Choosee Box
@@ -165,6 +179,10 @@ function Box() {
           <div className="col-lg-6 yourCart">
             Your Cart
             <div className="col-lg-12">
+              <WhiteProduct/>
+              <WhiteProduct/>
+              <WhiteProduct/>
+              <WhiteProduct/>
               <WhiteProduct/>
             </div>
           </div>

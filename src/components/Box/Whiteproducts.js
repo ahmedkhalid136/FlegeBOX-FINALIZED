@@ -13,7 +13,11 @@ export default function WhiteProduct() {
         position: "relative",
         backgroundColor:"#FFFFFF",
         borderRadius: "20px",
-        padding: "20px 10px 10px",
+        padding: "5px 5px 10px 5px",
+        width:"100%",
+        margin:"6px",
+       
+        
       }}
     >
       <div className="col-lg-2">
