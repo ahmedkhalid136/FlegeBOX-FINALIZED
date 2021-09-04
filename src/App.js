@@ -9,6 +9,7 @@ import Bloglist from "./components/Bloglist/Bloglist";
 import FillInfo from "./components/FillInformation/FillInfo";
 import Confirmation from "./components/Confirmation/Confirmation";
 import Box from "./components/Box/Box";
+import CustomBox from "./components/CustomBox/CustomBox";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/Fillinformation" component={FillInfo}></Route>
               <Route path="/confirmation" component={Confirmation}></Route>
               <Route path="/Box" component={Box}></Route>
+              <Route path="/CustomBox" component={CustomBox}></Route>
             </Switch>
           </BrowserRouter>
         </body>

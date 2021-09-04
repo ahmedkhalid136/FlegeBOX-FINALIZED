@@ -5,21 +5,14 @@ import Contactinfo from "./Contactinfo";
 import Carelevel from "./Carelevel";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
-import Footer from "../footer/Footer"
-
+import Footer from "../footer/Footer";
 
 function FillInfo() {
   return (
-  
-        <div className="mainDiv">
-      
+    <div className="mainDiv">
       <div className="personalInfo">
-      
         <div className="checkboxes">
-<<<<<<< HEAD
-          <h6 className="styleHeading">Personal Information </h6>
-=======
-        <h6 className="styleHeading">Personal Information</h6>
+          <h6 className="styleHeading">Personal Information</h6>
 
           <FormControlLabel
             value="Ms"
@@ -34,7 +27,6 @@ function FillInfo() {
             labelPlacement="End"
           />
         </div>
->>>>>>> 2169822a5ea2d6a80f1701145538f9a62467b82c
 
         <div className="container">
           <div className="row">
@@ -77,14 +69,10 @@ function FillInfo() {
           />
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-      <Carelevel /> 
+      <Carelevel />
       <Contactinfo />
       <Note />
-      
->>>>>>> 2169822a5ea2d6a80f1701145538f9a62467b82c
     </div>
   );
 }
