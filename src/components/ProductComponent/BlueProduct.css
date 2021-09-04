@@ -31,3 +31,22 @@
   background: #ffffff !important;
   color: black;
 }
+
+.cart-sizes {
+  background-color: #edf7fd !important;
+  border-radius: 0;
+  border: none;
+  color: black;
+}
+
+@media (max-width: 400px) {
+  .product-name {
+    text-align: right;
+  }
+  .product-image {
+    height: 60px;
+  }
+  .increment-area {
+    display: none;
+  }
+}
