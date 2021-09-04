@@ -3,24 +3,23 @@
   width: 60px;
 }
 
-.increment-buttons {
+.increment-buttons1 {
   background-color: #2faae5 !important;
   width: 30px;
   height: 30px;
   padding: 0;
   border-radius: 0;
-  
-  color: black;
-  border: none;
 
+  color: white;
+  border: none;
 }
 
-.sizes1 {    
+.sizes1 {
   width: 30px;
   height: 30px;
   padding: 0;
   border-radius: 0;
-  background-color: #edf7fd  !important;
+  background-color: #edf7fd !important;
   color: black;
   border: none;
 }
