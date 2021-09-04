@@ -7,20 +7,16 @@
   margin-left: 80px;
   border-radius: 20px;
 }
-
-.mainDiv input {
-  width: 100%;
-}
-
 .styleHeading {
   margin-top: 30px;
+  
 }
 .checkboxes {
   margin-left: 40px;
 }
 .input {
   background: #f6fbfe;
-  width: 100%;
+  width: 80%;
   border: 1px solid #dadadd;
   box-sizing: border-box;
   border-radius: 10px;
@@ -38,14 +34,16 @@
   border: 1px solid #dadadd;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-left: 20px;
   height: 50px;
 }
 .input2 {
   background: #f6fbfe;
-  width: 100%;
+  width: 45%;
   border: 1px solid #dadadd;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-left: 20px;
   height: 50px;
 }
 .input3 {
@@ -54,6 +52,7 @@
   border: 1px solid #dadadd;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-left: 20px;
   height: 50px;
 }
 .input4 {
@@ -62,6 +61,7 @@
   border: 1px solid #dadadd;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-left: 20px;
   height: 50px;
 }
 /* Care level box */
@@ -70,19 +70,20 @@
   float: left;
   text-align: left;
   width: 90%;
-  height: 150px;
+  height:150px;
   margin-left: 80px;
   border-radius: 20px;
   margin-top: 9px;
 }
 .Carelevelinner {
-  text-align: center;
+ text-align: center;
 }
 .Buttoncontainer {
+  margin-top: 3%;
 }
 .styleHeadingCare {
   margin-top: 30px;
-  margin-left: 40px;
+ margin-left: 40px;
 }
 /* button component */
 .buttonDiv2 {
@@ -119,16 +120,19 @@
   text-align: left;
   width: 90%;
   height: 200px;
+  margin-left: 80px;
   border-radius: 20px;
+  margin-top: 9px;
 }
 .contactContainer {
+  margin-top: 3%;
 }
 .innercontact {
   margin-left: 0px;
 }
 .styleHeadingContact {
   margin-top: 30px;
-  margin-left: 40px;
+ margin-left: 40px;
 }
 
 /* Note Div */
@@ -138,146 +142,167 @@
   text-align: left;
   width: 90%;
   height: 400px;
+  margin-left: 80px;
   border-radius: 20px;
+  margin-top: 9px;
 }
-.styleHeadingNote {
+.styleHeadingNote{
   margin-top: 30px;
-  margin-left: 40px;
+ margin-left: 40px;
 }
 
 .area {
   background: #f6fbfe;
-  width: 100%;
+  width: 90%;
   border: 1px solid #dadadd;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-left: 20px;
   height: 300px;
 }
 .separateCheckbox {
+  margin-top: 5%;
 }
 
 @media (min-width: 500px) and (max-width: 800px) {
-  .mainDiv {
+  .mainDiv{
     margin-left: 10px;
   }
   .personalInfo {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 100%;
+    width: 85%;
     height: 500px;
+    margin-left: 10px;
     border-radius: 20px;
   }
   .Carelevel {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 100%;
+    width: 85%;
     height: 400px;
+    margin-left: 10px;
     border-radius: 20px;
+    margin-top: 9px;
   }
   .ContactInfo {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 100%;
+    width: 85%;
     height: 300px;
+    margin-left: 10px;
     border-radius: 20px;
+    margin-top: 9px;
   }
   .NoteDiv {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 100%;
+    width: 85%;
     height: 300px;
+    margin-left: 10px;
     border-radius: 20px;
+    margin-top: 9px;
   }
   .area {
     background: #f6fbfe;
-    width: 100%;
+    width: 80%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
 
     height: 200px;
   }
+
   .separateCheckbox {
+    margin-top: 15%;
   }
-}
-/* ******************All the input fields in information tab*************************** */
-.input {
-  background: #f6fbfe;
-  width: 100%;
-  border: 1px solid #dadadd;
-  box-sizing: border-box;
-  border-radius: 10px;
-  height: 50px;
-}
-.input1 {
-  background: #f6fbfe;
-  width: 100%;
-  border: 1px solid #dadadd;
-  box-sizing: border-box;
-  border-radius: 10px;
-  height: 50px;
-}
-.input2 {
-  background: #f6fbfe;
-  width: 100%;
-  border: 1px solid #dadadd;
-  box-sizing: border-box;
-  border-radius: 10px;
-  height: 50px;
-}
-.input3 {
-  background: #f6fbfe;
-  width: 100%;
-  border: 1px solid #dadadd;
-  box-sizing: border-box;
-  border-radius: 10px;
-  height: 50px;
-}
-.input4 {
-  background: #f6fbfe;
-  width: 100%;
-  border: 1px solid #dadadd;
-  box-sizing: border-box;
-  border-radius: 10px;
-  height: 50px;
+
+  /* ******************All the input fields in information tab*************************** */
+  .input {
+    background: #f6fbfe;
+    width: 80%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input1 {
+    background: #f6fbfe;
+    width: 90%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin:15px;
+    height: 50px;
+  }
+  .input2 {
+    background: #f6fbfe;
+    width: 45%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input3 {
+    background: #f6fbfe;
+    width: 45%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input4 {
+    background: #f6fbfe;
+    width: 90%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+
+  /* button component */
+  .buttonDiv2 {
+    border-radius: 15px;
+    background: #f6fbfe;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+    margin:15px;
+  }
+  .buttonDiv3 {
+    border-radius: 15px;
+    background: #2faae5;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin:15px;
+    
+  }
+  
 }
 
-/* button component */
-.buttonDiv2 {
-  border-radius: 15px;
-  background: #f6fbfe;
-  width: 100%;
-  height: 50px;
-  border: 1px solid #dadadd;
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  color: #1f3347;
-  text-transform: uppercase;
-  margin: 15px;
-}
-.buttonDiv3 {
-  border-radius: 15px;
-  background: #2faae5;
-  width: 100%;
-  height: 50px;
-  border: 1px solid #dadadd;
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  color: #ffffff;
-  text-transform: uppercase;
-  margin: 15px;
-}
-
-@media (min-width: 300px) and (max-width: 499px) {
-  .mainDiv {
+@media (min-width:300px) and (max-width:499px) {
+  .mainDiv{
     margin-left: 5px;
   }
   .personalInfo {
@@ -339,7 +364,7 @@
   .buttonDiv2 {
     border-radius: 15px;
     background: #f6fbfe;
-    width: 80%;
+    width:80%;
     height: 50px;
     border: 1px solid #dadadd;
     font-family: Nunito Sans;
@@ -348,12 +373,12 @@
     font-size: 16px;
     color: #1f3347;
     text-transform: uppercase;
-    margin: 15px 15px 15px 0px;
+    margin:15px 15px 15px 0px;
   }
   .buttonDiv3 {
     border-radius: 15px;
     background: #2faae5;
-    width: 80%;
+    width:80%;
     height: 50px;
     border: 1px solid #dadadd;
     font-family: Nunito Sans;
@@ -362,47 +387,52 @@
     font-size: 16px;
     color: #1f3347;
     text-transform: uppercase;
-    margin: 15px 15px 15px 0px;
+    margin:15px 15px 15px 0px;
   }
-  /* ******************All the input fields in information tab*************************** */
-  .input {
+   /* ******************All the input fields in information tab*************************** */
+   .input {
     background: #f6fbfe;
     width: 80%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
+    margin: 10px;
     height: 50px;
   }
   .input1 {
     background: #f6fbfe;
-    width: 100%;
+    width: 90%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
+    margin:10px;
     height: 50px;
   }
   .input2 {
     background: #f6fbfe;
-    width: 100%;
+    width: 45%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
+    margin: 10px;
     height: 50px;
   }
   .input3 {
     background: #f6fbfe;
-    width: 100%;
+    width: 45%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
+    margin: 10px;
     height: 50px;
   }
   .input4 {
     background: #f6fbfe;
-    width: 100%;
+    width: 90%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
+    margin: 10px;
     height: 50px;
   }
 }
