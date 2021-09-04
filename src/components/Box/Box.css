@@ -46,11 +46,12 @@
 /* Header with 3 buttons */
 .chooosingBox{
   background-color: #F87433;
-  border-radius: 20px;
+  border-radius: 10px;
 
 }
 .head{
   margin-top: 12px;
+margin-left: 15px;
 }
 @media (min-width:300px) and (max-width:500px) {
   .chooseboxHead{
