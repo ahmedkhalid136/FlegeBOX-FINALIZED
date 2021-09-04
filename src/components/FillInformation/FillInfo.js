@@ -12,11 +12,7 @@ function FillInfo() {
     <div className="mainDiv">
       <div className="personalInfo">
         <div className="checkboxes">
-          <h6 className="styleHeading">Personal Information</h6>
-
-          <div className="personalInfo-section">
-            <h6 className="styleHeading">Personal Information</h6>
-          </div>
+          <h6 className="styleHeading">Personal Information </h6>
 
           <Carelevel />
           <Contactinfo />
