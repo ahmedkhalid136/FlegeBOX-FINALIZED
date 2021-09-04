@@ -7,9 +7,9 @@ function Box() {
     <div>
       <div className="container">
         {/* Header */}
-        <div className="container-fluid">
+        <div className="container-fluid head">
        <div className="row">
-         <div className="col-lg-2">
+         <div className="col-lg-2 chooosingBox">
            1.ChooseBox
          </div>
          <div className="col-lg-2">...........................</div>
