@@ -2,38 +2,43 @@ import React,{useState} from "react";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./Whitebox.css";
 
-export default function WhiteProduct() {
+export default function WhiteProduct(props) {
   const [getBackground,setBackground]=useState(true)
   const [getBackground2,setBackground2]=useState(true)
   const [getBackground3,setBackground3]=useState(true)
+  
   return (
+  
     <div
-      className="row"
-      style={{
-        position: "relative",
-        backgroundColor:"#FFFFFF",
-        borderRadius: "20px",
-        padding: "5px 5px 10px 5px",
-        width:"100%",
-        margin:"6px",
-       
-        
-      }}
+    className="row"
+    style={{
+      backgroundColor: "#ffffff",
+      borderRadius: "20px",
+      padding: "20px 10px 10px",
+      margin: "10px 0",
+    }}
+  >
+    <div className="col-lg-2 col-3">
+      <img
+        className="product-image"
+        src={props.image}
+      />
+    </div>
+    <div
+      className="col-lg-4 col-2 product-name"
+      style={{ textAlign: "left" }}
     >
-      <div className="col-lg-2">
-        <img
-          className="product-image"
-          src="./Images/clay-banks-e6pK_snssSY-unsplash.jpg"
-        />
-      </div>
-      <div className="col-lg-4" style={{ textAlign: "left" }}>
-        <h6>N95 Mask</h6>
-        <p>20 Pcs</p>
-      </div>
-      <div className="col-lg-6" style={{ paddingTop: "20px" }}>
-        <div className="row">
-          <div className="col-lg-12">
-            <button onClick={()=>{
+      <h6>{props.Name}</h6>
+      <p>{props.pcs}</p>
+    </div>
+    <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
+      <div className="row">
+        <div
+          className="col-lg-8 col-10 increment-cart"
+          style={{ textAlign: "right" }}
+        >
+          <div className="increment-cart">
+          <button onClick={()=>{
               setBackground(!getBackground)
             }} className={getBackground?"sizes1":"increment-buttons1"}>S</button>
             <button onClick={()=>{
@@ -43,9 +48,10 @@ export default function WhiteProduct() {
               setBackground3(!getBackground3)
             }} className={getBackground3?"sizes1":"increment-buttons1"}>L</button>
           </div>
-      
         </div>
+        
       </div>
     </div>
+  </div>
   );
 }
