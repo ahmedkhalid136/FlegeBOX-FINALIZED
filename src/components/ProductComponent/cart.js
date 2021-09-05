@@ -1,9 +1,10 @@
 import React from "react";
+import "./BlueProduct.css";
 
 export default function cart() {
   return (
     <div
-      className="row"
+      className="row cart-section"
       style={{
         backgroundColor: "#ffffff",
         borderRadius: "20px",
@@ -22,21 +23,14 @@ export default function cart() {
         style={{ textAlign: "left" }}
       >
         <h6>N95 Mask</h6>
-        <p>20 Pcs</p>
+        <p>20Pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
-        <div className="row">
-          <div
-            className="col-lg-8 col-10 increment-cart"
-            style={{ textAlign: "right" }}
-          >
-            <div className="increment-cart">
-              <button className="increment-buttons cart-sizes">S</button>
-              <button className="increment-buttons cart-sizes">M</button>
-              <button className="increment-buttons cart-sizes">L</button>
-            </div>
-          </div>
-          <div className="col-lg-4 col-1" style={{ textAlign: "right" }}>
+        <div className="increment-cart">
+          <button className="increment-buttons cart-sizes">S</button>
+          <button className="increment-buttons cart-sizes">M</button>
+          <button className="increment-buttons cart-sizes">L</button>
+          <div style={{ textAlign: "right", display: "inline-block" }}>
             <i class="fas fa-times"></i>
           </div>
         </div>
