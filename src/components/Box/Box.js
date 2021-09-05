@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Box.css";
 
 import WhiteProduct from "./Whiteproducts";
-
+import Cart from "../ProductComponent/cart"
 function Box() {
   const [getBox, setBox] = useState("box1");
   const [getBox1,setBox1]=useState(true);
@@ -315,22 +315,22 @@ function Box() {
             <div className="col-lg-12">
               
               {getBox=="box1"&& (box1.map((user) => (
-                <WhiteProduct Name={user.name} pcs={user.pcs} image={user.img} />
+                <Cart Name={user.name} pcs={user.pcs} image={user.img} />
               )))}
                {getBox=="box2"&& (box2.map((user) => (
-                <WhiteProduct Name={user.name} pcs={user.pcs} image={user.img} />
+                <Cart Name={user.name} pcs={user.pcs} image={user.img} />
               )))}
                {getBox=="box3"&& (box3.map((user) => (
-                <WhiteProduct Name={user.name} pcs={user.pcs} image={user.img}/>
+                <Cart Name={user.name} pcs={user.pcs} image={user.img}/>
               )))}
                 {getBox=="box4"&& (box4.map((user) => (
-                <WhiteProduct Name={user.name} pcs={user.pcs} image={user.img}/>
+                <Cart Name={user.name} pcs={user.pcs} image={user.img}/>
               )))}
                {getBox=="box5"&& (box5.map((user) => (
-                <WhiteProduct Name={user.name} pcs={user.pcs} image={user.img}/>
+                <Cart Name={user.name} pcs={user.pcs} image={user.img}/>
               )))}
                {getBox=="box6"&& (box6.map((user) => (
-                <WhiteProduct Name={user.name} pcs={user.pcs} image={user.img}/>
+                <Cart Name={user.name} pcs={user.pcs} image={user.img}/>
               )))}
 
             </div>
