@@ -49,4 +49,11 @@
   .increment-area {
     display: none;
   }
+  .cart-section {
+    padding: 2px;
+  }
+  .fa-times {
+    font-size: 15px;
+    margin-right: -25px;
+  }
 }
