@@ -23,7 +23,7 @@ export default function cart() {
         style={{ textAlign: "left" }}
       >
         <h6>N95 Mask</h6>
-        <p>20 Pcs</p>
+        <p>20Pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">

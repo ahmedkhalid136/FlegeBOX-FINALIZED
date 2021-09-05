@@ -39,6 +39,39 @@
   color: black;
 }
 
+.fa-times {
+  margin-right: -70px;
+}
+
+/* MOBILE ADD TO CART */
+.mobile-cart-section {
+  background: #edf7fd;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 7px 5px;
+}
+
+.mobile-cart-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.mobile-button-area {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.react-multi-carousel-dot button {
+  background: #2faae5;
+  border: 1px solid #2faae5;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #ffffff !important;
+  border: 1px solid black !important;
+}
+
 @media (max-width: 400px) {
   .product-name {
     text-align: right;
@@ -50,10 +83,13 @@
     display: none;
   }
   .cart-section {
-    padding: 2px;
   }
   .fa-times {
     font-size: 15px;
     margin-right: -25px;
+  }
+
+  .product-name p {
+    font-size: 13px;
   }
 }
