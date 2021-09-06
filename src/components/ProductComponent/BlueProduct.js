@@ -1,9 +1,17 @@
-import React from "react";
+import React,{useState}from "react";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct() {
-  
+  const[count,setCount] =useState(0)
+  const increment=()=>{
+       setCount(count+1)
+  }
+  const decrement=()=>{
+    if(count>0)setCount(count-1)
+    
+    
+  }
   return (
     <div
       className="row"
@@ -36,9 +44,13 @@ export default function BlueProduct() {
             <button className="increment-buttons sizes">L</button>
           </div>
           <div className="col-lg-7 col-7 increment-area">
-            <button className="increment-buttons">-</button>
-            <span className="increment-buttons counter">Count</span>
-            <button className="increment-buttons">+</button>
+            <button className="increment-buttons" onClick={()=>{
+              decrement()
+            }}>-</button>
+            <span className="increment-buttons counter">{count}</span>
+            <button className="increment-buttons" onClick={()=>{
+              increment()
+            }}>+</button>
           </div>
         </div>
       </div>
