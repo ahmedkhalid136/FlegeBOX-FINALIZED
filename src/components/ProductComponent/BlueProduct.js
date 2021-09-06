@@ -3,6 +3,7 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct() {
+  
   return (
     <div
       className="row"
@@ -36,7 +37,7 @@ export default function BlueProduct() {
           </div>
           <div className="col-lg-7 col-7 increment-area">
             <button className="increment-buttons">-</button>
-            <span className="increment-buttons counter">1</span>
+            <span className="increment-buttons counter">Count</span>
             <button className="increment-buttons">+</button>
           </div>
         </div>
