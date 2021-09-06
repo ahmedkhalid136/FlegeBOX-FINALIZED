@@ -8,7 +8,7 @@ export default function Title() {
         <br />
         <br />
         <div className="row">
-          <div className="col-lg-4" style={{ textAlign: "left" }}>
+          <div className="col-lg-4 phone-column" style={{ textAlign: "left" }}>
             <span>
               <i class="fas fa-phone-volume"></i> 040 123 45 67
             </span>

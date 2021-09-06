@@ -1,7 +1,6 @@
 .footer-title {
-  height: 260px;
   margin-top: 30px;
-
+  padding: 30px 0;
   transform: scaleX(-1);
   background: linear-gradient(
       0deg,
@@ -95,4 +94,19 @@
   font-size: 18px;
   line-height: 25px;
   color: rgba(255, 255, 255, 0.8) !important;
+}
+
+@media (max-width: 400px) {
+  .phone-column {
+    text-align: center !important;
+  }
+
+  .footer-title .col-lg-4 {
+    padding: 10px 0;
+  }
+
+  .footer-title {
+    background-size: cover;
+    background-position-x: center;
+  }
 }
