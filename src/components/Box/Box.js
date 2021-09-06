@@ -206,7 +206,7 @@ function Box() {
                 </div>
               </div>
               <div className="col-lg-4 RightText">
-                <h2>Boxes</h2>
+              <a> <h2>Boxes</h2> </a>
               </div>
             </div>
           </div>
@@ -283,7 +283,13 @@ function Box() {
             <h2 className="cart-h2">Choose Box</h2>
             <div className="row majorbox" style={{ textAlign: "center" }}>
               <div className="col-lg-4 col-4 ">
-                <div className={getBox1 ? "boxes" : "boxes2"}>
+                <div className={getBox1 ? "boxes" : "boxes2"}
+                 onClick={() => {
+                  setBox("box1");
+                  setBox1(!getBox1);
+                  setBox2(true);
+                  setBox3(true);
+                }}>
                   <svg
                     width="60"
                     height="64"
@@ -297,19 +303,19 @@ function Box() {
                     />
                   </svg>
                   <p
-                    onClick={() => {
-                      setBox("box1");
-                      setBox1(!getBox1);
-                      setBox2(true);
-                      setBox3(true);
-                    }}
+                   
                   >
                     BOX 1
                   </p>
                 </div>
               </div>
               <div className="col-lg-4 col-4">
-                <div className={getBox2 ? "boxes" : "boxes2"}>
+                <div className={getBox2 ? "boxes" : "boxes2"}   onClick={() => {
+                      setBox("box2");
+                      setBox2(!getBox2);
+                      setBox1(true);
+                      setBox3(true);
+                    }}>
                   <svg
                     width="60"
                     height="64"
@@ -323,19 +329,19 @@ function Box() {
                     />
                   </svg>
                   <p
-                    onClick={() => {
-                      setBox("box2");
-                      setBox2(!getBox2);
-                      setBox1(true);
-                      setBox3(true);
-                    }}
+                  
                   >
                     BOX 2
                   </p>
                 </div>
               </div>
               <div className="col-lg-4 col-4 ">
-                <div className={getBox3 ? "boxes" : "boxes2"}>
+                <div className={getBox3 ? "boxes" : "boxes2"}  onClick={() => {
+                      setBox("box3");
+                      setBox3(!getBox3);
+                      setBox1(true);
+                      setBox2(true);
+                    }}>
                   <svg
                     width="60"
                     height="64"
@@ -349,12 +355,7 @@ function Box() {
                     />
                   </svg>
                   <p
-                    onClick={() => {
-                      setBox("box3");
-                      setBox3(!getBox3);
-                      setBox1(true);
-                      setBox2(true);
-                    }}
+                   
                   >
                     BOX 3
                   </p>
