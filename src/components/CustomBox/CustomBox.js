@@ -27,6 +27,21 @@ const responsive = {
 };
 
 export default function CustomBox() {
+  const box1 = [
+    {
+      name: "K94 MASK",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    { name: "Gloves ", pcs: 20, img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg" },
+
+    { name: "Oxygen tube", pcs: 20, img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg" },
+  ];
   return (
     <div className="container">
       <div className="row">
@@ -74,11 +89,7 @@ export default function CustomBox() {
               </div>
             </div>
             <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
+           
           </div>
         </div>
       </div>
