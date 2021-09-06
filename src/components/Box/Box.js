@@ -181,12 +181,8 @@ function Box() {
                   <svg
                     width="60"
                     height="60"
-<<<<<<< HEAD
-                    viewBox="0 0 65 50"
-=======
                     viewBox="0 6 65 50"
                     fill="none"
->>>>>>> 14b9cb1078301bec8ebd4ca2208ef603f1b2c13d
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
