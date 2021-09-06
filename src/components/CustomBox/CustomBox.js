@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "../ProductComponent/BlueProduct";
 import Cart from "../ProductComponent/cart";
 import "./styles.css";
@@ -27,21 +27,33 @@ const responsive = {
 };
 
 export default function CustomBox() {
-  const box1 = [
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    { name: "Gloves ", pcs: 20, img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg" },
+  const [childCount, SetCount] = useState(0);
+  const [childCount1, SetCount1] = useState(0);
+  const [childCount2, SetCount2] = useState(0);
+  const [childCount3, SetCount3] = useState(0);
+  const [childCount4, SetCount4] = useState(0);
+  const [childCount5, SetCount5] = useState(0);
 
-    { name: "Oxygen tube", pcs: 20, img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg" },
-  ];
+  const box1 = {
+    name: "K94 MASK",
+    pcs: 20,
+    img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+  };
+  const box2 = {
+    name: "hand sanitizer",
+    pcs: 20,
+    img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+  };
+  const box3 = {
+    name: "Gloves ",
+    pcs: 20,
+    img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+  };
+  const box4 = {
+    name: "Oxygen tube",
+    pcs: 20,
+    img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+  };
   return (
     <div className="container">
       <div className="row">
@@ -70,12 +82,42 @@ export default function CustomBox() {
             </Carousel>
           </div>
           <div className="desktop-cart">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            <Product
+              mycount={SetCount}
+              Name={box1.name}
+              pcs={box1.pcs}
+              image={box1.img}
+            />
+            <Product
+              mycount={SetCount1}
+              Name={box2.name}
+              pcs={box2.pcs}
+              image={box2.img}
+            />
+            <Product
+              mycount={SetCount2}
+              Name={box3.name}
+              pcs={box3.pcs}
+              image={box3.img}
+            />
+            <Product
+              mycount={SetCount3}
+              Name={box4.name}
+              pcs={box4.pcs}
+              image={box4.img}
+            />
+            <Product
+              mycount={SetCount4}
+              Name={box4.name}
+              pcs={box4.pcs}
+              image={box4.img}
+            />
+            <Product
+              mycount={SetCount5}
+              Name={box4.name}
+              pcs={box4.pcs}
+              image={box4.img}
+            />
           </div>
         </div>
         <div className="col-lg-6">
@@ -88,8 +130,21 @@ export default function CustomBox() {
                 <span>Clear All</span>
               </div>
             </div>
-            <Cart />
-           
+            <div></div>
+            { childCount == 0  ? null : <Cart value={childCount}  Name={box1.name}
+              pcs={box1.pcs}
+              image={box1.img} />}
+            {childCount1 == 0 ? null: <Cart value={childCount1} Name={box2.name}
+              pcs={box2.pcs}
+              image={box2.img} />}
+            {childCount2 == 0 ? null: <Cart value={childCount2}   Name={box3.name}
+              pcs={box3.pcs}
+              image={box3.img}/>}
+            {childCount3 == 0 ? null: <Cart value={childCount3}  Name={box4.name}
+              pcs={box4.pcs}
+              image={box4.img}/>}
+            {childCount4 == 0 ? null: <Cart value={childCount4} />}
+            {childCount5 == 0 ? null: <Cart value={childCount5} />}
           </div>
         </div>
       </div>
