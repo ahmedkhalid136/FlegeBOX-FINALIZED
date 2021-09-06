@@ -67,6 +67,11 @@
   transform: translate(-50%, -50%);
   font-size: 40px;
   color: #fff !important;
+  fill: white !important;
+}
+
+.boxes2 path {
+  fill: white;
 }
 
 /* whitePoducts */
