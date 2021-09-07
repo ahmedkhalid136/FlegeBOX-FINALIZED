@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Box.css";
 import WhiteProduct from "./Whiteproducts";
-import Cart from "../ProductComponent/cart";
+import Cart1 from "../ProductComponent/Cart1";
 function BoxComp() {
     const [getBox, setBox] = useState("box1");
     const [getBox1, setBox1] = useState(true);
@@ -313,27 +313,27 @@ function BoxComp() {
             <div className="col-lg-12">
               {getBox == "box1" &&
                 box1.map((user) => (
-                  <Cart Name={user.name} pcs={user.pcs} image={user.img} />
+                  <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
               {getBox == "box2" &&
                 box2.map((user) => (
-                  <Cart Name={user.name} pcs={user.pcs} image={user.img} />
+                  <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
               {getBox == "box3" &&
                 box3.map((user) => (
-                  <Cart Name={user.name} pcs={user.pcs} image={user.img} />
+                  <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
               {getBox == "box4" &&
                 box4.map((user) => (
-                  <Cart Name={user.name} pcs={user.pcs} image={user.img} />
+                  <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
               {getBox == "box5" &&
                 box5.map((user) => (
-                  <Cart Name={user.name} pcs={user.pcs} image={user.img} />
+                  <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
               {getBox == "box6" &&
                 box6.map((user) => (
-                  <Cart Name={user.name} pcs={user.pcs} image={user.img} />
+                  <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
             </div>
           </div>
