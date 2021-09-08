@@ -200,18 +200,96 @@
   .mobile-fullLine {
     display: block;
   }
+  /* .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  } */
   .Icons {
+    
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
   }
+  .Icons2{
+    
+    
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+    }
+  
+  /* .Icons2 {
+    background-color: #2faae5;
+    border-radius: 50%;
+    position: relative;
+  
+    width: 100px;
+    height: 100px;
+    margin-top: -10px;
+  }
+  .CustomIcons {
+    background-color: #f4f4f5;
+    border-radius: 50%;
+    position: relative;
+  
+    width: 100px;
+    height: 100px;
+    margin-top: -10px;
+  }
+  .CustomIcons2 {
+    background-color: #2faae5;
+    border-radius: 50%;
+    position: relative;
+  
+    width: 100px;
+    height: 100px;
+    margin-top: -10px;
+  }
+  .Icons svg {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  .Icons2 svg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: #fff !important;
+    fill: white !important;
+  }
+  .CustomIcons svg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  .CustomIcons2 svg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: #fff !important;
+    fill: white !important;
+  } */
   .mobile-fullLine .col-6 {
     display: block;
   }
   .fullLine {
     display: none;
   }
-
+  
+  .Custo
   .head {
     display: none;
   }

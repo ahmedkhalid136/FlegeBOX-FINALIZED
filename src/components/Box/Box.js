@@ -108,7 +108,11 @@ const [getBox1,setBox1]=useState(true)
           <div className="row">
             <div className="col-6">
               {" "}
-              <div className="Icons">
+              <div className={getBox ? "Icons" : "Icons2"} onClick={()=>{
+                  setBox(!getBox)
+                  setComp(true)
+                  setBox1(true)
+                }}>
                 <svg
                   width="60"
                   height="60"
@@ -126,7 +130,11 @@ const [getBox1,setBox1]=useState(true)
             </div>
             <div className="col-6">
               {" "}
-              <div className="Icons">
+              <div className={getBox1 ? "CustomIcons" : "CustomIcons2"} onClick={()=>{
+                  setBox1(!getBox1)
+                  setComp(false)
+                  setBox(true)
+                }}>
                 <svg
                   width="60"
                   height="60"
