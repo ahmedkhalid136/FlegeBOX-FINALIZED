@@ -5,6 +5,7 @@ import Contactinfo from "./Contactinfo";
 import Carelevel from "./Carelevel";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
+import Footer from "../footer/Footer";
 
 function FillInfo(props) {
   return (
@@ -58,14 +59,56 @@ function FillInfo(props) {
               </div>
             </div>
           </div>
+          <div className="checkboxes">
+            <FormControlLabel
+              value="Ms"
+              control={<Checkbox color="primary" />}
+              label="Different address"
+              labelPlacement="End"
+            />
+          </div>
         </div>
-        <div className="checkboxes">
+
+        <Contactinfo />
+        <Note />
+        <div className="row separateCheckbox">
           <FormControlLabel
-            value="Ms"
             control={<Checkbox color="primary" />}
-            label="Different address"
+            label="Confirm first check box"
             labelPlacement="End"
           />
+          <FormControlLabel
+            control={<Checkbox color="primary" />}
+            label="Confirm second check box"
+            labelPlacement="End"
+          />
+        </div>
+        <div style={{ textAlign: "right", paddingTop: "30px" }}>
+          <button
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              marginRight: "30px",
+            }}
+            onClick={() => {
+              {
+                props.change(true);
+              }
+            }}
+          >
+            <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
+            back
+          </button>
+          <button
+            className="button confirmation-button"
+            onClick={() => {
+              {
+                props.change(true);
+              }
+            }}
+          >
+            Continue
+          </button>
         </div>
       </div>
 

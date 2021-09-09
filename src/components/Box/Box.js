@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
 import Footer from "../footer/Footer";
-import ChooseBox  from "./chooseBox";
+import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
-import Confirmation from "../Confirmation/Confirmation"
+import Confirmation from "../Confirmation/Confirmation";
 
 function Box() {
   const [getComp, setComp] = useState("Box");

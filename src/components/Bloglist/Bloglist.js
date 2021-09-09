@@ -7,112 +7,123 @@ import Image from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
 import Image2 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
 import Image12 from "../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg";
 import Footer from "../footer/Footer";
+import Header from "../Header/Header";
 
 function Bloglist() {
   return (
     <div>
-      <div className="container-fluid">
+      <Header title="bloglist" />
+      <div className="container bloglist-title-section">
         <div className="row">
           <div className="col-lg-6">
-            <img src={leftimage} className="Myimage1" />
+            <img className="left-bloglist-image" src={leftimage} />
           </div>
-          <div className="col-lg-6">
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
+          <div
+            className="col-lg-6 right-bloglist-text"
+            style={{ textAlign: "left" }}
+          >
+            <h2>
+              Lorem ipsum dolor sit amet,
+              <br /> consectetur dolor consectetur
+              <br />
+              adipiscing elit sed do
+            </h2>
+            <br />
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
+              We want to relieve the burden on those affected so that
+              <br /> they can concentrate on the finer things in life and have
+              <br /> more time for togetherness...
             </p>
-            <p className="datee">4 Min | july 20,2021</p>
+            <br />
+            <p>4 MIN | JULY 20, 2021</p>
           </div>
         </div>
-      </div>
-      {/* You may like this article div */}
-      <div className="container">
-        <h2 className="styleHeader1">you may also like this article</h2>
-        <div className="row articleImgdiv ">
-          <div className="col-lg-4 col-md-6 col-sm-6  ">
-            <img src={Image2} className="articleImg1" />
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
-            </p>
-            <p className="datee">4 Min | july 20,2021</p>
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-6  ">
-            <img src={BannerImage} className="articleImg1" />
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
-            </p>
-            <p className="datee">4 Min | july 20,2021</p>
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-6  ">
-            <img src={Image} className="articleImg1" />
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
-            </p>
-            <p className="datee">4 Min | july 20,2021</p>
-          </div>
 
-          {/* second  */}
-          <div className="col-lg-4 col-md-6 col-sm-6 ">
-            <img src={Image12} className="articleImg1" />
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
-            </p>
-            <p className="datee">4 Min | july 20,2021</p>
+        {/* POPULAR ARTICLE SECTION */}
+
+        <div className="container popular-article-section">
+          <div style={{ textAlign: "center", paddingBottom: "50px" }}>
+            <h3>Popular Article</h3>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-6 ">
-            <img src={mainImage} className="articleImg1" />
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
-            </p>
-            <p className="datee">4 Min | july 20,2021</p>
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-6  ">
-            <img src={Image} className="articleImg1" />
-            <p className="texts1">
-              <b>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </b>
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry'
-            </p>
-            <p className="datee">4 Min | july 20,2021</p>
+          <div className="row">
+            <div className="col-lg-4" style={{ textAlign: "left" }}>
+              <img src={Image2} className="bloglist-image" />
+              <br />
+              <br />
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <br />
+              <p>
+                We want everyone in need of care and their relatives to receive
+                the benefits...{" "}
+              </p>
+              <br />
+              <p>4 MIN | JULY 20, 2021</p>
+            </div>
+            <div className="col-lg-4" style={{ textAlign: "left" }}>
+              <img src={Image2} className="bloglist-image" />
+              <br />
+              <br />
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <br />
+              <p>
+                We want everyone in need of care and their relatives to receive
+                the benefits...{" "}
+              </p>
+              <br />
+              <p>4 MIN | JULY 20, 2021</p>
+            </div>
+            <div className="col-lg-4" style={{ textAlign: "left" }}>
+              <img src={Image2} className="bloglist-image" />
+              <br />
+              <br />
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <br />
+              <p>
+                We want everyone in need of care and their relatives to receive
+                the benefits...{" "}
+              </p>
+              <br />
+              <p>4 MIN | JULY 20, 2021</p>
+            </div>
+            <div className="col-lg-4" style={{ textAlign: "left" }}>
+              <img src={Image2} className="bloglist-image" />
+              <br />
+              <br />
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <br />
+              <p>
+                We want everyone in need of care and their relatives to receive
+                the benefits...{" "}
+              </p>
+              <br />
+              <p>4 MIN | JULY 20, 2021</p>
+            </div>
+            <div className="col-lg-4" style={{ textAlign: "left" }}>
+              <img src={Image2} className="bloglist-image" />
+              <br />
+              <br />
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <br />
+              <p>
+                We want everyone in need of care and their relatives to receive
+                the benefits...{" "}
+              </p>
+              <br />
+              <p>4 MIN | JULY 20, 2021</p>
+            </div>
+            <div className="col-lg-4" style={{ textAlign: "left" }}>
+              <img src={Image2} className="bloglist-image" />
+              <br />
+              <br />
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <br />
+              <p>
+                We want everyone in need of care and their relatives to receive
+                the benefits...{" "}
+              </p>
+              <br />
+              <p>4 MIN | JULY 20, 2021</p>
+            </div>
           </div>
         </div>
       </div>

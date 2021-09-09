@@ -1,33 +1,21 @@
-.texts1{
-    width:100%;
-    padding:15px;
-    color: black;
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 20px;
+.left-bloglist-image,
+.bloglist-image {
+  width: 100%;
+  border-radius: 20px;
 }
 
-.datee{
-    padding: 25px;    
-    font-family: Manrope;
- }
- .Myimage1{
-  
-    height: 300px;
-    width:90%;
-    border-radius: 20px;
-
+.bloglist-image {
+  height: 400px;
 }
-.articleImg1 {
-    display: inline-block;
-    width: 30%;
-    height: 150px;
-    border-radius: 20px;
-  }
-  .articleImgdiv {
-    display: flex;
-    flex-direction: row;
-  }
-  
+
+.bloglist-title-section {
+  padding: 50px 0;
+}
+.right-bloglist-text {
+  padding: 30px 0;
+  padding-left: 30px;
+}
+
+.popular-article-section {
+  padding: 50px 0;
+}
