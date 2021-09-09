@@ -3,13 +3,12 @@ import "./Box.css";
 import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 import BoxComp from "./BoxComp";
-import CustomBox from "../CustomBox/CustomBox"
+import CustomBox from "../CustomBox/CustomBox";
 
 function Box() {
-const [getComp,setComp]=useState(true)
-const [getBox,setBox]=useState(true)
-const [getBox1,setBox1]=useState(true)
-
+  const [getComp, setComp] = useState(true);
+  const [getBox, setBox] = useState(true);
+  const [getBox1, setBox1] = useState(true);
 
   return (
     <div>
@@ -50,11 +49,14 @@ const [getBox1,setBox1]=useState(true)
           <div className="col-lg-3">
             <div className="row">
               <div className="col-lg-2 ">
-                <div className={getBox ? "Icons" : "Icons2"} onClick={()=>{
-                  setBox(!getBox)
-                  setComp(true)
-                  setBox1(true)
-                }} >
+                <div
+                  className={getBox ? "Icons" : "Icons2"}
+                  onClick={() => {
+                    setBox(!getBox);
+                    setComp(true);
+                    setBox1(true);
+                  }}
+                >
                   <svg
                     width="60"
                     height="60"
@@ -70,18 +72,24 @@ const [getBox1,setBox1]=useState(true)
                 </div>
               </div>
               <div className="col-lg-4 RightText">
-              <a> <h2>Boxes</h2> </a>
+                <a>
+                  {" "}
+                  <h2>Boxes</h2>{" "}
+                </a>
               </div>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="row">
               <div className="col-lg-2 ">
-                <div className={getBox1 ? "CustomIcons" : "CustomIcons2"} onClick={()=>{
-                  setBox1(!getBox1)
-                  setComp(false)
-                  setBox(true)
-                }}>
+                <div
+                  className={getBox1 ? "CustomIcons" : "CustomIcons2"}
+                  onClick={() => {
+                    setBox1(!getBox1);
+                    setComp(false);
+                    setBox(true);
+                  }}
+                >
                   <svg
                     width="60"
                     height="60"
@@ -144,12 +152,9 @@ const [getBox1,setBox1]=useState(true)
             </div>
           </div>
         </div>
-        {
-          getComp?<BoxComp />:<CustomBox />
-        }
-       
+        {getComp ? <BoxComp /> : <CustomBox />}
+      </div>
       <Footer />
-    </div>
     </div>
   );
 }
