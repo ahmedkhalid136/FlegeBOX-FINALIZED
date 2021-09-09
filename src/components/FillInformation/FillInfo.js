@@ -103,7 +103,7 @@ function FillInfo(props) {
           className="button confirmation-button"
           onClick={() => {
             {
-              props.change("Confirm");
+              props.change("confirm");
             }
           }}
         >

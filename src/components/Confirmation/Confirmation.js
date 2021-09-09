@@ -3,11 +3,11 @@ import Body from "./Body";
 import "./styles.css";
 import "../footer/Footer";
 import Footer from "../footer/Footer";
-import Header from "../Header/Header"
+
 export default function Confirmation() {
   return (
     <div>
-      <Header />
+    
         <div className="container head">
           <div className="row">
             <div className="col-lg-3">
