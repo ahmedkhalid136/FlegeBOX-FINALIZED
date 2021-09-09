@@ -1,15 +1,62 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 import BoxComp from "./BoxComp";
-import CustomBox from "../CustomBox/CustomBox"
-
+import CustomBox from "../CustomBox/CustomBox";
+const axios = require("axios");
 function Box() {
-const [getComp,setComp]=useState(true)
-const [getBox,setBox]=useState(true)
-const [getBox1,setBox1]=useState(true)
+  const [getComp, setComp] = useState(true);
+  const [getBox, setBox] = useState(true);
+  const [getBox1, setBox1] = useState(true);
 
+  useEffect(() => {
+    const sendData = () => {
+      
+
+      fetch("http://35.84.238.24/api/method/flegeapp.utils.create_patient", {
+        method: 'POST',
+        mode: 'no-cors',
+        headers : {"Authorization":"token 6141d2161d30a42:b783e62c3c1518d"},
+        body: JSON.stringify({
+          'first_name': "John",
+        '  last_name': "Smith",
+          'title': "MR",
+         ' street_name': "1092-Bayern",
+          'date_of_birth': "2021-08-29",
+          'zip_code': "940012",
+         ' country': "Germany",
+          'care_level': "Level 1",
+         ' care_box': [
+              {
+                  'item': "gloves",
+                  'quantity': 2,
+                  'size': "Medium"
+              },
+              {
+                 ' item': "hand-sanitizer",
+                 ' quantity': 3,
+                  'size': "Large"
+              }
+          ],
+         ' phone_number': "+4919283292",
+         ' email_address' : "flegepatient@patient.com",
+          'insurance_company': "PAEO",
+          'insurance_number': "PAEO-012930",
+          'year': "2021",
+         ' note': "Patient from germany"
+      })
+    })
+    .then(r => r.json())
+    .then(r => {
+        console.log(r);
+        console.log("worked")
+    }).catch(e=>{
+      console.log(e,"error")
+    })
+    };
+    sendData();
+  });
 
   return (
     <div>
@@ -50,11 +97,14 @@ const [getBox1,setBox1]=useState(true)
           <div className="col-lg-3">
             <div className="row">
               <div className="col-lg-2 ">
-                <div className={getBox ? "Icons" : "Icons2"} onClick={()=>{
-                  setBox(!getBox)
-                  setComp(true)
-                  setBox1(true)
-                }} >
+                <div
+                  className={getBox ? "Icons" : "Icons2"}
+                  onClick={() => {
+                    setBox(!getBox);
+                    setComp(true);
+                    setBox1(true);
+                  }}
+                >
                   <svg
                     width="60"
                     height="60"
@@ -70,18 +120,24 @@ const [getBox1,setBox1]=useState(true)
                 </div>
               </div>
               <div className="col-lg-4 RightText">
-              <a> <h2>Boxes</h2> </a>
+                <a>
+                  {" "}
+                  <h2>Boxes</h2>{" "}
+                </a>
               </div>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="row">
               <div className="col-lg-2 ">
-                <div className={getBox1 ? "CustomIcons" : "CustomIcons2"} onClick={()=>{
-                  setBox1(!getBox1)
-                  setComp(false)
-                  setBox(true)
-                }}>
+                <div
+                  className={getBox1 ? "CustomIcons" : "CustomIcons2"}
+                  onClick={() => {
+                    setBox1(!getBox1);
+                    setComp(false);
+                    setBox(true);
+                  }}
+                >
                   <svg
                     width="60"
                     height="60"
@@ -108,11 +164,14 @@ const [getBox1,setBox1]=useState(true)
           <div className="row">
             <div className="col-6">
               {" "}
-              <div className={getBox ? "Icons" : "Icons2"} onClick={()=>{
-                  setBox(!getBox)
-                  setComp(true)
-                  setBox1(true)
-                }}>
+              <div
+                className={getBox ? "Icons" : "Icons2"}
+                onClick={() => {
+                  setBox(!getBox);
+                  setComp(true);
+                  setBox1(true);
+                }}
+              >
                 <svg
                   width="60"
                   height="60"
@@ -130,11 +189,14 @@ const [getBox1,setBox1]=useState(true)
             </div>
             <div className="col-6">
               {" "}
-              <div className={getBox1 ? "CustomIcons" : "CustomIcons2"} onClick={()=>{
-                  setBox1(!getBox1)
-                  setComp(false)
-                  setBox(true)
-                }}>
+              <div
+                className={getBox1 ? "CustomIcons" : "CustomIcons2"}
+                onClick={() => {
+                  setBox1(!getBox1);
+                  setComp(false);
+                  setBox(true);
+                }}
+              >
                 <svg
                   width="60"
                   height="60"
@@ -152,12 +214,10 @@ const [getBox1,setBox1]=useState(true)
             </div>
           </div>
         </div>
-        {
-          getComp?<BoxComp />:<CustomBox />
-        }
-       
-      <Footer />
-    </div>
+        {getComp ? <BoxComp /> : <CustomBox />}
+        <button className="button confirmation-button">Continue</button>
+        <Footer />
+      </div>
     </div>
   );
 }

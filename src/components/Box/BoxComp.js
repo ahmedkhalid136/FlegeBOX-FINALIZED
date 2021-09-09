@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+
 import "./Box.css";
 import WhiteProduct from "./Whiteproducts";
 import Cart1 from "../ProductComponent/Cart1";
+
 function BoxComp() {
+  
+  
+  
     const [getBox, setBox] = useState("box1");
     const [getBox1, setBox1] = useState(true);
     const [getBox2, setBox2] = useState(true);
@@ -335,7 +340,9 @@ function BoxComp() {
                 box6.map((user) => (
                   <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
                 ))}
+
             </div>
+           
           </div>
         </div>
       
