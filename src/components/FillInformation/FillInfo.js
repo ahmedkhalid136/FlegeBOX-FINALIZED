@@ -91,11 +91,12 @@ function FillInfo(props) {
       <Carelevel /> 
       <Contactinfo />
       <Note />
-      <button
+     
+       <button
          
          className="button confirmation-button"
          onClick={()=>{
-             {props.change(true)}
+             {props.change("Box")}
          }}
        >
         back

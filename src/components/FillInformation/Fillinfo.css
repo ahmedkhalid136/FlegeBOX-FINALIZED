@@ -251,7 +251,7 @@
   }
   .input3 {
     background: #f6fbfe;
-    width: 45%;
+    width: 50%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
@@ -302,14 +302,12 @@
 }
 
 @media (min-width:300px) and (max-width:499px) {
-  .mainDiv{
-    margin-left: 5px;
-  }
+ 
   .personalInfo {
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 78%;
+    width: 100%;
     height: 600px;
     margin-left: 1px;
     border-radius: 20px;
@@ -318,7 +316,7 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 78%;
+    width: 100%;
     height: 400px;
     margin-left: 1px;
     border-radius: 20px;
@@ -328,7 +326,7 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 78%;
+    width: 100%;
     height: 210px;
     margin-left: 1px;
     border-radius: 20px;
@@ -338,7 +336,7 @@
     background: #f6fbfe;
     float: left;
     text-align: left;
-    width: 78%;
+    width: 100%;
     height: 300px;
     margin-left: 1px;
     border-radius: 20px;
@@ -410,7 +408,7 @@
   }
   .input2 {
     background: #f6fbfe;
-    width: 45%;
+    width: 90%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
@@ -419,7 +417,7 @@
   }
   .input3 {
     background: #f6fbfe;
-    width: 45%;
+    width: 90%;
     border: 1px solid #dadadd;
     box-sizing: border-box;
     border-radius: 10px;
