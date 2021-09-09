@@ -5,7 +5,7 @@ import Footer from "../footer/Footer";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
-import { Link } from "react-router-dom";
+
 function Box() {
   const [getComp, setComp] = useState("Box");
 

@@ -8,7 +8,7 @@ export default function Header(props) {
   useEffect(() => {
     if (props.title == "whymypflegebox") setActive("2");
     else if (props.title == "Home") setActive("1");
-    else if (props.title == "BLOG") setActive("3");
+    else if (props.title == "bloglist") setActive("3");
     else if (props.title == "FAQ") setActive("4");
   });
 
@@ -23,57 +23,59 @@ export default function Header(props) {
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ms-auto navbarlis">
-                <li
-                  className={
-                    Active == "1"
-                      ? "nav-item nav-li class-active"
-                      : "nav-item nav-li"
-                  }
-                  to="/Homepage"
-                >
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-nav ms-auto navbarlis">
+              <li
+                className={
+                  Active == "1"
+                    ? "nav-item nav-li class-active"
+                    : "nav-item nav-li"
+                }
+              >
+                <a className="nav-link" href="/homepage">
                   <p>HOME</p>
-                </li>
-                <li
-                  className={
-                    Active == "2"
-                      ? "nav-item nav-li class-active"
-                      : "nav-item nav-li"
-                  }
-                  to="/whymypflegebox"
-                >
-                  <p> WHY MY PFLEGE BOX</p>
-                <li>
-                <li
-                  className={
-                    Active == "3"
-                      ? "nav-item nav-li class-active"
-                      : "nav-item nav-li"
-                  }
-                  to="/blogdetails"
-                >
+                </a>
+              </li>
+              <li
+                className={
+                  Active == "2"
+                    ? "nav-item nav-li class-active"
+                    : "nav-item nav-li"
+                }
+              >
+                <a className="nav-link" href="/whymypflegebox">
+                  <p>WHY MY PFLEGEBOX</p>
+                </a>
+              </li>
+              <li
+                className={
+                  Active == "3"
+                    ? "nav-item nav-li class-active"
+                    : "nav-item nav-li"
+                }
+              >
+                <a className="nav-link" href="/bloglist">
                   <p>BLOG</p>
-                </li>
-                <li
-                  className={
-                    Active == "4"
-                      ? "nav-item nav-li class-active"
-                      : "nav-item nav-li"
-                  }
-                  to="/FAQ"
-                >
+                </a>
+              </li>
+              <li
+                className={
+                  Active == "4"
+                    ? "nav-item nav-li class-active"
+                    : "nav-item nav-li"
+                }
+              >
+                <a className="nav-link" href="/faq">
                   <p>FAQ</p>
-                </li>
-              </div>
+                </a>
+              </li>
             </div>
           </div>
         </nav>

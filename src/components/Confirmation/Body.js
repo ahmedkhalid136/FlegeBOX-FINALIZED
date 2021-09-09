@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 var SignaturePad = require("react-signature-pad");
 
-export default function Body() {
+export default function Body(props) {
   let sigpad = useRef({});
 
   function clear() {
@@ -66,7 +66,11 @@ export default function Body() {
       >
         <div className="col-lg-6"></div>
         <div className="col-lg-6 right">
-          <span style={{ fontSize: "20px", paddingRight: "20px" }}>
+          <span style={{ fontSize: "20px", paddingRight: "20px" }}  onClick={() => {
+            {
+              props.value("info");
+            }
+          }}>
             <i class="fas fa-arrow-left" style={{ paddingRight: "5px" }}></i>
             BACK
           </span>

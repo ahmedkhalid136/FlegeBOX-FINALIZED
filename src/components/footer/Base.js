@@ -17,7 +17,18 @@ export default function Base() {
         <div className="row">
           <div className="col-lg-4">
             <h5>MyPflegebox</h5>
-            <ColoredLine color={"#f87433"} />
+            <p>
+              <hr
+                style={{
+                  width: "20%",
+                  color: "#F87433",
+                  backgroundColor: "#F87433",
+                  height: 3,
+                  borderColor: "#F87433",
+                  opacity: 1,
+                }}
+              ></hr>
+            </p>
             <a>Why MyPflegebox ?</a>
             <br /> <br />
             <a>Blog</a> <br /> <br />
@@ -26,15 +37,46 @@ export default function Base() {
           </div>
           <div className="col-lg-4">
             <h5>Shipping Partner</h5>
-            <hr className="line" />
+            <p>
+              <hr
+                style={{
+                  width: "20%",
+                  color: "#F87433",
+                  backgroundColor: "#F87433",
+                  height: 3,
+                  borderColor: "#F87433",
+                  opacity: 1,
+                }}
+              ></hr>
+            </p>
           </div>
           <div className="col-lg-4">
             <h5>Payment Methods</h5>
-            <hr className="line" />
+            <p>
+              <hr
+                style={{
+                  width: "20%",
+                  color: "#F87433",
+                  backgroundColor: "#F87433",
+                  height: 3,
+                  borderColor: "#F87433",
+                  opacity: 1,
+                }}
+              ></hr>
+            </p>
           </div>
         </div>
-
-        <hr className="line" style={{ width: "100%", color: "white" }} />
+        <p>
+          <hr
+            style={{
+              color: "#F87433",
+              backgroundColor: "#F87433",
+              height: 3,
+              borderColor: "#F87433",
+              opacity: 1,
+            }}
+          ></hr>
+        </p>
         <div style={{ textAlign: "center" }}>
           <h2 className="copyright-text">
             © 2021 MyPflegebox. All right reserved

@@ -172,7 +172,7 @@ function ChooseBox(props) {
           className="button confirmation-button"
           onClick={() => {
             {
-              props.change(false);
+              props.change("info");
             }
           }}
         >

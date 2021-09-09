@@ -3,11 +3,11 @@ import Body from "./Body";
 import "./styles.css";
 import "../footer/Footer";
 import Footer from "../footer/Footer";
-import Header from "../Header/Header"
-export default function Confirmation() {
+
+export default function Confirmation(props) {
   return (
     <div>
-      <Header />
+    
         <div className="container head">
           <div className="row">
             <div className="col-lg-3">
@@ -24,7 +24,7 @@ export default function Confirmation() {
             <div className="col-lg-1"></div>
           </div>
         </div>
-      <Body />
+      <Body value={props.change}/>
       <Footer />
     </div>
   );
