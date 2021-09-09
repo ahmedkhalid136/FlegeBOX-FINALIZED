@@ -27,7 +27,7 @@ const responsive = {
   },
 };
 
-export default function CustomBox() {
+export default function CustomBox(props) {
   const [childCount, SetCount] = useState(0);
   const [childCount1, SetCount1] = useState(0);
   const [childCount2, SetCount2] = useState(0);
@@ -35,26 +35,34 @@ export default function CustomBox() {
   const [childCount4, SetCount4] = useState(0);
   const [childCount5, SetCount5] = useState(0);
 
-  const box1 = {
-    name: "K94 MASK",
-    pcs: 20,
-    img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-  };
-  const box2 = {
-    name: "hand sanitizer",
-    pcs: 20,
-    img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-  };
-  const box3 = {
-    name: "Gloves ",
-    pcs: 20,
-    img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-  };
-  const box4 = {
-    name: "Oxygen tube",
-    pcs: 20,
-    img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-  };
+  const box1 = [
+    {
+      name: "K94 MASK",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+  ];
+  const box2 = [
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+  ];
+  const box3 = [
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
+  ];
+  const box4 = [
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+  ];
   return (
     <div className="container">
       <div className="row">
@@ -67,63 +75,86 @@ export default function CustomBox() {
               responsive={responsive}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               showDots={true}
+             
             >
               <div>
-                <MobileAddToCart />
+                <MobileAddToCart
+                  Name={box1[0].name}
+                  pcs={box1[0].pcs}
+                  image={box1[0].img}
+                  actual={childCount1}
+                  mycount={SetCount1}
+                />
               </div>
               <div>
-                <MobileAddToCart />
+                <MobileAddToCart 
+                 Name={box2[0].name}
+                 pcs={box2[0].pcs}
+                 image={box2[0].img}
+                 actual={childCount2}
+                  mycount={SetCount2}
+                 />
               </div>
               <div>
-                <MobileAddToCart />
+                <MobileAddToCart 
+                 Name={box3[0].name}
+                 pcs={box3[0].pcs}
+                 image={box3[0].img}
+                 actual={childCount3}
+                 mycount={SetCount3}/>
               </div>
               <div>
-                <MobileAddToCart />
+                <MobileAddToCart
+                 Name={box4[0].name}
+                 pcs={box4[0].pcs}
+                 image={box4[0].img}
+                 actual={childCount4}
+                 mycount={SetCount4} />
               </div>
             </Carousel>
           </div>
           <div className="desktop-cart">
             <Product
-            actual={childCount}
+              actual={childCount}
               mycount={SetCount}
-              Name={box1.name}
-              pcs={box1.pcs}
-              image={box1.img}
+              Name={box1[0].name}
+              pcs={box1[0].pcs}
+              image={box1[0].img}
             />
             <Product
               actual={childCount1}
               mycount={SetCount1}
-              Name={box2.name}
-              pcs={box2.pcs}
-              image={box2.img}
+              Name={box2[0].name}
+              pcs={box2[0].pcs}
+              image={box2[0].img}
             />
             <Product
               actual={childCount2}
               mycount={SetCount2}
-              Name={box3.name}
-              pcs={box3.pcs}
-              image={box3.img}
+              Name={box3[0].name}
+              pcs={box3[0].pcs}
+              image={box3[0].img}
             />
             <Product
               actual={childCount3}
               mycount={SetCount3}
-              Name={box4.name}
-              pcs={box4.pcs}
+              Name={box4[0].name}
+              pcs={box4[0].pcs}
               image={box4.img}
             />
             <Product
               actual={childCount4}
               mycount={SetCount4}
-              Name={box4.name}
-              pcs={box4.pcs}
-              image={box4.img}
+              Name={box4[0].name}
+              pcs={box4[0].pcs}
+              image={box4[0].img}
             />
             <Product
               actual={childCount5}
               mycount={SetCount5}
-              Name={box4.name}
-              pcs={box4.pcs}
-              image={box4.img}
+              Name={box4[0].name}
+              pcs={box4[0].pcs}
+              image={box4[0].img}
             />
           </div>
         </div>
@@ -142,42 +173,47 @@ export default function CustomBox() {
             </div>
             {childCount == 0 ? null : (
               <Cart
-              mycount1={SetCount}
+                mycount1={SetCount}
                 value={childCount}
-                Name={box1.name}
-                pcs={box1.pcs}
-                image={box1.img}
+                Name={box1[0].name}
+                pcs={box1[0].pcs}
+                image={box1[0].img}
               />
             )}
             {childCount1 == 0 ? null : (
               <Cart
-              mycount1={SetCount1}
+                mycount1={SetCount1}
                 value={childCount1}
-                Name={box2.name}
-                pcs={box2.pcs}
-                image={box2.img}
+                Name={box2[0].name}
+                pcs={box2[0].pcs}
+                image={box2[0].img}
               />
             )}
             {childCount2 == 0 ? null : (
               <Cart
-              mycount1={SetCount2}
+                mycount1={SetCount2}
                 value={childCount2}
-                Name={box3.name}
-                pcs={box3.pcs}
-                image={box3.img}
+                Name={box3[0].name}
+                pcs={box3[0].pcs}
+                image={box3[0].img}
               />
             )}
             {childCount3 == 0 ? null : (
               <Cart
-              mycount1={SetCount3}
+                mycount1={SetCount3}
                 value={childCount3}
-                Name={box4.name}
-                pcs={box4.pcs}
-                image={box4.img}
+                Name={box4[0].name}
+                pcs={box4[0].pcs}
+                image={box4[0].img}
+             
               />
             )}
-            {childCount4 == 0 ? null : <Cart value={childCount4} mycount1={SetCount4} />}
-            {childCount5 == 0 ? null : <Cart value={childCount5} mycount1={SetCount5} />}
+            {childCount4 == 0 ? null : (
+              <Cart value={childCount4} mycount1={SetCount4} />
+            )}
+            {childCount5 == 0 ? null : (
+              <Cart value={childCount5} mycount1={SetCount5} />
+            )}
           </div>
         </div>
       </div>

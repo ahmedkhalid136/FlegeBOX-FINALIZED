@@ -4,7 +4,7 @@ import "./Box.css";
 import WhiteProduct from "./Whiteproducts";
 import Cart1 from "../ProductComponent/Cart1";
 
-function BoxComp() {
+function BoxComp(props) {
   
   
   
@@ -164,6 +164,7 @@ function BoxComp() {
                 <div className={getBox1 ? "boxes" : "boxes2"}
                  onClick={() => {
                   setBox("box1");
+                  {props.box(box1)}
                   setBox1(!getBox1);
                   setBox2(true);
                   setBox3(true);
@@ -190,6 +191,7 @@ function BoxComp() {
               <div className="col-lg-4 col-4">
                 <div className={getBox2 ? "boxes" : "boxes2"}   onClick={() => {
                       setBox("box2");
+                      {props.box(box2)}
                       setBox2(!getBox2);
                       setBox1(true);
                       setBox3(true);
@@ -216,6 +218,7 @@ function BoxComp() {
               <div className="col-lg-4 col-4 ">
                 <div className={getBox3 ? "boxes" : "boxes2"}  onClick={() => {
                       setBox("box3");
+                      {props.box(box3)}
                       setBox3(!getBox3);
                       setBox1(true);
                       setBox2(true);
@@ -258,6 +261,7 @@ function BoxComp() {
                   <p
                     onClick={() => {
                       setBox("box4");
+                      {props.box(box4)}
                     }}
                   >
                     BOX 4
