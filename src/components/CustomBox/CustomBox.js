@@ -5,6 +5,7 @@ import "./styles.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MobileAddToCart from "../ProductComponent/mobileAddToCart";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 const responsive = {
   superLargeDesktop: {
@@ -130,21 +131,43 @@ export default function CustomBox() {
                 <span>Clear All</span>
               </div>
             </div>
-            <div></div>
-            { childCount == 0  ? null : <Cart value={childCount}  Name={box1.name}
-              pcs={box1.pcs}
-              image={box1.img} />}
-            {childCount1 == 0 ? null: <Cart value={childCount1} Name={box2.name}
-              pcs={box2.pcs}
-              image={box2.img} />}
-            {childCount2 == 0 ? null: <Cart value={childCount2}   Name={box3.name}
-              pcs={box3.pcs}
-              image={box3.img}/>}
-            {childCount3 == 0 ? null: <Cart value={childCount3}  Name={box4.name}
-              pcs={box4.pcs}
-              image={box4.img}/>}
-            {childCount4 == 0 ? null: <Cart value={childCount4} />}
-            {childCount5 == 0 ? null: <Cart value={childCount5} />}
+            <div style={{ padding: "10px 0" }}>
+              <ProgressBar completed={90} bgColor={"#F87433"} />
+            </div>
+            {childCount == 0 ? null : (
+              <Cart
+                value={childCount}
+                Name={box1.name}
+                pcs={box1.pcs}
+                image={box1.img}
+              />
+            )}
+            {childCount1 == 0 ? null : (
+              <Cart
+                value={childCount1}
+                Name={box2.name}
+                pcs={box2.pcs}
+                image={box2.img}
+              />
+            )}
+            {childCount2 == 0 ? null : (
+              <Cart
+                value={childCount2}
+                Name={box3.name}
+                pcs={box3.pcs}
+                image={box3.img}
+              />
+            )}
+            {childCount3 == 0 ? null : (
+              <Cart
+                value={childCount3}
+                Name={box4.name}
+                pcs={box4.pcs}
+                image={box4.img}
+              />
+            )}
+            {childCount4 == 0 ? null : <Cart value={childCount4} />}
+            {childCount5 == 0 ? null : <Cart value={childCount5} />}
           </div>
         </div>
       </div>
