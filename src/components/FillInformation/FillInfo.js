@@ -2,35 +2,16 @@ import React, { useState } from "react";
 import "./Fillinfo.css";
 import Checkbox from "@material-ui/core/Checkbox";
 import Contactinfo from "./Contactinfo";
-import Carelevel from "./Carelevel"
+import Carelevel from "./Carelevel";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
 
 function FillInfo(props) {
-
   return (
-    <div>
-    
-    <div style={{ marginTop: "40px" }} className="container head">
-          <div className="row">
-            <div className="col-lg-3">
-              1. CHOOSE BOX
-            </div>
-            <div className="col-lg-2">...........................</div>
-            <div className="col-lg-2">
-              <button className="chooseButton">2.FILLINFORMATION</button>
-            </div>
-            <div className="col-lg-2">...........................</div>
-            <div className="col-lg-2">3. CONFIRMATION</div>
-            <div className="col-lg-1"></div>
-          </div>
-        </div>
-    <div className="mainDiv">
-      
+    <div className="mainDiv container">
       <div className="personalInfo">
-      
         <div className="checkboxes">
-        <h6 className="styleHeading">Personal Information</h6>
+          <h6 className="styleHeading">Personal Information</h6>
 
           <FormControlLabel
             value="Ms"
@@ -46,7 +27,7 @@ function FillInfo(props) {
           />
         </div>
 
-        <div className="container">
+        <div className="">
           <div className="row">
             <div className="col-lg-6 col-sm-12 ">
               <input className="input" placeholder="Firstname" />
@@ -58,20 +39,20 @@ function FillInfo(props) {
           <div className="row secondDiv">
             <div className="col-lg-6">
               <div className="row">
-                <div className="col-lg-6 col-sm-8 col-xs-8">
+                <div className="col-lg-8 col-8">
                   <input className="input1" placeholder="Streetname" />
                 </div>
-                <div className="col-lg63 col-sm-4 col-xs-4">
+                <div className="col-lg-4 col-4">
                   <input className="input2" placeholder="N*" />
                 </div>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="row">
-                <div className="col-lg-6 col-sm-8  col-xs-8">
+                <div className="col-lg-4 col-6">
                   <input className="input3" placeholder="ZIP Code" />
                 </div>
-                <div className="col-lg-6 col-sm-4 col-xs-4">
+                <div className="col-lg-8 col-6">
                   <input className="input4" placeholder="Country" />
                 </div>
               </div>
@@ -88,31 +69,47 @@ function FillInfo(props) {
         </div>
       </div>
 
-      <Carelevel /> 
       <Contactinfo />
       <Note />
-     
-       <button
-         
-         className="button confirmation-button"
-         onClick={()=>{
-             {props.change("Box")}
-         }}
-       >
-        back
-       
-       </button>
-       <button
-         
-         className="button confirmation-button"
-         onClick={()=>{
-             {props.change("confirm")}
-         }}
-       >
-        Continue
-       
-       </button>
-    </div>
+      <div className="row separateCheckbox">
+        <FormControlLabel
+          control={<Checkbox color="primary" />}
+          label="Confirm first check box"
+          labelPlacement="End"
+        />
+        <FormControlLabel
+          control={<Checkbox color="primary" />}
+          label="Confirm second check box"
+          labelPlacement="End"
+        />
+      </div>
+      <div style={{ textAlign: "right", paddingTop: "30px" }}>
+        <button
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            marginRight: "30px",
+          }}
+          onClick={() => {
+            {
+              props.change(true);
+            }
+          }}
+        >
+          <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
+          back
+        </button>
+        <button
+          className="button confirmation-button"
+          onClick={() => {
+            {
+              props.change("Confirm");
+            }
+          }}
+        >
+          Continue
+        </button>
+      </div>
     </div>
   );
 }
