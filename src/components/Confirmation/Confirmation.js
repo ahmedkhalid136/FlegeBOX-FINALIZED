@@ -4,7 +4,7 @@ import "./styles.css";
 import "../footer/Footer";
 import Footer from "../footer/Footer";
 
-export default function Confirmation() {
+export default function Confirmation(props) {
   return (
     <div>
     
@@ -24,7 +24,7 @@ export default function Confirmation() {
             <div className="col-lg-1"></div>
           </div>
         </div>
-      <Body />
+      <Body value={props.change}/>
       <Footer />
     </div>
   );
