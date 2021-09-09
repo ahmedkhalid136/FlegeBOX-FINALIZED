@@ -171,6 +171,7 @@ function ChooseBox(props) {
          continue
         
         </button>
+      
         </div>
     )
 }

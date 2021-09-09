@@ -65,7 +65,7 @@ function Box() {
       <div style={{ marginTop: "40px" }} className="container">
         {/* Header */}
         
-       {getComp? <ChooseBox change={setComp} />:<FillInfo />}
+       {getComp? <ChooseBox change={setComp} />:<FillInfo change={setComp} />}
        
       </div>
     </div>

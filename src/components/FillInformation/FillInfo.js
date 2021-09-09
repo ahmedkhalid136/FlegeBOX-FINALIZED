@@ -5,8 +5,8 @@ import Contactinfo from "./Contactinfo";
 import Carelevel from "./Carelevel"
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
-import Header from "../Header/Header"
-function FillInfo() {
+
+function FillInfo(props) {
 
   return (
     <div>
@@ -91,6 +91,16 @@ function FillInfo() {
       <Carelevel /> 
       <Contactinfo />
       <Note />
+      <button
+         
+         className="button confirmation-button"
+         onClick={()=>{
+             {props.change(true)}
+         }}
+       >
+        back
+       
+       </button>
     </div>
     </div>
   );
