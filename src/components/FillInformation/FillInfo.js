@@ -10,8 +10,8 @@ function FillInfo() {
 
   return (
     <div>
-     <Header />
-    <div className="container head">
+    
+    <div style={{ marginTop: "40px" }} className="container head">
           <div className="row">
             <div className="col-lg-3">
               1. CHOOSE BOX
