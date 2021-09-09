@@ -102,6 +102,16 @@ function FillInfo(props) {
         back
        
        </button>
+       <button
+         
+         className="button confirmation-button"
+         onClick={()=>{
+             {props.change("confirm")}
+         }}
+       >
+        Continue
+       
+       </button>
     </div>
     </div>
   );
