@@ -8,7 +8,7 @@ function ChooseBox(props) {
   const [getBox1, setBox1] = useState(true);
   return (
     <div>
-      <div style={{ marginTop: "40px" }} className="container desktop-head">
+      <div style={{ marginTop: "40px" }} className="container">
         <div className="row">
           <div className="col-lg-2">
             <button className="chooseButton">1. CHOOSE BOX</button>

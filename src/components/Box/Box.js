@@ -4,10 +4,10 @@ import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
+import Confirmation from "../Confirmation/Confirmation";
 import { Link } from "react-router-dom";
-
 function Box() {
-  const [getComp, setComp] = useState(true);
+  const [getComp, setComp] = useState("Box");
 
   useEffect(() => {
     const sendData = () => {
@@ -64,7 +64,9 @@ function Box() {
       <div style={{ marginTop: "40px" }} className="container">
         {/* Header */}
 
-        {getComp ? <ChooseBox change={setComp} /> : <FillInfo />}
+        {getComp == "Box" && <ChooseBox change={setComp} />}
+        {getComp == "info" && <FillInfo change={setComp} />}
+        {getComp == "confirm" && <Confirmation change={setComp} />}
       </div>
     </div>
   );
