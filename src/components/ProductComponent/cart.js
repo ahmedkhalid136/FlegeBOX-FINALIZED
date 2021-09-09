@@ -1,4 +1,4 @@
-import React,{useState}from "react";
+import React,{useEffect, useState}from "react";
 import "./BlueProduct.css";
 
 export default function Cart(props) {
@@ -10,13 +10,14 @@ export default function Cart(props) {
     if(props.value>0)  {props.mycount1(props.value-1)}
     
   };
-  const thebox=[
-    {
-      Name:props.Name,
-      pcs:props.value*props.pcs,
-      size:"small"
-    }
-  ]
+   const total= props.value*props.pcs
+    props.mypcs(total)
+   
+ 
+  
+  
+    
+  
 
 
   return (

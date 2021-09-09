@@ -34,7 +34,11 @@ export default function CustomBox(props) {
   const [childCount3, SetCount3] = useState(0);
   const [childCount4, SetCount4] = useState(0);
   const [childCount5, SetCount5] = useState(0);
-
+  const [pcs,setpcs] =useState(0)
+  const customComp = [{}];
+  
+  
+  
   const box1 = [
     {
       name: "K94 MASK",
@@ -63,6 +67,16 @@ export default function CustomBox(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
     },
   ];
+  if (childCount != 0) {
+    const cart1 = {
+      Name: box1[0].name,
+      pcs: pcs,
+      Size: "size",
+    };
+ 
+    };
+
+    
   return (
     <div className="container">
       <div className="row">
@@ -75,7 +89,6 @@ export default function CustomBox(props) {
               responsive={responsive}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               showDots={true}
-             
             >
               <div>
                 <MobileAddToCart
@@ -87,29 +100,31 @@ export default function CustomBox(props) {
                 />
               </div>
               <div>
-                <MobileAddToCart 
-                 Name={box2[0].name}
-                 pcs={box2[0].pcs}
-                 image={box2[0].img}
-                 actual={childCount2}
+                <MobileAddToCart
+                  Name={box2[0].name}
+                  pcs={box2[0].pcs}
+                  image={box2[0].img}
+                  actual={childCount2}
                   mycount={SetCount2}
-                 />
-              </div>
-              <div>
-                <MobileAddToCart 
-                 Name={box3[0].name}
-                 pcs={box3[0].pcs}
-                 image={box3[0].img}
-                 actual={childCount3}
-                 mycount={SetCount3}/>
+                />
               </div>
               <div>
                 <MobileAddToCart
-                 Name={box4[0].name}
-                 pcs={box4[0].pcs}
-                 image={box4[0].img}
-                 actual={childCount4}
-                 mycount={SetCount4} />
+                  Name={box3[0].name}
+                  pcs={box3[0].pcs}
+                  image={box3[0].img}
+                  actual={childCount3}
+                  mycount={SetCount3}
+                />
+              </div>
+              <div>
+                <MobileAddToCart
+                  Name={box4[0].name}
+                  pcs={box4[0].pcs}
+                  image={box4[0].img}
+                  actual={childCount4}
+                  mycount={SetCount4}
+                />
               </div>
             </Carousel>
           </div>
@@ -178,6 +193,8 @@ export default function CustomBox(props) {
                 Name={box1[0].name}
                 pcs={box1[0].pcs}
                 image={box1[0].img}
+                custom={props.box}
+                mypcs={setpcs}
               />
             )}
             {childCount1 == 0 ? null : (
@@ -205,7 +222,6 @@ export default function CustomBox(props) {
                 Name={box4[0].name}
                 pcs={box4[0].pcs}
                 image={box4[0].img}
-             
               />
             )}
             {childCount4 == 0 ? null : (

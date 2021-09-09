@@ -6,7 +6,8 @@ function ChooseBox(props) {
     const [getComp, setComp] = useState(true);
     const [getBox, setBox] = useState(true);
     const [getBox1, setBox1] = useState(true);
- 
+    const [comp,nextComp]=useState([])
+   props.mybox(comp)
     return (
         <div>
               <div style={{ marginTop: "40px" }} className="container">
@@ -162,7 +163,7 @@ function ChooseBox(props) {
           </div>
         </div>
        
-        {getComp ? <BoxComp box={props.mybox}  /> : <CustomBox box={props.mybox}/>}
+        {getComp ? <BoxComp box={props.mybox}  /> : <CustomBox box={nextComp}/>}
         
         <button
          
