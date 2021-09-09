@@ -10,6 +10,15 @@ export default function Cart(props) {
     if(props.value>0)  {props.mycount1(props.value-1)}
     
   };
+  const thebox=[
+    {
+      Name:props.Name,
+      pcs:props.value*props.pcs,
+      size:"small"
+    }
+  ]
+
+
   return (
     <div
       className="row cart-section"

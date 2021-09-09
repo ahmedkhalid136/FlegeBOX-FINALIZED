@@ -5,6 +5,7 @@ import "../footer/Footer";
 import Footer from "../footer/Footer";
 
 export default function Confirmation(props) {
+ 
   return (
     <div>
     
