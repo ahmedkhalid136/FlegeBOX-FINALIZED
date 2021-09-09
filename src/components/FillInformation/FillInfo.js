@@ -5,26 +5,10 @@ import Contactinfo from "./Contactinfo";
 import Carelevel from "./Carelevel"
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Note from "./Note";
-import Header from "../Header/Header"
+
 function FillInfo() {
 
   return (
-    <div>
-     <Header />
-    <div className="container head">
-          <div className="row">
-            <div className="col-lg-3">
-              1. CHOOSE BOX
-            </div>
-            <div className="col-lg-2">...........................</div>
-            <div className="col-lg-2">
-              <button className="chooseButton">2.FILLINFORMATION</button>
-            </div>
-            <div className="col-lg-2">...........................</div>
-            <div className="col-lg-2">3. CONFIRMATION</div>
-            <div className="col-lg-1"></div>
-          </div>
-        </div>
     <div className="mainDiv">
       
       <div className="personalInfo">
@@ -91,7 +75,6 @@ function FillInfo() {
       <Carelevel /> 
       <Contactinfo />
       <Note />
-    </div>
     </div>
   );
 }

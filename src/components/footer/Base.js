@@ -34,7 +34,7 @@ export default function Base() {
           </div>
         </div>
 
-        <hr style={{ width: "100%", backgroundColor: "white" }} />
+        <hr className="line" style={{ width: "100%", color: "white" }} />
         <div style={{ textAlign: "center" }}>
           <h2 className="copyright-text">
             © 2021 MyPflegebox. All right reserved

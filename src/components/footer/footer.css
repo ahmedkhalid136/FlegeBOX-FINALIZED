@@ -63,8 +63,8 @@
   color: #ffffff;
 }
 
-.footer-base hr {
-  border: 2px solid #ffffff !important;
+hr .line {
+  border: 2px solid #f87433;
   width: 20%;
 }
 

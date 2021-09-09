@@ -5,6 +5,11 @@ export default function Cart(props) {
   const [getBackground,setBackground]=useState(true)
   const [getBackground2,setBackground2]=useState(true)
   const [getBackground3,setBackground3]=useState(true)
+  
+  const decrement = () => {
+    if(props.value>0)  {props.mycount1(props.value-1)}
+    
+  };
   return (
     <div
       className="row cart-section"
@@ -26,7 +31,7 @@ export default function Cart(props) {
         style={{ textAlign: "left" }}
       >
       <h6>{props.Name}</h6>
-      <p>{props.value*props.pcs} pcs</p>
+      <p>{props.value*props.pcs}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">
@@ -38,9 +43,12 @@ export default function Cart(props) {
             }} className={getBackground2?"sizes1":"increment-buttons1"}>M</button>
             <button onClick={()=>{
               setBackground3(!getBackground3)
-            }} className={getBackground3?"sizes1":"increment-buttons1"}>L</button>
-          <div style={{ textAlign: "right", display: "inline-block" }}>
-            <i class="fas fa-times"></i>
+            }} className={getBackground3?"sizes1":"increment-buttons1"} >L</button>
+          <div  style={{ textAlign: "right", display: "inline-block" }} >
+              
+            <i  onClick={()=>{
+              decrement()
+            }}class="fas fa-times" ></i>
           </div>
         </div>
       </div>
