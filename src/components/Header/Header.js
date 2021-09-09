@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { li } from "react-router-dom";
 import { useState } from "react";
 
 import "./Header.css";
@@ -19,49 +19,61 @@ export default function Header(props) {
           <a class="navbar-brand" href="#">
             myPflegebox
           </a>
-
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto navbarLinks">
-              <Link
-                className={
-                  Active == "1"
-                    ? "nav-item nav-link class-active"
-                    : "nav-item nav-link"
-                }
-                to="/Homepage"
-              >
-                <p>HOME</p>
-              </Link>
-              <Link
-                className={
-                  Active == "2"
-                    ? "nav-item nav-link class-active"
-                    : "nav-item nav-link"
-                }
-                to="/whymypflegebox"
-              >
-                <p> WHY MY PFLEGE BOX</p>
-              </Link>
-              <Link
-                className={
-                  Active == "3"
-                    ? "nav-item nav-link class-active"
-                    : "nav-item nav-link"
-                }
-                to="/blogdetails"
-              >
-                <p>BLOG</p>
-              </Link>
-              <Link
-                className={
-                  Active == "4"
-                    ? "nav-item nav-link class-active"
-                    : "nav-item nav-link"
-                }
-                to="/FAQ"
-              >
-                <p>FAQ</p>
-              </Link>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto navbarlis">
+                <li
+                  className={
+                    Active == "1"
+                      ? "nav-item nav-li class-active"
+                      : "nav-item nav-li"
+                  }
+                  to="/Homepage"
+                >
+                  <p>HOME</p>
+                </li>
+                <li
+                  className={
+                    Active == "2"
+                      ? "nav-item nav-li class-active"
+                      : "nav-item nav-li"
+                  }
+                  to="/whymypflegebox"
+                >
+                  <p> WHY MY PFLEGE BOX</p>
+                <li>
+                <li
+                  className={
+                    Active == "3"
+                      ? "nav-item nav-li class-active"
+                      : "nav-item nav-li"
+                  }
+                  to="/blogdetails"
+                >
+                  <p>BLOG</p>
+                </li>
+                <li
+                  className={
+                    Active == "4"
+                      ? "nav-item nav-li class-active"
+                      : "nav-item nav-li"
+                  }
+                  to="/FAQ"
+                >
+                  <p>FAQ</p>
+                </li>
+              </div>
             </div>
           </div>
         </nav>
