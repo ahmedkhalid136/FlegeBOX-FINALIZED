@@ -9,7 +9,7 @@ export default function BlueProduct(props) {
     
     setCount(count + 1);
     { props.mycount(count+1)}
-  
+    
   };
   const decrement = () => {
     if (count > 0) {
@@ -54,7 +54,7 @@ export default function BlueProduct(props) {
               decrement()
               
             }}>-</button>
-            <span className="increment-buttons counter">{count}</span>
+            <span className="increment-buttons counter">{props.actual}</span>
             <button className="increment-buttons" onClick={()=>{
               increment()
              

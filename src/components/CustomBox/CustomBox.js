@@ -84,36 +84,42 @@ export default function CustomBox() {
           </div>
           <div className="desktop-cart">
             <Product
+            actual={childCount}
               mycount={SetCount}
               Name={box1.name}
               pcs={box1.pcs}
               image={box1.img}
             />
             <Product
+              actual={childCount1}
               mycount={SetCount1}
               Name={box2.name}
               pcs={box2.pcs}
               image={box2.img}
             />
             <Product
+              actual={childCount2}
               mycount={SetCount2}
               Name={box3.name}
               pcs={box3.pcs}
               image={box3.img}
             />
             <Product
+              actual={childCount3}
               mycount={SetCount3}
               Name={box4.name}
               pcs={box4.pcs}
               image={box4.img}
             />
             <Product
+              actual={childCount4}
               mycount={SetCount4}
               Name={box4.name}
               pcs={box4.pcs}
               image={box4.img}
             />
             <Product
+              actual={childCount5}
               mycount={SetCount5}
               Name={box4.name}
               pcs={box4.pcs}
@@ -136,6 +142,7 @@ export default function CustomBox() {
             </div>
             {childCount == 0 ? null : (
               <Cart
+              mycount1={SetCount}
                 value={childCount}
                 Name={box1.name}
                 pcs={box1.pcs}
@@ -144,6 +151,7 @@ export default function CustomBox() {
             )}
             {childCount1 == 0 ? null : (
               <Cart
+              mycount1={SetCount1}
                 value={childCount1}
                 Name={box2.name}
                 pcs={box2.pcs}
@@ -152,6 +160,7 @@ export default function CustomBox() {
             )}
             {childCount2 == 0 ? null : (
               <Cart
+              mycount1={SetCount2}
                 value={childCount2}
                 Name={box3.name}
                 pcs={box3.pcs}
@@ -160,14 +169,15 @@ export default function CustomBox() {
             )}
             {childCount3 == 0 ? null : (
               <Cart
+              mycount1={SetCount3}
                 value={childCount3}
                 Name={box4.name}
                 pcs={box4.pcs}
                 image={box4.img}
               />
             )}
-            {childCount4 == 0 ? null : <Cart value={childCount4} />}
-            {childCount5 == 0 ? null : <Cart value={childCount5} />}
+            {childCount4 == 0 ? null : <Cart value={childCount4} mycount1={SetCount4} />}
+            {childCount5 == 0 ? null : <Cart value={childCount5} mycount1={SetCount5} />}
           </div>
         </div>
       </div>
