@@ -5,10 +5,10 @@ export default function Cart(props) {
   const [getBackground,setBackground]=useState(true)
   const [getBackground2,setBackground2]=useState(true)
   const [getBackground3,setBackground3]=useState(true)
- 
-
+  
   const decrement = () => {
-   {props.mycount1(props.value-1)}
+    if(props.value>0)  {props.mycount1(props.value-1)}
+    
   };
   return (
     <div
