@@ -125,7 +125,7 @@ function FillInfo(props) {
             }}
             onClick={() => {
               {
-                props.change(true);
+                props.change("Box");
               }
             }}
           >
