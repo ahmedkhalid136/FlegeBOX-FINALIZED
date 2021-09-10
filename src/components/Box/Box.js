@@ -9,13 +9,6 @@ import Confirmation from "../Confirmation/Confirmation";
 function Box() {
   const [getComp, setComp] = useState("Box");
   const [careBox, setcareBox] = useState([]);
-<<<<<<< HEAD
-  const data = careBox;
-  // useEffect(() => {
-
-  //   sendData();
-  // });
-=======
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [streetName, setstreetName] = useState("");
@@ -26,9 +19,11 @@ function Box() {
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
   const data = careBox;
-  
+  const [careLevel, setCareLevel] = useState("");
 
->>>>>>> 9b3eae6c9fc1b7e30e6ef66ff2d698833bf84634
+  useEffect(() => {
+    console.log(note);
+  });
 
   return (
     <div>
@@ -37,10 +32,6 @@ function Box() {
         {/* Header */}
 
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
-<<<<<<< HEAD
-        {getComp == "info" && <FillInfo change={setComp} />}
-        {getComp == "confirm" && <Confirmation change={setComp} />}
-=======
         {getComp == "info" && (
           <FillInfo
             change={setComp}
@@ -50,6 +41,8 @@ function Box() {
             zip={setzipCode}
             countryy={setCountry}
             title={setTitle}
+            careLevel={setCareLevel}
+            note={setNote}
           />
         )}
         {getComp == "confirm" && (
@@ -61,19 +54,16 @@ function Box() {
             zip={zipCode}
             countryy={country}
             title={title}
+            careLevel={careLevel}
+            note={note}
           />
         )}
->>>>>>> 9b3eae6c9fc1b7e30e6ef66ff2d698833bf84634
       </div>
 
       {data.map((i) => {
         return (
           <div>
             <p>{i.name}</p>
-<<<<<<< HEAD
-=======
-            
->>>>>>> 9b3eae6c9fc1b7e30e6ef66ff2d698833bf84634
           </div>
         );
       })}
