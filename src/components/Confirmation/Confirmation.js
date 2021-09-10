@@ -25,7 +25,13 @@ export default function Confirmation(props) {
             <div className="col-lg-1"></div>
           </div>
         </div>
-      <Body value={props.change}/>
+      <Body value={props.change} 
+      fname={props.fname}
+      lname={props.lname}
+      sname={props.sname}
+      zip={props.zip}
+      countryy={props.countryy}
+      title={props.title}/>
       <Footer />
     </div>
   );

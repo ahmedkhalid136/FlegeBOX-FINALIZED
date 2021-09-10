@@ -19,10 +19,11 @@ function Box() {
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
   const data = careBox;
-  // useEffect(() => {
+  
+  useEffect(() => {
 
-  //   sendData();
-  // });
+    console.log(firstName)
+  });
 
   return (
     <div>
@@ -59,6 +60,7 @@ function Box() {
         return (
           <div>
             <p>{i.name}</p>
+            
           </div>
         );
       })}

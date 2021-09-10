@@ -16,13 +16,13 @@ export default function Body(props) {
           'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify({
-         "first_name": "John",
-          "last_name": "Smith",
-          "title": "MR",
-          "street_name": "1092-Bayern",
+         "first_name": props.fname,
+          "last_name": props.lname,
+          "title": props.title,
+          "street_name": props.sname,
         "  date_of_birth": "2021-08-29",
-          "zip_code": "940012",
-          "country": "Germany",
+          "zip_code": props.zip,
+          "country": props.countryy,
           "care_level": "Level 1",
           "care_box": [
             {
