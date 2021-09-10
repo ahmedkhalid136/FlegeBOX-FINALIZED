@@ -20,10 +20,7 @@ function Box() {
   const [note, setNote] = useState("");
   const data = careBox;
   
-  useEffect(() => {
 
-    console.log(firstName)
-  });
 
   return (
     <div>

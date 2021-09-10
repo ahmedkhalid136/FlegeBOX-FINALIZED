@@ -7,18 +7,19 @@ export default function Body(props) {
   function clear() {
     sigpad.current.clear();
   }
-      function sendData () {
+      function sendData( event) {
+        event.preventDefault();
       fetch("http://35.84.238.24/api/method/flegeapp.utils.create_patient", {
         method: "POST",
         headers: {
           Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
-          "Content-Type": "application/json",
-          'Access-Control-Allow-Origin': '*',
+          "Content-Type": "application/json"
+          
         },
         body: JSON.stringify({
          "first_name": props.fname,
           "last_name": props.lname,
-          "title": props.title,
+          "title": "title",
           "street_name": props.sname,
         "  date_of_birth": "2021-08-29",
           "zip_code": props.zip,
@@ -46,8 +47,8 @@ export default function Body(props) {
       })
         .then((r) => r.json())
         .then((r) => {
-          console.log(r);
-          console.log("worked");
+          console.log(r,"worked");
+         
         })
         .catch((e) => {
           console.log(e, "error");
@@ -120,7 +121,7 @@ export default function Body(props) {
             <i class="fas fa-arrow-left" style={{ paddingRight: "5px" }}></i>
             BACK
           </span>
-          <button className="button confirmation-button" onClick={clear,sendData()}>
+          <button className="button confirmation-button" handleClick={clear,sendData()}>
             ORDER
           </button>
         </div>
