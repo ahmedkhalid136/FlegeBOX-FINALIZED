@@ -31,7 +31,11 @@ export default function Confirmation(props) {
       sname={props.sname}
       zip={props.zip}
       countryy={props.countryy}
-      title={props.title}/>
+      title={props.title}
+      phone={props.phone}
+      email={props.email}
+      />
+ 
       <Footer />
     </div>
   );

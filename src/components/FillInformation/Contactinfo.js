@@ -1,6 +1,6 @@
 import React from "react";
 import "./Fillinfo.css"
-function Contactinfo() {
+function Contactinfo(props) {
   return (
     <div className="ContactInfo">
         <div>
@@ -9,10 +9,14 @@ function Contactinfo() {
         
         <div className="row contactContainer">
           <div className="col-lg-6 col-md-12 col-sm-12">
-          <input className="input1" placeholder="Phone Number" />
+          <input className="input1" placeholder="Phone Number"onChange={
+                    e=>props.phone(e.target.value)
+                    }/>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
-          <input className="input1" placeholder="Email Address" />
+          <input className="input1" placeholder="Email Address" onChange={
+                    e=>props.email(e.target.value)
+                    } />
           </div>
         </div>
       </div>

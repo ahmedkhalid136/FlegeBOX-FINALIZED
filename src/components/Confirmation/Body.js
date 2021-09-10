@@ -1,29 +1,34 @@
-import React, { useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef } from "react";
 var SignaturePad = require("react-signature-pad");
 
 export default function Body(props) {
+  const[insuranceNumber,setinsurance]=useState("")
+  const[date,setDate]=useState("")
   let sigpad = useRef({});
 
   function clear() {
     sigpad.current.clear();
   }
- 
+ useEffect(()=>{
+  
+   console.log(date)
+ })
     function sendData(event) {
       event.preventDefault();
       fetch("http://35.84.238.24/api/method/flegeapp.utils.create_patient", {
         method: "POST",
-       
         headers: {
           Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify( {  "first_name": props.fname,
+        body: JSON.stringify( { 
+        "first_name": props.fname,
         "last_name": props.lname,
-        "title": "MR",
-        "street_name": "1092-Bayern",
-        "date_of_birth": "2021-08-29",
-        "zip_code": "940012",
-        "country": "Germany",
+        "title": props.title,
+        "street_name": props.sname,
+        "date_of_birth": date,
+        "zip_code": props.zip,
+        "country":props.countryy,
         "care_level": "Level 1",
         "care_box": [
             {
@@ -37,10 +42,10 @@ export default function Body(props) {
                 "size": "Large"
             }
         ],
-        "phone_number": "+4919283292",
-        "email_address": "flegepatient@patient.com",
+        "phone_number": props.phone,
+        "email_address": props.email,
         "insurance_company": "PAEO",
-        "insurance_number": "PAEO-012930",
+        "insurance_number": insuranceNumber,
         "year": "2021",
         "note": "Patient from germany"}),
       })
@@ -73,10 +78,10 @@ export default function Body(props) {
         <br />
         <div className="row">
           <div className="col-lg-4">
-            <input className="option-box" placeholder="Insurance Number" />
+            <input className="option-box" placeholder="Insurance Number"onChange={ e=>setinsurance(e.target.value)}/>
           </div>
           <div className="col-lg-4">
-            <input className="option-box" placeholder="Date Of Birth" />
+            <input className="option-box" placeholder="Date Of Birth" onChange={ e=>setDate(e.target.value)} />
           </div>
           <div className="col-lg-4">
             <select name="Insurance" className="option-box">

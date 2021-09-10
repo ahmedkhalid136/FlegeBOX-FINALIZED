@@ -20,7 +20,9 @@ function Box() {
   const [note, setNote] = useState("");
   const data = careBox;
   
-
+useEffect(()=>{
+  console.log(country)
+})
 
   return (
     <div>
@@ -38,6 +40,8 @@ function Box() {
             zip={setzipCode}
             countryy={setCountry}
             title={setTitle}
+            phone={setphoneNumber}
+            email={setEmail}
           />
         )}
         {getComp == "confirm" && (
@@ -49,6 +53,8 @@ function Box() {
             zip={zipCode}
             countryy={country}
             title={title}
+            phone={phoneNumber}
+            email={email}
           />
         )}
       </div>
