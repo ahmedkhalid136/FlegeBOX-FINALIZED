@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Fillinfo.css";
 function Carelevel(props) {
   const [getbutton1, setbutton1] = useState(true);
@@ -7,10 +7,40 @@ function Carelevel(props) {
   const [getbutton4, setbutton4] = useState(true);
   const [getbutton5, setbutton5] = useState(true);
   const [getbutton6, setbutton6] = useState(true);
+
+  function checkLevel() {
+    switch (props.valCareLevel) {
+      case "Level 1":
+        setbutton1(false);
+        break;
+      case "Level 2":
+        setbutton2(false);
+        break;
+      case "Level 3":
+        setbutton3(false);
+        break;
+      case "Level 4":
+        setbutton4(false);
+        break;
+      case "Level 5":
+        setbutton5(false);
+        break;
+      case "Neither":
+        setbutton6(false);
+        break;
+      default:
+        setbutton1(false);
+    }
+  }
+
+  useEffect(() => {
+    checkLevel();
+  });
+
   return (
     <div className="Carelevel">
       <h6 className="styleHeadingCare">Care Level</h6>
-      <div className="container Carelevelinner">
+      <div className=" Carelevelinner">
         <div className="row Buttoncontainer">
           <div className="col-lg-2 col-6 col-xs-6">
             <button

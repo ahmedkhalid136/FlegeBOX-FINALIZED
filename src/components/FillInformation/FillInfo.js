@@ -9,14 +9,27 @@ import Footer from "../footer/Footer";
 
 function FillInfo(props) {
   const [title, setTitle] = useState(Boolean);
+  const [checkMr, setCheckMr] = useState("");
+  const [checkMrs, setCheckMrs] = useState("");
   title == true ? props.title("Ms") : props.title("Mr");
+
+  // function checkGender() {
+  //   if (title === true) {
+  //     setCheckMrs("checked");
+  //     setCheckMr("");
+  //   } else {
+  //     setCheckMr("checked");
+  //     setCheckMrs("");
+  //   }
+  // }
+
   return (
-    <div className="mainDiv container">
-      <div className="personalInfo">
+    <div className="mainDiv">
+      <div className="personalInfo container">
         <div className="checkboxes">
           <h6 className="styleHeading">Personal Information</h6>
 
-          <FormControlLabel
+          {/* <FormControlLabel
             value="Ms"
             control={<Checkbox color="primary" />}
             label="Ms"
@@ -33,9 +46,48 @@ function FillInfo(props) {
             onClick={() => {
               setTitle(false);
             }}
-          />
+          /> */}
+          <div style={{ textAlign: "left", marginLeft: "-20px" }}>
+            <input
+              checked={checkMrs}
+              type="radio"
+              id="Mrs"
+              name="gender"
+              style={{
+                display: "inline",
+                width: "50px",
+                textAlign: "left",
+                height: "13px",
+              }}
+              onClick={() => {
+                setTitle(true);
+              }}
+            />
+            <label style={{ display: "inline-block" }} for="css">
+              Ms
+            </label>
+            <input
+              checked={checkMr}
+              style={{
+                display: "inline",
+                width: "50px",
+                textAlign: "left",
+                marginLeft: "20px",
+                height: "13px",
+              }}
+              type="radio"
+              id="Mr"
+              name="gender"
+              onClick={() => {
+                setTitle(false);
+              }}
+            />
+            <label style={{ display: "inline-block" }} for="javascript">
+              Mr
+            </label>
+          </div>
         </div>
-
+        <br />
         <div className="">
           <div className="row">
             <div className="col-lg-6 col-sm-12 ">
@@ -43,6 +95,7 @@ function FillInfo(props) {
                 className="input"
                 placeholder="Firstname"
                 onChange={(e) => props.fname(e.target.value)}
+                value={props.valFname}
               />
             </div>
             <div className="col-lg-6 col-sm-12">
@@ -50,6 +103,7 @@ function FillInfo(props) {
                 className="input"
                 placeholder="Lastname"
                 onChange={(e) => props.lname(e.target.value)}
+                value={props.valLname}
               />
             </div>
           </div>
@@ -61,6 +115,7 @@ function FillInfo(props) {
                     className="input1"
                     placeholder="Streetname"
                     onChange={(e) => props.sname(e.target.value)}
+                    value={props.valSname}
                   />
                 </div>
                 <div className="col-lg-4 col-4">
@@ -75,6 +130,7 @@ function FillInfo(props) {
                     className="input3"
                     placeholder="ZIP Code"
                     onChange={(e) => props.zip(e.target.value)}
+                    value={props.valZip}
                   />
                 </div>
                 <div className="col-lg-8 col-6">
@@ -82,11 +138,13 @@ function FillInfo(props) {
                     className="input4"
                     placeholder="Country"
                     onChange={(e) => props.countryy(e.target.value)}
+                    value={props.valCountry}
                   />
                 </div>
               </div>
             </div>
           </div>
+          <br />
           <div className="checkboxes">
             <FormControlLabel
               value="Ms"
@@ -96,48 +154,57 @@ function FillInfo(props) {
             />
           </div>
         </div>
-        <Carelevel careLevel={props.careLevel} />
-        <Contactinfo phone={props.phone} email={props.email} />
-        <Note note={props.note} />
-        <div className="row separateCheckbox">
-          <FormControlLabel
-            control={<Checkbox color="primary" />}
-            label="Confirm first check box"
-            labelPlacement="End"
-          />
-          <FormControlLabel
-            control={<Checkbox color="primary" />}
-            label="Confirm second check box"
-            labelPlacement="End"
-          />
-        </div>
-        <div style={{ textAlign: "right", paddingTop: "30px" }}>
-          <button
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              marginRight: "30px",
-            }}
-            onClick={() => {
-              {
-                props.change("Box");
-              }
-            }}
-          >
-            <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
-            back
-          </button>
-          <button
-            className="button confirmation-button"
-            onClick={() => {
-              {
-                props.change("confirm");
-              }
-            }}
-          >
-            Continue
-          </button>
-        </div>
+      </div>
+      <Carelevel
+        careLevel={props.careLevel}
+        valCareLevel={props.valCareLevel}
+      />
+      <Contactinfo
+        phone={props.phone}
+        valPhone={props.valPhone}
+        email={props.email}
+        valEmail={props.valEmail}
+      />
+      <Note note={props.note} valNote={props.valNote} />
+
+      <div className="row separateCheckbox">
+        <FormControlLabel
+          control={<Checkbox color="primary" />}
+          label="Confirm first check box"
+          labelPlacement="End"
+        />
+        <FormControlLabel
+          control={<Checkbox color="primary" />}
+          label="Confirm second check box"
+          labelPlacement="End"
+        />
+      </div>
+      <div style={{ textAlign: "right", paddingTop: "30px" }}>
+        <button
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            marginRight: "30px",
+          }}
+          onClick={() => {
+            {
+              props.change("Box");
+            }
+          }}
+        >
+          <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
+          back
+        </button>
+        <button
+          className="button confirmation-button"
+          onClick={() => {
+            {
+              props.change("confirm");
+            }
+          }}
+        >
+          Continue
+        </button>
       </div>
     </div>
   );

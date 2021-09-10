@@ -4,9 +4,9 @@ import BoxComp from "./BoxComp";
 import CustomBox from "../CustomBox/CustomBox";
 function ChooseBox(props) {
   const [getComp, setComp] = useState(true);
-  const [getBox, setBox] = useState(true);
+  const [getBox, setBox] = useState(false);
   const [getBox1, setBox1] = useState(true);
- 
+
   return (
     <div>
       <div style={{ marginTop: "40px" }} className="container desktop-head">
@@ -168,7 +168,11 @@ function ChooseBox(props) {
         </div>
       </div>
 
-      {getComp ? <BoxComp box={props.mybox} /> : <CustomBox box={props.mybox} />}
+      {getComp ? (
+        <BoxComp box={props.mybox} />
+      ) : (
+        <CustomBox box={props.mybox} />
+      )}
 
       <div style={{ textAlign: "right", margin: "30px 0" }}>
         <button

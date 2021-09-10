@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
+import Footer from "../footer/Footer";
 
 function Box() {
   const [getComp, setComp] = useState("Box");
@@ -22,7 +23,7 @@ function Box() {
   return (
     <div>
       <Header />
-      <div style={{ marginTop: "40px"}} className="container">
+      <div style={{ marginTop: "40px" }} className="container">
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
         {getComp == "info" && (
           <FillInfo
@@ -37,6 +38,17 @@ function Box() {
             note={setNote}
             phone={setphoneNumber}
             email={setEmail}
+            // USESTATE VALUES
+            valFname={firstName}
+            valLname={lastName}
+            valSname={streetName}
+            valZip={zipCode}
+            valCountry={country}
+            valTitle={title}
+            valCareLevel={careLevel}
+            valNote={note}
+            valPhone={phoneNumber}
+            valEmail={email}
           />
         )}
         {getComp == "confirm" && (
@@ -56,6 +68,7 @@ function Box() {
           />
         )}
       </div>
+      <Footer />
     </div>
   );
 }

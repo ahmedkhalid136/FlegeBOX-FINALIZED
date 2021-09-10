@@ -6,15 +6,16 @@ function Note(props) {
   return (
     <div className="NoteDiv">
       <h6 className="styleHeadingNote ">Note(optional)</h6>
-      <div className="container">
-        <div className="row contactContainer">
-          <div className="col-lg-12">
-            <textarea
-              className="area"
-              placeholder="Phone Number"
-              onChange={(e) => props.note(e.target.value)}
-            />
-          </div>
+
+      <div className="row contactContainer">
+        <div className="col-lg-12">
+          <textarea
+            className="area"
+            placeholder="Do you want to tell us anything ?"
+            onChange={(e) => props.note(e.target.value)}
+            rows="10"
+            value={props.valNote}
+          />
         </div>
       </div>
     </div>
