@@ -72,7 +72,7 @@
   border: 1px solid black !important;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .product-name {
     text-align: right;
   }
@@ -91,5 +91,7 @@
 
   .product-name p {
     font-size: 13px;
+  }
+  .cart1-sizes {
   }
 }

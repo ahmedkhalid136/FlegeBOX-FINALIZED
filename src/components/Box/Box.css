@@ -40,7 +40,6 @@
 }
 /* Cart */
 .yourCart {
-  height: 500px;
   background-color: #edf7fd;
   border-radius: 20px;
   text-align: left;
@@ -125,6 +124,10 @@
   margin-top: -10px;
 }
 
+.CustomIcons2 path {
+  fill: white;
+}
+
 .RightText h2 {
   margin-right: -70px;
   margin-top: 5px;
@@ -147,6 +150,10 @@
   z-index: 1000;
   color: #fff !important;
   fill: white !important;
+}
+
+.Icons2 path {
+  fill: white;
 }
 .CustomIcons svg {
   margin: 0;
