@@ -4,7 +4,7 @@ var SignaturePad = require("react-signature-pad");
 export default function Body(props) {
   const [insuranceNumber, setinsurance] = useState("");
   const [date, setDate] = useState("");
-  const data = props.value;
+  
   let sigpad = useRef({});
  
   function clear() {
@@ -56,9 +56,7 @@ export default function Body(props) {
     <div className="container" style={{ textAlign: "left" }}>
       <h2>Thank you for your Order!</h2>
       <p>Your Order will arrive at 12.08.2021</p>
-      {data.map((i) => {
-        return <p>{i.name}</p>;
-      })}
+    
       <br />
     
 

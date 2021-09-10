@@ -18,25 +18,35 @@ function Box() {
   const [phoneNumber, setphoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
-  const[careLevel,setCareLevel]=useState("")
- 
-  const data = careBox;
-useEffect(()=>{
-  console.log(data,"Box page sa")
-  data.map((i) => {
-    console.log(i.name)
-  })
-})
+  const [careLevel, setCareLevel] = useState("");
 
+  
+  // useEffect(() => {
+  //   console.log(data, "Box page sa");
+  //   data.map((i) => {
+  // console.log(i.name)
+  //   });
+  // });
+  
+function check(){
+ 
+  console.log(careBox,"answer")
+}
   return (
     <div>
       <Header />
+      <button onClick={()=>{
+        check()
+      }}>
+
+      </button>
       <div style={{ marginTop: "40px" }} className="container">
         {/* Header */}
 
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
         {getComp == "info" && (
           <FillInfo
+            mybox={careBox}
             change={setComp}
             fname={setfirstName}
             lname={setlastName}
@@ -52,7 +62,7 @@ useEffect(()=>{
         )}
         {getComp == "confirm" && (
           <Confirmation
-          change={setComp}
+            change={setComp}
             mybox={careBox}
             fname={firstName}
             lname={lastName}
@@ -66,10 +76,7 @@ useEffect(()=>{
             email={email}
           />
         )}
-         
       </div>
-
-      
     </div>
   );
 }

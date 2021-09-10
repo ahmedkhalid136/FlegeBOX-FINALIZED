@@ -168,11 +168,7 @@ function ChooseBox(props) {
       <div style={{ textAlign: "right", margin: "30px 0" }}>
         <button
           className="button confirmation-button"
-          onClick={() => {
-            {
-              props.change("info");
-            }
-          }}
+          onClick={() => props.change("info")}
         >
           continue
         </button>
