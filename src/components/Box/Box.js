@@ -8,15 +8,19 @@ import Confirmation from "../Confirmation/Confirmation";
 
 function Box() {
   const [getComp, setComp] = useState("Box");
-  const [careBox,setcareBox]= useState([])
-  const[firstName,setfirstName]=useState("")
-  const [lastName,setlastName]=useState("")
-  const [streetName,setstreetName]=useState("")
-  const [zipCode,setzipCode]=useState("")
-  const [country,setCountry]=useState("")
-  const data=careBox
-   // useEffect(() => {
-  
+  const [careBox, setcareBox] = useState([]);
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [streetName, setstreetName] = useState("");
+  const [zipCode, setzipCode] = useState("");
+  const [country, setCountry] = useState("");
+  const [title, setTitle] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [note, setNote] = useState("");
+  const data = careBox;
+  // useEffect(() => {
+
   //   sendData();
   // });
 
@@ -25,21 +29,39 @@ function Box() {
       <Header />
       <div style={{ marginTop: "40px" }} className="container">
         {/* Header */}
-       
-       {getComp=="Box" && <ChooseBox change={setComp} mybox={setcareBox}   />}
-       {getComp=="info" && <FillInfo  change={setComp}/>}
-       {getComp=="confirm" && <Confirmation  change={setComp} />}
-       
+
+        {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
+        {getComp == "info" && (
+          <FillInfo
+            change={setComp}
+            fname={setfirstName}
+            lname={setlastName}
+            sname={setstreetName}
+            zip={setzipCode}
+            countryy={setCountry}
+            title={setTitle}
+          />
+        )}
+        {getComp == "confirm" && (
+          <Confirmation
+            change={setComp}
+            fname={firstName}
+            lname={lastName}
+            sname={streetName}
+            zip={zipCode}
+            countryy={country}
+            title={title}
+          />
+        )}
       </div>
-    
-      {data.map((i)=>{
-              return(
-                <div>
-                  <p>
-                    {i.name}
-                  </p>
-                  </div>
-              )            })}
+
+      {data.map((i) => {
+        return (
+          <div>
+            <p>{i.name}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

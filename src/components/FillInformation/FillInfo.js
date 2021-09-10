@@ -8,6 +8,18 @@ import Note from "./Note";
 import Footer from "../footer/Footer";
 
 function FillInfo(props) {
+  
+  
+ 
+ 
+
+  
+ 
+  
+  
+ 
+  
+  
   return (
     <div className="mainDiv container">
       <div className="personalInfo">
@@ -19,29 +31,44 @@ function FillInfo(props) {
             control={<Checkbox color="primary" />}
             label="Ms"
             labelPlacement="End"
+            onClick={()=>{
+              props.title("Ms")
+            }}
           />
           <FormControlLabel
             value="Mr"
             control={<Checkbox color="primary" />}
             label="Mr"
             labelPlacement="End"
+            onClick={()=>{
+              props.title("Mr")
+            }}
           />
         </div>
 
         <div className="">
           <div className="row">
             <div className="col-lg-6 col-sm-12 ">
-              <input className="input" placeholder="Firstname" />
+              <input className="input" placeholder="Firstname" 
+              onChange={
+              e=>props.fname(e.target.value)
+              }/>
             </div>
             <div className="col-lg-6 col-sm-12">
-              <input className="input" placeholder="Lastname" />
+              <input className="input" placeholder="Lastname" 
+              onChange={
+                e=>props.lname(e.target.value)
+                }
+              />
             </div>
           </div>
           <div className="row secondDiv">
             <div className="col-lg-6">
               <div className="row">
                 <div className="col-lg-8 col-8">
-                  <input className="input1" placeholder="Streetname" />
+                  <input className="input1" placeholder="Streetname" onChange={
+              e=>props.sname(e.target.value)
+              }/>
                 </div>
                 <div className="col-lg-4 col-4">
                   <input className="input2" placeholder="N*" />
@@ -51,10 +78,16 @@ function FillInfo(props) {
             <div className="col-lg-6">
               <div className="row">
                 <div className="col-lg-4 col-6">
-                  <input className="input3" placeholder="ZIP Code" />
+                  <input className="input3" placeholder="ZIP Code"
+                  onChange={
+                    e=>props.zip(e.target.value)
+                    } />
                 </div>
                 <div className="col-lg-8 col-6">
-                  <input className="input4" placeholder="Country" />
+                  <input className="input4" placeholder="Country" 
+                   onChange={
+                    e=>props.countryy(e.target.value)
+                    }/>
                 </div>
               </div>
             </div>
@@ -68,7 +101,7 @@ function FillInfo(props) {
             />
           </div>
         </div>
-
+        <Carelevel />
         <Contactinfo />
         <Note />
         <div className="row separateCheckbox">
@@ -103,7 +136,7 @@ function FillInfo(props) {
             className="button confirmation-button"
             onClick={() => {
               {
-                props.change(true);
+                props.change("confirm");
               }
             }}
           >
