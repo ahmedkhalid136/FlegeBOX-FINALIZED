@@ -28,18 +28,7 @@ export default function Body(props) {
         zip_code: props.zip,
         country: props.countryy,
         care_level: props.careLevel,
-        care_box: [
-          {
-              "item": "gloves",
-              "quantity": 2,
-              "size": "Medium"
-          },
-          {
-              "item": "hand-sanitizer",
-              "quantity": 3,
-              "size": "Large"
-          }
-      ],
+        care_box: props.value,
         phone_number: props.phone,
         email_address: props.email,
         insurance_company: "PAEO",

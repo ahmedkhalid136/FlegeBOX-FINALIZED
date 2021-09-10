@@ -1,22 +1,26 @@
-import React,{useState}from "react";
+import React, { useState } from "react";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
   const [count, setCount] = useState(0);
 
+  const { Name, image, pcs, actual, mycount } = props;
+
   const increment = () => {
-    
-    setCount(count + 1);
-    { props.mycount(props.actual+1)}
-    
+    mycount(actual + 1);
+
+    console.log(actual);
+    props.setter((getter) => [...getter, { Name, image, pcs, actual }]);
+
   };
   const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1)
-      { props.mycount(props.actual-1)}
+    if (actual > 0) {
+      mycount(actual - 1);
+      {
+        props.mycount(props.actual - 1);
+      }
     }
-   
   };
   return (
     <div
@@ -30,11 +34,7 @@ export default function BlueProduct(props) {
       }}
     >
       <div className="col-lg-2 col-3">
-        <img
-          className="product-image"
-          src={props.image}
-          
-        />
+        <img className="product-image" src={props.image} />
       </div>
       <div
         className="col-lg-4 col-3 product-name"
@@ -51,15 +51,23 @@ export default function BlueProduct(props) {
             <button className="increment-buttons sizes">L</button>
           </div>
           <div className="col-lg-7 col-7 increment-area">
-            <button className="increment-buttons" onClick={()=>{
-              decrement()
-              
-            }}>-</button>
+            <button
+              className="increment-buttons"
+              onClick={() => {
+                decrement();
+              }}
+            >
+              -
+            </button>
             <span className="increment-buttons counter">{props.actual}</span>
-            <button className="increment-buttons" onClick={()=>{
-              increment()
-             
-            }}>+</button>
+            <button
+              className="increment-buttons"
+              onClick={() => {
+                increment();
+              }}
+            >
+              +
+            </button>
           </div>
         </div>
       </div>

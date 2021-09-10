@@ -10,7 +10,7 @@ export default function Cart(props) {
     if(props.value>0)  {props.mycount1(props.value-1)}
     
   };
-    
+
  
   
   

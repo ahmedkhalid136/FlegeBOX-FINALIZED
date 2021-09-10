@@ -161,12 +161,7 @@ function BoxComp(props) {
      if(getBox=="box1"){
        props.box(box1)
      }
-     else if(getBox=="box2"){
-      props.box(box2)
-     }
-     else if(getBox=="box3"){
-      props.box(box3)
-     }
+    
     }
     return (
         
@@ -206,7 +201,7 @@ function BoxComp(props) {
               <div className="col-lg-4 col-4">
                 <div className={getBox2 ? "boxes" : "boxes2"}   onClick={() => {
                       setBox("box2");
-                     check()
+                     
                       setBox2(!getBox2);
                       setBox1(true);
                       setBox3(true);
@@ -233,7 +228,7 @@ function BoxComp(props) {
               <div className="col-lg-4 col-4 ">
                 <div className={getBox3 ? "boxes" : "boxes2"}  onClick={() => {
                       setBox("box3");
-                     check()
+                     
                       setBox3(!getBox3);
                       setBox1(true);
                       setBox2(true);

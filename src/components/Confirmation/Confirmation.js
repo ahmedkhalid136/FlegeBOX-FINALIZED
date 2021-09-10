@@ -7,10 +7,10 @@ import Footer from "../footer/Footer";
 export default function Confirmation(props) {
 
    useEffect(()=>{
-    console.log(props.fname,"confirmation page ka data")
-    props.mybox.map((i) => {
-      console.log(i.name)
-    })
+    console.log(props.mybox,"confirmation page ka data")
+    // props.mybox.map((i) => {
+    //   console.log(i.name)
+    // })
   })
   return (
     <div>

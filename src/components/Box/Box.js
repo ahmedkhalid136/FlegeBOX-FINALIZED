@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
-import Footer from "../footer/Footer";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
@@ -20,33 +19,13 @@ function Box() {
   const [note, setNote] = useState("");
   const [careLevel, setCareLevel] = useState("");
 
-  
-  // useEffect(() => {
-  //   console.log(data, "Box page sa");
-  //   data.map((i) => {
-  // console.log(i.name)
-  //   });
-  // });
-  
-function check(){
- 
-  console.log(careBox,"answer")
-}
   return (
     <div>
       <Header />
-      <button onClick={()=>{
-        check()
-      }}>
-
-      </button>
-      <div style={{ marginTop: "40px" }} className="container">
-        {/* Header */}
-
+      <div style={{ marginTop: "40px"}} className="container">
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
         {getComp == "info" && (
           <FillInfo
-            mybox={careBox}
             change={setComp}
             fname={setfirstName}
             lname={setlastName}
