@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
-import Footer from "../footer/Footer";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
@@ -18,19 +17,12 @@ function Box() {
   const [phoneNumber, setphoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
-  const[careLevel,setCareLevel]=useState("")
-  const data = careBox;
-  
-useEffect(()=>{
-  console.log(careLevel)
-})
+  const [careLevel, setCareLevel] = useState("");
 
   return (
     <div>
       <Header />
-      <div style={{ marginTop: "40px" }} className="container">
-        {/* Header */}
-
+      <div style={{ marginTop: "40px"}} className="container">
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
         {getComp == "info" && (
           <FillInfo
@@ -50,6 +42,7 @@ useEffect(()=>{
         {getComp == "confirm" && (
           <Confirmation
             change={setComp}
+            mybox={careBox}
             fname={firstName}
             lname={lastName}
             sname={streetName}
@@ -63,14 +56,6 @@ useEffect(()=>{
           />
         )}
       </div>
-
-      {data.map((i) => {
-        return (
-          <div>
-            <p>{i.name}</p>
-          </div>
-        );
-      })}
     </div>
   );
 }

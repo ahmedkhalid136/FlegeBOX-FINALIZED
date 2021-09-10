@@ -15,6 +15,7 @@ function BoxComp(props) {
     const [getBox4, setBox4] = useState(true);
     const [getBox5, setBox5] = useState(true);
     const [getBox6, setBox6] = useState(true);
+
     
   const box1 = [
     {
@@ -153,6 +154,15 @@ function BoxComp(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
     },
   ];
+  // {getBox=="box1" && props.box(box1)}
+  //   {getBox=="box2" && props.box(box2)}
+  //   {getBox=="box3" && props.box(box3)}
+    function check(){
+     if(getBox=="box1"){
+       props.box(box1)
+     }
+    
+    }
     return (
         
         
@@ -164,7 +174,7 @@ function BoxComp(props) {
                 <div className={getBox1 ? "boxes" : "boxes2"}
                  onClick={() => {
                   setBox("box1");
-                  {props.box(box1)}
+                 check()
                   setBox1(!getBox1);
                   setBox2(true);
                   setBox3(true);
@@ -191,7 +201,7 @@ function BoxComp(props) {
               <div className="col-lg-4 col-4">
                 <div className={getBox2 ? "boxes" : "boxes2"}   onClick={() => {
                       setBox("box2");
-                      {props.box(box2)}
+                     
                       setBox2(!getBox2);
                       setBox1(true);
                       setBox3(true);
@@ -218,7 +228,7 @@ function BoxComp(props) {
               <div className="col-lg-4 col-4 ">
                 <div className={getBox3 ? "boxes" : "boxes2"}  onClick={() => {
                       setBox("box3");
-                      {props.box(box3)}
+                     
                       setBox3(!getBox3);
                       setBox1(true);
                       setBox2(true);

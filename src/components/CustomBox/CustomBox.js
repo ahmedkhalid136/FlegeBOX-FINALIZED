@@ -34,11 +34,9 @@ export default function CustomBox(props) {
   const [childCount3, SetCount3] = useState(0);
   const [childCount4, SetCount4] = useState(0);
   const [childCount5, SetCount5] = useState(0);
-  const [pcs,setpcs] =useState(0)
-  const customComp = [{}];
-  
-  
-  
+  const [myArr, setMyArr] = useState([]);
+  const [pcs, setpcs] = useState(0);
+
   const box1 = [
     {
       name: "K94 MASK",
@@ -73,10 +71,8 @@ export default function CustomBox(props) {
       pcs: pcs,
       Size: "size",
     };
- 
-    };
+  }
 
-    
   return (
     <div className="container">
       <div className="row">
@@ -135,6 +131,8 @@ export default function CustomBox(props) {
               Name={box1[0].name}
               pcs={box1[0].pcs}
               image={box1[0].img}
+              setter={setMyArr}
+              getter={myArr}
             />
             <Product
               actual={childCount1}
@@ -142,6 +140,8 @@ export default function CustomBox(props) {
               Name={box2[0].name}
               pcs={box2[0].pcs}
               image={box2[0].img}
+              setter={setMyArr}
+              getter={myArr}
             />
             <Product
               actual={childCount2}
@@ -149,6 +149,9 @@ export default function CustomBox(props) {
               Name={box3[0].name}
               pcs={box3[0].pcs}
               image={box3[0].img}
+              setter={setMyArr}
+              getter={myArr}
+
             />
             <Product
               actual={childCount3}
@@ -156,6 +159,8 @@ export default function CustomBox(props) {
               Name={box4[0].name}
               pcs={box4[0].pcs}
               image={box4.img}
+              setter={setMyArr}
+              getter={myArr}
             />
             <Product
               actual={childCount4}
@@ -186,7 +191,20 @@ export default function CustomBox(props) {
             <div style={{ padding: "10px 0" }}>
               <ProgressBar completed={90} bgColor={"#F87433"} />
             </div>
-            {childCount == 0 ? null : (
+            {myArr.map((item,ind)=>{
+              return(
+                item.actual>0 ? item.value*item.pcs:
+                 <Cart key={ind}
+                 mycount1={item.SetCount}
+                 value={item.actual}
+                 Name={item.Name}
+                 pcs={item.pcs}
+                 image={item.image}
+                 
+               />)
+            })}
+           
+            {/* {childCount == 0 ? null : (
               <Cart
                 mycount1={SetCount}
                 value={childCount}
@@ -229,7 +247,7 @@ export default function CustomBox(props) {
             )}
             {childCount5 == 0 ? null : (
               <Cart value={childCount5} mycount1={SetCount5} />
-            )}
+            )} */}
           </div>
         </div>
       </div>
