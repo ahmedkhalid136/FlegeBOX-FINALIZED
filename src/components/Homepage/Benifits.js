@@ -21,7 +21,7 @@ export default function Benifits() {
           <div className="col-lg-4">
             <div className="benifits-columns">
               <div className="icon-background">
-                <i class="fas fa-euro-sign icons blue-icons"></i>
+                <i class="fas fa-paper-plane icons blue-icons"></i>
               </div>
               <h4>Reliable Delivery</h4>
               <p>
@@ -33,7 +33,7 @@ export default function Benifits() {
           <div className="col-lg-4">
             <div className="benifits-columns">
               <div className="icon-background">
-                <i class="fas fa-euro-sign icons blue-icons"></i>
+                <i class="fas fa-gem icons blue-icons"></i>
               </div>
               <h4>Quality</h4>
               <p>We supply you with high quality branded products</p>
@@ -42,7 +42,7 @@ export default function Benifits() {
           <div className="col-lg-4">
             <div className="benifits-columns">
               <div className="icon-background">
-                <i class="fas fa-euro-sign icons blue-icons"></i>
+                <i class="fas fa-address-card icons blue-icons"></i>
               </div>
               <h4>No Formalities</h4>
               <p>
@@ -54,7 +54,7 @@ export default function Benifits() {
           <div className="col-lg-4">
             <div className="benifits-columns">
               <div className="icon-background">
-                <i class="fas fa-euro-sign icons blue-icons"></i>
+                <i class="fas fa-edit icons blue-icons"></i>
               </div>
               <h4>Without Contract Commitment</h4>
               <p>The care box can be cancelled at any time.</p>
@@ -63,7 +63,7 @@ export default function Benifits() {
           <div className="col-lg-4">
             <div className="benifits-columns">
               <div className="icon-background">
-                <i class="fas fa-euro-sign icons blue-icons"></i>
+                <i class="fas fa-envelope icons blue-icons"></i>
               </div>
               <h4>Prescription Free</h4>
               <p>You do not need a prescription from your doctor.</p>
