@@ -34,6 +34,7 @@ export default function Confirmation(props) {
       title={props.title}
       phone={props.phone}
       email={props.email}
+      carelevel={props.careLevel}
       />
  
       <Footer />

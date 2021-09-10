@@ -40,16 +40,17 @@ const[title,setTitle]=useState(Boolean)
         <div className="">
           <div className="row">
             <div className="col-lg-6 col-sm-12 ">
-              <input className="input" placeholder="Firstname" 
-              onChange={
-              e=>props.fname(e.target.value)
-              }/>
+              <input
+                className="input"
+                placeholder="Firstname"
+                onChange={(e) => props.fname(e.target.value)}
+              />
             </div>
             <div className="col-lg-6 col-sm-12">
-              <input className="input" placeholder="Lastname" 
-              onChange={
-                e=>props.lname(e.target.value)
-                }
+              <input
+                className="input"
+                placeholder="Lastname"
+                onChange={(e) => props.lname(e.target.value)}
               />
             </div>
           </div>
@@ -57,9 +58,11 @@ const[title,setTitle]=useState(Boolean)
             <div className="col-lg-6">
               <div className="row">
                 <div className="col-lg-8 col-8">
-                  <input className="input1" placeholder="Streetname" onChange={
-              e=>props.sname(e.target.value)
-              }/>
+                  <input
+                    className="input1"
+                    placeholder="Streetname"
+                    onChange={(e) => props.sname(e.target.value)}
+                  />
                 </div>
                 <div className="col-lg-4 col-4">
                   <input className="input2" placeholder="N*" />
@@ -69,16 +72,18 @@ const[title,setTitle]=useState(Boolean)
             <div className="col-lg-6">
               <div className="row">
                 <div className="col-lg-4 col-6">
-                  <input className="input3" placeholder="ZIP Code"
-                  onChange={
-                    e=>props.zip(e.target.value)
-                    } />
+                  <input
+                    className="input3"
+                    placeholder="ZIP Code"
+                    onChange={(e) => props.zip(e.target.value)}
+                  />
                 </div>
                 <div className="col-lg-8 col-6">
-                  <input className="input4" placeholder="Country" 
-                   onChange={
-                    e=>props.countryy(e.target.value)
-                    }/>
+                  <input
+                    className="input4"
+                    placeholder="Country"
+                    onChange={(e) => props.countryy(e.target.value)}
+                  />
                 </div>
               </div>
             </div>
@@ -92,10 +97,10 @@ const[title,setTitle]=useState(Boolean)
             />
           </div>
         </div>
-        <Carelevel />
+        <Carelevel careLevel={props.careLevel} />
         <Contactinfo phone={props.phone}
         email={props.email}/>
-        <Note />
+        <Note note={props.note} />
         <div className="row separateCheckbox">
           <FormControlLabel
             control={<Checkbox color="primary" />}
@@ -136,8 +141,6 @@ const[title,setTitle]=useState(Boolean)
           </button>
         </div>
       </div>
-
-      
     </div>
   );
 }

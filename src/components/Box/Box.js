@@ -18,10 +18,11 @@ function Box() {
   const [phoneNumber, setphoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
+  const[careLevel,setCareLevel]=useState("")
   const data = careBox;
   
 useEffect(()=>{
-  console.log(country)
+  console.log(careLevel)
 })
 
   return (
@@ -40,6 +41,8 @@ useEffect(()=>{
             zip={setzipCode}
             countryy={setCountry}
             title={setTitle}
+            careLevel={setCareLevel}
+            note={setNote}
             phone={setphoneNumber}
             email={setEmail}
           />
@@ -53,6 +56,8 @@ useEffect(()=>{
             zip={zipCode}
             countryy={country}
             title={title}
+            careLevel={careLevel}
+            note={note}
             phone={phoneNumber}
             email={email}
           />
@@ -63,7 +68,6 @@ useEffect(()=>{
         return (
           <div>
             <p>{i.name}</p>
-            
           </div>
         );
       })}

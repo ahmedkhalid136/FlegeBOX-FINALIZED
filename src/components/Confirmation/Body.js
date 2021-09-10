@@ -29,7 +29,7 @@ export default function Body(props) {
         "date_of_birth": date,
         "zip_code": props.zip,
         "country":props.countryy,
-        "care_level": "Level 1",
+        "care_level": props.careLevel,
         "care_box": [
             {
                 "item": "gloves",
@@ -47,19 +47,12 @@ export default function Body(props) {
         "insurance_company": "PAEO",
         "insurance_number": insuranceNumber,
         "year": "2021",
-        "note": "Patient from germany"}),
+        "note": props.note}),
       })
-        .then((r) => r.json())
-        .then((r) => {
-          console.log(r, "worked");
-           console.log(r)
-        })
-        .catch((e) => {
-          console.log(e, "error");
-        });
-    }
- 
-  
+      .catch((e) => {
+        console.log(e, "error");
+      });
+  }
 
   return (
     <div className="container" style={{ textAlign: "left" }}>
