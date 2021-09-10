@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 import Homepage from "./components/Homepage/Homepage";
 import whymypflegebox from "./components/whymypflegebox/whymypflegebox";
 import Faq from "./components/FAQ/FAQ";
@@ -19,7 +19,10 @@ function App() {
         <body>
           <BrowserRouter>
             <Switch>
-              <Route path="/" component={Homepage}></Route>
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+              <Route path="/home" component={Homepage}></Route>
               <Route path="/whymypflegebox" component={whymypflegebox}></Route>
               <Route path="/FAQ" component={Faq}></Route>
               <Route path="/contact" component={contact}></Route>
