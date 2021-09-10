@@ -39,7 +39,7 @@ export default function Header(props) {
                     : "nav-item nav-li"
                 }
               >
-                <a className="nav-link" href="/homepage">
+                <a className="nav-link" href="/">
                   <p>HOME</p>
                 </a>
               </li>
