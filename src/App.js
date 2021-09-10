@@ -19,7 +19,7 @@ function App() {
         <body>
           <BrowserRouter>
             <Switch>
-              <Route path="/homepage" component={Homepage}></Route>
+              <Route path="/" component={Homepage}></Route>
               <Route path="/whymypflegebox" component={whymypflegebox}></Route>
               <Route path="/FAQ" component={Faq}></Route>
               <Route path="/contact" component={contact}></Route>
