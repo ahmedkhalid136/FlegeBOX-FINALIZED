@@ -131,7 +131,7 @@ function ChooseBox(props) {
                 />
               </svg>
             </div>
-            <h2>BOXES</h2>
+            <h2>Boxes</h2>
           </div>
           <div className="col-6">
             {" "}
@@ -156,8 +156,14 @@ function ChooseBox(props) {
                 />
               </svg>
             </div>
-            <div style={{ textAlign: "left", paddingTop: "15px" }}>
-              <h2>CUSTOM</h2>
+            <div
+              style={{
+                textAlign: "left",
+                paddingTop: "15px",
+                paddingLeft: "10px",
+              }}
+            >
+              <h2>Custom</h2>
             </div>
           </div>
         </div>

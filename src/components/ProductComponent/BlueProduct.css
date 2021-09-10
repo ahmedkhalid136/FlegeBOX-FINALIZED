@@ -82,8 +82,7 @@
   .increment-area {
     display: none;
   }
-  .cart-section {
-  }
+
   .fa-times {
     font-size: 15px;
     margin-right: -25px;
@@ -91,7 +90,5 @@
 
   .product-name p {
     font-size: 13px;
-  }
-  .cart1-sizes {
   }
 }

@@ -8,8 +8,8 @@ import Note from "./Note";
 import Footer from "../footer/Footer";
 
 function FillInfo(props) {
-const[title,setTitle]=useState(Boolean)
-  title==true?props.title("Ms"):props.title("Mr")
+  const [title, setTitle] = useState(Boolean);
+  title == true ? props.title("Ms") : props.title("Mr");
   return (
     <div className="mainDiv container">
       <div className="personalInfo">
@@ -21,9 +21,8 @@ const[title,setTitle]=useState(Boolean)
             control={<Checkbox color="primary" />}
             label="Ms"
             labelPlacement="End"
-            onClick={()=>{
-              setTitle(true)
-            
+            onClick={() => {
+              setTitle(true);
             }}
           />
           <FormControlLabel
@@ -31,8 +30,8 @@ const[title,setTitle]=useState(Boolean)
             control={<Checkbox color="primary" />}
             label="Mr"
             labelPlacement="End"
-            onClick={()=>{
-              setTitle(false)
+            onClick={() => {
+              setTitle(false);
             }}
           />
         </div>
@@ -98,8 +97,7 @@ const[title,setTitle]=useState(Boolean)
           </div>
         </div>
         <Carelevel careLevel={props.careLevel} />
-        <Contactinfo phone={props.phone}
-        email={props.email}/>
+        <Contactinfo phone={props.phone} email={props.email} />
         <Note note={props.note} />
         <div className="row separateCheckbox">
           <FormControlLabel
