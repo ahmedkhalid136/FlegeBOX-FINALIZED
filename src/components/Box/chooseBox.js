@@ -6,7 +6,8 @@ function ChooseBox(props) {
   const [getComp, setComp] = useState(true);
   const [getBox, setBox] = useState(true);
   const [getBox1, setBox1] = useState(true);
-
+  const [comp, nextComp] = useState([]);
+  props.mybox(comp);
   return (
     <div>
       <div style={{ marginTop: "40px" }} className="container">
@@ -20,11 +21,6 @@ function ChooseBox(props) {
           <div className="col-lg-2">3. CONFIRMATION</div>
           <div className="col-lg-1"></div>
         </div>
-        <div className="col-lg-2">...........................</div>
-        <div className="col-lg-3">2. FILL INFORMATION FORM</div>
-        <div className="col-lg-2">...........................</div>
-        <div className="col-lg-2">3. CONFIRMATION</div>
-        <div className="col-lg-1"></div>
       </div>
 
       <div className="mobile-head">
@@ -40,7 +36,7 @@ function ChooseBox(props) {
           <div className="col-lg-2 col-2">3.</div>
         </div>
       </div>
-      {/* Choose Box Header */}
+
       <div className="row fullLine">
         <div className="col-lg-1"></div>
         <div className="col-lg-3  RightText chooseboxHead">
@@ -110,11 +106,7 @@ function ChooseBox(props) {
           </div>
         </div>
 
-        {getComp ? (
-          <BoxComp box={props.mybox} />
-        ) : (
-          <CustomBox box={props.mybox} />
-        )}
+        {getComp ? <BoxComp box={props.mybox} /> : <CustomBox box={nextComp} />}
 
         <button
           className="button confirmation-button"
