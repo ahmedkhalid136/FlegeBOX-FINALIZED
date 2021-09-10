@@ -9,6 +9,11 @@ import Confirmation from "../Confirmation/Confirmation";
 function Box() {
   const [getComp, setComp] = useState("Box");
   const [careBox,setcareBox]= useState([])
+  const[firstName,setfirstName]=useState("")
+  const [lastName,setlastName]=useState("")
+  const [streetName,setstreetName]=useState("")
+  const [zipCode,setzipCode]=useState("")
+  const [country,setCountry]=useState("")
   const data=careBox
    // useEffect(() => {
   

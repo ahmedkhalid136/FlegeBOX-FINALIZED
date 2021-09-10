@@ -112,47 +112,7 @@ function FillInfo(props) {
         </div>
       </div>
 
-      <Contactinfo />
-      <Note />
-      <div className="row separateCheckbox">
-        <FormControlLabel
-          control={<Checkbox color="primary" />}
-          label="Confirm first check box"
-          labelPlacement="End"
-        />
-        <FormControlLabel
-          control={<Checkbox color="primary" />}
-          label="Confirm second check box"
-          labelPlacement="End"
-        />
-      </div>
-      <div style={{ textAlign: "right", paddingTop: "30px" }}>
-        <button
-          style={{
-            backgroundColor: "transparent",
-            border: "none",
-            marginRight: "30px",
-          }}
-          onClick={() => {
-            {
-              props.change("Box");
-            }
-          }}
-        >
-          <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
-          back
-        </button>
-        <button
-          className="button confirmation-button"
-          onClick={() => {
-            {
-              props.change("confirm");
-            }
-          }}
-        >
-          Continue
-        </button>
-      </div>
+      
     </div>
   );
 }
