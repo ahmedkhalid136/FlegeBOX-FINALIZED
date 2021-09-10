@@ -1,11 +1,17 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Body from "./Body";
 import "./styles.css";
 import "../footer/Footer";
 import Footer from "../footer/Footer";
 
 export default function Confirmation(props) {
- 
+
+   useEffect(()=>{
+    console.log(props.mybox,"confirmation page ka data")
+    props.mybox.map((i) => {
+      console.log(i.name)
+    })
+  })
   return (
     <div>
     
@@ -25,7 +31,9 @@ export default function Confirmation(props) {
             <div className="col-lg-1"></div>
           </div>
         </div>
-      <Body value={props.change} 
+      <Body
+      change={props.change}
+       value={props.mybox} 
       fname={props.fname}
       lname={props.lname}
       sname={props.sname}

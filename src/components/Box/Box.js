@@ -19,10 +19,13 @@ function Box() {
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
   const[careLevel,setCareLevel]=useState("")
+ 
   const data = careBox;
-  
 useEffect(()=>{
-  console.log(careLevel)
+  console.log(data,"Box page sa")
+  data.map((i) => {
+    console.log(i.name)
+  })
 })
 
   return (
@@ -49,7 +52,8 @@ useEffect(()=>{
         )}
         {getComp == "confirm" && (
           <Confirmation
-            change={setComp}
+          change={setComp}
+            mybox={careBox}
             fname={firstName}
             lname={lastName}
             sname={streetName}
@@ -62,15 +66,10 @@ useEffect(()=>{
             email={email}
           />
         )}
+         
       </div>
 
-      {data.map((i) => {
-        return (
-          <div>
-            <p>{i.name}</p>
-          </div>
-        );
-      })}
+      
     </div>
   );
 }

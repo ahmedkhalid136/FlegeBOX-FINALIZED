@@ -1,64 +1,66 @@
-import React, {useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 var SignaturePad = require("react-signature-pad");
 
 export default function Body(props) {
-  const[insuranceNumber,setinsurance]=useState("")
-  const[date,setDate]=useState("")
+  const [insuranceNumber, setinsurance] = useState("");
+  const [date, setDate] = useState("");
+  const data = props.value;
   let sigpad = useRef({});
-
+ 
   function clear() {
     sigpad.current.clear();
   }
- useEffect(()=>{
-  
-   console.log(date)
- })
-    function sendData(event) {
-      event.preventDefault();
-      fetch("http://35.84.238.24/api/method/flegeapp.utils.create_patient", {
-        method: "POST",
-        headers: {
-          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify( { 
-        "first_name": props.fname,
-        "last_name": props.lname,
-        "title": props.title,
-        "street_name": props.sname,
-        "date_of_birth": date,
-        "zip_code": props.zip,
-        "country":props.countryy,
-        "care_level": props.careLevel,
-        "care_box": [
-            {
-                "item": "gloves",
-                "quantity": 2,
-                "size": "Medium"
-            },
-            {
-                "item": "hand-sanitizer",
-                "quantity": 3,
-                "size": "Large"
-            }
-        ],
-        "phone_number": props.phone,
-        "email_address": props.email,
-        "insurance_company": "PAEO",
-        "insurance_number": insuranceNumber,
-        "year": "2021",
-        "note": props.note}),
-      })
-      .catch((e) => {
-        console.log(e, "error");
-      });
+
+  function sendData(event) {
+    event.preventDefault();
+    fetch("http://35.84.238.24/api/method/flegeapp.utils.create_patient", {
+      method: "POST",
+      headers: {
+        Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        first_name: props.fname,
+        last_name: props.lname,
+        title: props.title,
+        street_name: props.sname,
+        date_of_birth: date,
+        zip_code: props.zip,
+        country: props.countryy,
+        care_level: props.careLevel,
+        care_box: [
+          {
+              "item": "gloves",
+              "quantity": 2,
+              "size": "Medium"
+          },
+          {
+              "item": "hand-sanitizer",
+              "quantity": 3,
+              "size": "Large"
+          }
+      ],
+        phone_number: props.phone,
+        email_address: props.email,
+        insurance_company: "PAEO",
+        insurance_number: insuranceNumber,
+        year: "2021",
+        note: props.note,
+      }),
+    }).catch((e) => {
+      console.log(e, "error");
+    });
   }
 
   return (
     <div className="container" style={{ textAlign: "left" }}>
       <h2>Thank you for your Order!</h2>
       <p>Your Order will arrive at 12.08.2021</p>
+      {data.map((i) => {
+        return <p>{i.name}</p>;
+      })}
       <br />
+    
 
       <p style={{ color: "black" }}>Please complete your information :</p>
 
@@ -71,10 +73,18 @@ export default function Body(props) {
         <br />
         <div className="row">
           <div className="col-lg-4">
-            <input className="option-box" placeholder="Insurance Number"onChange={ e=>setinsurance(e.target.value)}/>
+            <input
+              className="option-box"
+              placeholder="Insurance Number"
+              onChange={(e) => setinsurance(e.target.value)}
+            />
           </div>
           <div className="col-lg-4">
-            <input className="option-box" placeholder="Date Of Birth" onChange={ e=>setDate(e.target.value)} />
+            <input
+              className="option-box"
+              placeholder="Date Of Birth"
+              onChange={(e) => setDate(e.target.value)}
+            />
           </div>
           <div className="col-lg-4">
             <select name="Insurance" className="option-box">
@@ -116,7 +126,7 @@ export default function Body(props) {
             style={{ fontSize: "20px", paddingRight: "20px" }}
             onClick={() => {
               {
-                props.value("info");
+                props.change("info");
               }
             }}
           >
