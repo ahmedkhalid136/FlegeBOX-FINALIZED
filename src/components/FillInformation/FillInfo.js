@@ -25,6 +25,39 @@ function FillInfo(props) {
 
   return (
     <div className="mainDiv">
+      <div style={{ marginTop: "40px" }} className="container desktop-head">
+        <div className="row">
+          <div className="col-lg-2">1. CHOOSE BOX</div>
+          <div className="col-lg-2">...........................</div>
+          <div className="col-lg-3">
+            <button className="chooseButton">2. FILL INFORMATION FORM</button>
+          </div>
+          <div className="col-lg-2">...........................</div>
+          <div className="col-lg-2">3. CONFIRMATION</div>
+          <div className="col-lg-1"></div>
+        </div>
+      </div>
+      <div className="mobile-head">
+        <div className="row">
+          <div className="col-lg-2 col-1">
+            <i class="far fa-check-circle"></i>
+          </div>
+          <div className="col-lg-2 col-1">......</div>
+          <div className="col-lg-3 col-8">
+            <button
+              className="chooseButton"
+              style={{ padding: "7px 5px", marginRight: "-20px" }}
+            >
+              2. FILL INFORMATION FORM
+            </button>
+          </div>
+          <div className="col-lg-2 col-1">......</div>
+          <div className="col-lg-2 col-1">3.</div>
+        </div>
+      </div>{" "}
+      <br />
+      <br />
+      <br />
       <div className="personalInfo container">
         <div className="checkboxes">
           <h6 className="styleHeading">Personal Information</h6>
@@ -166,7 +199,6 @@ function FillInfo(props) {
         valEmail={props.valEmail}
       />
       <Note note={props.note} valNote={props.valNote} />
-
       <div className="row separateCheckbox">
         <FormControlLabel
           control={<Checkbox color="primary" />}

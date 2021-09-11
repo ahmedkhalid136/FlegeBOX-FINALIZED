@@ -110,7 +110,7 @@ export default function ImageSection() {
             style={{ zIndex: "1000", position: "relative" }}
           />
           <div
-            className="right-red-dot"
+            className="left-red-dot"
             style={{
               zIndex: "",
               textAlign: "right",
