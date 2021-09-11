@@ -29,6 +29,7 @@ export default function Base() {
                 }}
               ></hr>
             </p>
+            <br />
             <a>Why MyPflegebox ?</a>
             <br /> <br />
             <a>Blog</a> <br /> <br />
@@ -69,11 +70,12 @@ export default function Base() {
         <p>
           <hr
             style={{
-              color: "#F87433",
-              backgroundColor: "#F87433",
+              color: "rgba(255, 255, 255, 0.2)",
+              backgroundColor: "rgba(255, 255, 255, 0.2)",
               height: 3,
-              borderColor: "#F87433",
+              borderColor: "rgba(255, 255, 255, 0.2)",
               opacity: 1,
+              marginTop: "50px",
             }}
           ></hr>
         </p>

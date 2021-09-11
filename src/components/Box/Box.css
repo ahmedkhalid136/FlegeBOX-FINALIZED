@@ -9,7 +9,15 @@
   border-radius: 20px;
   height: 164px;
   width: 100%;
-  margin: 3px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.boxes2 {
+  background: #2faae5;
+  border-radius: 20px;
+  height: 164px;
+  width: 100%;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -30,14 +38,6 @@
   font-size: 22px;
 }
 
-.boxes2 {
-  background: #2faae5;
-  border-radius: 20px;
-  height: 164px;
-  width: 100%;
-  margin: 3px;
-  position: relative;
-}
 /* Cart */
 .yourCart {
   background-color: #edf7fd;

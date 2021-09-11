@@ -26,6 +26,11 @@ export default function Body() {
       <div className="container icon-section">
         <div className="row">
           <div className="col-lg-3">
+            <div className="icon-background">
+              <i class="fas fa-paper-plane icons blue-icons"></i>
+            </div>
+            <br />
+            <br />
             <h3>Reliable Delivery</h3>
             <p>
               Free shipping every month and <br /> an time at your home or at{" "}
@@ -33,6 +38,11 @@ export default function Body() {
             </p>
           </div>
           <div className="col-lg-3">
+            <div className="icon-background">
+              <i class="fas fa-address-card icons blue-icons"></i>
+            </div>
+            <br />
+            <br />
             <h3>No Formalities</h3>
             <p>
               We take care of the application <br /> and billing with the
@@ -40,12 +50,22 @@ export default function Body() {
             </p>
           </div>
           <div className="col-lg-3">
+            <div className="icon-background">
+              <i class="fas fa-gem icons blue-icons"></i>
+            </div>
+            <br />
+            <br />
             <h3>Quality</h3>
             <p>
               We supply you with high <br /> quality branded products.
             </p>
           </div>
           <div className="col-lg-3">
+            <div className="icon-background">
+              <i class="fas fa-envelope icons blue-icons"></i>
+            </div>
+            <br />
+            <br />
             <h3>Prescription Free</h3>
             <p>
               You do not need a prescription from <br /> your doctor.
@@ -54,7 +74,12 @@ export default function Body() {
         </div>
       </div>
       <div className="buttonDiv">
-        <button>REQUEST CARE BOX</button>
+        <br />
+        <br />
+        <a href="/box">
+          {" "}
+          <button>REQUEST CARE BOX</button>
+        </a>
       </div>
     </div>
   );
