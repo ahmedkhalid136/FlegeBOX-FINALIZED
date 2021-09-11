@@ -168,6 +168,8 @@ export default function CustomBox(props) {
               Name={box4[0].name}
               pcs={box4[0].pcs}
               image={box4[0].img}
+              setter={setMyArr}
+              getter={myArr}
             />
             <Product
               actual={childCount5}
@@ -175,6 +177,8 @@ export default function CustomBox(props) {
               Name={box4[0].name}
               pcs={box4[0].pcs}
               image={box4[0].img}
+              setter={setMyArr}
+              getter={myArr}
             />
           </div>
         </div>
