@@ -10,9 +10,10 @@ export default function Works() {
             <div className="icon-background">
               <i class="fas fa-shopping-cart icons"></i>
             </div>
-            <h3>
+            
+            <h4 className="iconsHeading">
               1. Wish core box <br /> select
-            </h3>
+            </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
           <i class="fas fa-arrow-down arrow down-arrow col-lg-2"></i>
@@ -23,9 +24,9 @@ export default function Works() {
             <div className="icon-background">
               <i class="far fa-address-card icons"></i>
             </div>
-            <h3>
+            <h4 className="iconsHeading">
               2. Request online fill out <br /> and send{" "}
-            </h3>
+            </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
           <i class="fas fa-arrow-down arrow down-arrow col-lg-2"></i>
@@ -35,11 +36,11 @@ export default function Works() {
             <div className="icon-background">
               <i class="fas fa-paperclip icons"></i>
             </div>
-            <h3>
+            <h4 className="iconsHeading">
               3. We take over <br />
               Application <br /> & billing with the <br />
               nursing care insurance
-            </h3>
+            </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
           <i class="fas fa-arrow-down arrow down-arrow col-lg-2"></i>
@@ -49,10 +50,10 @@ export default function Works() {
             <div className="icon-background">
               <i class="fas fa-truck icons"></i>
             </div>
-            <h3>
+            <h4 className="iconsHeading">
               4. Receive monthly your <br />
               free care box
-            </h3>
+            </h4>
           </div>
         </div>
       </div>
