@@ -26,7 +26,7 @@ export default function Cart(props) {
     }
   };
 
-
+console.log(actual)
   return (
     <div
       className="row cart-section"

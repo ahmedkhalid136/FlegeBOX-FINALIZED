@@ -24,7 +24,7 @@ export default function MobileAddToCart(props) {
       mycount(actual - 1);
     }
     function finish() {
-      mycount(actual - 1);
+      mycount(0);
       for (var i = getter.length - 1; i >= 0; i--) {
         if (getter[i].Name == find_and_delete) {
           getter.splice(i, 1);
