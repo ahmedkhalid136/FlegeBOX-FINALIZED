@@ -16,7 +16,7 @@ export default function Header(props) {
     <div style={{ backgroundColor: "#ffffff" }}>
       <div className="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/home">
             myPflegebox
           </a>
           <button

@@ -17,7 +17,10 @@ function Blogdetails() {
             elit
           </h1>
         </div>
-        <div className="datee">4 Min | july 20,2021</div>
+        <div className="datee">
+          <i class="far fa-clock"></i> 4 Min |{" "}
+          <i class="far fa-calendar-alt"></i> july 20,2021
+        </div>
         <div>
           <img src={mainImage} className="Myimage" />
         </div>
@@ -83,7 +86,10 @@ function Blogdetails() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry'
                 </p>
-                <p className="datee">4 Min | july 20,2021</p>
+                <p className="datee">
+                  <i class="far fa-clock"></i> 4 Min |{" "}
+                  <i class="far fa-calendar-alt"></i> july 20,2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4 col-md-4 col-xs-4  ">
@@ -99,7 +105,10 @@ function Blogdetails() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry'
                 </p>
-                <p className="datee">4 Min | july 20,2021</p>
+                <p className="datee">
+                  <i class="far fa-clock"></i> 4 Min |{" "}
+                  <i class="far fa-calendar-alt"></i> july 20,2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4 col-md-4 col-xs-4  ">
@@ -115,7 +124,10 @@ function Blogdetails() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry'
                 </p>
-                <p className="datee">4 Min | july 20,2021</p>
+                <p className="datee">
+                  <i class="far fa-clock"></i> 4 Min |{" "}
+                  <i class="far fa-calendar-alt"></i> july 20,2021
+                </p>
               </a>
             </div>
           </div>

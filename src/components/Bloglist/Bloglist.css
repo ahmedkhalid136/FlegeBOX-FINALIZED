@@ -28,3 +28,7 @@ a {
 a:hover {
   color: black;
 }
+
+.bloglist-title-section .col-lg-4 {
+  padding-bottom: 50px;
+}

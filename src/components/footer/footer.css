@@ -57,7 +57,7 @@
 
 .footer-base h5 {
   font-family: "Nunito Sans";
-font-style: normal;
+  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 27px;
@@ -96,7 +96,14 @@ hr .line {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
+.display-rule {
+  display: none;
+}
+
 @media (max-width: 400px) {
+  .display-rule {
+    display: block;
+  }
   .phone-column {
     text-align: center !important;
   }

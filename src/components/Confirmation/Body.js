@@ -4,9 +4,9 @@ var SignaturePad = require("react-signature-pad");
 export default function Body(props) {
   const [insuranceNumber, setinsurance] = useState("");
   const [date, setDate] = useState("");
-  
+
   let sigpad = useRef({});
- 
+
   function clear() {
     sigpad.current.clear();
   }
@@ -45,9 +45,8 @@ export default function Body(props) {
     <div className="container" style={{ textAlign: "left" }}>
       <h2>Thank you for your Order!</h2>
       <p>Your Order will arrive at 12.08.2021</p>
-    
+
       <br />
-    
 
       <p style={{ color: "black" }}>Please complete your information :</p>
 
@@ -117,10 +116,14 @@ export default function Body(props) {
               }
             }}
           >
-            <i class="fas fa-arrow-left" style={{ paddingRight: "5px" }}></i>
+            <i
+              class="fas fa-arrow-left"
+              style={{ paddingRight: "5px", cursor: "pointer" }}
+            ></i>
             BACK
           </span>
           <button
+            style={{ cursor: "pointer" }}
             className="button confirmation-button"
             onClick={(e) => sendData(e)}
           >
