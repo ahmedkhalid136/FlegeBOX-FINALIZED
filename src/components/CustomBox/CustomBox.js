@@ -74,6 +74,7 @@ export default function CustomBox(props) {
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
     },
+  
   ];
 
 
