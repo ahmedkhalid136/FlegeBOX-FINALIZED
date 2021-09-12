@@ -47,82 +47,94 @@ function Bloglist() {
           </div>
           <div className="row">
             <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <img src={Image2} className="bloglist-image" />
-              <br />
-              <br />
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <br />
-              <p>
-                We want everyone in need of care and their relatives to receive
-                the benefits...{" "}
-              </p>
-              <br />
-              <p>4 MIN | JULY 20, 2021</p>
+              <a href="/Blogdetails">
+                <img src={Image2} className="bloglist-image" />
+                <br />
+                <br />
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <br />
+                <p>
+                  We want everyone in need of care and their relatives to
+                  receive the benefits...{" "}
+                </p>
+                <br />
+                <p>4 MIN | JULY 20, 2021</p>
+              </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <img src={Image2} className="bloglist-image" />
-              <br />
-              <br />
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <br />
-              <p>
-                We want everyone in need of care and their relatives to receive
-                the benefits...{" "}
-              </p>
-              <br />
-              <p>4 MIN | JULY 20, 2021</p>
+              <a href="/Blogdetails">
+                <img src={Image2} className="bloglist-image" />
+                <br />
+                <br />
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <br />
+                <p>
+                  We want everyone in need of care and their relatives to
+                  receive the benefits...{" "}
+                </p>
+                <br />
+                <p>4 MIN | JULY 20, 2021</p>
+              </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <img src={Image2} className="bloglist-image" />
-              <br />
-              <br />
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <br />
-              <p>
-                We want everyone in need of care and their relatives to receive
-                the benefits...{" "}
-              </p>
-              <br />
-              <p>4 MIN | JULY 20, 2021</p>
+              <a href="/Blogdetails">
+                <img src={Image2} className="bloglist-image" />
+                <br />
+                <br />
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <br />
+                <p>
+                  We want everyone in need of care and their relatives to
+                  receive the benefits...{" "}
+                </p>
+                <br />
+                <p>4 MIN | JULY 20, 2021</p>
+              </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <img src={Image2} className="bloglist-image" />
-              <br />
-              <br />
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <br />
-              <p>
-                We want everyone in need of care and their relatives to receive
-                the benefits...{" "}
-              </p>
-              <br />
-              <p>4 MIN | JULY 20, 2021</p>
+              <a href="/Blogdetails">
+                <img src={Image2} className="bloglist-image" />
+                <br />
+                <br />
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <br />
+                <p>
+                  We want everyone in need of care and their relatives to
+                  receive the benefits...{" "}
+                </p>
+                <br />
+                <p>4 MIN | JULY 20, 2021</p>
+              </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <img src={Image2} className="bloglist-image" />
-              <br />
-              <br />
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <br />
-              <p>
-                We want everyone in need of care and their relatives to receive
-                the benefits...{" "}
-              </p>
-              <br />
-              <p>4 MIN | JULY 20, 2021</p>
+              <a href="/Blogdetails">
+                <img src={Image2} className="bloglist-image" />
+                <br />
+                <br />
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <br />
+                <p>
+                  We want everyone in need of care and their relatives to
+                  receive the benefits...{" "}
+                </p>
+                <br />
+                <p>4 MIN | JULY 20, 2021</p>
+              </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <img src={Image2} className="bloglist-image" />
-              <br />
-              <br />
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <br />
-              <p>
-                We want everyone in need of care and their relatives to receive
-                the benefits...{" "}
-              </p>
-              <br />
-              <p>4 MIN | JULY 20, 2021</p>
+              <a href="/Blogdetails">
+                <img src={Image2} className="bloglist-image" />
+                <br />
+                <br />
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <br />
+                <p>
+                  We want everyone in need of care and their relatives to
+                  receive the benefits...{" "}
+                </p>
+                <br />
+                <p>4 MIN | JULY 20, 2021</p>
+              </a>
             </div>
           </div>
         </div>

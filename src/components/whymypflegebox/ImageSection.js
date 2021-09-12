@@ -24,7 +24,7 @@ export default function ImageSection() {
       <div className="row">
         <div
           className="col-lg-6"
-          style={{ textAlign: "right", position: "relative" }}
+          style={{ textAlign: "right", position: "relative", zIndex: "100" }}
         >
           <div
             className="left-red-dot"
@@ -33,7 +33,7 @@ export default function ImageSection() {
               position: "absolute",
               left: "150px",
               top: "-50px",
-              zIndex: "1",
+              zIndex: "-1",
             }}
           >
             <OD />
@@ -92,27 +92,32 @@ export default function ImageSection() {
             <OD />
             <OD />
           </div>
-          <div style={{ zIndex: "1000" }}>
+          <div>
             <img
               className="why-my-img"
               src={Image1}
-              style={{ zIndex: "1000" }}
+              style={{ zIndex: "100" }}
             />
           </div>
         </div>
         <div
           className="col-lg-6"
-          style={{ textAlign: "left", position: "relative" }}
+          style={{ textAlign: "left", position: "relative", zIndex: "100" }}
         >
-          <img src={Image2} className="secondImage why-my-img" />
+          <img
+            src={Image2}
+            className="secondImage why-my-img"
+            style={{ zIndex: "1000", position: "relative" }}
+          />
           <div
-            className="right-red-dot"
+            className="left-red-dot"
             style={{
+              zIndex: "",
               textAlign: "right",
               position: "absolute",
               right: "150px",
               bottom: "-50px",
-              zIndex: "1",
+              zIndex: "-1",
             }}
           >
             <OD />

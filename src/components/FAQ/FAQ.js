@@ -214,6 +214,9 @@ function Faq() {
           </div>
         </p>
       </div>
+      <br />
+      <br />
+      <br />
       <Footer />
     </div>
   );

@@ -67,48 +67,56 @@ function Blogdetails() {
         </p>
         <div className="container">
           <h2>you may also like this article</h2>
+          <br />
+          <br />
           <div className="row articleImgdiv ">
             <div className="col-lg-4 col-md-4 col-xs-4  ">
-              <img src={Image2} className="articleImg" />
-              <p className="texts">
-                <b>
+              <a href="/Blogdetails">
+                <img src={Image2} className="articleImg" />
+                <p className="texts">
+                  <b>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </b>
+                </p>
+                <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting
-                </b>
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry'
-              </p>
-              <p className="datee">4 Min | july 20,2021</p>
+                  typesetting industry. Lorem Ipsum has been the industry'
+                </p>
+                <p className="datee">4 Min | july 20,2021</p>
+              </a>
             </div>
             <div className="col-lg-4 col-md-4 col-xs-4  ">
-              <img src={BannerImage} className="articleImg" />
-              <p className="texts">
-                <b>
+              <a href="/Blogdetails">
+                <img src={BannerImage} className="articleImg" />
+                <p className="texts">
+                  <b>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </b>
+                </p>
+                <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting
-                </b>
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry'
-              </p>
-              <p className="datee">4 Min | july 20,2021</p>
+                  typesetting industry. Lorem Ipsum has been the industry'
+                </p>
+                <p className="datee">4 Min | july 20,2021</p>
+              </a>
             </div>
             <div className="col-lg-4 col-md-4 col-xs-4  ">
-              <img src={Image} className="articleImg" />
-              <p className="texts">
-                <b>
+              <a href="/Blogdetails">
+                <img src={Image} className="articleImg" />
+                <p className="texts">
+                  <b>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </b>
+                </p>
+                <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting
-                </b>
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry'
-              </p>
-              <p className="datee">4 Min | july 20,2021</p>
+                  typesetting industry. Lorem Ipsum has been the industry'
+                </p>
+                <p className="datee">4 Min | july 20,2021</p>
+              </a>
             </div>
           </div>
         </div>

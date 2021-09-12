@@ -97,7 +97,7 @@
   font-size: 40px;
   color: #2faae4;
 }
-.iconsHeading{
+.iconsHeading {
   margin-top: 10px;
 }
 .arrow {
@@ -150,9 +150,10 @@
 .relieve-section h4 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 33px;
   padding-top: 20px;
+  letter-spacing: 1px;
 }
 
 .relieve-image {

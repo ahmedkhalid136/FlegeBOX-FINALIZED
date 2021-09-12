@@ -160,7 +160,10 @@ function BoxComp(props) {
   }
   return (
     <div className="row box-section">
-      <div className="col-lg-6" style={{ textAlign: "left" }}>
+      <div
+        className="col-lg-6"
+        style={{ textAlign: "left", paddingRight: "30px" }}
+      >
         <h2 className="cart-h2">Choose Box</h2>
         <div className="row majorbox" style={{ textAlign: "center" }}>
           <div className="col-lg-4 col-4 ">
@@ -250,8 +253,7 @@ function BoxComp(props) {
               <p>BOX 3</p>
             </div>
           </div>
-        </div>
-        <div className="row majorbox">
+
           <div className="col-lg-4 col-4 ">
             <div
               className={getBox4 ? "boxes" : "boxes2"}
@@ -362,7 +364,6 @@ function BoxComp(props) {
           </div>
         </div>
       </div>
-
       <div className="col-lg-6 yourCart">
         <h2 className="cart-h2">Your Cart</h2>
         <div className="col-lg-12">

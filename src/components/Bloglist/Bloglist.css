@@ -19,3 +19,12 @@
 .popular-article-section {
   padding: 50px 0;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}

@@ -13,7 +13,10 @@ export default function Title() {
             <h2>
               The way to your <br /> Free Care Box
             </h2>
-            <button>REQUEST CARE BOX</button>
+            <br />
+            <a href="/box">
+              <button>REQUEST CARE BOX</button>
+            </a>
           </div>
         </div>
       </div>
