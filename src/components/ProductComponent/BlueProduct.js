@@ -3,7 +3,7 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, actual, mycount, getter } = props;
+  const { Name, image, pcs, actual, mycount, getter, size } = props;
 
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
@@ -35,6 +35,7 @@ export default function BlueProduct(props) {
       }
     }
   };
+
   return (
     <div
       className="row"
@@ -59,9 +60,24 @@ export default function BlueProduct(props) {
       <div className="col-lg-6 col-6" style={{ paddingTop: "20px" }}>
         <div className="row">
           <div className="col-lg-5 col-12">
-            <button className="increment-buttons sizes">S</button>
-            <button className="increment-buttons sizes">M</button>
-            <button className="increment-buttons sizes">L</button>
+            <button
+              className="increment-buttons sizes"
+              onClick={() => setSize("S")}
+            >
+              S
+            </button>
+            <button
+              className="increment-buttons sizes"
+              onClick={() => setSize("M")}
+            >
+              M
+            </button>
+            <button
+              className="increment-buttons sizes"
+              onClick={() => setSize("L")}
+            >
+              L
+            </button>
           </div>
           <div className="col-lg-7 col-7 increment-area">
             <button
@@ -72,7 +88,7 @@ export default function BlueProduct(props) {
             >
               -
             </button>
-            <span className="increment-buttons counter">{actual}</span>
+            <span className="increment-buttons counter">{props.actual}</span>
             <button
               className="increment-buttons"
               onClick={() => {

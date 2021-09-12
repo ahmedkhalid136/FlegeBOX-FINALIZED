@@ -38,20 +38,21 @@ export default function CustomBox(props) {
   const [pcs, setpcs] = useState(0);
   props.box(myArr);
 
-  function clear(){
-    setMyArr([])
-    SetCount(0)    
-    SetCount1(0)
-    SetCount2(0)
-    SetCount3(0)
-    SetCount4(0)
-    SetCount5(0)
+  function clear() {
+    setMyArr([]);
+    SetCount(0);
+    SetCount1(0);
+    SetCount2(0);
+    SetCount3(0);
+    SetCount4(0);
+    SetCount5(0);
   }
   const box1 = [
     {
       name: "K94 MASK",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size: "",
     },
   ];
   const box2 = [
@@ -59,6 +60,7 @@ export default function CustomBox(props) {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size: "",
     },
   ];
   const box3 = [
@@ -66,6 +68,7 @@ export default function CustomBox(props) {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "",
     },
   ];
   const box4 = [
@@ -73,10 +76,37 @@ export default function CustomBox(props) {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size: "",
     },
   
   ];
 
+  const box = [
+    {
+      name: "K94 MASK",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size: "",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "",
+    },
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size: "",
+    },
+  ];
 
   return (
     <div className="container">
@@ -91,7 +121,6 @@ export default function CustomBox(props) {
               removeArrowOnDeviceType={["tablet", "mobile"]}
               showDots={true}
             >
-              
               <div>
                 <MobileAddToCart
                   Name={box1[0].name}
@@ -139,7 +168,22 @@ export default function CustomBox(props) {
             </Carousel>
           </div>
           <div className="desktop-cart">
-            <Product
+            {box.map((item, ind) => {
+              return (
+                <Product
+                  key={ind}
+                  actual={childCount}
+                  mycount={SetCount}
+                  Name={item.name}
+                  pcs={item.pcs}
+                  image={item.img}
+                  setter={setMyArr}
+                  getter={myArr}
+                  size={item.size}
+                />
+              );
+            })}
+            {/* <Product
               actual={childCount}
               mycount={SetCount}
               Name={box1[0].name}
@@ -192,7 +236,7 @@ export default function CustomBox(props) {
               image={box4[0].img}
               setter={setMyArr}
               getter={myArr}
-            />
+            /> */}
           </div>
         </div>
         <div className="col-lg-6">
@@ -202,9 +246,13 @@ export default function CustomBox(props) {
                 <h4>Your Cart</h4>
               </div>
               <div className="col-lg-6" style={{ textAlign: "right" }}>
-                <span onClick={()=>{
-                  clear()
-                }}>Clear All</span>
+                <span
+                  onClick={() => {
+                    clear();
+                  }}
+                >
+                  Clear All
+                </span>
               </div>
             </div>
             <div style={{ padding: "10px 0" }}>
@@ -224,8 +272,6 @@ export default function CustomBox(props) {
                 />
               );
             })}
-
-          
           </div>
         </div>
       </div>
