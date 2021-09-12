@@ -196,16 +196,32 @@ export default function CustomBox(props) {
               <ProgressBar completed={90} bgColor={"#F87433"} />
             </div>
             {myArr.map((item,ind)=>{
-              return(
-                item.actual>0 ? item.value*item.pcs:
-                 <Cart key={ind}
-                 mycount1={item.SetCount}
-                 value={item.actual}
-                 Name={item.Name}
-                 pcs={item.pcs}
-                 image={item.image}
-                 
-               />)
+             if(item.name!=myArr.name){
+               return(
+                <Cart key={ind}
+                mycount1={item.SetCount}
+                value={item.actual}
+                Name={item.Name}
+                pcs={item.pcs}
+                image={item.image}
+                
+              />
+               )
+             }
+             else if( item.name===myArr.name){
+               const total=item.pcs*item.actual
+               return(
+                <Cart key={ind}
+                mycount1={item.SetCount}
+                value={item.actual}
+                Name={item.Name}
+                pcs={total}
+                image={item.image}
+                
+              />
+               )
+             } 
+              
             })}
            
             {/* {childCount == 0 ? null : (

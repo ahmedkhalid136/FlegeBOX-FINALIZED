@@ -9,13 +9,7 @@ export default function Cart(props) {
   const decrement = () => {
     if(props.value>0)  {props.mycount1(props.value-1)}
     
-  };
-
- 
-  
-  
-    
-  
+  };  
 
 
   return (

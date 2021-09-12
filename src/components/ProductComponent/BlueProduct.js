@@ -5,13 +5,24 @@ import "./BlueProduct.css";
 export default function BlueProduct(props) {
   const [count, setCount] = useState(0);
 
-  const { Name, image, pcs, actual, mycount } = props;
+  const { Name, image, pcs, actual, mycount,getter} = props;
 
   const increment = () => {
-    mycount(actual + 1);
+    const theObj=getter.findIndex((obj=>obj.Name==Name))
+    if(actual>0){
+      mycount(actual + 1);  
+    console.log(getter[theObj].pcs,"found it")  
+    console.log(getter,"arrayBefore")
+    getter[theObj].pcs*actual
 
-    console.log(actual);
-    props.setter((getter) => [...getter, { Name, image, pcs, actual }]);
+    console.log(getter,"array afer")
+    }
+    else{
+      mycount(actual + 1);
+
+      console.log(actual);
+      props.setter((getterr) => [...getterr, { Name, image, pcs, actual }]);
+    }
 
   };
   const decrement = () => {
@@ -20,6 +31,9 @@ export default function BlueProduct(props) {
       {
         props.mycount(props.actual - 1);
       }
+    }
+    else{
+      getter.filter(item=>item.Name!==Name)
     }
   };
   return (
