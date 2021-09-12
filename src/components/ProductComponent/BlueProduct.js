@@ -1,29 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
   const [count, setCount] = useState(0);
 
-  const { Name, image, pcs, actual, mycount,getter} = props;
+  const { Name, image, pcs, actual, mycount, getter } = props;
 
-  const increment = () => {
-    const theObj=getter.findIndex((obj=>obj.Name==Name))
-    if(actual>0){
-      mycount(actual + 1);  
-    console.log(getter[theObj].pcs,"found it")  
-    console.log(getter,"arrayBefore")
-    getter[theObj].pcs*actual
-
-    console.log(getter,"array afer")
-    }
-    else{
+  const increment = async () => {
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    if (actual >= 1) {
+      console.log(actual, "addition ki ha mainay");
       mycount(actual + 1);
+      getter[theObj].pcs = getter[theObj].pcs + 20;
+      console.log(getter, "array afer");
+    } else {
+      mycount((actual) => actual + 1);
 
-      console.log(actual);
       props.setter((getterr) => [...getterr, { Name, image, pcs, actual }]);
     }
-
   };
   const decrement = () => {
     if (actual > 0) {
@@ -31,9 +26,8 @@ export default function BlueProduct(props) {
       {
         props.mycount(props.actual - 1);
       }
-    }
-    else{
-      getter.filter(item=>item.Name!==Name)
+    } else {
+      getter.filter((item) => item.Name !== Name);
     }
   };
   return (
@@ -73,7 +67,7 @@ export default function BlueProduct(props) {
             >
               -
             </button>
-            <span className="increment-buttons counter">{props.actual}</span>
+            <span className="increment-buttons counter">{actual}</span>
             <button
               className="increment-buttons"
               onClick={() => {

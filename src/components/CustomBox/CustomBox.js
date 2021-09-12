@@ -209,13 +209,13 @@ export default function CustomBox(props) {
                )
              }
              else if( item.name===myArr.name){
-               const total=item.pcs*item.actual
+             
                return(
                 <Cart key={ind}
                 mycount1={item.SetCount}
                 value={item.actual}
                 Name={item.Name}
-                pcs={total}
+                pcs={item.pcs}
                 image={item.image}
                 
               />
