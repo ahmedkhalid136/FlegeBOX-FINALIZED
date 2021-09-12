@@ -33,7 +33,7 @@ export default function Cart(props) {
         style={{ textAlign: "left" }}
       >
       <h6>{props.Name}</h6>
-      <p>{props.value*props.pcs}pcs</p>
+      <p>{props.pcs}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">

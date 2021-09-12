@@ -102,12 +102,13 @@
   width: 100px;
   height: 100px;
   margin-top: -10px;
+  cursor: pointer;
 }
 .Icons2 {
   background-color: #2faae5;
   border-radius: 50%;
   position: relative;
-
+  cursor: pointer;
   width: 100px;
   height: 100px;
   margin-top: -10px;
@@ -116,7 +117,7 @@
   background-color: #f4f4f5;
   border-radius: 50%;
   position: relative;
-
+  cursor: pointer;
   width: 100px;
   height: 100px;
   margin-top: -10px;
@@ -125,7 +126,7 @@
   background-color: #2faae5;
   border-radius: 50%;
   position: relative;
-
+  cursor: pointer;
   width: 100px;
   height: 100px;
   margin-top: -10px;
