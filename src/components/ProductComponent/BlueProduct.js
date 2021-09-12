@@ -7,7 +7,7 @@ export default function BlueProduct(props) {
 
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
-    if (actual >= 1) {
+    if (actual > 0) {
       console.log(actual, "addition ki ha mainay");
       mycount(actual + 1);
       getter[theObj].pcs = getter[theObj].pcs + 20;
@@ -20,23 +20,25 @@ export default function BlueProduct(props) {
   };
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
-    actual<=1 ? finish() : minus();
-    
+    actual <= 1 ? finish() : minus();
+
     function index() {
       getter.findIndex((obj) => obj.Name == Name);
     }
 
-   
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
       mycount(actual - 1);
     }
     function finish() {
       mycount(actual - 1);
-      const filtering = getter.filter(index);
-      props.setter(filtering);
-
+      console.log("HELLO" + getter.findIndex((obj) => obj.Name == Name) - 1);
+      const filtering = getter.splice(
+        getter.findIndex((obj) => obj.Name == Name),
+        1
+      );
       console.log(filtering, "filtered array");
+      props.setter(filtering);
     }
   };
   return (
@@ -71,7 +73,7 @@ export default function BlueProduct(props) {
             <button
               className="increment-buttons"
               onClick={() => {
-                // decrement();
+                decrement();
               }}
             >
               -
@@ -80,7 +82,7 @@ export default function BlueProduct(props) {
             <button
               className="increment-buttons"
               onClick={() => {
-                // increment();
+                increment();
               }}
             >
               +
