@@ -8,23 +8,18 @@ export default function BlueProduct(props) {
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
     if (actual >= 1) {
-      console.log(actual, "addition ki ha mainay");
       mycount(actual + 1);
       getter[theObj].pcs = getter[theObj].pcs + 20;
-      console.log(getter, "array afer");
     } else {
       mycount((actual) => actual + 1);
 
       props.setter((getterr) => [...getterr, { Name, image, pcs }]);
-      console.log(getter, "starting array");
     }
   };
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
     var find_and_delete = Name;
     actual <= 1 ? finish() : minus();
-
-    
 
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
@@ -38,8 +33,6 @@ export default function BlueProduct(props) {
         }
         props.setter(getter);
       }
-
-      console.log(getter, "filtered array");
     }
   };
   return (

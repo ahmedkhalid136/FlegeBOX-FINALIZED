@@ -36,7 +36,7 @@ export default function CustomBox(props) {
   const [childCount5, SetCount5] = useState(0);
   const [myArr, setMyArr] = useState([]);
   const [pcs, setpcs] = useState(0);
-
+  props.box(myArr);
   const box1 = [
     {
       name: "K94 MASK",
