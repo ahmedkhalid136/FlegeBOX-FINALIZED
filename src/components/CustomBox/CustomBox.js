@@ -207,50 +207,7 @@ export default function CustomBox(props) {
               );
             })}
 
-            {/* {childCount == 0 ? null : (
-              <Cart
-                mycount1={SetCount}
-                value={childCount}
-                Name={box1[0].name}
-                pcs={box1[0].pcs}
-                image={box1[0].img}
-                custom={props.box}
-                mypcs={setpcs}
-              />
-            )}
-            {childCount1 == 0 ? null : (
-              <Cart
-                mycount1={SetCount1}
-                value={childCount1}
-                Name={box2[0].name}
-                pcs={box2[0].pcs}
-                image={box2[0].img}
-              />
-            )}
-            {childCount2 == 0 ? null : (
-              <Cart
-                mycount1={SetCount2}
-                value={childCount2}
-                Name={box3[0].name}
-                pcs={box3[0].pcs}
-                image={box3[0].img}
-              />
-            )}
-            {childCount3 == 0 ? null : (
-              <Cart
-                mycount1={SetCount3}
-                value={childCount3}
-                Name={box4[0].name}
-                pcs={box4[0].pcs}
-                image={box4[0].img}
-              />
-            )}
-            {childCount4 == 0 ? null : (
-              <Cart value={childCount4} mycount1={SetCount4} />
-            )}
-            {childCount5 == 0 ? null : (
-              <Cart value={childCount5} mycount1={SetCount5} />
-            )} */}
+          
           </div>
         </div>
       </div>
