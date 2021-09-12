@@ -3,8 +3,6 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const [count, setCount] = useState(0);
-
   const { Name, image, pcs, actual, mycount, getter } = props;
 
   const increment = async () => {
@@ -21,13 +19,20 @@ export default function BlueProduct(props) {
     }
   };
   const decrement = () => {
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    function index() {
+      const theObj = getter.findIndex((obj) => obj.Name == Name);
+      console.log(theObj, "index");
+    }
+
     if (actual > 0) {
+      getter[theObj].pcs = getter[theObj].pcs - 20;
       mycount(actual - 1);
-      {
-        props.mycount(props.actual - 1);
-      }
-    } else {
-      getter.filter((item) => item.Name !== Name);
+    } else if (actual >= 0) {
+      const filtering = getter.filter(index);
+      props.setter(filtering);
+      console.log(theObj, "index");
+      console.log(filtering, "filtered array");
     }
   };
   return (
