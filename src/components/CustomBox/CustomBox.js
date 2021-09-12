@@ -65,13 +65,7 @@ export default function CustomBox(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
     },
   ];
-  if (childCount != 0) {
-    const cart1 = {
-      Name: box1[0].name,
-      pcs: pcs,
-      Size: "size",
-    };
-  }
+
 
   return (
     <div className="container">
@@ -86,13 +80,16 @@ export default function CustomBox(props) {
               removeArrowOnDeviceType={["tablet", "mobile"]}
               showDots={true}
             >
+              
               <div>
                 <MobileAddToCart
                   Name={box1[0].name}
                   pcs={box1[0].pcs}
                   image={box1[0].img}
-                  actual={childCount1}
-                  mycount={SetCount1}
+                  actual={childCount}
+                  mycount={SetCount}
+                  setter={setMyArr}
+                  getter={myArr}
                 />
               </div>
               <div>
@@ -100,8 +97,10 @@ export default function CustomBox(props) {
                   Name={box2[0].name}
                   pcs={box2[0].pcs}
                   image={box2[0].img}
-                  actual={childCount2}
-                  mycount={SetCount2}
+                  actual={childCount1}
+                  mycount={SetCount1}
+                  setter={setMyArr}
+                  getter={myArr}
                 />
               </div>
               <div>
@@ -109,8 +108,10 @@ export default function CustomBox(props) {
                   Name={box3[0].name}
                   pcs={box3[0].pcs}
                   image={box3[0].img}
-                  actual={childCount3}
-                  mycount={SetCount3}
+                  actual={childCount2}
+                  mycount={SetCount2}
+                  setter={setMyArr}
+                  getter={myArr}
                 />
               </div>
               <div>
@@ -118,8 +119,10 @@ export default function CustomBox(props) {
                   Name={box4[0].name}
                   pcs={box4[0].pcs}
                   image={box4[0].img}
-                  actual={childCount4}
-                  mycount={SetCount4}
+                  actual={childCount3}
+                  mycount={SetCount3}
+                  setter={setMyArr}
+                  getter={myArr}
                 />
               </div>
             </Carousel>
