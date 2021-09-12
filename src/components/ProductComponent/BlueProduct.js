@@ -7,11 +7,9 @@ export default function BlueProduct(props) {
 
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
-    if (actual > 0) {
-      console.log(actual, "addition ki ha mainay");
+    if (actual >= 1) {
       mycount(actual + 1);
       getter[theObj].pcs = getter[theObj].pcs + 20;
-      console.log(getter, "array afer");
     } else {
       mycount((actual) => actual + 1);
 
@@ -20,25 +18,21 @@ export default function BlueProduct(props) {
   };
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
+    var find_and_delete = Name;
     actual <= 1 ? finish() : minus();
-
-    function index() {
-      getter.findIndex((obj) => obj.Name == Name);
-    }
 
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
       mycount(actual - 1);
     }
     function finish() {
-      mycount(actual - 1);
-      console.log("HELLO" + getter.findIndex((obj) => obj.Name == Name) - 1);
-      const filtering = getter.splice(
-        getter.findIndex((obj) => obj.Name == Name),
-        1
-      );
-      console.log(filtering, "filtered array");
-      props.setter(filtering);
+      mycount(0);
+      for (var i = getter.length - 1; i >= 0; i--) {
+        if (getter[i].Name == find_and_delete) {
+          getter.splice(i, 1);
+        }
+        props.setter(getter);
+      }
     }
   };
   return (

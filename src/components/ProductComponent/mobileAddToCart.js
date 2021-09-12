@@ -1,20 +1,37 @@
 import React,{useState} from "react";
 
 export default function MobileAddToCart(props) {
-  const [count, setCount] = useState(0);
+  const { Name, image, pcs, actual, mycount, getter } = props;
 
-  const increment = () => {
-    
-    setCount(count + 1);
-    { props.mycount(props.actual+1)}
-    
+  const increment = async () => {
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    if (actual >= 1) {
+      mycount(actual + 1);
+      getter[theObj].pcs = getter[theObj].pcs + 20;
+    } else {
+      mycount((actual) => actual + 1);
+
+      props.setter((getterr) => [...getterr, { Name, image, pcs }]);
+    }
   };
   const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1)
-      { props.mycount(props.actual-1)}
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    var find_and_delete = Name;
+    actual <= 1 ? finish() : minus();
+
+    function minus() {
+      getter[theObj].pcs = getter[theObj].pcs - 20;
+      mycount(actual - 1);
     }
-   
+    function finish() {
+      mycount(actual - 1);
+      for (var i = getter.length - 1; i >= 0; i--) {
+        if (getter[i].Name == find_and_delete) {
+          getter.splice(i, 1);
+        }
+        props.setter(getter);
+      }
+    }
   };
   return (
     <div>

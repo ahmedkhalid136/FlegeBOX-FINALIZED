@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
 import ChooseBox from "./chooseBox";
