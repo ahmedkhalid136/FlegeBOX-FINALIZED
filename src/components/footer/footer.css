@@ -56,7 +56,8 @@
 }
 
 .footer-base h5 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans";
+font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 27px;
