@@ -201,11 +201,13 @@ export default function CustomBox(props) {
               return (
                 <Cart
                   key={ind}
-                  mycount1={item.SetCount}
-                  value={item.actual}
+                  mycount={item.SetCount}
+                  actual={item.actual}
                   Name={item.Name}
                   pcs={item.pcs}
                   image={item.image}
+                  setter={setMyArr}
+                  getter={myArr}
                 />
               );
             })}

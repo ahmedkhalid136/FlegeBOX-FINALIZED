@@ -5,11 +5,26 @@ export default function Cart(props) {
   const [getBackground,setBackground]=useState(true)
   const [getBackground2,setBackground2]=useState(true)
   const [getBackground3,setBackground3]=useState(true)
-  
+  const { Name, image, pcs, actual, mycount, getter } = props;
   const decrement = () => {
-    if(props.value>0)  {props.mycount1(props.value-1)}
-    
-  };  
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    var find_and_delete = Name;
+    actual <= 1 ? finish() : minus();
+
+    function minus() {
+      getter[theObj].pcs = getter[theObj].pcs - 20;
+      mycount(actual - 1);
+    }
+    function finish() {
+      mycount(actual - 1);
+      for (var i = getter.length - 1; i >= 0; i--) {
+        if (getter[i].Name == find_and_delete) {
+          getter.splice(i, 1);
+        }
+        props.setter(getter);
+      }
+    }
+  };
 
 
   return (
