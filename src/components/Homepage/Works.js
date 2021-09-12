@@ -6,11 +6,14 @@ export default function Works() {
       <h2>How Your MyPflegebox Works</h2>
       <div className="row icons-container">
         <div className="col-lg-3 row">
-          <div className="col-lg-10" style={{ textAlign: "center" }}>
+          <div
+            className="col-lg-10"
+            style={{ textAlign: "center", margin: "0", padding: "0" }}
+          >
             <div className="icon-background">
               <i class="fas fa-shopping-cart icons"></i>
             </div>
-            
+
             <h4 className="iconsHeading">
               1. Wish core box <br /> select
             </h4>

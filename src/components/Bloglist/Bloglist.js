@@ -35,14 +35,17 @@ function Bloglist() {
               <br /> more time for togetherness...
             </p>
             <br />
-            <p>4 MIN | JULY 20, 2021</p>
+            <p>
+              <i class="far fa-clock"></i> 4 MIN |{" "}
+              <i class="far fa-calendar-alt"></i> JULY 20, 2021
+            </p>
           </div>
         </div>
 
         {/* POPULAR ARTICLE SECTION */}
 
         <div className="container popular-article-section">
-          <div style={{ textAlign: "center", paddingBottom: "50px" }}>
+          <div style={{ textAlign: "center", padding: "90px 0" }}>
             <h3>Popular Article</h3>
           </div>
           <div className="row">
@@ -58,7 +61,10 @@ function Bloglist() {
                   receive the benefits...{" "}
                 </p>
                 <br />
-                <p>4 MIN | JULY 20, 2021</p>
+                <p>
+                  <i class="far fa-clock"></i> 4 MIN |{" "}
+                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
@@ -73,7 +79,10 @@ function Bloglist() {
                   receive the benefits...{" "}
                 </p>
                 <br />
-                <p>4 MIN | JULY 20, 2021</p>
+                <p>
+                  <i class="far fa-clock"></i> 4 MIN |{" "}
+                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
@@ -88,7 +97,10 @@ function Bloglist() {
                   receive the benefits...{" "}
                 </p>
                 <br />
-                <p>4 MIN | JULY 20, 2021</p>
+                <p>
+                  <i class="far fa-clock"></i> 4 MIN |{" "}
+                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
@@ -103,7 +115,10 @@ function Bloglist() {
                   receive the benefits...{" "}
                 </p>
                 <br />
-                <p>4 MIN | JULY 20, 2021</p>
+                <p>
+                  <i class="far fa-clock"></i> 4 MIN |{" "}
+                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
@@ -118,7 +133,10 @@ function Bloglist() {
                   receive the benefits...{" "}
                 </p>
                 <br />
-                <p>4 MIN | JULY 20, 2021</p>
+                <p>
+                  <i class="far fa-clock"></i> 4 MIN |{" "}
+                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
+                </p>
               </a>
             </div>
             <div className="col-lg-4" style={{ textAlign: "left" }}>
@@ -133,7 +151,10 @@ function Bloglist() {
                   receive the benefits...{" "}
                 </p>
                 <br />
-                <p>4 MIN | JULY 20, 2021</p>
+                <p>
+                  <i class="far fa-clock"></i> 4 MIN |{" "}
+                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
+                </p>
               </a>
             </div>
           </div>

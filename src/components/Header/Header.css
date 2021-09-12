@@ -33,7 +33,8 @@
 
 @media (max-width: 500px) {
   .navbar-nav {
-    padding: 15px;
+    padding: 10px 0;
+    margin-left: -20px !important;
   }
   .nav-item p {
     border-bottom: 1px solid #efeff0;
