@@ -16,17 +16,15 @@ export default function BlueProduct(props) {
       mycount((actual) => actual + 1);
 
       props.setter((getterr) => [...getterr, { Name, image, pcs }]);
-      console.log(getter,"starting array")
+      console.log(getter, "starting array");
     }
   };
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
-    var find_and_delete = Name
+    var find_and_delete = Name;
     actual <= 1 ? finish() : minus();
 
-    function index() {
-      getter.findIndex((obj) => obj.Name == Name);
-    }
+    
 
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
@@ -35,15 +33,12 @@ export default function BlueProduct(props) {
     function finish() {
       mycount(actual - 1);
       for (var i = getter.length - 1; i >= 0; i--) {
-        if(getter[i].Name == find_and_delete){     
-         getter.splice(i,1)
-        
-
+        if (getter[i].Name == find_and_delete) {
+          getter.splice(i, 1);
         }
         props.setter(getter);
-    }
-    
-      
+      }
+
       console.log(getter, "filtered array");
     }
   };
