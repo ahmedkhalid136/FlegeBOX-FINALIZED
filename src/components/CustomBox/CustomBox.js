@@ -37,6 +37,16 @@ export default function CustomBox(props) {
   const [myArr, setMyArr] = useState([]);
   const [pcs, setpcs] = useState(0);
   props.box(myArr);
+
+  function clear(){
+    setMyArr([])
+    SetCount(0)    
+    SetCount1(0)
+    SetCount2(0)
+    SetCount3(0)
+    SetCount4(0)
+    SetCount5(0)
+  }
   const box1 = [
     {
       name: "K94 MASK",
@@ -191,7 +201,9 @@ export default function CustomBox(props) {
                 <h4>Your Cart</h4>
               </div>
               <div className="col-lg-6" style={{ textAlign: "right" }}>
-                <span>Clear All</span>
+                <span onClick={()=>{
+                  clear()
+                }}>Clear All</span>
               </div>
             </div>
             <div style={{ padding: "10px 0" }}>
