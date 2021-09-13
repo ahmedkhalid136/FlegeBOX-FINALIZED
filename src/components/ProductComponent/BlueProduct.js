@@ -3,10 +3,11 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, actual, mycount, getter, size } = props;
-
+  const { Name, image, pcs, actual, mycount, getter } = props;
+  const [ssize, setSize] = "";
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
+
     if (actual >= 1) {
       mycount(actual + 1);
       getter[theObj].pcs = getter[theObj].pcs + 20;

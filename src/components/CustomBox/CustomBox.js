@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Product from "../ProductComponent/BlueProduct";
 import Cart from "../ProductComponent/cart";
 import "./styles.css";
@@ -78,7 +78,6 @@ export default function CustomBox(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
       size: "",
     },
-  
   ];
 
   const box = [
@@ -95,7 +94,7 @@ export default function CustomBox(props) {
       size: "",
     },
     {
-      name: "Gloves ",
+      name: "hand sanitizer ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
       size: "",
@@ -107,6 +106,8 @@ export default function CustomBox(props) {
       size: "",
     },
   ];
+
+ 
 
   return (
     <div className="container">
@@ -180,6 +181,7 @@ export default function CustomBox(props) {
                   setter={setMyArr}
                   getter={myArr}
                   size={item.size}
+                  data={box}
                 />
               );
             })}
@@ -262,8 +264,8 @@ export default function CustomBox(props) {
               return (
                 <Cart
                   key={ind}
-                  mycount={item.SetCount}
-                  actual={item.actual}
+                  mycount={SetCount}
+                  actual={childCount}
                   Name={item.Name}
                   pcs={item.pcs}
                   image={item.image}
