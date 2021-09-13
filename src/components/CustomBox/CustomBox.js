@@ -38,6 +38,7 @@ export default function CustomBox(props) {
   const [pcs, setpcs] = useState(0);
   const [getValue, setValue] = useState(0);
   props.box(myArr);
+ 
   
   function clear() {
     setMyArr([]);
@@ -271,6 +272,7 @@ export default function CustomBox(props) {
                   setter={setMyArr}
                   sets={item.sets}
                   myvalue={myvalue}
+                  setvalue={setvalue}
                 />
               );
             })}

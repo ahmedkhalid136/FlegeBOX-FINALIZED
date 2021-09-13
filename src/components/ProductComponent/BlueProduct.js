@@ -13,6 +13,7 @@ export default function BlueProduct(props) {
     if (actual >= 1) {
       mycount(actual + 1);
       setvalue(actual);
+      
       console.log(actual, "incremented value");
       getter[theObj].pcs = getter[theObj].pcs + 20;
 
@@ -21,6 +22,7 @@ export default function BlueProduct(props) {
     } else {
       mycount(actual + 1);
       setvalue(actual);
+     
       setter((getterr) => [...getterr, { Name, image, pcs, size }]);
       console.log(getter, "myarray");
     }
@@ -29,11 +31,12 @@ export default function BlueProduct(props) {
   // decrement function
   const decrement = async () => {
     var find_and_delete = Name;
-    actual <= 1 ? finish() : minus();
+    actual < 1 ? finish() : minus();
 
     function minus() {
       mycount(actual - 1);
       setvalue(actual)
+      
       getter[theObj].pcs = getter[theObj].pcs - 20;
       console.log(getter[theObj].pcs, "total pcs");
  

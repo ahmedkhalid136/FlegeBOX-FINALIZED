@@ -6,30 +6,39 @@ export default function Cart(props) {
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
   const { Name, image, pcs, myvalue, setvalue, getter } = props;
-  const [cartCount, setCartcount] = useState(0);
+  const [actual, mycount] = useState(0);
 
-  console.log(pcs, "these are the pcs here");
-  // const decrement = () => {
-  //   const theObj = getter.findIndex((obj) => obj.Name == Name);
-  //   var find_and_delete = Name;
-  //   myvalue <= 1 ? finish() : minus();
+  const theObj = getter.findIndex((obj) => obj.Name == Name);
+  
+  const decrement = async () => {
+    await mycount(myvalue)
+    
+    var find_and_delete = Name;
+    actual< 1 ? finish() : minus();
 
-  //   function minus() {
-  //     getter[theObj].pcs = getter[theObj].pcs - 20;
-  //     setvalue(myvalue - 1);
-  //     console(myvalue, "minus karka value");
-  //   }
-  //   function finish() {
-  //     setvalue(0);
+    function minus() {
+      mycount(actual - 1);
+      setvalue(actual)
+      
+      getter[theObj].pcs = getter[theObj].pcs - 20;
+      console.log(getter[theObj].pcs, "total pcs");
+      console.log(getter,"array changed after minus from cart")
+ 
+    }
+    function finish() {
+      mycount(0);
+      setvalue(0)
+      // setvalue((actual)=>actual)
+      for (var i = getter.length - 1; i >= 0; i--) {
+        if (getter[i].Name == find_and_delete) {
+          getter.splice(i, 1);
+        }
+        props.setter(getter);
+        console.log(getter);
+      }
+    }
+  };
 
-  //     for (var i = getter.length - 1; i >= 0; i--) {
-  //       if (getter[i].Name == find_and_delete) {
-  //         getter.splice(i, 1);
-  //       }
-  //       props.setter(getter);
-  //     }
-  //   }
-  // };
 
   useEffect(() => {
     console.log(getter);
@@ -83,9 +92,9 @@ export default function Cart(props) {
           </button>
           <div style={{ textAlign: "right", display: "inline-block" }}>
             <i
-              // onClick={() => {
-              //   decrement();
-              // }}
+              onClick={() => {
+                decrement();
+              }}
               class="fas fa-times"
             ></i>
           </div>
