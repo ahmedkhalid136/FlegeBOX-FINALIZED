@@ -61,3 +61,28 @@
 .fa-clock {
   padding: 0 5px;
 }
+
+@media (min-width:300px) and (max-width:715px) {
+  .paraText {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: black;
+    text-align: left;
+    padding: 20px;
+  }
+  .Myimage {
+    height: 300px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  .articleImg {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+  }
+}

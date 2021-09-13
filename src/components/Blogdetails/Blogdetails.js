@@ -73,7 +73,7 @@ function Blogdetails() {
           <br />
           <br />
           <div className="row articleImgdiv ">
-            <div className="col-lg-4 col-md-4 col-xs-4  ">
+            <div className="col-lg-4 col-md-4 col-xs-6 col-6  ">
               <a href="/Blogdetails">
                 <img src={Image2} className="articleImg" />
                 <p className="texts">
@@ -92,7 +92,7 @@ function Blogdetails() {
                 </p>
               </a>
             </div>
-            <div className="col-lg-4 col-md-4 col-xs-4  ">
+            <div className="col-lg-4 col-md-4 col-xs-6 col-6  ">
               <a href="/Blogdetails">
                 <img src={BannerImage} className="articleImg" />
                 <p className="texts">
@@ -111,7 +111,7 @@ function Blogdetails() {
                 </p>
               </a>
             </div>
-            <div className="col-lg-4 col-md-4 col-xs-4  ">
+            <div className="col-lg-4 col-md-4 col-xs-6 col-6 ">
               <a href="/Blogdetails">
                 <img src={Image} className="articleImg" />
                 <p className="texts">
@@ -130,6 +130,7 @@ function Blogdetails() {
                 </p>
               </a>
             </div>
+          
           </div>
         </div>
       </div>
