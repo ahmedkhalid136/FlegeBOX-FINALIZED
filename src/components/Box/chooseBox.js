@@ -105,7 +105,7 @@ function ChooseBox(props) {
           </div>
         </div>
       </div>
-      <div className="mobile-fullLine">
+      <div className="mobile-fullLine container-fluid">
         <div className="row">
           <div className="col-6">
             {" "}
