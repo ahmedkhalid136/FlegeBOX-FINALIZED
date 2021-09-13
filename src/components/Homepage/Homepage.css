@@ -188,6 +188,23 @@
   .down-arrow {
     display: block;
   }
+  .home-img {
+    height: 500px;
+  }
+  .home-banner {
+    background-color: #2faae5;
+    height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-img {
+    height: 400px;
+  }
+  .home-banner {
+    background-color: #2faae5;
+    height: 400px;
+  }
 }
 
 @media (max-width: 990px) and (max-width: 700) {
