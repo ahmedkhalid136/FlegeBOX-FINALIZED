@@ -17,7 +17,7 @@
   font-weight: 500;
 }
 
-.mainDiv {
+.mainDiv1 {
   margin-top: 5%;
 }
 .questionDiv {
@@ -38,6 +38,7 @@
   text-align: left;
   background-color: #fafdfe;
   color: #70717b;
+  display: block;
 }
 .text1 {
   padding: 5px;
