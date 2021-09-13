@@ -87,24 +87,28 @@ export default function CustomBox(props) {
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
       size: "",
+      sets:childCount
     },
     {
       name: "Gloves",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
       size: "",
+      sets:childCount
     },
     {
       name: "hand sanitizer ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
       size: "",
+      sets:childCount
     },
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
       size: "",
+      sets:childCount
     },
   ];
 
@@ -183,6 +187,7 @@ export default function CustomBox(props) {
                   getter={myArr}
                   size={item.size}
                   data={box}
+                  sets={item.sets}
                 />
               );
             })}
@@ -272,6 +277,7 @@ export default function CustomBox(props) {
                   image={item.image}
                   setter={setMyArr}
                   getter={myArr}
+                  sets={item.sets}
                 />
               );
             })}

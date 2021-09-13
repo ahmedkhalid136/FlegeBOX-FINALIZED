@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { act } from "react-dom/cjs/react-dom-test-utils.production.min";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, actual, mycount, getter } = props;
+  const { Name, image, pcs, actual, mycount, getter,sets,data } = props;
   const [ssize, setSize] = "";
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
 
-    if (actual >= 1) {
-      mycount(actual + 1);
+    if ( actual >= 1) {
+     mycount(actual+1)
+    
+     
+      console.log(  actual,"incremented value")
       getter[theObj].pcs = getter[theObj].pcs + 20;
-    } else {
-      mycount((actual) => actual + 1);
-
-      props.setter((getterr) => [...getterr, { Name, image, pcs }]);
+    } else  {
+      mycount(actual+1)
+  
+      props.setter((getterr) => [...getterr, { Name, image, pcs,actual }]);
+      console.log(getter,"myarray")
     }
   };
   const decrement = () => {
@@ -89,7 +94,7 @@ export default function BlueProduct(props) {
             >
               -
             </button>
-            <span className="increment-buttons counter">{props.actual}</span>
+            <span className="increment-buttons counter">{sets}</span>
             <button
               className="increment-buttons"
               onClick={() => {
