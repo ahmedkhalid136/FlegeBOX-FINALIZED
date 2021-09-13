@@ -12,7 +12,9 @@ function ChooseBox(props) {
       <div style={{ marginTop: "40px" }} className="container desktop-head">
         <div className="row">
           <div className="col-lg-2">
-            <button className="chooseButton">1. CHOOSE BOX</button>
+            <button className="chooseButton" style={{ padding: "10px 20px" }}>
+              1. CHOOSE BOX
+            </button>
           </div>
           <div className="col-lg-2">...........................</div>
           <div className="col-lg-3">2. FILL INFORMATION FORM</div>
@@ -24,15 +26,15 @@ function ChooseBox(props) {
 
       <div className="mobile-head">
         <div className="row">
-          <div className="col-lg-2 col-6">
+          <div className="col-lg-2 col-md-4 ">
             <button className="chooseButton" style={{ padding: "7px 8px" }}>
-              1. CHOOSE BOX
+              1. CHOOSE BOX{" "}
             </button>
           </div>
-          <div className="col-lg-2 col-1">......</div>
-          <div className="col-lg-3 col-2">2.</div>
-          <div className="col-lg-2 col-1">......</div>
-          <div className="col-lg-2 col-2">3.</div>
+          <div className="col-lg-2 col-md-2 col-1">......</div>
+          <div className="col-lg-3 col-2 col-md-2">2.</div>
+          <div className="col-lg-2 col-1 col-md-2">......</div>
+          <div className="col-lg-2 col-2 col-md-2">3.</div>
         </div>
       </div>
 

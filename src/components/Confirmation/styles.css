@@ -39,3 +39,9 @@
 
 .right icon {
 }
+
+@media (max-width: 900px) {
+  .option-box {
+    margin: 5px 0 !important;
+  }
+}
