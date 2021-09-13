@@ -38,8 +38,7 @@ export default function CustomBox(props) {
   const [pcs, setpcs] = useState(0);
   const [getValue, setValue] = useState(0);
   props.box(myArr);
-  console.log(myvalue, "global");
-  console.log(myArr,"meri new Array")
+  
   function clear() {
     setMyArr([]);
 
