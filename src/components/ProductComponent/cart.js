@@ -5,32 +5,32 @@ export default function Cart(props) {
   const [getBackground, setBackground] = useState(true);
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
-  const { Name, image, pcs,myvalue,getter} = props;
+  const { Name, image, pcs,myvalue,setvalue,getter} = props;
 const [cartCount,setCartcount]=useState(0)
 
 console.log(myvalue,"these are the pcs here")
-  // const decrement = () => {
-  //   const theObj = getter.findIndex((obj) => obj.Name == Name);
-  //   var find_and_delete = Name;
-  //   cartCount <= 1 ? finish() : minus();
+  const decrement = () => {
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    var find_and_delete = Name;
+    myvalue <= 1 ? finish() : minus();
 
-  //   function minus() {
-  //     getter[theObj].pcs = getter[theObj].pcs - 20;
-  //     setCartcount(cartCount-1)
-  //     console(cartCount,"minus karka value")
+    function minus() {
+      getter[theObj].pcs = getter[theObj].pcs - 20;
+      setvalue(myvalue-1)
+      console(myvalue,"minus karka value")
      
-  //   }
-  //   function finish() {
-  //     setCartcount(0);
+    }
+    function finish() {
+      setvalue(0);
       
-  //     for (var i = getter.length - 1; i >= 0; i--) {
-  //       if (getter[i].Name == find_and_delete) {
-  //         getter.splice(i, 1);
-  //       }
-  //       props.setter(getter);
-  //     }
-  //   }
-  // };
+      for (var i = getter.length - 1; i >= 0; i--) {
+        if (getter[i].Name == find_and_delete) {
+          getter.splice(i, 1);
+        }
+        props.setter(getter);
+      }
+    }
+  };
 
   // useEffect(() => {
   //   console.log(getter);
@@ -84,9 +84,9 @@ console.log(myvalue,"these are the pcs here")
           </button>
           <div style={{ textAlign: "right", display: "inline-block" }}>
             <i
-              // onClick={() => {
-              //   decrement();
-              // }}
+              onClick={() => {
+                decrement();
+              }}
               class="fas fa-times"
             ></i>
           </div>
