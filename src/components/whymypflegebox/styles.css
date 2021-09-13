@@ -122,4 +122,8 @@ p {
   .secondImage {
     margin-top: 10px;
   }
+  .buttonDiv {
+    margin-top: -30px;
+    margin-bottom: -50px;
+  }
 }

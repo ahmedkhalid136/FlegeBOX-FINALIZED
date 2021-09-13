@@ -5,10 +5,10 @@ export default function Cart(props) {
   const [getBackground, setBackground] = useState(true);
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
-  const { Name, image, pcs,myvalue,setvalue,getter} = props;
-const [cartCount,setCartcount]=useState(0)
+  const { Name, image, pcs, myvalue, setvalue, getter } = props;
+  const [cartCount, setCartcount] = useState(0);
 
-console.log(myvalue,"these are the pcs here")
+  console.log(myvalue, "these are the pcs here");
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
     var find_and_delete = Name;
@@ -16,13 +16,12 @@ console.log(myvalue,"these are the pcs here")
 
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      setvalue(myvalue-1)
-      console(myvalue,"minus karka value")
-     
+      setvalue(myvalue - 1);
+      console(myvalue, "minus karka value");
     }
     function finish() {
       setvalue(0);
-      
+
       for (var i = getter.length - 1; i >= 0; i--) {
         if (getter[i].Name == find_and_delete) {
           getter.splice(i, 1);
@@ -32,9 +31,9 @@ console.log(myvalue,"these are the pcs here")
     }
   };
 
-  // useEffect(() => {
-  //   console.log(getter);
-  // });
+  useEffect(() => {
+    console.log(getter);
+  });
 
   return (
     <div

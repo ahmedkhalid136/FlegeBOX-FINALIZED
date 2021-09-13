@@ -4,24 +4,24 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, getter, sets, data,setvalue,myvalue} = props;
+  const { Name, image, pcs, getter, sets, data, setvalue, myvalue } = props;
   const [actual, mycount] = useState(0);
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState("M");
 
   const theObj = getter.findIndex((obj) => obj.Name == Name);
   const increment = async () => {
     if (actual >= 1) {
       mycount(actual + 1);
-      setvalue(actual)
+      setvalue(actual);
       console.log(actual, "incremented value");
       getter[theObj].pcs = getter[theObj].pcs + 20;
 
       console.log(getter[theObj].pcs, "total pcs");
-    console.log(getter,"after addition")
+      console.log(getter, "after addition");
     } else {
       mycount(actual + 1);
-      setvalue(actual)
-      props.setter((getterr) => [...getterr, { Name, image, pcs }]);
+      setvalue(actual);
+      props.setter((getterr) => [...getterr, { Name, image, pcs, size }]);
       console.log(getter, "myarray");
     }
   };
@@ -33,7 +33,7 @@ export default function BlueProduct(props) {
     function minus() {
       mycount(actual - 1);
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      
+
       console.log(getter[theObj].pcs, "total pcs");
     }
     function finish() {
@@ -44,10 +44,18 @@ export default function BlueProduct(props) {
         }
         props.setter(getter);
         console.log(getter);
-
       }
     }
   };
+
+  function changeSize(x) {
+    setSize(x);
+    const theObj = getter.findIndex((obj) => obj.Name == Name);
+    getter[theObj].size = size;
+  }
+  // useEffect(() => {
+  //   console.log(getter);
+  // });
 
   return (
     <div
@@ -75,19 +83,19 @@ export default function BlueProduct(props) {
           <div className="col-lg-5 col-12">
             <button
               className="increment-buttons sizes"
-              onClick={() => setSize("S")}
+              onClick={() => changeSize("S")}
             >
               S
             </button>
             <button
               className="increment-buttons sizes"
-              onClick={() => setSize("M")}
+              onClick={() => changeSize("M")}
             >
               M
             </button>
             <button
               className="increment-buttons sizes"
-              onClick={() => setSize("L")}
+              onClick={() => changeSize("L")}
             >
               L
             </button>

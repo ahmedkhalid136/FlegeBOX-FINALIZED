@@ -28,7 +28,7 @@ const responsive = {
 };
 
 export default function CustomBox(props) {
-  const[myvalue,setvalue]=useState(0)
+  const [myvalue, setvalue] = useState(0);
   const [childCount1, SetCount1] = useState(0);
   const [childCount2, SetCount2] = useState(0);
   const [childCount3, SetCount3] = useState(0);
@@ -38,7 +38,7 @@ export default function CustomBox(props) {
   const [pcs, setpcs] = useState(0);
   const [getValue, setValue] = useState(0);
   props.box(myArr);
- console.log(myvalue,"global")
+  console.log(myvalue, "global");
   function clear() {
     setMyArr([]);
 
@@ -86,28 +86,28 @@ export default function CustomBox(props) {
       name: "K94 MASK",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-
+      size: "M",
       sets: 0,
     },
     {
       name: "Gloves",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-
+      size: "M",
       sets: 0,
     },
     {
       name: "hand sanitizer ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-
+      size: "M",
       sets: 0,
     },
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-
+      size: "M",
       sets: 0,
     },
   ];

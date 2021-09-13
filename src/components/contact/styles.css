@@ -69,13 +69,14 @@ h3 {
 
 .info {
   text-align: left;
+  padding-top: 30px;
 }
 
 .info p {
   color: black;
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
 }
 

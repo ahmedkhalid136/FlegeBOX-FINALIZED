@@ -31,7 +31,7 @@
   border: 1px solid transparent;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .navbar-nav {
     padding: 10px 0;
     margin-left: -20px !important;
