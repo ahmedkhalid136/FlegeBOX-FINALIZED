@@ -32,7 +32,7 @@ export default function Cart(props) {
   };
 
   useEffect(() => {
-    console.log(getter);
+    console.log("YEH CART KA GETTER HA", getter);
   });
 
   return (

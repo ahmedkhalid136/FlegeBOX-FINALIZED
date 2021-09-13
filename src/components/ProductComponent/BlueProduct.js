@@ -32,6 +32,7 @@ export default function BlueProduct(props) {
 
     function minus() {
       mycount(actual - 1);
+      const theObj = getter.findIndex((obj) => obj.Name == Name);
       getter[theObj].pcs = getter[theObj].pcs - 20;
 
       console.log(getter[theObj].pcs, "total pcs");
