@@ -38,7 +38,11 @@ function Faq() {
               setColor(!Color);
             }}
             style={{ color: Color }}
-            data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"
+            data-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
           >
             {getIcon === true ? <AddIcon /> : <RemoveIcon />}
             click
@@ -62,7 +66,10 @@ function Faq() {
             }}
             style={{ color: Color2 }}
             data-toggle="collapse"
-            href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"
+            href="#collapseExample1"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample1"
           >
             {getIcon2 === true ? <AddIcon /> : <RemoveIcon />}
             Link with href
@@ -198,7 +205,7 @@ function Faq() {
             {getIcon7 === true ? <AddIcon /> : <RemoveIcon />}
             Link with href
           </h6>
-          <div class="collapse" id="collapseExample">
+          <div class="collapse" id="collapseExample6">
             <div class="answerDiv">
               Some placeholder content for the collapse component. This panel is
               hidden by default but revealed when the user activates the
