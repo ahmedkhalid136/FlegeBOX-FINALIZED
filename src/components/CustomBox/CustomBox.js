@@ -28,7 +28,7 @@ const responsive = {
 };
 
 export default function CustomBox(props) {
-  const [childCount, SetCount] = useState(0);
+  const[myvalue,setvalue]=useState(0)
   const [childCount1, SetCount1] = useState(0);
   const [childCount2, SetCount2] = useState(0);
   const [childCount3, SetCount3] = useState(0);
@@ -38,10 +38,10 @@ export default function CustomBox(props) {
   const [pcs, setpcs] = useState(0);
   const [getValue, setValue] = useState(0);
   props.box(myArr);
-
+ console.log(myvalue,"global")
   function clear() {
     setMyArr([]);
-    SetCount(0);
+
     SetCount1(0);
     SetCount2(0);
     SetCount3(0);
@@ -86,33 +86,31 @@ export default function CustomBox(props) {
       name: "K94 MASK",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size: "",
-      sets:childCount
+
+      sets: 0,
     },
     {
       name: "Gloves",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "",
-      sets:childCount
+
+      sets: 0,
     },
     {
       name: "hand sanitizer ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "",
-      sets:childCount
+
+      sets: 0,
     },
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size: "",
-      sets:childCount
+
+      sets: 0,
     },
   ];
-
- 
 
   return (
     <div className="container">
@@ -132,8 +130,6 @@ export default function CustomBox(props) {
                   Name={box1[0].name}
                   pcs={box1[0].pcs}
                   image={box1[0].img}
-                  actual={childCount}
-                  mycount={SetCount}
                   setter={setMyArr}
                   getter={myArr}
                 />
@@ -143,8 +139,8 @@ export default function CustomBox(props) {
                   Name={box2[0].name}
                   pcs={box2[0].pcs}
                   image={box2[0].img}
-                  actual={childCount1}
-                  mycount={SetCount1}
+                  // actual={childCount1}
+                  // mycount={SetCount1}
                   setter={setMyArr}
                   getter={myArr}
                 />
@@ -154,8 +150,8 @@ export default function CustomBox(props) {
                   Name={box3[0].name}
                   pcs={box3[0].pcs}
                   image={box3[0].img}
-                  actual={childCount2}
-                  mycount={SetCount2}
+                  // actual={childCount2}
+                  // mycount={SetCount2}
                   setter={setMyArr}
                   getter={myArr}
                 />
@@ -165,8 +161,8 @@ export default function CustomBox(props) {
                   Name={box4[0].name}
                   pcs={box4[0].pcs}
                   image={box4[0].img}
-                  actual={childCount3}
-                  mycount={SetCount3}
+                  // actual={childCount3}
+                  // mycount={SetCount3}
                   setter={setMyArr}
                   getter={myArr}
                 />
@@ -178,15 +174,13 @@ export default function CustomBox(props) {
               return (
                 <Product
                   key={ind}
-                  mycount={SetCount}
-                  actual={childCount}
                   Name={item.name}
                   pcs={item.pcs}
                   image={item.img}
                   setter={setMyArr}
                   getter={myArr}
-                  size={item.size}
-                  data={box}
+                  setvalue={setvalue}
+                  myvalue={myvalue}
                   sets={item.sets}
                 />
               );
@@ -270,14 +264,13 @@ export default function CustomBox(props) {
               return (
                 <Cart
                   key={ind}
-                  mycount={SetCount}
-                  actual={childCount}
                   Name={item.Name}
                   pcs={item.pcs}
                   image={item.image}
-                  setter={setMyArr}
                   getter={myArr}
+                  setter={setMyArr}
                   sets={item.sets}
+                  myvalue={myvalue}
                 />
               );
             })}

@@ -5,22 +5,24 @@ export default function Cart(props) {
   const [getBackground, setBackground] = useState(true);
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
-  const { Name, image, pcs, getter } = props;
+  const { Name, image, pcs,myvalue,setvalue,getter} = props;
+const [cartCount,setCartcount]=useState(0)
 
-  const [value, setValue] = useState(getter.value);
+console.log(myvalue,"these are the pcs here")
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
     var find_and_delete = Name;
-    value <= 1 ? finish() : minus();
+    myvalue <= 1 ? finish() : minus();
 
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      setValue(value - 1);
-      getter[theObj].value = value;
+      setvalue(myvalue-1)
+      console(myvalue,"minus karka value")
+     
     }
     function finish() {
-      setValue(value - 1);
-      getter[theObj].value = value;
+      setvalue(0);
+      
       for (var i = getter.length - 1; i >= 0; i--) {
         if (getter[i].Name == find_and_delete) {
           getter.splice(i, 1);
@@ -30,9 +32,9 @@ export default function Cart(props) {
     }
   };
 
-  useEffect(() => {
-    console.log(getter);
-  });
+  // useEffect(() => {
+  //   console.log(getter);
+  // });
 
   return (
     <div
@@ -45,14 +47,14 @@ export default function Cart(props) {
       }}
     >
       <div className="col-lg-2 col-3">
-        <img className="product-image" src={props.image} />
+        <img className="product-image" src={image} />
       </div>
       <div
         className="col-lg-4 col-2 product-name"
         style={{ textAlign: "left" }}
       >
-        <h6>{props.Name}</h6>
-        <p>{props.pcs}pcs</p>
+        <h6>{Name}</h6>
+        <p>{pcs}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">

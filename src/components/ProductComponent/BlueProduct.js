@@ -4,22 +4,25 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, actual, mycount, getter,sets,data } = props;
-  const [ssize, setSize] = "";
-  const increment = async () => {
-    const theObj = getter.findIndex((obj) => obj.Name == Name);
+  const { Name, image, pcs, getter, sets, data,setvalue,myvalue} = props;
+  const [actual, mycount] = useState(0);
+  const [size, setSize] = useState(0);
 
-    if ( actual >= 1) {
-     mycount(actual+1)
-    
-     
-      console.log(  actual,"incremented value")
+  const theObj = getter.findIndex((obj) => obj.Name == Name);
+  const increment = async () => {
+    if (actual >= 1) {
+      mycount(actual + 1);
+      setvalue(actual)
+      console.log(actual, "incremented value");
       getter[theObj].pcs = getter[theObj].pcs + 20;
-    } else  {
-      mycount(actual+1)
-  
-      props.setter((getterr) => [...getterr, { Name, image, pcs,actual }]);
-      console.log(getter,"myarray")
+
+      console.log(getter[theObj].pcs, "total pcs");
+    console.log(getter,"after addition")
+    } else {
+      mycount(actual + 1);
+      setvalue(actual)
+      props.setter((getterr) => [...getterr, { Name, image, pcs }]);
+      console.log(getter, "myarray");
     }
   };
   const decrement = () => {
@@ -28,8 +31,10 @@ export default function BlueProduct(props) {
     actual <= 1 ? finish() : minus();
 
     function minus() {
-      getter[theObj].pcs = getter[theObj].pcs - 20;
       mycount(actual - 1);
+      getter[theObj].pcs = getter[theObj].pcs - 20;
+      
+      console.log(getter[theObj].pcs, "total pcs");
     }
     function finish() {
       mycount(0);
@@ -38,6 +43,8 @@ export default function BlueProduct(props) {
           getter.splice(i, 1);
         }
         props.setter(getter);
+        console.log(getter);
+
       }
     }
   };
@@ -94,7 +101,7 @@ export default function BlueProduct(props) {
             >
               -
             </button>
-            <span className="increment-buttons counter">{sets}</span>
+            <span className="increment-buttons counter">{actual}</span>
             <button
               className="increment-buttons"
               onClick={() => {
