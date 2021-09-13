@@ -198,7 +198,7 @@ function Faq() {
             {getIcon7 === true ? <AddIcon /> : <RemoveIcon />}
             Link with href
           </h6>
-          <div class="collapse" id="collapseExample">
+          <div class="collapse" id="collapseExample6">
             <div class="answerDiv">
               Some placeholder content for the collapse component. This panel is
               hidden by default but revealed when the user activates the
