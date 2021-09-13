@@ -257,4 +257,8 @@
   .home-img {
     height: 400px;
   }
+  .benifits-columns p {
+    padding: 0;
+    margin-top: -20px;
+  }
 }
