@@ -32,7 +32,7 @@ export default function Body() {
             <br />
             <br />
             <h3>Reliable Delivery</h3>
-            <p>
+            <p style={{ marginBottom: "30px" }}>
               Free shipping every month and <br /> an time at your home or at{" "}
               <br /> your care service.
             </p>
@@ -44,7 +44,7 @@ export default function Body() {
             <br />
             <br />
             <h3>No Formalities</h3>
-            <p>
+            <p style={{ marginBottom: "30px" }}>
               We take care of the application <br /> and billing with the
               nursing <br /> care insurrance.
             </p>
@@ -56,7 +56,7 @@ export default function Body() {
             <br />
             <br />
             <h3>Quality</h3>
-            <p>
+            <p style={{ marginBottom: "30px" }}>
               We supply you with high <br /> quality branded products.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Body() {
             <br />
             <br />
             <h3>Prescription Free</h3>
-            <p>
+            <p style={{ marginBottom: "30px" }}>
               You do not need a prescription from <br /> your doctor.
             </p>
           </div>

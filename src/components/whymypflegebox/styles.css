@@ -85,6 +85,16 @@ p {
   color: #2faae5;
 }
 
+@media (max-width: 900px) {
+  .why-my-img {
+    width: 100%;
+    height: 702px;
+  }
+  .left-red-dot {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .left-red-dot {
     display: none;

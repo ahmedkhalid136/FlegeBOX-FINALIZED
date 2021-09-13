@@ -41,7 +41,6 @@
 .Works {
   padding-top: 140px;
   padding-bottom: 140px;
-  padding-left: 100px;
 }
 
 .Works h2 {
@@ -76,6 +75,7 @@
 
 .icons-container {
   margin-top: -80px;
+  padding-left: 100px;
 }
 
 .icon-background {
@@ -179,14 +179,35 @@
     display: block;
     width: 100%;
   }
+  .icons-container {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 900px) {
+  .icons-container {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .icon-background {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .icons {
+    font-size: 60px;
+  }
   .right-arrow {
     display: none;
   }
+  .iconsHeading {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
   .down-arrow {
     display: block;
+    font-size: 70px;
   }
   .home-img {
     height: 500px;
@@ -199,11 +220,18 @@
 
 @media (max-width: 500px) {
   .home-img {
-    height: 400px;
+    height: 350px;
   }
   .home-banner {
     background-color: #2faae5;
-    height: 400px;
+    height: 350px;
+  }
+  .icon-background {
+    height: 100px;
+    width: 100px;
+  }
+  .icons {
+    font-size: 40px;
   }
 }
 
