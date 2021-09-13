@@ -29,7 +29,7 @@ function Faq() {
       <div className="titleSection1">
         <h1 className="breadcrumbs1">Hello can we help you?</h1>
       </div>
-      <div className="mainDiv">
+      <div className="mainDiv1">
         <p className="questionDiv">
           <h6
             className={Color === true ? "text1" : "activeText1"}
@@ -38,11 +38,7 @@ function Faq() {
               setColor(!Color);
             }}
             style={{ color: Color }}
-            data-bs-toggle="collapse"
-            href="#collapseExample"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseExample"
+            data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"
           >
             {getIcon === true ? <AddIcon /> : <RemoveIcon />}
             click
@@ -65,11 +61,8 @@ function Faq() {
               setColor2(!Color2);
             }}
             style={{ color: Color2 }}
-            data-bs-toggle="collapse"
-            href="#collapseExample1"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseExample"
+            data-toggle="collapse"
+            href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"
           >
             {getIcon2 === true ? <AddIcon /> : <RemoveIcon />}
             Link with href
@@ -91,7 +84,7 @@ function Faq() {
               setColor3(!Color3);
             }}
             style={{ color: Color3 }}
-            data-bs-toggle="collapse"
+            data-toggle="collapse"
             href="#collapseExample2"
             role="button"
             aria-expanded="false"
@@ -117,7 +110,7 @@ function Faq() {
               setColor4(!Color4);
             }}
             style={{ color: Color4 }}
-            data-bs-toggle="collapse"
+            data-toggle="collapse"
             href="#collapseExample3"
             role="button"
             aria-expanded="false"
@@ -143,7 +136,7 @@ function Faq() {
               setColor5(!Color5);
             }}
             style={{ color: Color5 }}
-            data-bs-toggle="collapse"
+            data-toggle="collapse"
             href="#collapseExample4"
             role="button"
             aria-expanded="false"
@@ -170,7 +163,7 @@ function Faq() {
               setColor6(!Color6);
             }}
             style={{ color: Color6 }}
-            data-bs-toggle="collapse"
+            data-toggle="collapse"
             href="#collapseExample5"
             role="button"
             aria-expanded="false"
@@ -196,7 +189,7 @@ function Faq() {
               setColor7(!Color7);
             }}
             style={{ color: Color7 }}
-            data-bs-toggle="collapse"
+            data-toggle="collapse"
             href="#collapseExample6"
             role="button"
             aria-expanded="false"
