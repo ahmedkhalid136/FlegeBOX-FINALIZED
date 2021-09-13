@@ -3,39 +3,45 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, actual, mycount, getter, size } = props;
+  const { Name, image, pcs, actual, mycount, getter } = props;
+  const [value, setValue] = useState(0);
 
   const increment = async () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
-    if (actual >= 1) {
-      mycount(actual + 1);
+    if (value >= 1) {
+      setValue(value + 1);
+      // console.log("YELLOW" + value);
       getter[theObj].pcs = getter[theObj].pcs + 20;
+      getter[theObj].value++;
     } else {
-      mycount((actual) => actual + 1);
-
-      props.setter((getterr) => [...getterr, { Name, image, pcs }]);
+      setValue((value) => value + 1);
+      props.setter((getterr) => [...getterr, { Name, image, pcs, value }]);
     }
   };
   const decrement = () => {
+    setValue(value - 1);
+    console.log(value);
     const theObj = getter.findIndex((obj) => obj.Name == Name);
     var find_and_delete = Name;
-    actual <= 1 ? finish() : minus();
+    value <= 0 ? finish() : minus();
 
     function minus() {
+      console.log(getter[theObj].pcs);
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      mycount(actual - 1);
+      console.log(getter[theObj].pcs);
+      props.setter(getter);
+      setValue(value - 1);
     }
     function finish() {
-      mycount(0);
+      setValue(0);
       for (var i = getter.length - 1; i >= 0; i--) {
-        if (getter[i].Name == find_and_delete) {
+        if (getter[i].Name === find_and_delete) {
           getter.splice(i, 1);
         }
         props.setter(getter);
       }
     }
   };
-
   return (
     <div
       className="row"
@@ -62,19 +68,19 @@ export default function BlueProduct(props) {
           <div className="col-lg-5 col-12">
             <button
               className="increment-buttons sizes"
-              onClick={() => setSize("S")}
+              // onClick={() => setSize("S")}
             >
               S
             </button>
             <button
               className="increment-buttons sizes"
-              onClick={() => setSize("M")}
+              // onClick={() => setSize("M")}
             >
               M
             </button>
             <button
               className="increment-buttons sizes"
-              onClick={() => setSize("L")}
+              // onClick={() => setSize("L")}
             >
               L
             </button>
@@ -88,7 +94,7 @@ export default function BlueProduct(props) {
             >
               -
             </button>
-            <span className="increment-buttons counter">{props.actual}</span>
+            <span className="increment-buttons counter">{value}</span>
             <button
               className="increment-buttons"
               onClick={() => {

@@ -100,7 +100,7 @@ hr .line {
   display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 900px) {
   .display-rule {
     display: block;
   }

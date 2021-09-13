@@ -1,22 +1,26 @@
-import React,{useEffect, useState}from "react";
+import React, { useEffect, useState } from "react";
 import "./BlueProduct.css";
 
 export default function Cart(props) {
-  const [getBackground,setBackground]=useState(true)
-  const [getBackground2,setBackground2]=useState(true)
-  const [getBackground3,setBackground3]=useState(true)
-  const { Name, image, pcs, actual, mycount, getter } = props;
+  const [getBackground, setBackground] = useState(true);
+  const [getBackground2, setBackground2] = useState(true);
+  const [getBackground3, setBackground3] = useState(true);
+  const { Name, image, pcs, getter } = props;
+
+  const [value, setValue] = useState(getter.value);
   const decrement = () => {
     const theObj = getter.findIndex((obj) => obj.Name == Name);
     var find_and_delete = Name;
-    actual <= 1 ? finish() : minus();
+    value <= 1 ? finish() : minus();
 
     function minus() {
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      mycount(actual - 1);
+      setValue(value - 1);
+      getter[theObj].value = value;
     }
     function finish() {
-      mycount(actual - 1);
+      setValue(value - 1);
+      getter[theObj].value = value;
       for (var i = getter.length - 1; i >= 0; i--) {
         if (getter[i].Name == find_and_delete) {
           getter.splice(i, 1);
@@ -26,7 +30,10 @@ export default function Cart(props) {
     }
   };
 
-console.log(actual)
+  useEffect(() => {
+    console.log(getter);
+  });
+
   return (
     <div
       className="row cart-section"
@@ -38,34 +45,48 @@ console.log(actual)
       }}
     >
       <div className="col-lg-2 col-3">
-        <img
-          className="product-image"
-          src={props.image}
-        />
+        <img className="product-image" src={props.image} />
       </div>
       <div
         className="col-lg-4 col-2 product-name"
         style={{ textAlign: "left" }}
       >
-      <h6>{props.Name}</h6>
-      <p>{props.pcs}pcs</p>
+        <h6>{props.Name}</h6>
+        <p>{props.pcs}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">
-        <button onClick={()=>{
-              setBackground(!getBackground)
-            }} className={getBackground?"sizes1":"increment-buttons1"}>S</button>
-            <button onClick={()=>{
-              setBackground2(!getBackground2)
-            }} className={getBackground2?"sizes1":"increment-buttons1"}>M</button>
-            <button onClick={()=>{
-              setBackground3(!getBackground3)
-            }} className={getBackground3?"sizes1":"increment-buttons1"} >L</button>
-          <div  style={{ textAlign: "right", display: "inline-block" }} >
-              
-            <i  onClick={()=>{
-              decrement()
-            }}class="fas fa-times" ></i>
+          <button
+            onClick={() => {
+              setBackground(!getBackground);
+            }}
+            className={getBackground ? "sizes1" : "increment-buttons1"}
+          >
+            S
+          </button>
+          <button
+            onClick={() => {
+              setBackground2(!getBackground2);
+            }}
+            className={getBackground2 ? "sizes1" : "increment-buttons1"}
+          >
+            M
+          </button>
+          <button
+            onClick={() => {
+              setBackground3(!getBackground3);
+            }}
+            className={getBackground3 ? "sizes1" : "increment-buttons1"}
+          >
+            L
+          </button>
+          <div style={{ textAlign: "right", display: "inline-block" }}>
+            <i
+              onClick={() => {
+                decrement();
+              }}
+              class="fas fa-times"
+            ></i>
           </div>
         </div>
       </div>
