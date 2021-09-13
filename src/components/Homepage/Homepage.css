@@ -181,7 +181,16 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .right-arrow {
+    display: none;
+  }
+  .down-arrow {
+    display: block;
+  }
+}
+
+@media (max-width: 990px) and (max-width: 700) {
   .icons-container {
     padding-right: 0 !important;
     padding-left: 0 !important;

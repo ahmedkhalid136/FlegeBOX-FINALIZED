@@ -36,6 +36,7 @@ export default function CustomBox(props) {
   const [childCount5, SetCount5] = useState(0);
   const [myArr, setMyArr] = useState([]);
   const [pcs, setpcs] = useState(0);
+  const [getValue, setValue] = useState(0);
   props.box(myArr);
 
   function clear() {
@@ -80,7 +81,7 @@ export default function CustomBox(props) {
     },
   ];
 
-  const box = [
+  var box = [
     {
       name: "K94 MASK",
       pcs: 20,
@@ -88,7 +89,7 @@ export default function CustomBox(props) {
       size: "",
     },
     {
-      name: "Gloves ",
+      name: "Gloves",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
       size: "",
@@ -173,8 +174,8 @@ export default function CustomBox(props) {
               return (
                 <Product
                   key={ind}
-                  actual={childCount}
                   mycount={SetCount}
+                  actual={childCount}
                   Name={item.name}
                   pcs={item.pcs}
                   image={item.img}

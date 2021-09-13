@@ -211,6 +211,16 @@
   padding: 70px 0;
   text-align: center;
 }
+
+@media (min-width: 500) and (max-width: 900) {
+  .mobile-fullLine {
+    display: block;
+  }
+  .desktop-head {
+    display: none;
+  }
+}
+
 @media (min-width: 300px) and (max-width: 500px) {
   .majorbox p {
     margin-bottom: 20px !important;
@@ -222,6 +232,33 @@
     display: block;
   }
   .desktop-head {
+    display: none;
+  }
+  .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  .Icons2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  .mobile-fullLine .col-6 {
+    display: block;
+  }
+  .fullLine {
+    display: none;
+  }
+
+  .Custo .head {
+    display: none;
+  }
+  .mobile-head {
+    display: block;
+  }
+  .chooseboxHead {
     display: none;
   }
   /* .Icons {
