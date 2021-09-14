@@ -1,47 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import "./BlueProduct.css";
-
+import { CreateContext} from "../../contexts/Customcontext"
 export default function Cart(props) {
   const [getBackground, setBackground] = useState(true);
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
-  const { Name, image, pcs, myvalue, setvalue, getter } = props;
+  const { Name, image, pcs } = props;
   const [actual, mycount] = useState(0);
-
-  const theObj = getter.findIndex((obj) => obj.Name == Name);
-
-  console.log(myvalue, "jo white product main hain value");
+  const {myvalue,setvalue,myArr,setMyArr} =useContext(CreateContext)
+useEffect(()=>{
+console.log("cart is also re rendring")
+},[myvalue])
   const decrement = async () => {
-    // mycount(myvalue);
-    // setvalue(actual);
-    console.log(actual, "value after another call to function");
-
+ 
     var find_and_delete = Name;
-    actual == 1 ? finish() : minus();
-
-    function minus() {
-      getter[theObj].pcs = getter[theObj].pcs - 20;
-      if(myvalue>0) mycount(myvalue - 1); 
-     
-       setvalue(actual)
-      console.log(myvalue, "the sets going on in minus function");
-
-   
-      // console.log(getter[theObj].pcs, "total pcs");
-      // console.log(getter, "array changed after minus from cart");
-    }
-    function finish() {
-      mycount(0);
+    
+      
       setvalue(0);
-      // setvalue((actual)=>actual)
-      for (var i = getter.length - 1; i >= 0; i--) {
-        if (getter[i].Name == find_and_delete) {
-          getter.splice(i, 1);
-        }
-        props.setter(getter);
-        // console.log(getter);
-        console.log(myvalue, "value here");
+      console.log(myvalue,"maybe changed")
+  
+    for (var i = myArr.length - 1; i >= 0; i--) {
+      if (myArr[i].Name == find_and_delete) {
+        myArr.splice(i, 1);
       }
+      setMyArr(myArr);
+      
+      console.log(myvalue, "mycount");
+      console.log(myArr);
     }
   };
 
@@ -94,6 +79,7 @@ export default function Cart(props) {
           <div style={{ textAlign: "right", display: "inline-block" }}>
             <i
               onClick={() => {
+                
                 decrement();
               }}
               class="fas fa-times"

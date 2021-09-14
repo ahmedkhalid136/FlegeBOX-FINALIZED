@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import Product from "../ProductComponent/BlueProduct";
 import Cart from "../ProductComponent/cart";
 import "./styles.css";
@@ -6,7 +7,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MobileAddToCart from "../ProductComponent/mobileAddToCart";
 import ProgressBar from "@ramonak/react-progress-bar";
-
+import { CreateContext } from "../../contexts/Customcontext";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -29,26 +30,16 @@ const responsive = {
 
 export default function CustomBox(props) {
   const [myvalue, setvalue] = useState(0);
-  const [childCount1, SetCount1] = useState(0);
-  const [childCount2, SetCount2] = useState(0);
-  const [childCount3, SetCount3] = useState(0);
-  const [childCount4, SetCount4] = useState(0);
-  const [childCount5, SetCount5] = useState(0);
+
   const [myArr, setMyArr] = useState([]);
-  const [pcs, setpcs] = useState(0);
-  const [getValue, setValue] = useState(0);
+
   props.box(myArr);
- 
-  console.log(myvalue,"main component main")
-  
+      useEffect(() => {
+          console.log(myvalue, "main is changed");
+      }, [myvalue]);
   function clear() {
     setMyArr([]);
-
-    SetCount1(0);
-    SetCount2(0);
-    SetCount3(0);
-    SetCount4(0);
-    SetCount5(0);
+    setvalue(0);
   }
   const box1 = [
     {
@@ -174,20 +165,23 @@ export default function CustomBox(props) {
           <div className="desktop-cart">
             {box.map((item, ind) => {
               return (
-                <Product
-                  key={ind}
-                  Name={item.name}
-                  pcs={item.pcs}
-                  image={item.img}
-                  setter={setMyArr}
-                  getter={myArr}
-                  setvalue={setvalue}
-                  myvalue={myvalue}
-                  sets={item.sets}
-                />
+                <CreateContext.Provider
+                  value={{ myvalue, setvalue, myArr, setMyArr }}
+                >
+                  <Product
+                    key={ind}
+                    Name={item.name}
+                    pcs={item.pcs}
+                    image={item.img}
+                    // setter={setMyArr}
+                    // getter={myArr}
+                    // setvalue={setvalue}
+                    // myvalue={myvalue}
+                    // sets={item.sets}
+                  />
+                </CreateContext.Provider>
               );
             })}
-           
           </div>
         </div>
         <div className="col-lg-6">
@@ -206,22 +200,31 @@ export default function CustomBox(props) {
                 </span>
               </div>
             </div>
-            <div style={{ padding: "10px 0" }}>
+            <div
+              style={{ padding: "10px 0" }}
+              onClick={() => {
+                console.log(myArr, "loader");
+              }}
+            >
               <ProgressBar completed={90} bgColor={"#F87433"} />
             </div>
             {myArr.map((item, ind) => {
               return (
-                <Cart
-                  key={ind}
-                  Name={item.Name}
-                  pcs={item.pcs}
-                  image={item.image}
-                  getter={myArr}
-                  setter={setMyArr}
-                  sets={item.sets}
-                  myvalue={myvalue}
-                  setvalue={setvalue}
-                />
+                <CreateContext.Provider
+                  value={{ myvalue, setvalue, myArr, setMyArr }}
+                >
+                  <Cart
+                    key={ind}
+                    Name={item.Name}
+                    pcs={item.pcs}
+                    image={item.image}
+                    // getter={myArr}
+                    // setter={setMyArr}
+                    // sets={item.sets}
+                    // myvalue={myvalue}
+                    // setvalue={setvalue}
+                  />
+                </CreateContext.Provider>
               );
             })}
           </div>
