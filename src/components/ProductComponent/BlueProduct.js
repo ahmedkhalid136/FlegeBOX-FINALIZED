@@ -1,64 +1,68 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+
 import { act } from "react-dom/cjs/react-dom-test-utils.production.min";
 import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
+import { CreateContext } from "../../contexts/Customcontext";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, getter, sets, data, setvalue, myvalue, setter } =
-    props;
+  const { Name, image, pcs } = props;
+  const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
   const [actual, mycount] = useState(0);
   const [size, setSize] = useState("M");
-
-  const theObj = getter.findIndex((obj) => obj.Name == Name);
+  const theObj = myArr.findIndex((obj) => obj.Name == Name);
   const increment = async () => {
-    if (actual >= 1) {
-      mycount(actual + 1);
-      setvalue(actual);
-      console.log(actual, "incremented value");
-      getter[theObj].pcs = getter[theObj].pcs + 20;
+    if (myvalue >= 1) {
+      //   mycount(actual + 1);
+      setvalue(myvalue + 1);
 
-      console.log(getter[theObj].pcs, "total pcs");
-      console.log(getter, "after addition");
+      console.log(myvalue, "incremented value");
+      myArr[theObj].pcs = myArr[theObj].pcs + 20;
+
+      console.log(myArr[theObj].pcs, "total pcs");
+      console.log(myArr, "after incrementing");
     } else {
-      mycount(actual + 1);
-      setvalue(actual);
-      setter((getterr) => [...getterr, { Name, image, pcs, size }]);
-      console.log(getter, "myarray");
+      //   mycount(actual + 1);
+      setvalue(myvalue + 1);
+      console.log(myvalue, "incremented value");
+      setMyArr((myArr) => [...myArr, { Name, image, pcs }]);
+      console.log(myArr, "after first append");
     }
   };
 
   // decrement function
-  const decrement = async () => {
+  function decrement() {
     var find_and_delete = Name;
-    actual <= 1 ? finish() : minus();
+    myvalue <= 1 ? finish() : minus();
 
     function minus() {
-      mycount(actual - 1);
-      setvalue(actual);
-      getter[theObj].pcs = getter[theObj].pcs - 20;
-      console.log(getter[theObj].pcs, "total pcs");
+      setvalue(myvalue - 1);
+
+      myArr[theObj].pcs = myArr[theObj].pcs - 20;
     }
     function finish() {
-      mycount(0);
       setvalue(0);
-      for (var i = getter.length - 1; i >= 0; i--) {
-        if (getter[i].Name == find_and_delete) {
-          getter.splice(i, 1);
+
+      for (var i = myArr.length - 1; i >= 0; i--) {
+        if (myArr[i].Name == find_and_delete) {
+          myArr.splice(i, 1);
         }
-        props.setter(getter);
-        console.log(getter);
+        setMyArr(myArr);
+        console.log(myvalue, "decremenet value in minus function");
+        console.log(myArr);
       }
     }
-  };
+  }
+
+  useEffect(() => {
+    console.log(myvalue, "after re-rendering again and again");
+  }, [myvalue]);
 
   function changeSize(x) {
     setSize(x);
-    const theObj = getter.findIndex((obj) => obj.Name == Name);
-    getter[theObj].size = size;
+    const theObj = myArr.findIndex((obj) => obj.Name == Name);
+    myArr[theObj].size = size;
   }
-  // useEffect(() => {
-  //   console.log(getter);
-  // });
 
   return (
     <div

@@ -1,39 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./BlueProduct.css";
-
+import { CreateContext } from "../../contexts/Customcontext";
 export default function Cart(props) {
   const [getBackground, setBackground] = useState(true);
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
-  const { Name, image, pcs, myvalue, setvalue, getter } = props;
-  const [cartCount, setCartcount] = useState(0);
+  const { Name, image, pcs } = props;
+  const [actual, mycount] = useState(0);
+  const { myvalue, setvalue, myArr, setMyArr, decrement } =
+    useContext(CreateContext);
+  useEffect(() => {
+    console.log("cart is also re rendring");
+  }, [myvalue]);
+  // const decrement = async () => {
 
-  console.log(pcs, "these are the pcs here");
-  // const decrement = () => {
-  //   const theObj = getter.findIndex((obj) => obj.Name == Name);
   //   var find_and_delete = Name;
-  //   myvalue <= 1 ? finish() : minus();
 
-  //   function minus() {
-  //     getter[theObj].pcs = getter[theObj].pcs - 20;
-  //     setvalue(myvalue - 1);
-  //     console(myvalue, "minus karka value");
-  //   }
-  //   function finish() {
   //     setvalue(0);
+  //     console.log(myvalue,"maybe changed")
 
-  //     for (var i = getter.length - 1; i >= 0; i--) {
-  //       if (getter[i].Name == find_and_delete) {
-  //         getter.splice(i, 1);
-  //       }
-  //       props.setter(getter);
+  //   for (var i = myArr.length - 1; i >= 0; i--) {
+  //     if (myArr[i].Name == find_and_delete) {
+  //       myArr.splice(i, 1);
   //     }
+  //     setMyArr(myArr);
+
+  //     console.log(myvalue, "mycount");
+  //     console.log(myArr);
   //   }
   // };
-
-  useEffect(() => {
-    console.log("YEH CART KA GETTER HA", getter);
-  });
 
   return (
     <div
@@ -53,7 +48,7 @@ export default function Cart(props) {
         style={{ textAlign: "left" }}
       >
         <h6>{Name}</h6>
-        <p>{pcs}pcs</p>
+        <p>{myvalue}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">
@@ -83,9 +78,9 @@ export default function Cart(props) {
           </button>
           <div style={{ textAlign: "right", display: "inline-block" }}>
             <i
-              // onClick={() => {
-              //   decrement();
-              // }}
+              onClick={() => {
+                decrement();
+              }}
               class="fas fa-times"
             ></i>
           </div>

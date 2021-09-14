@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+
 import Product from "../ProductComponent/BlueProduct";
 import Cart from "../ProductComponent/cart";
 import "./styles.css";
@@ -6,7 +7,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MobileAddToCart from "../ProductComponent/mobileAddToCart";
 import ProgressBar from "@ramonak/react-progress-bar";
-
+import CreateContextProvider from "../../contexts/Customcontext";
+import { CreateContext } from "../../contexts/Customcontext";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -28,26 +30,41 @@ const responsive = {
 };
 
 export default function CustomBox(props) {
-  const [myvalue, setvalue] = useState(0);
-  const [childCount1, SetCount1] = useState(0);
-  const [childCount2, SetCount2] = useState(0);
-  const [childCount3, SetCount3] = useState(0);
-  const [childCount4, SetCount4] = useState(0);
-  const [childCount5, SetCount5] = useState(0);
-  const [myArr, setMyArr] = useState([]);
-  const [pcs, setpcs] = useState(0);
-  const [getValue, setValue] = useState(0);
-  props.box(myArr);
-  
-  function clear() {
-    setMyArr([]);
+  const { myArr } = useContext(CreateContext);
 
-    SetCount1(0);
-    SetCount2(0);
-    SetCount3(0);
-    SetCount4(0);
-    SetCount5(0);
-  }
+  const box = [
+    {
+      name: "K94 MASK",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+    {
+      name: "Gloves",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+    {
+      name: "hand sanitizer ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+  ];
+
+  props.box(myArr);
+
   const box1 = [
     {
       name: "K94 MASK",
@@ -81,37 +98,6 @@ export default function CustomBox(props) {
     },
   ];
 
-  var box = [
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-    {
-      name: "Gloves",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-    {
-      name: "hand sanitizer ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-  ];
-
   return (
     <div className="container">
       <div className="row">
@@ -130,8 +116,8 @@ export default function CustomBox(props) {
                   Name={box1[0].name}
                   pcs={box1[0].pcs}
                   image={box1[0].img}
-                  setter={setMyArr}
-                  getter={myArr}
+                  // setter={setMyArr}
+                  // getter={myArr}
                 />
               </div>
               <div>
@@ -141,8 +127,8 @@ export default function CustomBox(props) {
                   image={box2[0].img}
                   // actual={childCount1}
                   // mycount={SetCount1}
-                  setter={setMyArr}
-                  getter={myArr}
+                  // setter={setMyArr}
+                  // getter={myArr}
                 />
               </div>
               <div>
@@ -152,8 +138,8 @@ export default function CustomBox(props) {
                   image={box3[0].img}
                   // actual={childCount2}
                   // mycount={SetCount2}
-                  setter={setMyArr}
-                  getter={myArr}
+                  // setter={setMyArr}
+                  // getter={myArr}
                 />
               </div>
               <div>
@@ -163,8 +149,8 @@ export default function CustomBox(props) {
                   image={box4[0].img}
                   // actual={childCount3}
                   // mycount={SetCount3}
-                  setter={setMyArr}
-                  getter={myArr}
+                  // setter={setMyArr}
+                  // getter={myArr}
                 />
               </div>
             </Carousel>
@@ -172,73 +158,21 @@ export default function CustomBox(props) {
           <div className="desktop-cart">
             {box.map((item, ind) => {
               return (
-                <Product
-                  key={ind}
-                  Name={item.name}
-                  pcs={item.pcs}
-                  image={item.img}
-                  setter={setMyArr}
-                  getter={myArr}
-                  setvalue={setvalue}
-                  myvalue={myvalue}
-                  sets={item.sets}
-                />
+                <CreateContextProvider>
+                  <Product
+                    key={ind}
+                    Name={item.name}
+                    pcs={item.pcs}
+                    image={item.img}
+                    // setter={setMyArr}
+                    // getter={myArr}
+                    // setvalue={setvalue}
+                    // myvalue={myvalue}
+                    // sets={item.sets}
+                  />
+                </CreateContextProvider>
               );
             })}
-            {/* <Product
-              actual={childCount}
-              mycount={SetCount}
-              Name={box1[0].name}
-              pcs={box1[0].pcs}
-              image={box1[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount1}
-              mycount={SetCount1}
-              Name={box2[0].name}
-              pcs={box2[0].pcs}
-              image={box2[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount2}
-              mycount={SetCount2}
-              Name={box3[0].name}
-              pcs={box3[0].pcs}
-              image={box3[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount3}
-              mycount={SetCount3}
-              Name={box4[0].name}
-              pcs={box4[0].pcs}
-              image={box4.img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount4}
-              mycount={SetCount4}
-              Name={box4[0].name}
-              pcs={box4[0].pcs}
-              image={box4[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount5}
-              mycount={SetCount5}
-              Name={box4[0].name}
-              pcs={box4[0].pcs}
-              image={box4[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            /> */}
           </div>
         </div>
         <div className="col-lg-6">
@@ -248,13 +182,7 @@ export default function CustomBox(props) {
                 <h4>Your Cart</h4>
               </div>
               <div className="col-lg-6" style={{ textAlign: "right" }}>
-                <span
-                  onClick={() => {
-                    clear();
-                  }}
-                >
-                  Clear All
-                </span>
+                <span>Clear All</span>
               </div>
             </div>
             <div style={{ padding: "10px 0" }}>
@@ -262,16 +190,19 @@ export default function CustomBox(props) {
             </div>
             {myArr.map((item, ind) => {
               return (
-                <Cart
-                  key={ind}
-                  Name={item.Name}
-                  pcs={item.pcs}
-                  image={item.image}
-                  getter={myArr}
-                  setter={setMyArr}
-                  sets={item.sets}
-                  myvalue={myvalue}
-                />
+                <CreateContextProvider>
+                  <Cart
+                    key={ind}
+                    Name={item.Name}
+                    pcs={item.pcs}
+                    image={item.image}
+                    // getter={myArr}
+                    // setter={setMyArr}
+                    // sets={item.sets}
+                    // myvalue={myvalue}
+                    // setvalue={setvalue}
+                  />
+                </CreateContextProvider>
               );
             })}
           </div>
