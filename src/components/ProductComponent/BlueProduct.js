@@ -12,6 +12,7 @@ export default function BlueProduct(props) {
   const [size, setSize] = useState("M");
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
   const increment = async () => {
+    
     if (myvalue >= 1) {
       //   mycount(actual + 1);
       setvalue(myvalue + 1);
@@ -32,6 +33,7 @@ export default function BlueProduct(props) {
 
   // decrement function
   function decrement() {
+ 
     var find_and_delete = Name;
     myvalue <= 1 ? finish() : minus();
 

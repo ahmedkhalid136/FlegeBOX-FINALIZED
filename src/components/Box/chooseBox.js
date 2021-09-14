@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect,useContext } from "react";
 import "./Box.css";
 import BoxComp from "./BoxComp";
 import CustomBox from "../CustomBox/CustomBox";
+import { CreateContext} from "../../contexts/Customcontext"
+import  CreateContextProvider from "../../contexts/Customcontext";
 function ChooseBox(props) {
   const [getComp, setComp] = useState(true);
   const [getBox, setBox] = useState(false);
@@ -174,7 +176,9 @@ function ChooseBox(props) {
       {getComp ? (
         <BoxComp box={props.mybox} />
       ) : (
+        < CreateContextProvider>
         <CustomBox box={props.mybox} />
+        </CreateContextProvider>
       )}
 
       <div style={{ textAlign: "right", margin: "30px 0" }}>
