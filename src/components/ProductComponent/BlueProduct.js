@@ -4,7 +4,8 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs, getter, sets, data, setvalue, myvalue } = props;
+  const { Name, image, pcs, getter, sets, data, setvalue, myvalue, setter } =
+    props;
   const [actual, mycount] = useState(0);
   const [size, setSize] = useState("M");
 
@@ -21,24 +22,25 @@ export default function BlueProduct(props) {
     } else {
       mycount(actual + 1);
       setvalue(actual);
-      props.setter((getterr) => [...getterr, { Name, image, pcs, size }]);
+      setter((getterr) => [...getterr, { Name, image, pcs, size }]);
       console.log(getter, "myarray");
     }
   };
-  const decrement = () => {
-    const theObj = getter.findIndex((obj) => obj.Name == Name);
+
+  // decrement function
+  const decrement = async () => {
     var find_and_delete = Name;
     actual <= 1 ? finish() : minus();
 
     function minus() {
       mycount(actual - 1);
-      const theObj = getter.findIndex((obj) => obj.Name == Name);
+      setvalue(actual);
       getter[theObj].pcs = getter[theObj].pcs - 20;
-
       console.log(getter[theObj].pcs, "total pcs");
     }
     function finish() {
       mycount(0);
+      setvalue(0);
       for (var i = getter.length - 1; i >= 0; i--) {
         if (getter[i].Name == find_and_delete) {
           getter.splice(i, 1);

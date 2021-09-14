@@ -19,12 +19,12 @@
 
 .mainDiv1 {
   margin-top: 5%;
+  padding: 40px 80px;
 }
 .questionDiv {
   justify-content: center;
-  width: 70%;
+  width: 100%;
   background-color: #f6fbfe;
-  margin-left: 15%;
   box-sizing: border-box;
   border-radius: 10px;
   text-align: left;
@@ -33,8 +33,7 @@
 }
 .answerDiv {
   width: 100%;
-  padding: 2px;
-  margin: 5px;
+  padding: 15px;
   text-align: left;
   background-color: #fafdfe;
   color: #70717b;
@@ -69,6 +68,14 @@
 }
 
 @media (max-width: 700px) {
+  .answerDiv {
+    font-size: 10px;
+    margin: 0;
+    padding: 10px;
+  }
+  .mainDiv1 {
+    padding: 40px 30px;
+  }
   .titleSection1 {
     background-size: cover;
     background-position-y: 0px;

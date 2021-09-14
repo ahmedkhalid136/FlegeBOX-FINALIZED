@@ -26,7 +26,7 @@ function ChooseBox(props) {
 
       <div className="mobile-head">
         <div className="row">
-          <div className="col-lg-2 col-md-4 ">
+          <div className="col-lg-2 col-md-4 col-5 ">
             <button className="chooseButton" style={{ padding: "7px 8px" }}>
               1. CHOOSE BOX{" "}
             </button>
@@ -38,7 +38,7 @@ function ChooseBox(props) {
         </div>
       </div>
 
-      <div className="row fullLine">
+      <div style={{ margin: "80px 0" }} className="row fullLine">
         <div className="col-lg-1"></div>
         <div className="col-lg-3  RightText chooseboxHead">
           <h3>Choose Box:</h3>
@@ -134,7 +134,7 @@ function ChooseBox(props) {
             </div>
             <h2>Boxes</h2>
           </div>
-          <div className="col-6">
+          <div className="col-6" style={{ textAlign: "center" }}>
             {" "}
             <div
               className={getBox1 ? "CustomIcons" : "CustomIcons2"}
@@ -158,6 +158,7 @@ function ChooseBox(props) {
               </svg>
             </div>
             <div
+              className="custom-box-mobile"
               style={{
                 textAlign: "left",
                 paddingTop: "15px",
