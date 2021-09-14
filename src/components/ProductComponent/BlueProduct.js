@@ -56,9 +56,9 @@ export default function BlueProduct(props) {
     }
   }
  
- useEffect(()=>{
-console.log(myvalue,"after re-rendering again and again")
- },[myvalue])
+     useEffect(()=>{
+         console.log(myvalue,"after re-rendering again and again")
+          },[myvalue])
  
 
 
