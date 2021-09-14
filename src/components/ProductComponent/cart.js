@@ -9,40 +9,41 @@ export default function Cart(props) {
   const [actual, mycount] = useState(0);
 
   const theObj = getter.findIndex((obj) => obj.Name == Name);
-  
+
+  console.log(myvalue, "jo white product main hain value");
   const decrement = async () => {
-    await mycount(myvalue)
-    
+    // mycount(myvalue);
+    // setvalue(actual);
+    console.log(actual, "value after another call to function");
+
     var find_and_delete = Name;
-    actual< 1 ? finish() : minus();
+    actual == 1 ? finish() : minus();
 
     function minus() {
-      mycount(actual - 1);
-      setvalue(actual)
-      
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      console.log(getter[theObj].pcs, "total pcs");
-      console.log(getter,"array changed after minus from cart")
- 
+      if(myvalue>0) mycount(myvalue - 1); 
+     
+       setvalue(actual)
+      console.log(myvalue, "the sets going on in minus function");
+
+   
+      // console.log(getter[theObj].pcs, "total pcs");
+      // console.log(getter, "array changed after minus from cart");
     }
     function finish() {
       mycount(0);
-      setvalue(0)
+      setvalue(0);
       // setvalue((actual)=>actual)
       for (var i = getter.length - 1; i >= 0; i--) {
         if (getter[i].Name == find_and_delete) {
           getter.splice(i, 1);
         }
         props.setter(getter);
-        console.log(getter);
+        // console.log(getter);
+        console.log(myvalue, "value here");
       }
     }
   };
-
-
-  useEffect(() => {
-    console.log(getter);
-  });
 
   return (
     <div

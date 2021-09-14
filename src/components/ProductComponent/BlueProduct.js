@@ -9,6 +9,8 @@ export default function BlueProduct(props) {
   const [size, setSize] = useState("M");
 
   const theObj = getter.findIndex((obj) => obj.Name == Name);
+  console.log(myvalue,"white sa blue main bheji gae value")
+  
   const increment = async () => {
     if (actual >= 1) {
       mycount(actual + 1);
@@ -29,16 +31,17 @@ export default function BlueProduct(props) {
   };
 
   // decrement function
-  const decrement = async () => {
+  function decrement  () {
+   
     var find_and_delete = Name;
-    actual < 1 ? finish() : minus();
+    actual <= 1 ? finish() : minus();
 
     function minus() {
       mycount(actual - 1);
       setvalue(actual)
       
       getter[theObj].pcs = getter[theObj].pcs - 20;
-      console.log(getter[theObj].pcs, "total pcs");
+      
  
     }
     function finish() {

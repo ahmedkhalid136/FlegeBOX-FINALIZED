@@ -39,6 +39,7 @@ export default function CustomBox(props) {
   const [getValue, setValue] = useState(0);
   props.box(myArr);
  
+  console.log(myvalue,"main component main")
   
   function clear() {
     setMyArr([]);
@@ -186,60 +187,7 @@ export default function CustomBox(props) {
                 />
               );
             })}
-            {/* <Product
-              actual={childCount}
-              mycount={SetCount}
-              Name={box1[0].name}
-              pcs={box1[0].pcs}
-              image={box1[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount1}
-              mycount={SetCount1}
-              Name={box2[0].name}
-              pcs={box2[0].pcs}
-              image={box2[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount2}
-              mycount={SetCount2}
-              Name={box3[0].name}
-              pcs={box3[0].pcs}
-              image={box3[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount3}
-              mycount={SetCount3}
-              Name={box4[0].name}
-              pcs={box4[0].pcs}
-              image={box4.img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount4}
-              mycount={SetCount4}
-              Name={box4[0].name}
-              pcs={box4[0].pcs}
-              image={box4[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            />
-            <Product
-              actual={childCount5}
-              mycount={SetCount5}
-              Name={box4[0].name}
-              pcs={box4[0].pcs}
-              image={box4[0].img}
-              setter={setMyArr}
-              getter={myArr}
-            /> */}
+           
           </div>
         </div>
         <div className="col-lg-6">
