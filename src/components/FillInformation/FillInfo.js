@@ -146,13 +146,13 @@ function FillInfo(props) {
                 <div className="col-lg-8 col-8">
                   <input
                     className="input1"
-                    placeholder="Streetname"
+                    placeholder="Street Name"
                     onChange={(e) => props.sname(e.target.value)}
                     value={props.valSname}
                   />
                 </div>
                 <div className="col-lg-4 col-4">
-                  <input className="input2" placeholder="N*" />
+                  <input className="input2" placeholder="City" />
                 </div>
               </div>
             </div>
@@ -228,6 +228,7 @@ function FillInfo(props) {
           back
         </button>
         <button
+          style={{ margin: "20px 0 30px" }}
           className="button confirmation-button"
           onClick={() => {
             {

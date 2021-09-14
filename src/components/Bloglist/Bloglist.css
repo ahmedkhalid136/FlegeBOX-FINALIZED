@@ -32,3 +32,24 @@ a:hover {
 .bloglist-title-section .col-lg-4 {
   padding-bottom: 50px;
 }
+
+@media (max-width: 900px) {
+  .popular-article-section .col-lg-4 {
+    padding: 50px 50px;
+  }
+  .popular-article-section {
+    padding: 10px;
+  }
+  .bloglist-title-section .col-lg-4 {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: "400px") {
+  .popular-article-section img {
+    height: 300px;
+  }
+  .popular-article-section {
+    /* padding: 30px; */
+  }
+}
