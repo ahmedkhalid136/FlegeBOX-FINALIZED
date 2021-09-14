@@ -7,28 +7,28 @@ export default function Cart(props) {
   const [getBackground3, setBackground3] = useState(true);
   const { Name, image, pcs } = props;
   const [actual, mycount] = useState(0);
-  const {myvalue,setvalue,myArr,setMyArr} =useContext(CreateContext)
+  const {myvalue,setvalue,myArr,setMyArr,decrement} =useContext(CreateContext)
 useEffect(()=>{
 console.log("cart is also re rendring")
 },[myvalue])
-  const decrement = async () => {
+  // const decrement = async () => {
  
-    var find_and_delete = Name;
+  //   var find_and_delete = Name;
     
       
-      setvalue(0);
-      console.log(myvalue,"maybe changed")
+  //     setvalue(0);
+  //     console.log(myvalue,"maybe changed")
   
-    for (var i = myArr.length - 1; i >= 0; i--) {
-      if (myArr[i].Name == find_and_delete) {
-        myArr.splice(i, 1);
-      }
-      setMyArr(myArr);
+  //   for (var i = myArr.length - 1; i >= 0; i--) {
+  //     if (myArr[i].Name == find_and_delete) {
+  //       myArr.splice(i, 1);
+  //     }
+  //     setMyArr(myArr);
       
-      console.log(myvalue, "mycount");
-      console.log(myArr);
-    }
-  };
+  //     console.log(myvalue, "mycount");
+  //     console.log(myArr);
+  //   }
+  // };
 
   return (
     <div
@@ -48,7 +48,7 @@ console.log("cart is also re rendring")
         style={{ textAlign: "left" }}
       >
         <h6>{Name}</h6>
-        <p>{pcs}pcs</p>
+        <p>{myvalue}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">

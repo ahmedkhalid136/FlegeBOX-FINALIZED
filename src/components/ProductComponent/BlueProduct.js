@@ -10,62 +10,55 @@ export default function BlueProduct(props) {
   const {myvalue,setvalue,myArr,setMyArr} =useContext(CreateContext)
   const [actual, mycount] = useState(0);
   const [size, setSize] = useState("M");
-
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
- useEffect(()=>{
-console.log(myvalue,"after re-rendering again and again")
- },[myvalue])
- 
   const increment = async () => {
     if (myvalue >= 1) {
-      mycount(actual + 1);
-      setvalue(myvalue+1);
-      
-      console.log(myvalue, "incremented value");
-      myArr[theObj].pcs =   myArr[theObj].pcs + 20;
+      //   mycount(actual + 1);
+      setvalue(myvalue + 1);
 
-      console.log(  myArr[theObj].pcs, "total pcs");
-      console.log(myArr,"after incrementing")
-      
-    } else {
-      mycount(actual + 1);
-      setvalue(actual);
       console.log(myvalue, "incremented value");
-     setMyArr((  myArr) => [...  myArr, { Name, image, pcs }]);
-     console.log(myArr,"after first append")
+      myArr[theObj].pcs = myArr[theObj].pcs + 20;
+
+      console.log(myArr[theObj].pcs, "total pcs");
+      console.log(myArr, "after incrementing");
+    } else {
+      //   mycount(actual + 1);
+      setvalue(myvalue + 1);
+      console.log(myvalue, "incremented value");
+      setMyArr((myArr) => [...myArr, {Name, image, pcs }]);
+      console.log(myArr, "after first append");
     }
   };
 
   // decrement function
-  function decrement  () {
-   
+  function decrement() {
     var find_and_delete = Name;
-    actual <= 1 ? finish() : minus();
+    myvalue <= 1 ? finish() : minus();
 
     function minus() {
-      
-      mycount(actual - 1);
-      setvalue(actual)
-      
-        myArr[theObj].pcs =   myArr[theObj].pcs - 20;
-      
-      
+      setvalue(myvalue - 1);
+
+      myArr[theObj].pcs = myArr[theObj].pcs - 20;
     }
     function finish() {
-      setvalue(0)
-      mycount(myvalue);
-     
-      for (var i =   myArr.length - 1; i >= 0; i--) {
-        if (  myArr[i].Name == find_and_delete) {
-            myArr.splice(i, 1);
+      setvalue(0);
+
+      for (var i = myArr.length - 1; i >= 0; i--) {
+        if (myArr[i].Name == find_and_delete) {
+          myArr.splice(i, 1);
         }
         setMyArr(myArr);
-        console.log(myvalue,"decremenet value in minus function")
-        console.log(  myArr);
+        console.log(myvalue, "decremenet value in minus function");
+        console.log(myArr);
       }
     }
-    
-  };
+  }
+ 
+ useEffect(()=>{
+console.log(myvalue,"after re-rendering again and again")
+ },[myvalue])
+ 
+
 
   function changeSize(x) {
     setSize(x);
