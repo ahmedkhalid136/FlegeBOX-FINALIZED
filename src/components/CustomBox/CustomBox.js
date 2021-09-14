@@ -30,37 +30,8 @@ const responsive = {
 };
 
 export default function CustomBox(props) {
-  const {myArr} =useContext(CreateContext)
-  const  box=[
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-    {
-      name: "Gloves",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-    {
-      name: "hand sanitizer ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size: "M",
-      sets: 0,
-    },
-  ];
+  const {myvalue, setvalue, myArr, setMyArr,box} =useContext(CreateContext)
+  
 
   props.box(myArr);
     
@@ -158,6 +129,7 @@ export default function CustomBox(props) {
             </Carousel>
           </div>
           <div className="desktop-cart">
+        
             {box.map((item, ind) => {
               return (
                 < CreateContextProvider>
@@ -172,9 +144,11 @@ export default function CustomBox(props) {
                     // myvalue={myvalue}
                     // sets={item.sets}
                   />
-                </ CreateContextProvider>
+                  </ CreateContextProvider>
+              
               );
             })}
+              
           </div>
         </div>
         <div className="col-lg-6">
@@ -196,6 +170,7 @@ export default function CustomBox(props) {
             >
               <ProgressBar completed={90} bgColor={"#F87433"} />
             </div>
+         
             {myArr.map((item, ind) => {
               return (
                 < CreateContextProvider>
@@ -210,9 +185,10 @@ export default function CustomBox(props) {
                     // myvalue={myvalue}
                     // setvalue={setvalue}
                   />
-                </ CreateContextProvider>
+            </ CreateContextProvider>
               );
             })}
+                
           </div>
         </div>
       </div>
