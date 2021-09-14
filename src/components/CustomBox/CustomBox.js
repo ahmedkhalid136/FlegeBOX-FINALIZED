@@ -175,7 +175,7 @@ export default function CustomBox(props) {
                     // getter={myArr}
                     // setvalue={setvalue}
                     // myvalue={myvalue}
-                    // sets={item.sets}
+                    sets={item.sets}
                   />
                   </ CreateContext.Provider>
               
@@ -214,7 +214,7 @@ export default function CustomBox(props) {
                     image={item.image}
                     // getter={myArr}
                     // setter={setMyArr}
-                    // sets={item.sets}
+                    sets={item.sets}
                     // myvalue={myvalue}
                     // setvalue={setvalue}
                   />

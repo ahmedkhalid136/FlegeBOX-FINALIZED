@@ -1,36 +1,35 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./BlueProduct.css";
-import { CreateContext} from "../../contexts/Customcontext"
+import { CreateContext } from "../../contexts/Customcontext";
 export default function Cart(props) {
   const [getBackground, setBackground] = useState(true);
   const [getBackground2, setBackground2] = useState(true);
   const [getBackground3, setBackground3] = useState(true);
   const { Name, image, pcs } = props;
   const [actual, mycount] = useState(0);
-//   const {myvalue,setvalue,myArr,setMyArr} =useContext(CreateContext)
-// useEffect(()=>{
-// console.log(myvalue,"cart is also re rendring")
-
-// },[myvalue])
-//   const decrement = async () => {
- 
-//     var find_and_delete = Name;
-    
-      
-//       setvalue(0);
-//       console.log(myvalue,"maybe changed")
+  const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
+  useEffect(() => {
+    console.log(myvalue, "cart is also re rendring");
+  }, [myvalue]);
   
-//     for (var i = myArr.length - 1; i >= 0; i--) {
-//       if (myArr[i].Name == find_and_delete) {
-//         myArr.splice(i, 1);
-//       }
-//       setMyArr(myArr);
-      
-//       console.log(myvalue, "mycount");
-//       console.log(myArr);
-//     }
-//   };
-
+  const decrement = async () => {
+    var find_and_delete = Name;
+  
+    mycount(0);
+    setvalue(actual);
+    console.log(myvalue, "maybe changed");
+  
+    for (var i = myArr.length - 1; i >= 0; i--) {
+      if (myArr[i].Name == find_and_delete) {
+        myArr.splice(i, 1);
+      }
+      setMyArr(myArr);
+  
+      console.log(myvalue, "mycount");
+      console.log(myArr);
+    }
+  };
+  
   return (
     <div
       className="row cart-section"
@@ -79,10 +78,9 @@ export default function Cart(props) {
           </button>
           <div style={{ textAlign: "right", display: "inline-block" }}>
             <i
-                // onClick={() => {
-                  
-                //   decrement();
-                // }}
+              onClick={() => {
+                decrement();
+              }}
               class="fas fa-times"
             ></i>
           </div>
