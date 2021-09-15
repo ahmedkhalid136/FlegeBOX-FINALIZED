@@ -6,16 +6,18 @@ import "./BlueProduct.css";
 import { CreateContext } from "../../contexts/Customcontext";
 
 export default function BlueProduct(props) {
-  const { Name, image, pcs } = props;
+  const { Name, image, pcs, sets } = props;
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
+
   const [actual, mycount] = useState(0);
+
   const [size, setSize] = useState("M");
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
   const increment = async () => {
-    
-    if (myvalue >= 1) {
-      //   mycount(actual + 1);
-      setvalue(myvalue + 1);
+    if (actual >= 1) {
+      mycount(actual + 1);
+
+      setvalue(actual);
 
       console.log(myvalue, "incremented value");
       myArr[theObj].pcs = myArr[theObj].pcs + 20;
@@ -23,27 +25,29 @@ export default function BlueProduct(props) {
       console.log(myArr[theObj].pcs, "total pcs");
       console.log(myArr, "after incrementing");
     } else {
-      //   mycount(actual + 1);
-      setvalue(myvalue + 1);
+      mycount(sets + 1);
+      setvalue(actual);
       console.log(myvalue, "incremented value");
-      setMyArr((myArr) => [...myArr, { Name, image, pcs }]);
+      setMyArr((myArr) => [...myArr, { Name, image, pcs, sets }]);
       console.log(myArr, "after first append");
     }
   };
 
   // decrement function
   function decrement() {
- 
     var find_and_delete = Name;
-    myvalue <= 1 ? finish() : minus();
+    actual <= 1 ? finish() : minus();
 
     function minus() {
-      setvalue(myvalue - 1);
+      mycount(actual - 1);
+      setvalue(actual);
 
       myArr[theObj].pcs = myArr[theObj].pcs - 20;
+      console.log(myArr, "my array after decrementing");
     }
     function finish() {
-      setvalue(0);
+      mycount(0);
+      setvalue(actual);
 
       for (var i = myArr.length - 1; i >= 0; i--) {
         if (myArr[i].Name == find_and_delete) {
@@ -51,10 +55,14 @@ export default function BlueProduct(props) {
         }
         setMyArr(myArr);
         console.log(myvalue, "decremenet value in minus function");
-        console.log(myArr);
+        console.log(myArr, "my array after decrementing");
       }
     }
   }
+
+  useEffect(() => {
+    console.log(myvalue, "after re-rendering again and again");
+  }, [actual]);
 
   useEffect(() => {
     console.log(myvalue, "after re-rendering again and again");

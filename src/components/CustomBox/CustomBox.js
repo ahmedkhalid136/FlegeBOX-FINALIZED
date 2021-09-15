@@ -7,7 +7,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MobileAddToCart from "../ProductComponent/mobileAddToCart";
 import ProgressBar from "@ramonak/react-progress-bar";
-import CreateContextProvider from "../../contexts/Customcontext";
+
 import { CreateContext } from "../../contexts/Customcontext";
 const responsive = {
   superLargeDesktop: {
@@ -30,7 +30,39 @@ const responsive = {
 };
 
 export default function CustomBox(props) {
-  const { myvalue, setvalue, myArr, setMyArr, box } = useContext(CreateContext);
+  const [myvalue, setvalue] = useState(0);
+
+  const [myArr, setMyArr] = useState([]);
+  const box = [
+    {
+      name: "K94 MASK",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+    {
+      name: "Gloves",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+    {
+      name: "hand sanitizer ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size: "M",
+      sets: 0,
+    },
+  ];
 
   props.box(myArr);
 
@@ -131,7 +163,9 @@ export default function CustomBox(props) {
           <div className="desktop-cart">
             {box.map((item, ind) => {
               return (
-                <CreateContextProvider>
+                <CreateContext.Provider
+                  value={{ myvalue, setvalue, myArr, setMyArr }}
+                >
                   <Product
                     key={ind}
                     Name={item.name}
@@ -141,9 +175,9 @@ export default function CustomBox(props) {
                     // getter={myArr}
                     // setvalue={setvalue}
                     // myvalue={myvalue}
-                    // sets={item.sets}
+                    sets={item.sets}
                   />
-                </CreateContextProvider>
+                </CreateContext.Provider>
               );
             })}
           </div>
@@ -165,7 +199,9 @@ export default function CustomBox(props) {
             {console.log("BEFORE RENDERING CART" + myArr + "HELL")}
             {myArr.map((item, ind) => {
               return (
-                <CreateContext.Provider>
+                <CreateContext.Provider
+                  value={{ myvalue, setvalue, myArr, setMyArr }}
+                >
                   <Cart
                     key={ind}
                     Name={item.Name}
@@ -173,7 +209,7 @@ export default function CustomBox(props) {
                     image={item.image}
                     // getter={myArr}
                     // setter={setMyArr}
-                    // sets={item.sets}
+                    sets={item.sets}
                     // myvalue={myvalue}
                     // setvalue={setvalue}
                   />

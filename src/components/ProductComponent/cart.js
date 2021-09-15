@@ -9,12 +9,14 @@ export default function Cart(props) {
   const [actual, mycount] = useState(0);
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
   useEffect(() => {
-    console.log(myvalue, "FUCKING CART");
+    console.log(myvalue, "cart is also re rendring");
   }, [myvalue]);
+
   const decrement = async () => {
     var find_and_delete = Name;
 
-    setvalue(0);
+    mycount(0);
+    setvalue(actual);
     console.log(myvalue, "maybe changed");
 
     for (var i = myArr.length - 1; i >= 0; i--) {
@@ -46,7 +48,7 @@ export default function Cart(props) {
         style={{ textAlign: "left" }}
       >
         <h6>{Name}</h6>
-        <p>{myvalue}pcs</p>
+        <p>{pcs}pcs</p>
       </div>
       <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
         <div className="increment-cart">
