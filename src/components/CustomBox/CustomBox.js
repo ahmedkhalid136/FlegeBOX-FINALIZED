@@ -9,6 +9,13 @@ import MobileAddToCart from "../ProductComponent/mobileAddToCart";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 import { CreateContext } from "../../contexts/Customcontext";
+
+//action
+import { setItem, clear_cart } from "../../action/cart";
+
+//redux connect
+import { connect } from "react-redux";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -29,10 +36,11 @@ const responsive = {
   },
 };
 
-export default function CustomBox(props) {
+function CustomBox(props) {
   const [myvalue, setvalue] = useState(0);
 
   const [myArr, setMyArr] = useState([]);
+
   const box = [
     {
       name: "K94 MASK",
@@ -40,6 +48,7 @@ export default function CustomBox(props) {
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
       size: "M",
       sets: 0,
+      price: 5,
     },
     {
       name: "Gloves",
@@ -47,6 +56,7 @@ export default function CustomBox(props) {
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
       size: "M",
       sets: 0,
+      price: 10,
     },
     {
       name: "hand sanitizer ",
@@ -54,6 +64,7 @@ export default function CustomBox(props) {
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
       size: "M",
       sets: 0,
+      price: 15,
     },
     {
       name: "Oxygen tube",
@@ -61,12 +72,17 @@ export default function CustomBox(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
       size: "M",
       sets: 0,
+      price: 1,
     },
   ];
 
   props.box(myArr);
 
   useEffect(() => {
+    //adding product to redux if there not products
+    if (props.product && props.product.length == 0) {
+      props.setItem(box);
+    }
     console.log("THE FUCK" + myArr);
   });
 
@@ -103,6 +119,12 @@ export default function CustomBox(props) {
     },
   ];
 
+  //function to clear cart
+  const clearCart = () => {
+    props.clear_cart(myArr);
+    setMyArr([]);
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -111,75 +133,63 @@ export default function CustomBox(props) {
             <h4>Choose Box</h4>
           </div>
           <div className="mobile-cart">
-            <Carousel
-              responsive={responsive}
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              showDots={true}
-            >
-              <div>
-                <MobileAddToCart
-                  Name={box1[0].name}
-                  pcs={box1[0].pcs}
-                  image={box1[0].img}
-                  // setter={setMyArr}
-                  // getter={myArr}
-                />
-              </div>
-              <div>
-                <MobileAddToCart
-                  Name={box2[0].name}
-                  pcs={box2[0].pcs}
-                  image={box2[0].img}
-                  // actual={childCount1}
-                  // mycount={SetCount1}
-                  // setter={setMyArr}
-                  // getter={myArr}
-                />
-              </div>
-              <div>
-                <MobileAddToCart
-                  Name={box3[0].name}
-                  pcs={box3[0].pcs}
-                  image={box3[0].img}
-                  // actual={childCount2}
-                  // mycount={SetCount2}
-                  // setter={setMyArr}
-                  // getter={myArr}
-                />
-              </div>
-              <div>
-                <MobileAddToCart
-                  Name={box4[0].name}
-                  pcs={box4[0].pcs}
-                  image={box4[0].img}
-                  // actual={childCount3}
-                  // mycount={SetCount3}
-                  // setter={setMyArr}
-                  // getter={myArr}
-                />
-              </div>
-            </Carousel>
+            {props.product ? (
+              <Carousel
+                responsive={responsive}
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+                showDots={true}
+              >
+                {props.product.map((item, ind) => {
+                  return (
+                    <CreateContext.Provider
+                      value={{ myvalue, setvalue, myArr, setMyArr }}
+                    >
+                      <div>
+                        <MobileAddToCart
+                          key={ind}
+                          Name={item.name}
+                          pcs={item.pcs}
+                          image={item.img}
+                          index={ind}
+                          price={item.price}
+                          // setter={setMyArr}
+                          // getter={myArr}
+                          // setvalue={setvalue}
+                          // myvalue={myvalue}
+                          sets={item.sets}
+                        />
+                      </div>
+                    </CreateContext.Provider>
+                  );
+                })}
+              </Carousel>
+            ) : null}
           </div>
           <div className="desktop-cart">
-            {box.map((item, ind) => {
-              return (
-                <CreateContext.Provider
-                  value={{ myvalue, setvalue, myArr, setMyArr }}
-                >
-                  <Product
-                    key={ind}
-                    Name={item.name}
-                    pcs={item.pcs}
-                    image={item.img}
-                    // setter={setMyArr}
-                    // getter={myArr}
-                    // setvalue={setvalue}
-                    // myvalue={myvalue}
-                    sets={item.sets}
-                  />
-                </CreateContext.Provider>
-              );
-            })}
+            {console.log(props.product)}
+            {props.product
+              ? props.product.map((item, ind) => {
+                  return (
+                    <CreateContext.Provider
+                      value={{ myvalue, setvalue, myArr, setMyArr }}
+                    >
+                      <Product
+                        key={ind}
+                        Name={item.name}
+                        pcs={item.pcs}
+                        image={item.img}
+                        index={ind}
+                        price={item.price}
+                        // setter={setMyArr}
+                        // getter={myArr}
+                        // setvalue={setvalue}
+                        // myvalue={myvalue}
+                        sets={item.sets}
+                      />
+                    </CreateContext.Provider>
+                  );
+                })
+              : null}
           </div>
         </div>
         <div className="col-lg-6">
@@ -189,15 +199,24 @@ export default function CustomBox(props) {
                 <h4>Your Cart</h4>
               </div>
               <div className="col-lg-6" style={{ textAlign: "right" }}>
-                <span>Clear All</span>
+                <button
+                  onClick={() => clearCart()}
+                  style={{ border: "none", background: "transparent" }}
+                >
+                  Clear All
+                </button>
               </div>
             </div>
             <div style={{ padding: "10px 0" }}>
-              <ProgressBar completed={90} bgColor={"#F87433"} />
+              <ProgressBar
+                completed={Math.round((props.total / 60) * 100)}
+                bgColor={"#F87433"}
+              />
             </div>
 
-            {console.log("BEFORE RENDERING CART" + myArr + "HELL")}
+            {/*console.log("BEFORE RENDERING CART" + myArr + "HELL"*/}
             {myArr.map((item, ind) => {
+              console.log("item card", item);
               return (
                 <CreateContext.Provider
                   value={{ myvalue, setvalue, myArr, setMyArr }}
@@ -207,9 +226,12 @@ export default function CustomBox(props) {
                     Name={item.Name}
                     pcs={item.pcs}
                     image={item.image}
+                    price={item.price}
                     // getter={myArr}
                     // setter={setMyArr}
                     sets={item.sets}
+                    index={item.index}
+                    size={item.size}
                     // myvalue={myvalue}
                     // setvalue={setvalue}
                   />
@@ -222,3 +244,11 @@ export default function CustomBox(props) {
     </div>
   );
 }
+
+const mapStateToProps = (state) => ({
+  product: state.cart.products,
+  cart: state.cart.cart,
+  total: state.cart.total,
+});
+
+export default connect(mapStateToProps, { setItem, clear_cart })(CustomBox);

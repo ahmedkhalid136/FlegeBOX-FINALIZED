@@ -5,6 +5,7 @@ import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
 import Footer from "../footer/Footer";
+import {connect} from 'react-redux';
 
 function Box() {
   const [getComp, setComp] = useState("Box");

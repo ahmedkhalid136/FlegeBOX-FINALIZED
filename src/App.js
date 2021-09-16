@@ -10,6 +10,9 @@ import FillInfo from "./components/FillInformation/FillInfo";
 import Confirmation from "./components/Confirmation/Confirmation";
 import Box from "./components/Box/Box";
 import CustomBox from "./components/CustomBox/CustomBox";
+import {Provider} from 'react-redux';
+
+import store from './store';
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
       <header className="App-header">
         <title>flegebox</title>
         <body>
+          <Provider store={store}>
           <BrowserRouter>
             <Switch>
               <Route exact path="/">
@@ -34,6 +38,7 @@ function App() {
               <Route path="/CustomBox" component={CustomBox}></Route>
             </Switch>
           </BrowserRouter>
+          </Provider>
         </body>
       </header>
     </div>

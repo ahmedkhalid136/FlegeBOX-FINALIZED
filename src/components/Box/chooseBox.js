@@ -3,7 +3,8 @@ import "./Box.css";
 import BoxComp from "./BoxComp";
 import CustomBox from "../CustomBox/CustomBox";
 import { CreateContext} from "../../contexts/Customcontext"
-
+import {connect} from 'react-redux';
+import {setItem} from '../../action/cart';
 function ChooseBox(props) {
   const [getComp, setComp] = useState(true);
   const [getBox, setBox] = useState(false);
@@ -182,7 +183,8 @@ function ChooseBox(props) {
       )}
 
       <div style={{ textAlign: "right", margin: "30px 0" }}>
-        <button
+        <button disabled={props.cart==0?true:false}
+         style={{opacity:props.cart==0?0.7:1}}
           className="button confirmation-button"
           onClick={() => props.change("info")}
         >
@@ -193,4 +195,11 @@ function ChooseBox(props) {
   );
 }
 
-export default ChooseBox;
+
+
+const mapStateToProps = state => ({
+  cart: state.cart.cart,
+});
+
+
+export default connect(mapStateToProps,null)(ChooseBox);
