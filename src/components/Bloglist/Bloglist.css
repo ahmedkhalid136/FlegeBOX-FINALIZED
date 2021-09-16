@@ -45,7 +45,10 @@ a:hover {
   }
 }
 
-@media (max-width: "400px") {
+@media (max-width: 400px) {
+  .popular-article-section .col-lg-4 {
+    padding: 20px 20px !important;
+  }
   .popular-article-section img {
     height: 300px;
   }
