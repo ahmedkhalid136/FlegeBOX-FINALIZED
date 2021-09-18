@@ -26,7 +26,7 @@ function Faq() {
   return (
     <div>
       <Header title="FAQ" />
-      <div className="titleSection1">
+      <div className="titleSection1 mobile-background-color">
         <h1 className="breadcrumbs1">Hello can we help you?</h1>
       </div>
       <div className="mainDiv1">

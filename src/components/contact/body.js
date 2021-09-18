@@ -2,7 +2,7 @@ import React from "react";
 
 export default function body() {
   return (
-    <div className="container body-container">
+    <div className="container body-container mobile-background-color">
       <div className="row">
         <div className="col-lg-7 left-side">
           <h3>What is your Question</h3>

@@ -10,7 +10,7 @@ import Footer from "../footer/Footer";
 
 function Homepage() {
   return (
-    <div>
+    <div className="mobile-background-color">
       <Header title="Home" />
       <Title />
       <Works />

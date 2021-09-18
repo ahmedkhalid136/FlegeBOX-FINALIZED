@@ -8,7 +8,7 @@ export default function Benifits() {
         <div className="row">
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background">
+              <div className="icon-background home-icon-back">
                 <i class="fas fa-euro-sign icons blue-icons"></i>
               </div>
               <h4>Cost Absorption</h4>
@@ -20,7 +20,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background">
+              <div className="icon-background home-icon-back">
                 <i class="fas fa-paper-plane icons blue-icons"></i>
               </div>
               <h4>Reliable Delivery</h4>
@@ -32,7 +32,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background">
+              <div className="icon-background home-icon-back">
                 <i class="fas fa-gem icons blue-icons"></i>
               </div>
               <h4>Quality</h4>
@@ -41,7 +41,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background">
+              <div className="icon-background home-icon-back">
                 <i class="fas fa-address-card icons blue-icons"></i>
               </div>
               <h4>No Formalities</h4>
@@ -53,7 +53,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background">
+              <div className="icon-background home-icon-back">
                 <i class="fas fa-edit icons blue-icons"></i>
               </div>
               <h4>Without Contract Commitment</h4>
@@ -62,7 +62,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background">
+              <div className="icon-background home-icon-back">
                 <i class="fas fa-envelope icons blue-icons"></i>
               </div>
               <h4>Prescription Free</h4>

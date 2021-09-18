@@ -4,7 +4,7 @@ import Blogdetails from "../Blogdetails/Blogdetails";
 import { Link } from "react-router-dom";
 function Popular(props) {
   return (
-    <div className="col-lg-4" style={{ textAlign: "left" }}>
+    <div className="col-lg-4" style={{ textAlign: "left", cursor: "pointer" }}>
       <Link
         to={{
           pathname: "/Blogdetails",

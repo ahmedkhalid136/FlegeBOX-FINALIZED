@@ -186,9 +186,16 @@
 }
 
 @media (max-width: 900px) {
+  .mobile-background-color {
+    background-color: #fefefe;
+  }
+  .Works h2 {
+    font-size: 20px;
+  }
   .icons-container {
     padding-left: 0;
     margin-left: 0;
+    margin-top: -150px;
   }
   .icon-background {
     height: 200px;
@@ -202,17 +209,18 @@
     display: none;
   }
   .iconsHeading {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 20px;
   }
   .down-arrow {
     display: block;
-    font-size: 70px;
+    font-size: 40px;
     margin-bottom: -50px;
   }
   .home-img {
-    height: 500px;
+    height: 400px;
   }
+
   .home-banner {
     background-color: #2faae5;
     height: 500px;
@@ -220,6 +228,28 @@
 }
 
 @media (max-width: 500px) {
+  .benifits-columns {
+    height: 300px;
+  }
+  .benifits-section {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .benifits-section h1 {
+    font-size: 20px;
+  }
+  .benifits-section .row {
+    margin-top: -100px;
+  }
+  .benifits-columns h4 {
+    font-size: 16px;
+    margin: 0;
+    margin-top: -60px;
+  }
+  .benifits-columns p {
+    font-size: 12px;
+    margin: 0;
+  }
   .home-img {
     height: 350px;
   }
@@ -227,12 +257,27 @@
     background-color: #2faae5;
     height: 350px;
   }
+  .home-banner h2 {
+    font-size: 28px;
+  }
   .icon-background {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+  }
+  .home-icon-back {
+    margin-top: -20px;
   }
   .icons {
     font-size: 40px;
+  }
+  .relieve-section h1 {
+    font-size: 20px;
+  }
+  .relieve-section h4 {
+    font-size: 18px;
+  }
+  .relieve-section p {
+    font-size: 12px;
   }
 }
 

@@ -7,9 +7,9 @@ import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 function whymypflegebox() {
   return (
-    <div>
+    <div className="mobile-background-color">
       {/* <Header active="whymypflegebox" /> */}
-      <Header title="whymypflegebox"/>
+      <Header title="whymypflegebox" />
       <Title />
       <Body />
       <ImageSection />
