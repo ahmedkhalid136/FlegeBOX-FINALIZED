@@ -13,7 +13,7 @@ function Homepage() {
     <div className="mobile-background-color">
       <Header title="Home" />
       {/* <Title /> */}
-      {/* <Works /> */}
+      <Works />
       <Benifits />
       <Relieve />
       <Footer />
