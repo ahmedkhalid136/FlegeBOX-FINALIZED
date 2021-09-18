@@ -12,8 +12,8 @@ function Homepage() {
   return (
     <div className="mobile-background-color">
       <Header title="Home" />
-      <Title />
-      <Works />
+      {/* <Title /> */}
+      {/* <Works /> */}
       <Benifits />
       <Relieve />
       <Footer />
