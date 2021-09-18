@@ -6,8 +6,13 @@ export default function body() {
       <div className="row">
         <div className="col-lg-7 left-side">
           <h3>What is your Question</h3>
-          <input className="input-field" placeholder="Your Name" />
+          <br />
+          <br />
+          <input className="input-field" placeholder="Your Name" /> <br />
+          <br />
           <input className="input-field" placeholder="Email Address" />
+          <br />
+          <br />
           <textarea className="text-field" placeholder="Message" rows="10" />
           <button className="button">Submit</button>
         </div>
