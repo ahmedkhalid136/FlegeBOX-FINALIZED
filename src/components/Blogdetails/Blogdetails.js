@@ -6,15 +6,29 @@ import Image from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
 import Image2 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
 import Header from "../Header/Header";
 import Footer from "../footer/Footer";
+import Popular from "../Bloglist/Popular";
+
+const data = [
+  {
+    title: "MY Blog",
+    content: "THIS IS OUR BLOG",
+    Date: "28/09/2021",
+    Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+  },
+  {
+    title: "NEW BLOG",
+    content: "THIS IS MY SECOND BLOG",
+    Date: "28/09/2021",
+    Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+  },
+];
 function Blogdetails(props) {
   return (
     <div>
       <Header title="BLOG" />
       <div class="container">
         <div>
-          <h1 className="styleHeader">
-            {props.location.aboutProps.title}
-          </h1>
+          <h1 className="styleHeader">{props.location.aboutProps.title}</h1>
         </div>
         <div className="datee">
           <i class="far fa-clock"></i> 4 Min |{" "}
@@ -24,7 +38,7 @@ function Blogdetails(props) {
           <img src={props.location.aboutProps.image} className="Myimage" />
         </div>
         <p className="paraText">
-        {props.location.aboutProps.content}
+          {props.location.aboutProps.content}
           <br />
           <br />
           It was popularised in the 1960s with the release of Letraset sheets
@@ -59,64 +73,15 @@ function Blogdetails(props) {
           <br />
           <br />
           <div className="row articleImgdiv ">
-            <div className="col-lg-6 col-md-6 col-xs-6 col-6  ">
-              <a href="/Blogdetails">
-                <img src={Image2} className="articleImg" />
-                <p className="texts">
-                  <b>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                  </b>
-                </p>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry'
-                </p>
-                <p className="datee">
-                  <i class="far fa-clock"></i> 4 Min |{" "}
-                  <i class="far fa-calendar-alt"></i> july 20,2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-6 col-md-6 col-xs-6 col-6  ">
-              <a href="/Blogdetails">
-                <img src={BannerImage} className="articleImg" />
-                <p className="texts">
-                  <b>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                  </b>
-                </p>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry'
-                </p>
-                <p className="datee">
-                  <i class="far fa-clock"></i> 4 Min |{" "}
-                  <i class="far fa-calendar-alt"></i> july 20,2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-6 col-md-6 col-xs-6 col-6 ">
-              <a href="/Blogdetails">
-                <img src={Image} className="articleImg" />
-                <p className="texts">
-                  <b>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                  </b>
-                </p>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry'
-                </p>
-                <p className="datee">
-                  <i class="far fa-clock"></i> 4 Min |{" "}
-                  <i class="far fa-calendar-alt"></i> july 20,2021
-                </p>
-              </a>
-            </div>
-          
+            {data.map((item) => {
+              return (
+                <Popular
+                  title={item.title}
+                  content={item.content}
+                  image={item.Img}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
