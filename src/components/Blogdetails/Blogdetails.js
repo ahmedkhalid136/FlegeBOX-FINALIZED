@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Blogdetails.css";
 import mainImage from "../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg";
 import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
@@ -8,21 +8,20 @@ import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 import Popular from "../Bloglist/Popular";
 
-const data = [
-  {
+const data = [{
     title: "MY Blog",
     content: "THIS IS OUR BLOG",
     Date: "28/09/2021",
     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  },
-  {
+  },{
     title: "NEW BLOG",
     content: "THIS IS MY SECOND BLOG",
     Date: "28/09/2021",
     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  },
-];
+  },];
+
 function Blogdetails(props) {
+  
   return (
     <div>
       <Header title="BLOG" />
