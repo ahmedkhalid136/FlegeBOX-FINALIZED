@@ -3,7 +3,7 @@ import React from "react";
 export default function Benifits() {
   return (
     <div className="benifits-section">
-      <div className="container" style={{ justifyContent: "space-around" }}>
+      <div className="container">
         <h1>Your Benifits</h1>
         <div className="row">
           <div className="col-lg-4">

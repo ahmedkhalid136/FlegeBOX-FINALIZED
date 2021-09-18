@@ -40,9 +40,8 @@ export default function Works() {
               <i class="fas fa-paperclip icons"></i>
             </div>
             <h4 className="iconsHeading">
-              3. We take over <br />
-              Application <br /> & billing with the <br />
-              nursing care insurance
+              3. We take over Application & billing with the nursing care
+              insurance
             </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>

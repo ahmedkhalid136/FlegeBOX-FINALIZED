@@ -44,4 +44,7 @@
   .option-box {
     margin: 5px 0 !important;
   }
+  .confirmation-text {
+    font-size: 16px !important;
+  }
 }

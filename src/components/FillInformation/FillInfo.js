@@ -82,7 +82,6 @@ function FillInfo(props) {
           /> */}
           <div style={{ textAlign: "left", marginLeft: "-20px" }}>
             <input
-              checked={checkMrs}
               type="radio"
               id="Mrs"
               name="gender"
@@ -100,7 +99,6 @@ function FillInfo(props) {
               Ms
             </label>
             <input
-              checked={checkMr}
               style={{
                 display: "inline",
                 width: "50px",

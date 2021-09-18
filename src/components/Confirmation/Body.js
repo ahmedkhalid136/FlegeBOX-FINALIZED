@@ -48,10 +48,14 @@ export default function Body(props) {
 
       <br />
 
-      <p style={{ color: "black" }}>Please complete your information :</p>
+      <p className="confirmation-text" style={{ color: "black" }}>
+        Please complete your information :
+      </p>
 
       <div className="confirmation-background">
-        <p style={{ color: "black" }}>Insurance Company for the careperson</p>
+        <p className="confirmation-text" style={{ color: "black" }}>
+          Insurance Company for the careperson
+        </p>
         <select name="Insurance" className="option-box">
           <option value="Insurance">Insurance</option>
         </select>
@@ -83,7 +87,9 @@ export default function Body(props) {
       {/* SIGNATURE SECTION  */}
       <br />
       <div className="confirmation-background">
-        <p style={{ color: "black" }}>Signature of the contact person</p>
+        <p className="confirmation-text" style={{ color: "black" }}>
+          Signature of the contact person
+        </p>
         <div className="sigpad-div">
           <SignaturePad ref={sigpad} style={{ border: "1px solid black" }} />
         </div>
