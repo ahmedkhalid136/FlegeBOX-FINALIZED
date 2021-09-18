@@ -83,41 +83,41 @@ function CustomBox(props) {
     if (props.product && props.product.length == 0) {
       props.setItem(box);
     }
-    console.log("THE FUCK" + myArr);
+    console.log(myArr,"array jo backend pa ha");
   });
 
-  const box1 = [
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size: "",
-    },
-  ];
-  const box2 = [
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size: "",
-    },
-  ];
-  const box3 = [
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "",
-    },
-  ];
-  const box4 = [
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size: "",
-    },
-  ];
+  // const box1 = [
+  //   {
+  //     name: "K94 MASK",
+  //     pcs: 20,
+  //     img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+  //     size: "",
+  //   },
+  // ];
+  // const box2 = [
+  //   {
+  //     name: "hand sanitizer",
+  //     pcs: 20,
+  //     img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+  //     size: "",
+  //   },
+  // ];
+  // const box3 = [
+  //   {
+  //     name: "Gloves ",
+  //     pcs: 20,
+  //     img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+  //     size: "",
+  //   },
+  // ];
+  // const box4 = [
+  //   {
+  //     name: "Oxygen tube",
+  //     pcs: 20,
+  //     img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+  //     size: "",
+  //   },
+  // ];
 
   //function to clear cart
   const clearCart = () => {
