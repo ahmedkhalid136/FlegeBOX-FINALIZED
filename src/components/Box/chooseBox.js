@@ -1,10 +1,10 @@
-import React, {useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Box.css";
 import BoxComp from "./BoxComp";
 import CustomBox from "../CustomBox/CustomBox";
-import { CreateContext} from "../../contexts/Customcontext"
-import {connect} from 'react-redux';
-import {setItem} from '../../action/cart';
+import { CreateContext } from "../../contexts/Customcontext";
+import { connect } from "react-redux";
+import { setItem } from "../../action/cart";
 function ChooseBox(props) {
   const [getComp, setComp] = useState(true);
   const [getBox, setBox] = useState(false);
@@ -29,13 +29,16 @@ function ChooseBox(props) {
 
       <div className="mobile-head">
         <div className="row">
-          <div className="col-lg-2 col-md-4 col-5 ">
-            <button className="chooseButton" style={{ padding: "7px 8px" }}>
+          <div className="col-lg-2 col-md-4 col-6 ">
+            <button
+              className="chooseButton"
+              style={{ padding: "10px 10px", marginTop: "-5px" }}
+            >
               1. CHOOSE BOX{" "}
             </button>
           </div>
           <div className="col-lg-2 col-md-2 col-1">......</div>
-          <div className="col-lg-3 col-2 col-md-2">2.</div>
+          <div className="col-lg-3 col-2 col-md-1">2.</div>
           <div className="col-lg-2 col-1 col-md-2">......</div>
           <div className="col-lg-2 col-2 col-md-2">3.</div>
         </div>
@@ -177,14 +180,13 @@ function ChooseBox(props) {
       {getComp ? (
         <BoxComp box={props.mybox} />
       ) : (
-        
         <CustomBox box={props.mybox} />
-        
       )}
 
       <div style={{ textAlign: "right", margin: "30px 0" }}>
-        <button disabled={props.cart==0?true:false}
-         style={{opacity:props.cart==0?0.7:1}}
+        <button
+          disabled={props.cart == 0 ? true : false}
+          style={{ opacity: props.cart == 0 ? 0.7 : 1 }}
           className="button confirmation-button"
           onClick={() => props.change("info")}
         >
@@ -195,11 +197,8 @@ function ChooseBox(props) {
   );
 }
 
-
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   cart: state.cart.cart,
 });
 
-
-export default connect(mapStateToProps,null)(ChooseBox);
+export default connect(mapStateToProps, null)(ChooseBox);

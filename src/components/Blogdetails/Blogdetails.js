@@ -25,7 +25,7 @@ function Blogdetails(props) {
   return (
     <div>
       <Header title="BLOG" />
-      <div class="container">
+      <div class="container mobile-background-color">
         <div>
           <h1 className="styleHeader">{props.location.aboutProps.title}</h1>
         </div>

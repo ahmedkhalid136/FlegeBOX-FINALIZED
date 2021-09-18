@@ -36,7 +36,7 @@
 p {
   font-family: "Nunito Sans", sans-serif;
   color: #919191;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
 }
 
@@ -96,6 +96,9 @@ p {
 }
 
 @media (max-width: 600px) {
+  p {
+    font-size: 12px !important;
+  }
   .left-red-dot {
     display: none;
   }

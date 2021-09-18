@@ -25,7 +25,7 @@ function Bloglist() {
   return (
     <div>
       <Header title="bloglist" />
-      <div className="container bloglist-title-section">
+      <div className="container bloglist-title-section mobile-background-color">
         <div className="row">
           <div className="col-lg-6">
             <img className="left-bloglist-image" src={leftimage} />
