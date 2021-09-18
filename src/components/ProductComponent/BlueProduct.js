@@ -24,7 +24,7 @@ import {connect} from 'react-redux';
   useEffect(()=>{
      if(props.product[index].sets==0){
        mycount(0);
-       setSize("M");
+       setSize("");
      }
     
   },[props.product[index].sets]);

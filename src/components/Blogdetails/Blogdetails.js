@@ -6,15 +6,14 @@ import Image from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
 import Image2 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
 import Header from "../Header/Header";
 import Footer from "../footer/Footer";
-function Blogdetails() {
+function Blogdetails(props) {
   return (
     <div>
       <Header title="BLOG" />
       <div class="container">
         <div>
           <h1 className="styleHeader">
-            Lorem ipsum dolor sit amet, consetutor dolor consectetur adipiscing
-            elit
+            {props.location.aboutProps.title}
           </h1>
         </div>
         <div className="datee">
@@ -22,23 +21,10 @@ function Blogdetails() {
           <i class="far fa-calendar-alt"></i> july 20,2021
         </div>
         <div>
-          <img src={mainImage} className="Myimage" />
+          <img src={props.location.aboutProps.image} className="Myimage" />
         </div>
         <p className="paraText">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen
-          book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged.
+        {props.location.aboutProps.content}
           <br />
           <br />
           It was popularised in the 1960s with the release of Letraset sheets

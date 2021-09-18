@@ -3,13 +3,25 @@ import "./Bloglist.css";
 import leftimage from "../../Pictures/alexander-rotker-bydMjNfuO_4-unsplash.jpg";
 import mainImage from "../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg";
 import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
-import Image from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
-import Image2 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
-import Image12 from "../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg";
+
 import Footer from "../footer/Footer";
 import Header from "../Header/Header";
-
+import Popular from "./Popular";
 function Bloglist() {
+  const data = [
+    {
+      title: "MY Blog",
+      content: "THIS IS OUR BLOG",
+      Date: "28/09/2021",
+      Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+    },
+    {
+      title: "MY Blog",
+      content: "THIS IS MY SECOND BLOG",
+      Date: "28/09/2021",
+      Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+    },
+  ];
   return (
     <div>
       <Header title="bloglist" />
@@ -49,114 +61,15 @@ function Bloglist() {
             <h3>Popular Article</h3>
           </div>
           <div className="row">
-            <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <a href="/Blogdetails">
-                <img src={Image2} className="bloglist-image" />
-                <br />
-                <br />
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <br />
-                <p>
-                  We want everyone in need of care and their relatives to
-                  receive the benefits...{" "}
-                </p>
-                <br />
-                <p>
-                  <i class="far fa-clock"></i> 4 MIN |{" "}
-                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <a href="/Blogdetails">
-                <img src={Image2} className="bloglist-image" />
-                <br />
-                <br />
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <br />
-                <p>
-                  We want everyone in need of care and their relatives to
-                  receive the benefits...{" "}
-                </p>
-                <br />
-                <p>
-                  <i class="far fa-clock"></i> 4 MIN |{" "}
-                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <a href="/Blogdetails">
-                <img src={Image2} className="bloglist-image" />
-                <br />
-                <br />
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <br />
-                <p>
-                  We want everyone in need of care and their relatives to
-                  receive the benefits...{" "}
-                </p>
-                <br />
-                <p>
-                  <i class="far fa-clock"></i> 4 MIN |{" "}
-                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <a href="/Blogdetails">
-                <img src={Image2} className="bloglist-image" />
-                <br />
-                <br />
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <br />
-                <p>
-                  We want everyone in need of care and their relatives to
-                  receive the benefits...{" "}
-                </p>
-                <br />
-                <p>
-                  <i class="far fa-clock"></i> 4 MIN |{" "}
-                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <a href="/Blogdetails">
-                <img src={Image2} className="bloglist-image" />
-                <br />
-                <br />
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <br />
-                <p>
-                  We want everyone in need of care and their relatives to
-                  receive the benefits...{" "}
-                </p>
-                <br />
-                <p>
-                  <i class="far fa-clock"></i> 4 MIN |{" "}
-                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
-                </p>
-              </a>
-            </div>
-            <div className="col-lg-4" style={{ textAlign: "left" }}>
-              <a href="/Blogdetails">
-                <img src={Image2} className="bloglist-image" />
-                <br />
-                <br />
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <br />
-                <p>
-                  We want everyone in need of care and their relatives to
-                  receive the benefits...{" "}
-                </p>
-                <br />
-                <p>
-                  <i class="far fa-clock"></i> 4 MIN |{" "}
-                  <i class="far fa-calendar-alt"></i> JULY 20, 2021
-                </p>
-              </a>
-            </div>
+            {data.map((item) => {
+              return (
+                <Popular
+                  title={item.title}
+                  content={item.content}
+                  image={item.Img}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

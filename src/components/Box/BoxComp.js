@@ -18,22 +18,29 @@ function BoxComp(props) {
       name: "K94 MASK",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size  :"M",
+      price:40
+
     },
     {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size:"M",
+      price:20
     },
     {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size:"M"
     },
 
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size:"M"
     },
   ];
   const box2 = [
@@ -41,22 +48,31 @@ function BoxComp(props) {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Box2",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size:"M"
+
+      
     },
 
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size:"M"
+
     },
   ];
   const box3 = [
@@ -64,21 +80,29 @@ function BoxComp(props) {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Box3",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size:"M"
+
     },
   ];
   const box4 = [
@@ -86,22 +110,30 @@ function BoxComp(props) {
       name: "Box4",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size:"M"
+
     },
 
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size:"M"
+
     },
   ];
   const box5 = [
@@ -109,22 +141,30 @@ function BoxComp(props) {
       name: "Box5",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size:"M"
+
     },
 
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size:"M"
+
     },
   ];
   const box6 = [
@@ -132,27 +172,33 @@ function BoxComp(props) {
       name: "Box6",
       pcs: 20,
       img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "hand sanitizer",
       pcs: 20,
       img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+      size:"M"
+
     },
     {
       name: "Gloves ",
       pcs: 20,
       img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+      size:"M"
+
     },
 
     {
       name: "Oxygen tube",
       pcs: 20,
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+      size:"M"
+
     },
   ];
-  // {getBox=="box1" && props.box(box1)}
-  //   {getBox=="box2" && props.box(box2)}
-  //   {getBox=="box3" && props.box(box3)}
+ 
   function check() {
     if (getBox == "box1") {
       props.box(box1);
@@ -369,27 +415,27 @@ function BoxComp(props) {
         <div className="col-lg-12">
           {getBox == "box1" &&
             box1.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
+              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size} array={box1} />
             ))}
           {getBox == "box2" &&
             box2.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
+              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box2}/>
             ))}
           {getBox == "box3" &&
             box3.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
+              <Cart1 Name={user.name} pcs={user.pcs} image={user.img}size={user.size}  array={box3} />
             ))}
           {getBox == "box4" &&
             box4.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
+              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box4}/>
             ))}
           {getBox == "box5" &&
             box5.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
+              <Cart1 Name={user.name} pcs={user.pcs} image={user.img}size={user.size}  array={box5}/>
             ))}
           {getBox == "box6" &&
             box6.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} />
+              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box6}/>
             ))}
         </div>
       </div>
