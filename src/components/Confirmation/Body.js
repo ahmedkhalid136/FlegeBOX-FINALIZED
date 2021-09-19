@@ -114,26 +114,27 @@ export default function Body(props) {
       >
         <div className="col-lg-6"></div>
         <div className="col-lg-6 right">
-          <span
-            style={{ fontSize: "20px", paddingRight: "20px" }}
-            onClick={() => {
-              {
-                props.change("info");
-              }
-            }}
-          >
-            <i
-              class="fas fa-arrow-left"
-              style={{ paddingRight: "5px", cursor: "pointer" }}
-            ></i>
-            BACK
-          </span>
+        <button
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            marginRight: "30px",
+          }}
+          onClick={() => {
+            {
+              props.change("info");
+            }
+          }}
+        >
+          <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
+          back
+        </button>
           <button
             style={{ cursor: "pointer" }}
             className="button confirmation-button"
             onClick={(e) => sendData(e)}
           >
-            ORDER
+            Order
           </button>
         </div>
       </div>
