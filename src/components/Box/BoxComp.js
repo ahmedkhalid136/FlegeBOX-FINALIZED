@@ -217,6 +217,7 @@ function BoxComp(props) {
               className={getBox1 ? "boxes" : "boxes2"}
               onClick={() => {
                 setBox("box1");
+                
                 check();
                 setBox1(false);
                 setBox2(true);
@@ -438,6 +439,16 @@ function BoxComp(props) {
               <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box6}/>
             ))}
         </div>
+      </div>
+      
+      <div style={{ textAlign: "right", margin: "30px 0" }}>
+        <button
+         
+          className="button confirmation-button"
+          onClick={() => props.change("info")}
+        >
+          continue
+        </button>
       </div>
     </div>
   );

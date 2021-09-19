@@ -239,6 +239,17 @@ function CustomBox(props) {
               );
             })}
           </div>
+          
+      <div style={{ textAlign: "right", margin: "30px 0" }}>
+        <button
+          disabled={props.cart == 0 ? true : false}
+          style={{ opacity: props.cart == 0 ? 0.7 : 1 }}
+          className="button confirmation-button"
+          onClick={() => props.change("info")}
+        >
+          continue
+        </button>
+      </div>
         </div>
       </div>
     </div>
