@@ -97,7 +97,7 @@ p {
 
 @media (max-width: 600px) {
   p {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
   .left-red-dot {
     display: none;

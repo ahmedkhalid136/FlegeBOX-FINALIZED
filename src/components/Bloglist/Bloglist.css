@@ -43,6 +43,9 @@ a:hover {
   .bloglist-title-section .col-lg-4 {
     padding-bottom: 20px;
   }
+  p {
+    font-size: 21px !important;
+}
 }
 
 @media (max-width: 400px) {
@@ -55,4 +58,5 @@ a:hover {
   .popular-article-section {
     /* padding: 30px; */
   }
+  
 }

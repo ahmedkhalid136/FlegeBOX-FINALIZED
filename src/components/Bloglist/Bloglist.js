@@ -40,7 +40,7 @@ function Bloglist() {
               <br />
               adipiscing elit sed do
             </h2>
-            <br />
+            
             <p>
               We want to relieve the burden on those affected so that
               <br /> they can concentrate on the finer things in life and have
