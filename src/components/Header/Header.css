@@ -31,6 +31,11 @@
   border: 1px solid transparent;
 }
 
+.navbar-light .navbar-toggler {
+  color: transparent !important;
+  border-color: transparent !important;
+}
+
 @media (max-width: 900px) {
   .navbar-nav {
     padding: 10px 0;
