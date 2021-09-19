@@ -57,7 +57,7 @@ function Bloglist() {
         {/* POPULAR ARTICLE SECTION */}
 
         <div className="container popular-article-section">
-          <div style={{ textAlign: "center", padding: "90px 0" }}>
+          <div style={{ textAlign: "center", padding: "24px 0" }}>
             <h3>Popular Article</h3>
           </div>
           <div className="row">
