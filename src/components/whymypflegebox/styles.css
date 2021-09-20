@@ -97,7 +97,7 @@ p {
 
 @media (max-width: 600px) {
   p {
-    font-size: 18px !important;
+    font-size: 12px !important;
   }
   .left-red-dot {
     display: none;
@@ -112,7 +112,7 @@ p {
     margin-top: 20px;
   }
   .bodySection div p {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .titleSection {
     height: 200px;

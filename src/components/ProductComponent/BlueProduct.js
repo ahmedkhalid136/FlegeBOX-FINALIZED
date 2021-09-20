@@ -122,7 +122,7 @@ import {connect} from 'react-redux';
       >
         <h6>{props.Name}</h6>
         <p>{props.pcs}</p>
-        <p>price{ props.price}</p>
+        
       </div>
       <div className="col-lg-6 col-6" style={{ paddingTop: "20px" }}>
         <div className="row">
