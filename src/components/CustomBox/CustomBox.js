@@ -7,6 +7,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MobileAddToCart from "../ProductComponent/mobileAddToCart";
 import ProgressBar from "@ramonak/react-progress-bar";
+import axios from "axios";
 
 import { CreateContext } from "../../contexts/Customcontext";
 
@@ -40,51 +41,68 @@ function CustomBox(props) {
   const [myvalue, setvalue] = useState(0);
 
   const [myArr, setMyArr] = useState([]);
+  const [box, setBox] = useState([]);
+  const getData = async () => {
+    const response = await axios.get(
+      `http://35.84.238.24/api/method/flegeapp.utils.get_items`,
+      {
+        headers: {
+          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const box = await response.data.data;
+    console.log(box, "mydata");
+    await setBox(box);
+  };
+  useEffect(async () => {
+    getData();
+  }, []);
 
-  const box = [
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size: "M",
-      sets: 0,
-      price: 5,
-    },
-    {
-      name: "Gloves",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "M",
-      sets: 0,
-      price: 10,
-    },
-    {
-      name: "hand sanitizer ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size: "M",
-      sets: 0,
-      price: 15,
-    },
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size: "M",
-      sets: 0,
-      price: 1,
-    },
-  ];
+  // const box = [
+  //   {
+  //     name: "K94 MASK",
+  //     pcs: 20,
+  //     img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+  //     size: "M",
+  //     sets: 0,
+  //     price: 5,
+  //   },
+  //   {
+  //     name: "Gloves",
+  //     pcs: 20,
+  //     img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+  //     size: "M",
+  //     sets: 0,
+  //     price: 10,
+  //   },
+  //   {
+  //     name: "hand sanitizer ",
+  //     pcs: 20,
+  //     img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+  //     size: "M",
+  //     sets: 0,
+  //     price: 15,
+  //   },
+  //   {
+  //     name: "Oxygen tube",
+  //     pcs: 20,
+  //     img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+  //     size: "M",
+  //     sets: 0,
+  //     price: 1,
+  //   },
+  // ];
 
   props.box(myArr);
 
   useEffect(() => {
-    
     //adding product to redux if there not products
     if (props.product && props.product.length == 0) {
       props.setItem(box);
     }
-    console.log(myArr,"array jo backend pa ha");
+    console.log(myArr, "array jo backend pa ha");
   });
 
   // const box1 = [
@@ -148,9 +166,9 @@ function CustomBox(props) {
                       <div>
                         <MobileAddToCart
                           key={ind}
-                          Name={item.name}
+                          Name={item.item_name}
                           pcs={item.pcs}
-                          image={item.img}
+                          image={item.image}
                           index={ind}
                           price={item.price}
                           // setter={setMyArr}
@@ -176,9 +194,9 @@ function CustomBox(props) {
                     >
                       <Product
                         key={ind}
-                        Name={item.name}
+                        Name={item.item_name}
                         pcs={item.pcs}
-                        image={item.img}
+                        image={item.image}
                         index={ind}
                         price={item.price}
                         // setter={setMyArr}
@@ -240,17 +258,17 @@ function CustomBox(props) {
               );
             })}
           </div>
-          
-      <div style={{ textAlign: "right", margin: "30px 0" }}>
-        <button
-          disabled={props.cart == 0 ? true : false}
-          style={{ opacity: props.cart == 0 ? 0.7 : 1 }}
-          className="button confirmation-button"
-          onClick={() => props.change("info")}
-        >
-          continue
-        </button>
-      </div>
+
+          <div style={{ textAlign: "right", margin: "30px 0" }}>
+            <button
+              disabled={props.cart == 0 ? true : false}
+              style={{ opacity: props.cart == 0 ? 0.7 : 1 }}
+              className="button confirmation-button"
+              onClick={() => props.change("info")}
+            >
+              continue
+            </button>
+          </div>
         </div>
       </div>
     </div>
