@@ -79,6 +79,7 @@ function CustomBox(props) {
   props.box(myArr);
 
   useEffect(() => {
+    
     //adding product to redux if there not products
     if (props.product && props.product.length == 0) {
       props.setItem(box);
