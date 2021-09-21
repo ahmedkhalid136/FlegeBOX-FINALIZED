@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Bloglist.css";
 import leftimage from "../../Pictures/alexander-rotker-bydMjNfuO_4-unsplash.jpg";
 import mainImage from "../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg";
@@ -7,21 +7,44 @@ import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
 import Footer from "../footer/Footer";
 import Header from "../Header/Header";
 import Popular from "./Popular";
+import axios from "axios";
 function Bloglist() {
-  const data = [
-    {
-      title: "MY Blog",
-      content: "THIS IS OUR BLOG",
-      Date: "28/09/2021",
-      Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-    },
-    {
-      title: "MY Blog",
-      content: "THIS IS MY SECOND BLOG",
-      Date: "28/09/2021",
-      Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-    },
-  ];
+  const [Data, setData] = useState([]);
+  
+  const getData = async () => {
+    const response = await axios.get( `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,{
+      headers:{
+        Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+        "Content-Type": "application/json",
+      }
+    });
+    const data = await response.data.data;
+    console.log(data,"mydata")
+    await setData(data)
+    console.log(Data,"my useState")
+    
+   
+  };
+  useEffect(async () => {
+    getData();
+   
+  }, []);
+
+  
+  // const data = [
+  //   {
+  //     title: "MY Blog",
+  //     content: "THIS IS OUR BLOG",
+  //     Date: "28/09/2021",
+  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+  //   },
+  //   {
+  //     title: "MY Blog",
+  //     content: "THIS IS MY SECOND BLOG",
+  //     Date: "28/09/2021",
+  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+  //   },
+  // ];
   return (
     <div>
       <Header title="bloglist" />
@@ -40,7 +63,7 @@ function Bloglist() {
               <br />
               adipiscing elit sed do
             </h2>
-            
+
             <p>
               We want to relieve the burden on those affected so that
               <br /> they can concentrate on the finer things in life and have
@@ -61,7 +84,7 @@ function Bloglist() {
             <h3>Popular Article</h3>
           </div>
           <div className="row">
-            {data.map((item) => {
+            {Data.map((item) => {
               return (
                 <Popular
                   title={item.title}
