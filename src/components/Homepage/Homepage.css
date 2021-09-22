@@ -12,6 +12,20 @@
   padding-left: 0;
 }
 
+.mobile-hero-section {
+  display: none;
+}
+
+.desktop-hero-section {
+  display: block;
+}
+
+.mobile-TUV {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(25px);
+  margin-top: 30px;
+}
+
 .home-banner div {
   background-color: white;
   display: inline-block;
@@ -36,6 +50,26 @@
   border: none;
   padding: 12px 30px;
   border-radius: 10px;
+}
+
+.mobile-hero-section button {
+  background-color: #f87433;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.home-left-div {
+  background: linear-gradient(
+    97.73deg,
+    #dff2fb 3.48%,
+    rgba(232, 246, 252, 0.7) 70.88%
+  );
+}
+
+.home-right-div {
+  background: #2faae4;
 }
 
 .Works {
@@ -299,6 +333,12 @@
   }
   .relieve-section p {
     font-size: 14px !important;
+  }
+  .desktop-hero-section {
+    display: none;
+  }
+  .mobile-hero-section {
+    display: block;
   }
 }
 
