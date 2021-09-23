@@ -24,11 +24,11 @@ export default function Title() {
         </div>
       </div>
       <div
-        className="mobile-hero-section container-fluid"
+        className="mobile-hero-section"
         style={{ textAlign: "left", width: "100%", boxSizing: "content-box" }}
       >
-        <div className="row">
-          <div className="col-9 home-left-div">
+        <div className="row" style={{ margin: "0" }}>
+          <div className="col-9">
             <h3
               style={{
                 fontSize: "28px",
@@ -51,15 +51,14 @@ export default function Title() {
               style={{
                 width: "303px",
                 height: "313px",
-                position: "absolute",
-                right: "30px",
-                top: "428.6px",
+                position: "relative",
+                left: "70px",
               }}
             />
           </div>
           <div className="col-3 home-right-div">
             <svg
-              width="85"
+              width="100%"
               height="594"
               viewBox="0 0 85 594"
               fill="none"
@@ -74,7 +73,15 @@ export default function Title() {
             </svg>
           </div>
         </div>
-        <div className="mobile-TUV" style={{ textAlign: "center" }}>
+        <div
+          className="mobile-TUV"
+          style={{
+            textAlign: "center",
+            marginTop: "-25px",
+            boxSizing: "content-box",
+            paddingLeft: "30px",
+          }}
+        >
           <img
             src="./Images/badge.svg"
             style={{ width: "70%", marginRight: "30px" }}
