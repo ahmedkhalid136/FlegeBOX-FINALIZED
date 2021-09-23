@@ -43,9 +43,11 @@ export default function Title() {
               Pflegebedürftige Personen haben einen gesetzlichen Anspruch auf
               Produkte im Wert von 60€
             </p>
-            <button style={{ textTransform: "uppercase" }}>
-              Pflegebox sichern
-            </button>
+            <a href="/box">
+              <button style={{ textTransform: "uppercase" }}>
+                Pflegebox sichern
+              </button>
+            </a>
             <img
               src="./Images/girl.svg"
               style={{
