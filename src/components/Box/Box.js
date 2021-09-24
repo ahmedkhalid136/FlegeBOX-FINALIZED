@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
 import Footer from "../footer/Footer";
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 
 function Box() {
   const [getComp, setComp] = useState("Box");
@@ -22,7 +22,7 @@ function Box() {
   const [careLevel, setCareLevel] = useState("");
 
   return (
-    <div>
+    <div className="mobile-background-color">
       <Header />
       <div style={{ marginTop: "40px" }} className="container">
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
