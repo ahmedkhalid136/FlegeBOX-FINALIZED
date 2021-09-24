@@ -10,28 +10,40 @@ import Popular from "./Popular";
 import axios from "axios";
 function Bloglist() {
   const [Data, setData] = useState([]);
-  
+
   const getData = async () => {
-    const response = await axios.get( `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,{
-      headers:{
-        Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
-        "Content-Type": "application/json",
+    const response = await axios.get(
+      `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
+      {
+        headers: {
+          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+          "Content-Type": "application/json",
+        },
       }
-    });
+    );
     const data = await response.data.data;
-    console.log(data,"mydata")
-    await setData(data)
-    console.log(Data,"my useState")
-    
-   
+    console.log(data, "mydata");
+    await setData(data);
+    console.log(Data, "my useState");
   };
   useEffect(async () => {
     getData();
-   
   }, []);
 
-  
-  
+  // const data = [
+  //   {
+  //     title: "MY Blog",
+  //     content: "THIS IS OUR BLOG",
+  //     Date: "28/09/2021",
+  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+  //   },
+  //   {
+  //     title: "MY Blog",
+  //     content: "THIS IS MY SECOND BLOG",
+  //     Date: "28/09/2021",
+  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
+  //   },
+  // ];
   return (
     <div>
       <Header title="bloglist" />
@@ -50,7 +62,7 @@ function Bloglist() {
               <br />
               adipiscing elit sed do
             </h2>
-
+            <br />
             <p>
               We want to relieve the burden on those affected so that
               <br /> they can concentrate on the finer things in life and have

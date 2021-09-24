@@ -4,6 +4,7 @@ var SignaturePad = require("react-signature-pad");
 export default function Body(props) {
   const [insuranceNumber, setinsurance] = useState("");
   const [date, setDate] = useState("");
+  const [order,setorder]=useState("")
 
   let sigpad = useRef({});
 
@@ -36,6 +37,7 @@ export default function Body(props) {
         year: "2021",
         note: props.note,
       }),
+      
     }).catch((e) => {
       console.log(e, "error");
     });
@@ -43,8 +45,8 @@ export default function Body(props) {
 
   return (
     <div className="container" style={{ textAlign: "left" }}>
-      <h2>Thank you for your Order!</h2>
-      <p>Your Order will arrive at 12.08.2021</p>
+      <h2>{order}</h2>
+      <p></p>
 
       <br />
 
@@ -132,7 +134,10 @@ export default function Body(props) {
           <button
             style={{ cursor: "pointer" }}
             className="button confirmation-button"
-            onClick={(e) => sendData(e)}
+            onClick={(e) => {
+              sendData(e)
+              setorder("Thankyou for your order")
+            }}
           >
             Order
           </button>

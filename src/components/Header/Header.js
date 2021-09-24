@@ -17,7 +17,7 @@ export default function Header(props) {
       <div className="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="/home">
-            myPflegebox
+            <img src="./Images/LOGO.svg"></img>
           </a>
           <button
             class="navbar-toggler"
