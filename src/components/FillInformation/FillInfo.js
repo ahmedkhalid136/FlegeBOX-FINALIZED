@@ -39,6 +39,9 @@ function FillInfo(props) {
             <div className="col-lg-3">
               <button className="chooseButton">2. FILL INFORMATION FORM</button>
             </div>
+            <div className="col-lg-2">...........................</div>
+          <div className="col-lg-2">3. CONFIRMATION</div>
+          <div className="col-lg-1"></div>
           </div>
           <div className="mobile-head">
             <div className="row">
