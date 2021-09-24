@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function body() {
+export default function body() { 
+  const refreshPage = ()=>{
+  window.location.reload();
+}
   return (
     <div className="container body-container mobile-background-color">
       <div className="row">
@@ -14,7 +17,7 @@ export default function body() {
           <br />
           <br />
           <textarea className="text-field" placeholder="Message" rows="10" />
-          <button className="button">Submit</button>
+          <button className="button" onClick={refreshPage}>Submit</button>
         </div>
         <div className="col-lg-5 right-side">
           <iframe

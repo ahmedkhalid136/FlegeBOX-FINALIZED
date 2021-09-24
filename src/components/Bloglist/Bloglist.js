@@ -31,20 +31,7 @@ function Bloglist() {
   }, []);
 
   
-  // const data = [
-  //   {
-  //     title: "MY Blog",
-  //     content: "THIS IS OUR BLOG",
-  //     Date: "28/09/2021",
-  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  //   },
-  //   {
-  //     title: "MY Blog",
-  //     content: "THIS IS MY SECOND BLOG",
-  //     Date: "28/09/2021",
-  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  //   },
-  // ];
+  
   return (
     <div>
       <Header title="bloglist" />
@@ -89,7 +76,7 @@ function Bloglist() {
                 <Popular
                   title={item.title}
                   content={item.content}
-                  image={item.Img}
+                  image={item.picture}
                 />
               );
             })}
