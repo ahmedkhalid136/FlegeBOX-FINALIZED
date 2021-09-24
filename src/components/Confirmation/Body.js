@@ -132,6 +132,7 @@ export default function Body(props) {
           back
         </button>
           <button
+          disabled={!insuranceNumber || !date }
             style={{ cursor: "pointer" }}
             className="button confirmation-button"
             onClick={(e) => {

@@ -33,9 +33,7 @@ function FillInfo(props) {
 
   return (
     <div className="mainDiv">
-      <p>
-        {props.valFname}
-      </p>
+     
       <form  onSubmit={handleSubmit}>
       <div style={{ marginTop: "40px" }} className="container desktop-head">
         <div className="row">
@@ -238,7 +236,7 @@ function FillInfo(props) {
           back
         </button>
         <button
- disabled={!props.valFname || !props.valLname  || !props.valPhone || !props.valEmail || !props.valCountry || !props.valSname || !props.valZip || !props.valCareLevel || !props.valTitle}
+ disabled={!props.valFname || !props.valLname  || !props.valPhone || !props.valEmail || !props.valCountry || !props.valSname || !props.valZip || !props.valTitle}
         type="submit"
           style={{ margin: "20px 0 30px" }}
           className="button confirmation-button"
