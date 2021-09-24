@@ -1,6 +1,31 @@
-import React from "react";
+import { React, useState } from "react";
+import { Redirect } from "react-router-dom";
+export default function Body() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-export default function body() {
+  function sendData(event) {
+    event.preventDefault();
+    fetch("http://35.84.238.24/api/resource/Pflege Contact Form", {
+      method: "POST",
+      headers: {
+        Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        customer_name: name,
+        email: email,
+        message: message,
+      }),
+    })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((e) => {
+        console.log(e, "error");
+      });
+  }
   return (
     <div className="container body-container mobile-background-color">
       <div className="row">
@@ -8,13 +33,39 @@ export default function body() {
           <h3>What is your Question</h3>
           <br />
           <br />
-          <input className="input-field" placeholder="Your Name" /> <br />
+          <input
+            className="input-field"
+            placeholder="Your Name"
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            value={name}
+          />{" "}
           <br />
-          <input className="input-field" placeholder="Email Address" />
+          <br />
+          <input
+            type="email"
+            className="input-field"
+            placeholder="Email Address"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            value={email}
+          />
           <br />
           <br />
-          <textarea className="text-field" placeholder="Message" rows="10" />
-          <button className="button">Submit</button>
+          <textarea
+            className="text-field"
+            placeholder="Message"
+            rows="10"
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            value={message}
+          />
+          <button className="button" onClick={sendData}>
+            Submit
+          </button>
         </div>
         <div className="col-lg-5 right-side">
           <iframe
