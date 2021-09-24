@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Fillinfo.css";
 import Checkbox from "@material-ui/core/Checkbox";
 import Contactinfo from "./Contactinfo";
@@ -12,6 +12,9 @@ function FillInfo(props) {
   const [checkMr, setCheckMr] = useState("");
   const [checkMrs, setCheckMrs] = useState("");
   title == true ? props.title("Ms") : props.title("Mr");
+  useEffect(() => {
+    console.log(props.valFname)
+  }, [])
 
   // function checkGender() {
   //   if (title === true) {
@@ -22,9 +25,18 @@ function FillInfo(props) {
   //     setCheckMrs("");
   //   }
   // }
+  const handleSubmit = event => {
+    event.preventDefault();
+   
+  };
+
 
   return (
     <div className="mainDiv">
+      <p>
+        {props.valFname}
+      </p>
+      <form  onSubmit={handleSubmit}>
       <div style={{ marginTop: "40px" }} className="container desktop-head">
         <div className="row">
           <div className="col-lg-2">1. CHOOSE BOX</div>
@@ -125,7 +137,7 @@ function FillInfo(props) {
               <input
                 className="input"
                 placeholder="Firstname"
-                onChange={(e) => props.fname(e.target.value)}
+                onChange={(e) =>{ props.fname(e.target.value)}}
                 value={props.valFname}
               />
             </div>
@@ -226,6 +238,8 @@ function FillInfo(props) {
           back
         </button>
         <button
+ disabled={!props.valFname || !props.valLname  || !props.valPhone || !props.valEmail || !props.valCountry || !props.valSname || !props.valZip || !props.valCareLevel || !props.valTitle}
+        type="submit"
           style={{ margin: "20px 0 30px" }}
           className="button confirmation-button"
           onClick={() => {
@@ -237,6 +251,7 @@ function FillInfo(props) {
           Continue
         </button>
       </div>
+      </form>
     </div>
   );
 }
