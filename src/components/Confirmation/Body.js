@@ -60,7 +60,8 @@ export default function Body(props) {
         <p className="confirmation-text" style={{ color: "black" }}>
           Insurance Company for the careperson
         </p>
-        <select name="Insurance" className="option-box" onChange={(e) => setInsurance(e.target.value)}>
+        <select value="Insurance" className="option-box" onChange={(e) => setInsurance(e.target.value)}>
+        <option>Insurance</option>
           <option value="first-Insurance"> first-Insurance</option>
           <option value="second insurance ">second-insurance</option>
         </select>
