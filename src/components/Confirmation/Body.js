@@ -230,7 +230,7 @@ export default function Body(props) {
             onClick={(e) => {
               sendData(e);
               setorder("Thankyou for your order");
-              window.location.reload();
+              setTimeout( window.location.reload(), 10000)       
             }}
           >
             Order
