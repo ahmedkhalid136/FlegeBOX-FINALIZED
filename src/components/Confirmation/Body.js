@@ -6,16 +6,14 @@ export default function Body(props) {
   const [date, setDate] = useState("");
   const [order, setorder] = useState("");
   const [year, setYear] = useState("");
+  const [insurance,setInsurance]=useState("")
 
   let sigpad = useRef({});
 
   function clear() {
     sigpad.current.clear();
   }
-  function year() {
-    var e = document.getElementById("year");
-    setYear(e.value);
-  }
+  
 
   function sendData(event) {
     event.preventDefault();
@@ -37,9 +35,9 @@ export default function Body(props) {
         care_box: props.value,
         phone_number: props.phone,
         email_address: props.email,
-        insurance_company: "PAEO",
+        insurance_company: insurance,
         insurance_number: insuranceNumber,
-        year: "2021",
+        year: year,
         note: props.note,
       }),
     }).catch((e) => {
@@ -50,7 +48,7 @@ export default function Body(props) {
   return (
     <div className="container" style={{ textAlign: "left" }}>
       <h2>{order}</h2>
-      <p></p>
+      {insurance}
 
       <br />
 
@@ -62,9 +60,9 @@ export default function Body(props) {
         <p className="confirmation-text" style={{ color: "black" }}>
           Insurance Company for the careperson
         </p>
-        <select name="Insurance" className="option-box">
-          <option value="Insurance">Insurance</option>
-          <option value="second ">second insurance</option>
+        <select name="Insurance" className="option-box" onChange={(e) => setInsurance(e.target.value)}>
+          <option value="first-Insurance"> first-Insurance</option>
+          <option value="second insurance ">second-insurance</option>
         </select>
         <br />
         <br />
@@ -89,7 +87,7 @@ export default function Body(props) {
               id="year"
               className="option-box"
               name="year"
-              onChange={year}
+              onChange={(e) => setYear(e.target.value)}
             >
               <option>year</option>
               <option value="1940">1940</option>
@@ -225,7 +223,7 @@ export default function Body(props) {
             back
           </button>
           <button
-            disabled={!insuranceNumber || !date}
+            disabled={!insuranceNumber || !date ||!year}
             style={{ cursor: "pointer" }}
             className="button confirmation-button"
             onClick={(e) => {
