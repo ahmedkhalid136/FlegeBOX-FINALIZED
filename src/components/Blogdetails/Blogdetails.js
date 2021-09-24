@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import "./Blogdetails.css";
 import mainImage from "../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg";
 import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
@@ -8,19 +8,29 @@ import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 import Popular from "../Bloglist/Popular";
 
-const data = [{
-    title: "MY Blog",
-    content: "THIS IS OUR BLOG",
-    Date: "28/09/2021",
-    Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  },{
-    title: "NEW BLOG",
-    content: "THIS IS MY SECOND BLOG",
-    Date: "28/09/2021",
-    Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  },];
-
+import axios from "axios";
 function Blogdetails(props) {
+  
+const [Data, setData] = useState([]);
+  
+const getData = async () => {
+  const response = await axios.get( `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,{
+    headers:{
+      Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+      "Content-Type": "application/json",
+    }
+  });
+  const data = await response.data.data;
+  console.log(data,"mydata")
+  await setData(data)
+  console.log(Data,"my useState")
+  
+ 
+};
+useEffect(async () => {
+  getData();
+ 
+}, []);
   
   return (
     <div>
@@ -72,12 +82,12 @@ function Blogdetails(props) {
           <br />
           <br />
           <div className="row articleImgdiv ">
-            {data.map((item) => {
+            {Data.map((item) => {
               return (
                 <Popular
                   title={item.title}
                   content={item.content}
-                  image={item.Img}
+                  image={item.picture}
                 />
               );
             })}

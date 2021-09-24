@@ -88,7 +88,7 @@ function Bloglist() {
                 <Popular
                   title={item.title}
                   content={item.content}
-                  image={item.Img}
+                  image={item.picture}
                 />
               );
             })}
