@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Fillinfo.css";
 import Checkbox from "@material-ui/core/Checkbox";
 import Contactinfo from "./Contactinfo";
@@ -12,6 +12,9 @@ function FillInfo(props) {
   const [checkMr, setCheckMr] = useState("");
   const [checkMrs, setCheckMrs] = useState("");
   title == true ? props.title("Ms") : props.title("Mr");
+  useEffect(() => {
+    console.log(props.valFname);
+  }, []);
 
   // function checkGender() {
   //   if (title === true) {
@@ -22,47 +25,51 @@ function FillInfo(props) {
   //     setCheckMrs("");
   //   }
   // }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <div className="mainDiv">
-      <div style={{ marginTop: "40px" }} className="container desktop-head">
-        <div className="row">
-          <div className="col-lg-2">1. CHOOSE BOX</div>
-          <div className="col-lg-2">...........................</div>
-          <div className="col-lg-3">
-            <button className="chooseButton">2. FILL INFORMATION FORM</button>
+      <form onSubmit={handleSubmit}>
+        <div style={{ marginTop: "40px" }} className="container desktop-head">
+          <div className="row">
+            <div className="col-lg-2">1. CHOOSE BOX</div>
+            <div className="col-lg-2">...........................</div>
+            <div className="col-lg-3">
+              <button className="chooseButton">2. FILL INFORMATION FORM</button>
+            </div>
+            <div className="col-lg-2">...........................</div>
+            <div className="col-lg-2">3. CONFIRMATION</div>
+            <div className="col-lg-1"></div>
           </div>
-          <div className="col-lg-2">...........................</div>
-          <div className="col-lg-2">3. CONFIRMATION</div>
-          <div className="col-lg-1"></div>
         </div>
-      </div>
-      <div className="mobile-head">
-        <div className="row">
-          <div className="col-lg-2 col-1">
-            <i class="far fa-check-circle"></i>
+        <div className="mobile-head">
+          <div className="row">
+            <div className="col-lg-2 col-1">
+              <i class="far fa-check-circle"></i>
+            </div>
+            <div className="col-lg-2 col-1">......</div>
+            <div className="col-lg-3 col-8">
+              <button
+                className="chooseButton"
+                style={{ padding: "7px 5px", marginRight: "-20px" }}
+              >
+                2. FILL INFORMATION FORM
+              </button>
+            </div>
+            <div className="col-lg-2 col-1">......</div>
+            <div className="col-lg-2 col-1">3.</div>
           </div>
-          <div className="col-lg-2 col-1">......</div>
-          <div className="col-lg-3 col-8">
-            <button
-              className="chooseButton"
-              style={{ padding: "7px 5px", marginRight: "-20px" }}
-            >
-              2. FILL INFORMATION FORM
-            </button>
-          </div>
-          <div className="col-lg-2 col-1">......</div>
-          <div className="col-lg-2 col-1">3.</div>
-        </div>
-      </div>{" "}
-      <br />
-      <br />
-      <br />
-      <div className="personalInfo container">
-        <div className="checkboxes">
-          <h6 className="styleHeading">Personal Information</h6>
+        </div>{" "}
+        <br />
+        <br />
+        <br />
+        <div className="personalInfo container">
+          <div className="checkboxes">
+            <h6 className="styleHeading">Personal Information</h6>
 
-          {/* <FormControlLabel
+            {/* <FormControlLabel
             value="Ms"
             control={<Checkbox color="primary" />}
             label="Ms"
@@ -80,163 +87,177 @@ function FillInfo(props) {
               setTitle(false);
             }}
           /> */}
-          <div style={{ textAlign: "left", marginLeft: "-20px" }}>
-            <input
-              type="radio"
-              id="Mrs"
-              name="gender"
-              style={{
-                display: "inline",
-                width: "50px",
-                textAlign: "left",
-                height: "13px",
-              }}
-              onClick={() => {
-                setTitle(true);
-              }}
-            />
-            <label style={{ display: "inline-block" }} for="css">
-              Ms
-            </label>
-            <input
-              style={{
-                display: "inline",
-                width: "50px",
-                textAlign: "left",
-                marginLeft: "20px",
-                height: "13px",
-              }}
-              type="radio"
-              id="Mr"
-              name="gender"
-              onClick={() => {
-                setTitle(false);
-              }}
-            />
-            <label style={{ display: "inline-block" }} for="javascript">
-              Mr
-            </label>
-          </div>
-        </div>
-        <br />
-        <div className="">
-          <div className="row">
-            <div className="col-lg-6 col-sm-12 ">
+            <div style={{ textAlign: "left", marginLeft: "-20px" }}>
               <input
-                className="input"
-                placeholder="Firstname"
-                onChange={(e) => props.fname(e.target.value)}
-                value={props.valFname}
+                type="radio"
+                id="Mrs"
+                name="gender"
+                style={{
+                  display: "inline",
+                  width: "50px",
+                  textAlign: "left",
+                  height: "13px",
+                }}
+                onClick={() => {
+                  setTitle(true);
+                }}
               />
-            </div>
-            <div className="col-lg-6 col-sm-12">
+              <label style={{ display: "inline-block" }} for="css">
+                Ms
+              </label>
               <input
-                className="input"
-                placeholder="Lastname"
-                onChange={(e) => props.lname(e.target.value)}
-                value={props.valLname}
+                style={{
+                  display: "inline",
+                  width: "50px",
+                  textAlign: "left",
+                  marginLeft: "20px",
+                  height: "13px",
+                }}
+                type="radio"
+                id="Mr"
+                name="gender"
+                onClick={() => {
+                  setTitle(false);
+                }}
               />
-            </div>
-          </div>
-          <div className="row secondDiv">
-            <div className="col-lg-6">
-              <div className="row">
-                <div className="col-lg-8 col-8">
-                  <input
-                    className="input1"
-                    placeholder="Street Name"
-                    onChange={(e) => props.sname(e.target.value)}
-                    value={props.valSname}
-                  />
-                </div>
-                <div className="col-lg-4 col-4">
-                  <input className="input2" placeholder="City" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="row">
-                <div className="col-lg-4 col-6">
-                  <input
-                    className="input3"
-                    placeholder="ZIP Code"
-                    onChange={(e) => props.zip(e.target.value)}
-                    value={props.valZip}
-                  />
-                </div>
-                <div className="col-lg-8 col-6">
-                  <input
-                    className="input4"
-                    placeholder="Country"
-                    onChange={(e) => props.countryy(e.target.value)}
-                    value={props.valCountry}
-                  />
-                </div>
-              </div>
+              <label style={{ display: "inline-block" }} for="javascript">
+                Mr
+              </label>
             </div>
           </div>
           <br />
-          <div className="checkboxes">
-            <FormControlLabel
-              value="Ms"
-              control={<Checkbox color="primary" />}
-              label="Different address"
-              labelPlacement="End"
-            />
+          <div className="">
+            <div className="row">
+              <div className="col-lg-6 col-sm-12 ">
+                <input
+                  className="input"
+                  placeholder="Firstname"
+                  onChange={(e) => {
+                    props.fname(e.target.value);
+                  }}
+                  value={props.valFname}
+                />
+              </div>
+              <div className="col-lg-6 col-sm-12">
+                <input
+                  className="input"
+                  placeholder="Lastname"
+                  onChange={(e) => props.lname(e.target.value)}
+                  value={props.valLname}
+                />
+              </div>
+            </div>
+            <div className="row secondDiv">
+              <div className="col-lg-6">
+                <div className="row">
+                  <div className="col-lg-8 col-8">
+                    <input
+                      className="input1"
+                      placeholder="Street Name"
+                      onChange={(e) => props.sname(e.target.value)}
+                      value={props.valSname}
+                    />
+                  </div>
+                  <div className="col-lg-4 col-4">
+                    <input className="input2" placeholder="City" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="row">
+                  <div className="col-lg-4 col-6">
+                    <input
+                      className="input3"
+                      placeholder="ZIP Code"
+                      onChange={(e) => props.zip(e.target.value)}
+                      value={props.valZip}
+                    />
+                  </div>
+                  <div className="col-lg-8 col-6">
+                    <input
+                      className="input4"
+                      placeholder="Country"
+                      onChange={(e) => props.countryy(e.target.value)}
+                      value={props.valCountry}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div className="checkboxes">
+              <FormControlLabel
+                value="Ms"
+                control={<Checkbox color="primary" />}
+                label="Different address"
+                labelPlacement="End"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <Carelevel
-        careLevel={props.careLevel}
-        valCareLevel={props.valCareLevel}
-      />
-      <Contactinfo
-        phone={props.phone}
-        valPhone={props.valPhone}
-        email={props.email}
-        valEmail={props.valEmail}
-      />
-      <Note note={props.note} valNote={props.valNote} />
-      <div className="row separateCheckbox">
-        <FormControlLabel
-          control={<Checkbox color="primary" />}
-          label="Confirm first check box"
-          labelPlacement="End"
+        <Carelevel
+          careLevel={props.careLevel}
+          valCareLevel={props.valCareLevel}
         />
-        <FormControlLabel
-          control={<Checkbox color="primary" />}
-          label="Confirm second check box"
-          labelPlacement="End"
+        <Contactinfo
+          phone={props.phone}
+          valPhone={props.valPhone}
+          email={props.email}
+          valEmail={props.valEmail}
         />
-      </div>
-      <div style={{ textAlign: "right", paddingTop: "30px" }}>
-        <button
-          style={{
-            backgroundColor: "transparent",
-            border: "none",
-            marginRight: "30px",
-          }}
-          onClick={() => {
-            {
-              props.change("Box");
+        <Note note={props.note} valNote={props.valNote} />
+        <div className="row separateCheckbox">
+          <FormControlLabel
+            control={<Checkbox color="primary" />}
+            label="Confirm first check box"
+            labelPlacement="End"
+          />
+          <FormControlLabel
+            control={<Checkbox color="primary" />}
+            label="Confirm second check box"
+            labelPlacement="End"
+          />
+        </div>
+        <div style={{ textAlign: "right", paddingTop: "30px" }}>
+          <button
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              marginRight: "30px",
+            }}
+            onClick={() => {
+              {
+                props.change("Box");
+              }
+            }}
+          >
+            <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
+            back
+          </button>
+          <button
+            disabled={
+              !props.valFname ||
+              !props.valLname ||
+              !props.valPhone ||
+              !props.valEmail ||
+              !props.valCountry ||
+              !props.valSname ||
+              !props.valZip ||
+              !props.valTitle
             }
-          }}
-        >
-          <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
-          back
-        </button>
-        <button
-          style={{ margin: "20px 0 30px" }}
-          className="button confirmation-button"
-          onClick={() => {
-            {
-              props.change("confirm");
-            }
-          }}
-        >
-          Continue
-        </button>
-      </div>
+            type="submit"
+            style={{ margin: "20px 0 30px" }}
+            className="button confirmation-button"
+            onClick={() => {
+              {
+                props.change("confirm");
+              }
+            }}
+          >
+            Continue
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
