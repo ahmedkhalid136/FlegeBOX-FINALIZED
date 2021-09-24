@@ -27,6 +27,26 @@ export default function Title() {
         className="mobile-hero-section"
         style={{ textAlign: "left", width: "100%", boxSizing: "content-box" }}
       >
+        <img
+          src="./Images/car.svg"
+          style={{
+            position: "absolute",
+            width: "50px",
+            height: "50px",
+            left: "100.37px",
+            top: "420.65px",
+          }}
+        />
+        <img
+          src="./Images/box.svg"
+          style={{
+            position: "absolute",
+            width: "50px",
+            height: "50px",
+            left: "300.37px",
+            top: "450.65px",
+          }}
+        />
         <div className="row" style={{ margin: "0" }}>
           <div className="col-9">
             <h3
@@ -54,7 +74,7 @@ export default function Title() {
                 width: "303px",
                 height: "313px",
                 position: "relative",
-                left: "70px",
+                left: "20px",
               }}
             />
           </div>
