@@ -84,13 +84,20 @@ function FillInfo(props) {
             }}
           /> */}
               <div style={{ textAlign: "left", marginLeft: "-20px" }}>
-                <input
-                  className="input"
-                  placeholder="Firstname"
-                  onChange={(e) => {
-                    props.fname(e.target.value);
+              <input
+                  style={{
+                    display: "inline",
+                    width: "50px",
+                    textAlign: "left",
+                    marginLeft: "20px",
+                    height: "13px",
                   }}
-                  value={props.valFname}
+                  type="radio"
+                  id="Mr"
+                  name="gender"
+                  onClick={() => {
+                    setTitle(false);
+                  }}
                 />
                 <label style={{ display: "inline-block" }} for="css">
                   Ms

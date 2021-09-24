@@ -48,7 +48,7 @@ export default function Body(props) {
   return (
     <div className="container" style={{ textAlign: "left" }}>
       <h2>{order}</h2>
-      {insurance}
+
 
       <br />
 
@@ -223,12 +223,13 @@ export default function Body(props) {
             back
           </button>
           <button
-            disabled={!insuranceNumber || !date ||!year}
+            disabled={!insuranceNumber || !date ||!year ||!insurance}
             style={{ cursor: "pointer" }}
             className="button confirmation-button"
             onClick={(e) => {
               sendData(e);
               setorder("Thankyou for your order");
+              window.location.reload();
             }}
           >
             Order
