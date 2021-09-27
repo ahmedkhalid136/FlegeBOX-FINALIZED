@@ -3,6 +3,12 @@
   height: 620px;
 }
 
+.title-text {
+  font-family: "Merriweather", serif;
+  font-size: 50px;
+  line-height: 78px;
+}
+
 .home-banner {
   background-color: #2faae5;
 }

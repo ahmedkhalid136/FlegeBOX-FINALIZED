@@ -22,7 +22,7 @@ function Box() {
   const [careLevel, setCareLevel] = useState("");
 
   return (
-    <div className="mobile-background-color">
+    <div>
       <Header />
       <div style={{ marginTop: "40px" }} className="container">
         {getComp == "Box" && <ChooseBox change={setComp} mybox={setcareBox} />}
