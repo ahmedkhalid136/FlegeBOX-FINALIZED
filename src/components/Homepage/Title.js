@@ -9,6 +9,7 @@ export default function Title() {
       <div>
         <div className="desktop-hero-section container-fluid">
           <img
+            className="hero-car"
             src="./Images/car.svg"
             style={{
               position: "absolute",
@@ -20,6 +21,7 @@ export default function Title() {
             }}
           />
           <img
+            className="hero-box"
             src="./Images/box.svg"
             style={{
               position: "absolute",
@@ -32,8 +34,14 @@ export default function Title() {
           />
           <div>
             <div className="row">
-              <div className="col-lg-9" style={{ backgroundColor: "#e3f4fc" }}>
-                <div style={{ textAlign: "left", padding: "95px" }}>
+              <div
+                className="col-lg-9 col-md-9"
+                style={{ backgroundColor: "#e3f4fc" }}
+              >
+                <div
+                  className="hero-left-side"
+                  style={{ textAlign: "left", padding: "95px" }}
+                >
                   <h1 className="title-text">
                     Kostenlose <br />
                     <span style={{ color: "#2FAAE4" }}>
@@ -63,7 +71,10 @@ export default function Title() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-3" style={{ backgroundColor: "#2FAAE5" }}>
+              <div
+                className="col-lg-3 col-md-3"
+                style={{ backgroundColor: "#2FAAE5" }}
+              >
                 {" "}
                 <svg
                   width="100%"
@@ -80,6 +91,7 @@ export default function Title() {
                   />
                 </svg>
                 <img
+                  className="hero-girl"
                   src="./Images/girl.svg"
                   style={{
                     width: "500px",
@@ -94,7 +106,7 @@ export default function Title() {
           </div>
         </div>
         <div
-          className="mobile-TUV"
+          className="mobile-TUV desktop-hero-section"
           style={{
             textAlign: "center",
             paddingLeft: "30px",
