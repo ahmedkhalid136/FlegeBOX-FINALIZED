@@ -3,202 +3,45 @@ import React, { useState, useEffect } from "react";
 import "./Box.css";
 import WhiteProduct from "./Whiteproducts";
 import Cart1 from "../ProductComponent/Cart1";
-
+import axios from "axios";
 function BoxComp(props) {
   const [getBox, setBox] = useState("box1");
+  const [Box1, ssetBox1] = useState([]);
+
   const [getBox1, setBox1] = useState(false);
   const [getBox2, setBox2] = useState(true);
   const [getBox3, setBox3] = useState(true);
   const [getBox4, setBox4] = useState(true);
   const [getBox5, setBox5] = useState(true);
   const [getBox6, setBox6] = useState(true);
+  let box;
+  const getData = async () => {
+    const response = await axios.get(
+      `http://35.84.238.24/api/method/flegeapp.utils.get_careboxes`,
+      {
+        headers: {
+          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    box = await response.data.data;
 
-  const box1 = [
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size  :"M",
-      price:40
+    console.log(box, "mydata");
+    await ssetBox1(box);
+  };
+  useEffect(async () => {
+    getData();
+  }, []);
 
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size:"M",
-      price:20
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size:"M"
-    },
+  const box1 = Box1[0].carebox_item;
 
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size:"M"
-    },
-  ];
-  const box2 = [
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size:"M"
+  const box2 = Box1[1].carebox_item;
+  const box3 = Box1[2].carebox_item;
+  const box4 = Box1[3].carebox_item;
+  const box5 = Box1[4].carebox_item;
+  const box6 = Box1[5].carebox_item;
 
-    },
-    {
-      name: "Box2",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size:"M"
-
-      
-    },
-
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size:"M"
-
-    },
-  ];
-  const box3 = [
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "Box3",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size:"M"
-
-    },
-  ];
-  const box4 = [
-    {
-      name: "Box4",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size:"M"
-
-    },
-
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size:"M"
-
-    },
-  ];
-  const box5 = [
-    {
-      name: "Box5",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size:"M"
-
-    },
-
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size:"M"
-
-    },
-  ];
-  const box6 = [
-    {
-      name: "Box6",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-      size:"M"
-
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-      size:"M"
-
-    },
-
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-      size:"M"
-
-    },
-  ];
- 
   function check() {
     if (getBox == "box1") {
       props.box(box1);
@@ -217,7 +60,7 @@ function BoxComp(props) {
               className={getBox1 ? "boxes" : "boxes2"}
               onClick={() => {
                 setBox("box1");
-                
+
                 check();
                 setBox1(false);
                 setBox2(true);
@@ -416,34 +259,69 @@ function BoxComp(props) {
         <div className="col-lg-12">
           {getBox == "box1" &&
             box1.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size} array={box1} />
+              <Cart1
+                Name={user.name}
+                pcs={user.quantity}
+                image={user.img}
+                size={user.size}
+                array={box1}
+              />
             ))}
           {getBox == "box2" &&
             box2.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box2}/>
+              <Cart1
+                Name={user.name}
+                pcs={user.quantity}
+                image={user.img}
+                size={user.size}
+                array={box2}
+              />
             ))}
           {getBox == "box3" &&
             box3.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img}size={user.size}  array={box3} />
+              <Cart1
+                Name={user.name}
+                pcs={user.pcs}
+                image={user.img}
+                size={user.size}
+                array={box3}
+              />
             ))}
           {getBox == "box4" &&
             box4.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box4}/>
+              <Cart1
+                Name={user.name}
+                pcs={user.quantity}
+                image={user.img}
+                size={user.size}
+                array={box4}
+              />
             ))}
           {getBox == "box5" &&
             box5.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img}size={user.size}  array={box5}/>
+              <Cart1
+                Name={user.name}
+                pcs={user.quantity}
+                image={user.img}
+                size={user.size}
+                array={box5}
+              />
             ))}
           {getBox == "box6" &&
             box6.map((user) => (
-              <Cart1 Name={user.name} pcs={user.pcs} image={user.img} size={user.size}  array={box6}/>
+              <Cart1
+                Name={user.name}
+                pcs={user.quantity}
+                image={user.img}
+                size={user.size}
+                array={box6}
+              />
             ))}
         </div>
       </div>
-      
+
       <div style={{ textAlign: "right", margin: "30px 0" }}>
         <button
-         
           className="button confirmation-button"
           onClick={() => props.change("info")}
         >
