@@ -31,7 +31,7 @@ function BoxComp(props) {
     await ssetBox1(box);
   };
   useEffect(async () => {
-    getData();
+    await getData();
   }, []);
 
   const box1 = Box1[0].carebox_item;
