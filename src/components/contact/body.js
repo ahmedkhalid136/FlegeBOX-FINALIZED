@@ -66,6 +66,7 @@ export default function Body() {
                 setMessage(e.target.value);
               }}
               value={message}
+              style={{ outline: "none" }}
             />
             <button className="button" onClick={sendData}>
               Submit
