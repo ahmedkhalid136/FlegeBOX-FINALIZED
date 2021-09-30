@@ -13,10 +13,10 @@ function Bloglist() {
 
   const getData = async () => {
     const response = await axios.get(
-      `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
+      `http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
       {
         headers: {
-          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+          Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
           "Content-Type": "application/json",
         },
       }

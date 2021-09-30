@@ -14,9 +14,9 @@ function BoxComp(props) {
   const [getBox4, setBox4] = useState(true);
   const [getBox5, setBox5] = useState(true);
   const [getBox6, setBox6] = useState(true);
-  let box;
-  const getData = async () => {
-    const response = await axios.get(
+  let box = [];
+  const getData = () => {
+    const response = axios.get(
       `http://35.84.238.24/api/method/flegeapp.utils.get_careboxes`,
       {
         headers: {
@@ -25,22 +25,22 @@ function BoxComp(props) {
         },
       }
     );
-    box = await response.data.data;
+    box = response.data.data;
 
     console.log(box, "mydata");
-    await ssetBox1(box);
+    ssetBox1(box);
   };
-  useEffect(async () => {
-    await getData();
+  useEffect(() => {
+    getData();
   }, []);
 
-  const box1 = Box1[0].carebox_item;
+  const box1 = box[0].carebox_item;
 
-  const box2 = Box1[1].carebox_item;
-  const box3 = Box1[2].carebox_item;
-  const box4 = Box1[3].carebox_item;
-  const box5 = Box1[4].carebox_item;
-  const box6 = Box1[5].carebox_item;
+  const box2 = box[1].carebox_item;
+  const box3 = box[2].carebox_item;
+  const box4 = box[3].carebox_item;
+  const box5 = box[4].carebox_item;
+  const box6 = box[5].carebox_item;
 
   function check() {
     if (getBox == "box1") {
