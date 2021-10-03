@@ -24,7 +24,7 @@ function Bloglist() {
     const data = await response.data.data;
     console.log(data, "mydata");
     await setData(data);
-    console.log(Data, "my useState");
+    console.log(response, "my useState");
   };
   useEffect(async () => {
     getData();

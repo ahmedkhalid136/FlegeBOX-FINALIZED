@@ -17,7 +17,7 @@ function BoxComp(props) {
   let box = [];
   const getData = () => {
     const response = axios.get(
-      `http://35.84.238.24/api/method/flegeapp.utils.get_careboxes`,
+      `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
       {
         headers: {
           Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
