@@ -64,7 +64,7 @@ export default function Base() {
               ></hr>
             </p>
             <img
-              src="./images/dhl-logo.png"
+              src="./Images/DHL_logo_rgb.png"
               style={{ width: "120px", height: "40px" }}
             />
             <hr

@@ -14,10 +14,10 @@ function BoxComp(props) {
   const [getBox4, setBox4] = useState(true);
   const [getBox5, setBox5] = useState(true);
   const [getBox6, setBox6] = useState(true);
-  let box;
+  let box = [];
   const getData = async () => {
-    const response = await axios.get(
-      `http://35.84.238.24/api/method/flegeapp.utils.get_careboxes`,
+    const response = axios.get(
+      `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
       {
         headers: {
           Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
@@ -25,24 +25,29 @@ function BoxComp(props) {
         },
       }
     );
-    box = await response.data.data;
+    box = response.data;
 
     console.log(box, "mydata");
-    await ssetBox1(box);
-    console.log(Box1[0].carebox_item[0].name, "pakar");
+
+    ssetBox1(box);
   };
-  useEffect(async () => {
+  useEffect(() => {
     getData();
   }, []);
 
-  const box1 = Box1[0].carebox_item;
+  const box1 = box[0];
 
-  const box2 = Box1[1].carebox_item;
-  const box3 = Box1[2].carebox_item;
-  const box4 = Box1[3].carebox_item;
-  const box5 = Box1[4].carebox_item;
-  const box6 = Box1[5].carebox_item;
-
+  const box2 = box[1];
+  const box3 = box[2];
+  const box4 = box[3];
+  const box5 = box[4];
+  const box6 = box[5];
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
   function check() {
     if (getBox == "box1") {
       props.box(box1);
@@ -258,7 +263,7 @@ function BoxComp(props) {
       <div className="col-lg-6 yourCart">
         <h2 className="cart-h2">Your Cart</h2>
         <div className="col-lg-12">
-          {getBox == "box1" &&
+          {/* {getBox == "box1" &&
             box1.map((user) => (
               <Cart1
                 Name={user.name}
@@ -282,7 +287,7 @@ function BoxComp(props) {
             box3.map((user) => (
               <Cart1
                 Name={user.name}
-                pcs={user.quantity}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box3}
@@ -317,7 +322,7 @@ function BoxComp(props) {
                 size={user.size}
                 array={box6}
               />
-            ))}
+            ))} */}
         </div>
       </div>
 

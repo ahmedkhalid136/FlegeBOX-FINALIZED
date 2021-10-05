@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Box.css";
 import Header from "../Header/Header";
 import ChooseBox from "./chooseBox";
 import FillInfo from "../FillInformation/FillInfo";
 import Confirmation from "../Confirmation/Confirmation";
 import Footer from "../footer/Footer";
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 
 function Box() {
   const [getComp, setComp] = useState("Box");

@@ -77,7 +77,7 @@ function ChooseBox(props) {
             <div className="col-lg-4 RightText">
               <a>
                 {" "}
-                <h2>Boxes</h2>{" "}
+                <h2 style={{ marginRight: "-80px" }}>Boxes</h2>{" "}
               </a>
             </div>
           </div>
@@ -108,7 +108,7 @@ function ChooseBox(props) {
               </div>
             </div>
             <div className="col-lg-5 RightText">
-              <h2>Custom</h2>
+              <h2 style={{ marginRight: "-80px" }}>Custom</h2>
             </div>
           </div>
         </div>
@@ -182,8 +182,6 @@ function ChooseBox(props) {
       ) : (
         <CustomBox change={props.change} box={props.mybox} />
       )}
-
-   
     </div>
   );
 }
