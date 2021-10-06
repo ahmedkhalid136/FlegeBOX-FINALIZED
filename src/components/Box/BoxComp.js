@@ -15,7 +15,7 @@ function BoxComp(props) {
   const [getBox5, setBox5] = useState(true);
   const [getBox6, setBox6] = useState(true);
   let box = [];
-  const getData = () => {
+  const getData = async () => {
     const response = axios.get(
       `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
       {
@@ -25,23 +25,29 @@ function BoxComp(props) {
         },
       }
     );
-    box = response.data.data;
+    box = response.data;
 
     console.log(box, "mydata");
+
     ssetBox1(box);
   };
   useEffect(() => {
     getData();
   }, []);
 
-  const box1 = box[0].carebox_item;
+  const box1 = box[0];
 
-  const box2 = box[1].carebox_item;
-  const box3 = box[2].carebox_item;
-  const box4 = box[3].carebox_item;
-  const box5 = box[4].carebox_item;
-  const box6 = box[5].carebox_item;
-
+  const box2 = box[1];
+  const box3 = box[2];
+  const box4 = box[3];
+  const box5 = box[4];
+  const box6 = box[5];
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
+  // .carebox_item
   function check() {
     if (getBox == "box1") {
       props.box(box1);
@@ -257,7 +263,7 @@ function BoxComp(props) {
       <div className="col-lg-6 yourCart">
         <h2 className="cart-h2">Your Cart</h2>
         <div className="col-lg-12">
-          {getBox == "box1" &&
+          {/* {getBox == "box1" &&
             box1.map((user) => (
               <Cart1
                 Name={user.name}
@@ -316,7 +322,7 @@ function BoxComp(props) {
                 size={user.size}
                 array={box6}
               />
-            ))}
+            ))} */}
         </div>
       </div>
 
