@@ -8,7 +8,7 @@ export default function Relieve() {
   return (
     <div className="container relieve-section">
       <div>
-        <h1>We Are Here To Relieve You</h1>
+        <h1>Wir sind da um Sie zu entlasten </h1>
         <p>
           We are not only concerened with the current situation in nursing, but
           also with the future. Fo us, the focus is on the people in care -
@@ -17,42 +17,28 @@ export default function Relieve() {
       </div>
 
       <div className="row relieve-image-section">
-        <div className="col-lg-3">
+        <div className="col-lg-4">
           <img src={image1} className="relieve-image" />
-          <h4>We want to enlighten</h4>
+          <h4>Es soll Ihnen gut gehen</h4>
           <p>
-            {" "}
-            We want everyone in need of care and their relatives to receive the
-            benefits to which they are legally entitled.{" "}
+            Unsere Produkte und Dienstleistungen sowie unsere Beiträge zu den
+            Themen Gesundheit und Pflege soll eben dieses bei Ihnen erreichen
           </p>
         </div>
-        <div className="col-lg-3">
+        <div className="col-lg-4">
           <img src={image2} className="relieve-image" />
-          <h4>We want to relieve</h4>
+          <h4>Wir wollen informieren</h4>
           <p>
-            We want to relieve the burden on those affected so that they can
-            concentrate on the finer things in life and have more time for
-            togetherness, Forthis reason, we take care of all the formalities
-            associated with the benefits on nursing aids, incontinence products
-            and bed protection inserts
+            Pflegebedürftige uns Ihre Angehörigen sollen jene Leistung erfahren
+            und erwarten dürfen die Ihnen gesetzlich zustehen
           </p>
         </div>
-        <div className="col-lg-3">
+        <div className="col-lg-4">
           <img src={image3} className="relieve-image" />
-          <h4> We want that you are well</h4>
+          <h4>Sie sollen entlastet werden</h4>
           <p>
-            With our products and services, as well as extensive information on
-            the topics of health and care, we want to achieve just that.
-          </p>
-        </div>
-        <div className="col-lg-3">
-          <img src={image4} className="relieve-image" />
-          <h4>We are MyPflegebox</h4>
-          <p>
-            From experts who advise on care aids to the applicants who contact
-            the care insurance companies to the many hands that assemble the
-            care aids in practiced hand movements, pack them and send them to
-            many households in Germany. we are the PflegeBox
+            Damit sie mehr Zeit für das Miteinander haben übernehmen wir alle
+            Formalitäten für Sie die anfallen.
           </p>
         </div>
       </div>
