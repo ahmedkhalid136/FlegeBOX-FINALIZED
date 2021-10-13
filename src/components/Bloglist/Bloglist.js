@@ -12,22 +12,38 @@ function Bloglist() {
   const [Data, setData] = useState([]);
 
   const getData = async () => {
-    const response = await axios.get(
-      `http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
+    // const response = await axios.get(
+    //   `http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
+    //   {
+    //     headers: {
+    //       Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
+    //       "Content-Type": "application/json",
+    //     },
+    //   }
+    // );
+    // const data = await response.data.data;
+    // console.log(data, "mydata");
+    // await setData(data);
+    // console.log(response, "my useState");
+    const response = await fetch(
+      'http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]',
       {
-        headers: {
+        method: "get",
+        headers: new Headers({
           Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
           "Content-Type": "application/json",
-        },
+        }),
       }
-    );
-    const data = await response.data.data;
-    console.log(data, "mydata");
-    await setData(data);
-    console.log(response, "my useState");
+    ).then(async (data) => {
+      setData(data);
+    });
+    console.log(Data);
   };
-  useEffect(async () => {
+
+  useEffect(() => {});
+  useEffect(() => {
     getData();
+    console.log(Data);
   }, []);
 
   // const data = [

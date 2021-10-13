@@ -3,7 +3,11 @@ import React from "react";
 export default function Works() {
   return (
     <div className="container-fluid Works">
-      <h2>How Your MyPflegebox Works</h2>
+      <h2>So einfach funktioniert MyPflegebox</h2>
+      <p style={{ marginTop: "25px" }}>
+        Unkompliziert und ohne versteckte Kosten - In 5 Minuten zu Ihrer
+        individuellen Pflegebox
+      </p>
       <div className="row icons-container">
         <div className="col-lg-3 row">
           <div
@@ -15,7 +19,7 @@ export default function Works() {
             </div>
 
             <h4 className="iconsHeading">
-              1. Wish core box <br /> select
+              1. Wunschbox wählen oder selbst individualisieren
             </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
@@ -28,7 +32,7 @@ export default function Works() {
               <i class="far fa-address-card icons"></i>
             </div>
             <h4 className="iconsHeading">
-              2. Request online fill out <br /> and send{" "}
+              2. Antrag online ausfüllen und absende
             </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
@@ -40,8 +44,8 @@ export default function Works() {
               <i class="fas fa-paperclip icons"></i>
             </div>
             <h4 className="iconsHeading">
-              3. We take over Application & billing with the nursing care
-              insurance
+              3. Wir entlasten Sie und übernehmen die Antragstellung &
+              Abrechnung mit der Pflegekasse
             </h4>
           </div>
           <i class="fas fa-arrow-right arrow col-lg-2 right-arrow"></i>
@@ -53,8 +57,7 @@ export default function Works() {
               <i class="fas fa-truck icons"></i>
             </div>
             <h4 className="iconsHeading">
-              4. Receive monthly your <br />
-              free care box
+              4. Pünktlich und monatlich erhalten Sie ihre kostenfreie Pflegebox
             </h4>
           </div>
         </div>
