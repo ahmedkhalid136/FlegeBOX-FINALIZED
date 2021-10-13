@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Blogdetails.css";
 import mainImage from "../../Pictures/hunter-newton--xNgyZfX1gs-unsplash.jpg";
 import BannerImage from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
@@ -10,29 +10,32 @@ import Popular from "../Bloglist/Popular";
 
 import axios from "axios";
 function Blogdetails(props) {
-  
-const [Data, setData] = useState([]);
-  
-const getData = async () => {
-  const response = await fetch( `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,{
-    method:"GET",
-    headers:{
-      Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
-      "Content-Type": "application/json",
+  const [Data, setData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await fetch(
+        `http://35.84.238.24/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.data.data;
+      console.log(data, "mydata");
+      await setData(data);
+      console.log(Data, "my useState");
+    } catch (e) {
+      console.log(e);
     }
-  });
-  const data = await response.data.data;
-  console.log(data,"mydata")
-  await setData(data)
-  console.log(Data,"my useState")
-  
- 
-};
-useEffect(async () => {
-  getData();
- 
-}, []);
-  
+  };
+  useEffect(async () => {
+    getData();
+  }, []);
+
   return (
     <div>
       <Header title="BLOG" />

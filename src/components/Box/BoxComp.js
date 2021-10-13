@@ -16,20 +16,25 @@ function BoxComp(props) {
   const [getBox6, setBox6] = useState(true);
   let box = [];
   const getData = async () => {
-    const response = axios.get(
-      `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
-      {
-        headers: {
-          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    box = response.data;
-
-    console.log(box, "mydata");
-
-    ssetBox1(box);
+    try{
+      const response = axios.get(
+        `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
+        {
+          headers: {
+            Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      box = response.data;
+  
+      console.log(box, "mydata");
+  
+      ssetBox1(box);
+    }catch(e){
+     console.log(e)
+    }
+   
   };
   useEffect(() => {
     getData();
