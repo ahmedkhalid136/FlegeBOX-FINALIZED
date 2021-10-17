@@ -59,16 +59,14 @@ function CustomBox(props) {
     getData();
   }, []);
 
-
   props.box(myArr);
 
   useEffect(() => {
-    
     //adding product to redux if there not products
     if (props.product && props.product.length == 0) {
       props.setItem(box);
     }
-    console.log(myArr,"array jo backend pa ha");
+    console.log(myArr, "array jo backend pa ha");
   });
 
   // const box1 = [
@@ -141,7 +139,7 @@ function CustomBox(props) {
                           // getter={myArr}
                           // setvalue={setvalue}
                           // myvalue={myvalue}
-                          sets={item.sets}
+                          sets={item.stock}
                         />
                       </div>
                     </CreateContext.Provider>
@@ -159,17 +157,17 @@ function CustomBox(props) {
                       value={{ myvalue, setvalue, myArr, setMyArr }}
                     >
                       <Product
-                      key={ind}
-                      Name={item.item_name}
-                      pcs={item.pcs}
-                      image={item.image}
-                      index={ind}
-                      price={item.price}
-                      // setter={setMyArr}
-                      // getter={myArr}
-                      // setvalue={setvalue}
-                      // myvalue={myvalue}
-                      sets={item.sets}
+                        key={ind}
+                        Name={item.item_name}
+                        pcs={item.pcs}
+                        image={item.image}
+                        index={ind}
+                        price={item.price}
+                        // setter={setMyArr}
+                        // getter={myArr}
+                        // setvalue={setvalue}
+                        // myvalue={myvalue}
+                        sets={item.stock}
                       />
                     </CreateContext.Provider>
                   );
@@ -214,7 +212,7 @@ function CustomBox(props) {
                     price={item.price}
                     // getter={myArr}
                     // setter={setMyArr}
-                    sets={item.sets}
+                    sets={item.stock}
                     index={item.index}
                     size={item.size}
                     // myvalue={myvalue}
@@ -224,17 +222,17 @@ function CustomBox(props) {
               );
             })}
           </div>
-          
-      <div style={{ textAlign: "right", margin: "30px 0" }}>
-        <button
-          disabled={props.cart == 0 ? true : false}
-          style={{ opacity: props.cart == 0 ? 0.7 : 1 }}
-          className="button confirmation-button"
-          onClick={() => props.change("info")}
-        >
-          continue
-        </button>
-      </div>
+
+          <div style={{ textAlign: "right", margin: "30px 0" }}>
+            <button
+              disabled={props.cart == 0 ? true : false}
+              style={{ opacity: props.cart == 0 ? 0.7 : 1 }}
+              className="button confirmation-button"
+              onClick={() => props.change("info")}
+            >
+              continue
+            </button>
+          </div>
         </div>
       </div>
     </div>

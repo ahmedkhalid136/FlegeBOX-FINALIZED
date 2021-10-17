@@ -15,38 +15,143 @@ function BoxComp(props) {
   const [getBox5, setBox5] = useState(true);
   const [getBox6, setBox6] = useState(true);
   let box = [];
-  const getData = async () => {
-    try{
-      const response = axios.get(
-        `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
-        {
-          headers: {
-            Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      box = response.data;
-  
-      console.log(box, "mydata");
-  
-      ssetBox1(box);
-    }catch(e){
-     console.log(e)
-    }
-   
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+  const box1 = [
+    {
+      name: "K94 MASK",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
 
-  const box1 = box[0];
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+  ];
+  const box2 = [
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    {
+      name: "Box2",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
 
-  const box2 = box[1];
-  const box3 = box[2];
-  const box4 = box[3];
-  const box5 = box[4];
-  const box6 = box[5];
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+  ];
+  const box3 = [
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+    {
+      name: "Box3",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
+  ];
+  const box4 = [
+    {
+      name: "Box4",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
+
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+  ];
+  const box5 = [
+    {
+      name: "Box5",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
+
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+  ];
+  const box6 = [
+    {
+      name: "Box6",
+      pcs: 20,
+      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
+    },
+    {
+      name: "hand sanitizer",
+      pcs: 20,
+      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
+    },
+    {
+      name: "Gloves ",
+      pcs: 20,
+      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
+    },
+
+    {
+      name: "Oxygen tube",
+      pcs: 20,
+      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
+    },
+  ];
   // .carebox_item
   // .carebox_item
   // .carebox_item
@@ -268,7 +373,7 @@ function BoxComp(props) {
       <div className="col-lg-6 yourCart">
         <h2 className="cart-h2">Your Cart</h2>
         <div className="col-lg-12">
-          {/* {getBox == "box1" &&
+          {getBox == "box1" &&
             box1.map((user) => (
               <Cart1
                 Name={user.name}
@@ -327,7 +432,7 @@ function BoxComp(props) {
                 size={user.size}
                 array={box6}
               />
-            ))} */}
+            ))}
         </div>
       </div>
 

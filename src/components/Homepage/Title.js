@@ -92,7 +92,7 @@ export default function Title() {
                 </svg>
                 <img
                   className="hero-girl"
-                  src="./Images/girl.svg"
+                  src="./Images/girl.png"
                   style={{
                     width: "500px",
                     height: "500px",

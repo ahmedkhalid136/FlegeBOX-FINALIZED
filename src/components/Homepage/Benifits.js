@@ -83,18 +83,20 @@ export default function Benifits() {
       <br />
       <br />
       <br />
-      <button
-        style={{
-          textTransform: "uppercase",
-          backgroundColor: "#f87433",
-          color: "white",
-          border: "none",
-          padding: "12px 30px",
-          borderRadius: "10px",
-        }}
-      >
-        Pflegebox sichern
-      </button>
+      <a href="/box">
+        <button
+          style={{
+            textTransform: "uppercase",
+            backgroundColor: "#f87433",
+            color: "white",
+            border: "none",
+            padding: "12px 30px",
+            borderRadius: "10px",
+          }}
+        >
+          Pflegebox sichern
+        </button>
+      </a>
     </div>
   );
 }
