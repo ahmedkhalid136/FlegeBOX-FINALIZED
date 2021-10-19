@@ -130,16 +130,16 @@ function CustomBox(props) {
                       <div>
                         <MobileAddToCart
                           key={ind}
-                          Name={item.name}
-                          pcs={item.pcs}
-                          image={item.img}
+                          Name={item.item_name}
+                          pcs={5}
+                          image={item.website_image}
                           index={ind}
-                          price={item.price}
+                          price={item.standard_rate}
                           // setter={setMyArr}
                           // getter={myArr}
                           // setvalue={setvalue}
                           // myvalue={myvalue}
-                          sets={item.stock}
+                          sets={0}
                         />
                       </div>
                     </CreateContext.Provider>
@@ -159,15 +159,15 @@ function CustomBox(props) {
                       <Product
                         key={ind}
                         Name={item.item_name}
-                        pcs={item.pcs}
-                        image={item.image}
+                        pcs={5}
+                        image={item.website_image}
                         index={ind}
-                        price={item.price}
+                        price={item.standard_rate}
                         // setter={setMyArr}
                         // getter={myArr}
                         // setvalue={setvalue}
                         // myvalue={myvalue}
-                        sets={item.stock}
+                        sets={0}
                       />
                     </CreateContext.Provider>
                   );
@@ -192,7 +192,7 @@ function CustomBox(props) {
             </div>
             <div style={{ padding: "10px 0" }}>
               <ProgressBar
-                completed={Math.round((props.total / 60) * 100)}
+                completed={Math.round((props.total / 600) * 100)}
                 bgColor={"#F87433"}
               />
             </div>
@@ -209,10 +209,10 @@ function CustomBox(props) {
                     Name={item.Name}
                     pcs={item.pcs}
                     image={item.image}
-                    price={item.price}
+                    price={item.standard_rate}
                     // getter={myArr}
                     // setter={setMyArr}
-                    sets={item.stock}
+                    sets={item.sets}
                     index={item.index}
                     size={item.size}
                     // myvalue={myvalue}

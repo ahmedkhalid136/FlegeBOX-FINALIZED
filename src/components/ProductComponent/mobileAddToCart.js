@@ -21,33 +21,33 @@ function MobileAddToCart(props) {
   const [size, setSize] = useState("M");
 
   useEffect(() => {
-    if (props.product[index].sets == 0) {
+    if (actual == 0) {
       mycount(0);
       setSize("M");
     }
-  }, [props.product[index].sets]);
+  }, [actual]);
 
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
 
   const increment = async () => {
-    if (props.total + props.price > 60) {
+    if (props.total + props.price > 600) {
       return;
     }
 
     props.increase_total(props.price);
-    props.ChangeQuantity(index, props.product[index].sets + 1);
-    if (actual >= 1) {
+    props.ChangeQuantity(index, actual + 1);
+    if (actual > 1) {
       setvalue(actual);
-      mycount(sets + 1);
-      myArr[theObj].pcs = myArr[theObj].pcs + 20;
+      mycount(actual + 1);
+      myArr[theObj].pcs = myArr[theObj].pcs * actual;
       myArr[theObj].sets = myArr[theObj].sets + 1;
     } else {
-      mycount(sets + 1);
+      mycount(actual + 1);
       props.increment_cart();
       setvalue(actual);
       setMyArr((myArr) => [
         ...myArr,
-        { Name, image, pcs, sets: 1, index, size, price },
+        { Name, image, pcs:pcs+actual, index, size, price },
       ]);
     }
   };
@@ -58,13 +58,13 @@ function MobileAddToCart(props) {
     actual <= 1 ? finish() : minus();
 
     function minus() {
-      props.ChangeQuantity(index, props.product[index].sets - 1);
+      props.ChangeQuantity(index, actual - 1);
       mycount(actual - 1);
       setvalue(actual);
       props.decrease_total(props.price);
 
-      myArr[theObj].pcs = myArr[theObj].pcs - 20;
-      myArr[theObj].sets = myArr[theObj].sets - 1;
+      myArr[theObj].pcs = myArr[theObj].pcs - actual;
+      // myArr[theObj].sets = myArr[theObj].sets - 1;
       //  console.log(myArr, "my array after decrementing");
     }
     function finish() {
@@ -134,11 +134,11 @@ function MobileAddToCart(props) {
           -
         </button>
         <span className="increment-buttons counter">
-          {props.product ? props.product[index].sets : null}
+          {actual}
         </span>
         <button
-          disabled={props.total + props.price > 60 ? true : false}
-          style={{ opacity: props.total + props.price > 60 ? 0.7 : 1 }}
+          disabled={props.total + props.price > 600 ? true : false}
+          style={{ opacity: props.total + props.price > 600 ? 0.7 : 1 }}
           className="increment-buttons"
           onClick={() => {
             increment();

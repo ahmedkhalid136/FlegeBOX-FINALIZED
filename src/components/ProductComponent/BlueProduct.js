@@ -13,7 +13,7 @@ import {ChangeQuantity,increment_cart,decrement_cart,increase_total,decrease_tot
 import {connect} from 'react-redux';
 
  function BlueProduct(props) {
-  const { Name, image, pcs, sets,index ,price} = props;
+  const { Name, image, pcs,index ,price} = props;
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
 
   const [actual, mycount] = useState(0);
@@ -22,33 +22,35 @@ import {connect} from 'react-redux';
 
 
   useEffect(()=>{
-     if(props.product[index].sets==0){
+     if(actual==0){
        mycount(0);
        setSize("");
+       
      }
     
-  },[props.product[index].sets]);
+  },[actual.sets]);
 
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
   
   const increment = async () => {
       
-    if(props.total+props.price>60){
+    if(props.total+props.price>600||props.pcs==0){
       return;
     }
 
     props.increase_total(props.price)
-    props.ChangeQuantity(index,props.product[index].sets+1)
+    props.ChangeQuantity(index,actual+1)
     if (actual >= 1) {
       setvalue(actual);
-      mycount(sets+1)
-      myArr[theObj].pcs = myArr[theObj].pcs + 20;
+      mycount(actual+1)
+      myArr[theObj].pcs = myArr[theObj].pcs + actual;
       myArr[theObj].sets = myArr[theObj].sets + 1;
     } else {
-      mycount(sets + 1);
+     
+      mycount(actual + 1);
       props.increment_cart();
       setvalue(actual);
-      setMyArr((myArr) => [...myArr, { Name, image, pcs, sets:1,index,size,price }]);
+      setMyArr((myArr) => [...myArr, { Name, image, pcs:pcs+actual,index,size,price }]);
     }
   };
 
@@ -58,12 +60,12 @@ import {connect} from 'react-redux';
     actual <= 1 ? finish() : minus();
 
     function minus() {
-      props.ChangeQuantity(index,props.product[index].sets-1)
+      props.ChangeQuantity(index,actual-1)
       mycount(actual - 1);
       setvalue(actual); 
       props.decrease_total(props.price);
 
-      myArr[theObj].pcs = myArr[theObj].pcs - 20;
+      myArr[theObj].pcs = myArr[theObj].pcs - actual;
       myArr[theObj].sets = myArr[theObj].sets - 1;
     //  console.log(myArr, "my array after decrementing");
     }
@@ -122,6 +124,7 @@ import {connect} from 'react-redux';
       >
         <h6>{props.Name}</h6>
         <p>{props.pcs}</p>
+        <p>{props.price}</p>
         
       </div>
       <div className="col-lg-6 col-6" style={{ paddingTop: "20px" }}>
@@ -157,11 +160,11 @@ import {connect} from 'react-redux';
             >
               -
             </button>
-            <span className="increment-buttons counter">{props.product?props.product[index].sets:null}</span>
+            <span className="increment-buttons counter">{actual}</span>
             <button
               className="increment-buttons"
-              disabled={props.total+props.price>60?true:false}
-              style={{opacity:props.total+props.price>60?0.7:1}}
+              disabled={props.total+props.price>600?true:false}
+              style={{opacity:props.total+props.price>600?0.7:1}}
               onClick={() => {
                 increment();
               }}

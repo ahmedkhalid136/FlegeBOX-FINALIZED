@@ -152,12 +152,7 @@ function BoxComp(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
     },
   ];
-  // .carebox_item
-  // .carebox_item
-  // .carebox_item
-  // .carebox_item
-  // .carebox_item
-  // .carebox_item
+  
   function check() {
     if (getBox == "box1") {
       props.box(box1);

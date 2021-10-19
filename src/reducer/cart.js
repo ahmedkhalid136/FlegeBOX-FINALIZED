@@ -45,7 +45,7 @@ export default function(state=initialState,action){
            }
 
         case INC_TOTAL:
-            if(state.total+payload<=60){
+            if(state.total+payload<=600){
                 return{
                     ...state,
                     total:state.total+payload,
