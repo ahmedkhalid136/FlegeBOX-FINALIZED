@@ -152,26 +152,26 @@ function CustomBox(props) {
             {console.log(props.product)}
             {props.product
               ? props.product.map((item, ind) => {
-                  return (
-                    <CreateContext.Provider
-                      value={{ myvalue, setvalue, myArr, setMyArr }}
-                    >
-                      <Product
-                        key={ind}
-                        Name={item.item_name}
-                        pcs={5}
-                        image={item.website_image}
-                        index={ind}
-                        price={item.standard_rate}
-                        // setter={setMyArr}
-                        // getter={myArr}
-                        // setvalue={setvalue}
-                        // myvalue={myvalue}
-                        sets={0}
-                      />
-                    </CreateContext.Provider>
-                  );
-                })
+                return (
+                  <CreateContext.Provider
+                    value={{ myvalue, setvalue, myArr, setMyArr }}
+                  >
+                    <Product
+                      key={ind}
+                      Name={item.item_name}
+                      pcs={5}
+                      image={item.website_image}
+                      index={ind}
+                      price={item.standard_rate}
+                      // setter={setMyArr}
+                      // getter={myArr}
+                      // setvalue={setvalue}
+                      // myvalue={myvalue}
+                      sets={item.sets ? item.sets : 0}
+                    />
+                  </CreateContext.Provider>
+                );
+              })
               : null}
           </div>
         </div>
@@ -209,14 +209,14 @@ function CustomBox(props) {
                     Name={item.Name}
                     pcs={item.pcs}
                     image={item.image}
-                    price={item.standard_rate}
+                    price={item.price}
                     // getter={myArr}
                     // setter={setMyArr}
                     sets={item.sets}
                     index={item.index}
                     size={item.size}
-                    // myvalue={myvalue}
-                    // setvalue={setvalue}
+                  // myvalue={myvalue}
+                  // setvalue={setvalue}
                   />
                 </CreateContext.Provider>
               );

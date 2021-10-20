@@ -40,7 +40,7 @@ export default function Title() {
               >
                 <div
                   className="hero-left-side"
-                  style={{ textAlign: "left", padding: "95px" }}
+                  style={{ textAlign: "left", padding: "95px 95px 95px 80px" }}
                 >
                   <h1 className="title-text">
                     Kostenlose <br />
@@ -73,7 +73,7 @@ export default function Title() {
               </div>
               <div
                 className="col-lg-3 col-md-3"
-                style={{ backgroundColor: "#2FAAE5" }}
+                style={{ backgroundColor: "#2FAAE5", position: "relative" }}
               >
                 {" "}
                 <svg
@@ -94,11 +94,11 @@ export default function Title() {
                   className="hero-girl"
                   src="./Images/girl.png"
                   style={{
-                    width: "500px",
+                    width: "120%",
                     height: "500px",
                     position: "absolute",
-                    right: "230px",
-                    bottom: "0",
+                    bottom: "0px",
+                    left: "-300px",
                   }}
                 />
               </div>

@@ -17,6 +17,9 @@ function Cart(props) {
   const [actual, mycount] = useState(0);
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
 
+  console.log('price', price);
+  console.log('sets', sets);
+
   console.log("cart props", props);
 
   const decrement = async () => {
