@@ -105,7 +105,7 @@ function Bloglist() {
                 <Popular
                   title={item.title}
                   content={item.content}
-                  image={item.picture}
+                  image={"http://23.88.103.58" + item.picture}
                 />
               );
             })}
