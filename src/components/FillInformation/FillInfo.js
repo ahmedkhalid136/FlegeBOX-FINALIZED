@@ -11,6 +11,7 @@ function FillInfo(props) {
   const [title, setTitle] = useState(Boolean);
   const [checkMr, setCheckMr] = useState("");
   const [checkMrs, setCheckMrs] = useState("");
+  const [Daddress, setDaddress] = useState(false);
   title == true ? props.title("Ms") : props.title("Mr");
   useEffect(() => {
     console.log(props.valFname);
@@ -40,8 +41,8 @@ function FillInfo(props) {
               <button className="chooseButton">2. FILL INFORMATION FORM</button>
             </div>
             <div className="col-lg-2">...........................</div>
-          <div className="col-lg-2">3. CONFIRMATION</div>
-          <div className="col-lg-1"></div>
+            <div className="col-lg-2">3. CONFIRMATION</div>
+            <div className="col-lg-1"></div>
           </div>
           <div className="mobile-head">
             <div className="row">
@@ -87,7 +88,7 @@ function FillInfo(props) {
             }}
           /> */}
               <div style={{ textAlign: "left", marginLeft: "-20px" }}>
-              <input
+                <input
                   style={{
                     display: "inline",
                     width: "50px",
@@ -187,11 +188,21 @@ function FillInfo(props) {
               <br />
               <div className="checkboxes">
                 <FormControlLabel
-                  value="Ms"
                   control={<Checkbox color="primary" />}
                   label="Different address"
                   labelPlacement="End"
+                  onClick={() => {
+                    setDaddress(!Daddress);
+                  }}
                 />
+                {Daddress ? (
+                  <input
+                    className="input1"
+                    placeholder="Different address"
+                    onChange={(e) => props.sname(e.target.value)}
+                    value={props.valSname}
+                  />
+                ) : null}
               </div>
             </div>
           </div>

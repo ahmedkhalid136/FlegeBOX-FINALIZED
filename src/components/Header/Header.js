@@ -14,7 +14,10 @@ export default function Header(props) {
 
   return (
     <div style={{ backgroundColor: "#ffffff" }}>
-      <div className="container-fluid" style={{ paddingLeft: "85px" }}>
+      <div
+        className="container-fluid"
+        style={{ paddingLeft: "85px", paddingRight: "30px" }}
+      >
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="/home">
             <img src="./Images/LOGO.svg"></img>

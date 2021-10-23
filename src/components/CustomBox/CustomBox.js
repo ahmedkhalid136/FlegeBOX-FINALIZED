@@ -43,10 +43,10 @@ function CustomBox(props) {
 
   const getData = async () => {
     const response = await axios.get(
-      `http://35.84.238.24/api/method/flegeapp.utils.get_items`,
+      `http://23.88.103.58/api/method/flegeapp.utils.get_items`,
       {
         headers: {
-          Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+          Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
           "Content-Type": "application/json",
         },
       }
@@ -132,7 +132,7 @@ function CustomBox(props) {
                           key={ind}
                           Name={item.item_name}
                           pcs={5}
-                          image={item.website_image}
+                          image={item.image}
                           index={ind}
                           price={item.standard_rate}
                           // setter={setMyArr}
@@ -152,26 +152,26 @@ function CustomBox(props) {
             {console.log(props.product)}
             {props.product
               ? props.product.map((item, ind) => {
-                return (
-                  <CreateContext.Provider
-                    value={{ myvalue, setvalue, myArr, setMyArr }}
-                  >
-                    <Product
-                      key={ind}
-                      Name={item.item_name}
-                      pcs={5}
-                      image={item.website_image}
-                      index={ind}
-                      price={item.standard_rate}
-                      // setter={setMyArr}
-                      // getter={myArr}
-                      // setvalue={setvalue}
-                      // myvalue={myvalue}
-                      sets={item.sets ? item.sets : 0}
-                    />
-                  </CreateContext.Provider>
-                );
-              })
+                  return (
+                    <CreateContext.Provider
+                      value={{ myvalue, setvalue, myArr, setMyArr }}
+                    >
+                      <Product
+                        key={ind}
+                        Name={item.item_name}
+                        pcs={5}
+                        image={item.image}
+                        index={ind}
+                        price={item.standard_rate}
+                        // setter={setMyArr}
+                        // getter={myArr}
+                        // setvalue={setvalue}
+                        // myvalue={myvalue}
+                        sets={item.sets ? item.sets : 0}
+                      />
+                    </CreateContext.Provider>
+                  );
+                })
               : null}
           </div>
         </div>
@@ -197,7 +197,7 @@ function CustomBox(props) {
               />
             </div>
 
-            {/*console.log("BEFORE RENDERING CART" + myArr + "HELL"*/}
+            {/* {/console.log("BEFORE RENDERING CART" + myArr + "HELL"/} */}
             {myArr.map((item, ind) => {
               console.log("item card", item);
               return (
@@ -215,8 +215,8 @@ function CustomBox(props) {
                     sets={item.sets}
                     index={item.index}
                     size={item.size}
-                  // myvalue={myvalue}
-                  // setvalue={setvalue}
+                    // myvalue={myvalue}
+                    // setvalue={setvalue}
                   />
                 </CreateContext.Provider>
               );

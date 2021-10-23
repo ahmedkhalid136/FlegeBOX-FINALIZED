@@ -6,14 +6,13 @@ export default function Body(props) {
   const [date, setDate] = useState("");
   const [order, setorder] = useState("");
   const [year, setYear] = useState("");
-  const [insurance,setInsurance]=useState("")
+  const [insurance, setInsurance] = useState("");
 
   let sigpad = useRef({});
 
   function clear() {
     sigpad.current.clear();
   }
-  
 
   function sendData(event) {
     event.preventDefault();
@@ -49,7 +48,6 @@ export default function Body(props) {
     <div className="container" style={{ textAlign: "left" }}>
       <h2>{order}</h2>
 
-
       <br />
 
       <p className="confirmation-text" style={{ color: "black" }}>
@@ -60,8 +58,12 @@ export default function Body(props) {
         <p className="confirmation-text" style={{ color: "black" }}>
           Insurance Company for the careperson
         </p>
-        <select value="Insurance" className="option-box" onChange={(e) => setInsurance(e.target.value)}>
-        <option>Insurance</option>
+        <select
+          value="Insurance"
+          className="option-box"
+          onChange={(e) => setInsurance(e.target.value)}
+        >
+          <option>Insurance</option>
           <option value="first-Insurance"> first-Insurance</option>
           <option value="second insurance ">second-insurance</option>
         </select>
@@ -224,13 +226,13 @@ export default function Body(props) {
             back
           </button>
           <button
-            disabled={!insuranceNumber || !date ||!year ||!insurance}
+            disabled={!insuranceNumber || !date || !year || !insurance}
             style={{ cursor: "pointer" }}
             className="button confirmation-button"
             onClick={(e) => {
               sendData(e);
               setorder("Thankyou for your order");
-              setTimeout( window.location.reload(), 10000)       
+              // setTimeout( window.location.reload(), 10000)
             }}
           >
             Order

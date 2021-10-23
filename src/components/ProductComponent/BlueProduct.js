@@ -5,12 +5,17 @@ import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
 import "./BlueProduct.css";
 import { CreateContext } from "../../contexts/Customcontext";
 
-
 //action
-import { ChangeQuantity, increment_cart, decrement_cart, increase_total, decrease_total } from '../../action/cart';
+import {
+  ChangeQuantity,
+  increment_cart,
+  decrement_cart,
+  increase_total,
+  decrease_total,
+} from "../../action/cart";
 
 //redux
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 function BlueProduct(props) {
   const { Name, image, pcs, index, price, sets } = props;
@@ -25,32 +30,31 @@ function BlueProduct(props) {
     if (sets == 0) {
       mycount(0);
       setSize("M");
-
     }
-
   }, [sets]);
 
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
 
   const increment = async () => {
-
     if (props.total + props.price > 600 || props.pcs == 0) {
       return;
     }
 
-    props.increase_total(props.price)
-    props.ChangeQuantity(index, actual + 1)
+    props.increase_total(props.price);
+    props.ChangeQuantity(index, actual + 1);
     if (actual >= 1) {
       setvalue(actual);
-      mycount(actual + 1)
+      mycount(actual + 1);
       myArr[theObj].pcs = myArr[theObj].pcs + pcs;
       myArr[theObj].sets = myArr[theObj].sets + 1;
     } else {
-
       mycount(actual + 1);
       props.increment_cart();
       setvalue(actual);
-      setMyArr((myArr) => [...myArr, { Name, image, pcs: pcs, index, size, price, sets: 1 }]);
+      setMyArr((myArr) => [
+        ...myArr,
+        { Name, image, pcs: pcs, index, size, price, sets: 1 },
+      ]);
     }
   };
 
@@ -60,7 +64,7 @@ function BlueProduct(props) {
     actual <= 1 ? finish() : minus();
 
     function minus() {
-      props.ChangeQuantity(index, actual - 1)
+      props.ChangeQuantity(index, actual - 1);
       mycount(actual - 1);
       setvalue(actual);
       props.decrease_total(props.price);
@@ -70,7 +74,7 @@ function BlueProduct(props) {
       //  console.log(myArr, "my array after decrementing");
     }
     function finish() {
-      props.ChangeQuantity(index, 0)
+      props.ChangeQuantity(index, 0);
       mycount(0);
       setvalue(actual);
       props.decrement_cart();
@@ -86,23 +90,16 @@ function BlueProduct(props) {
     }
   }
 
-
-
   function changeSize(x) {
-
     const theObj = myArr.findIndex((obj) => obj.Name == Name);
 
     //update size only if item exits in the cart
     if (theObj !== -1) {
       myArr[theObj].size = x;
-      setMyArr([...myArr])
+      setMyArr([...myArr]);
     }
     setSize(x);
-
   }
-
-
-
 
   return (
     <div
@@ -116,36 +113,43 @@ function BlueProduct(props) {
       }}
     >
       <div className="col-lg-2 col-3">
-        <img className="product-image" src={props.image} />
+        <img
+          className="product-image"
+          src={"http://23.88.103.58" + props.image}
+        />
       </div>
       <div
         className="col-lg-4 col-3 product-name"
         style={{ textAlign: "left" }}
       >
         <h6>{props.Name}</h6>
-        <p>{props.pcs}</p>
-        <p>{props.price}</p>
-
+        <p>{props.pcs} pcs</p>
       </div>
       <div className="col-lg-6 col-6" style={{ paddingTop: "20px" }}>
         <div className="row">
           <div className="col-lg-5 col-12">
             <button
-              className={size == 'S' ? "increment-buttons1" : "sizes1"}
+              className={size == "S" ? "increment-buttons1" : "sizes1"}
               onClick={() => changeSize("S")}
             >
               S
             </button>
             <button
-              style={{ backgroundColor: size == 'M' ? '#2faae5 !important' : '#fff !important' }}
-              className={size == 'M' ? "increment-buttons1" : "sizes1"}
+              style={{
+                backgroundColor:
+                  size == "M" ? "#2faae5 !important" : "#fff !important",
+              }}
+              className={size == "M" ? "increment-buttons1" : "sizes1"}
               onClick={() => changeSize("M")}
             >
               M
             </button>
             <button
-              style={{ background: size == 'L' ? '#2faae5 !important' : '#fff !important' }}
-              className={size == 'L' ? "increment-buttons1" : "sizes1"}
+              style={{
+                background:
+                  size == "L" ? "#2faae5 !important" : "#fff !important",
+              }}
+              className={size == "L" ? "increment-buttons1" : "sizes1"}
               onClick={() => changeSize("L")}
             >
               L
@@ -178,12 +182,16 @@ function BlueProduct(props) {
   );
 }
 
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   product: state.cart.products,
   cart: state.cart.cart,
-  total: state.cart.total
+  total: state.cart.total,
 });
 
-
-export default connect(mapStateToProps, { ChangeQuantity, increment_cart, decrement_cart, increase_total, decrease_total })(BlueProduct);
+export default connect(mapStateToProps, {
+  ChangeQuantity,
+  increment_cart,
+  decrement_cart,
+  increase_total,
+  decrease_total,
+})(BlueProduct);

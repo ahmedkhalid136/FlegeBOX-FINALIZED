@@ -17,8 +17,8 @@ function Cart(props) {
   const [actual, mycount] = useState(0);
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
 
-  console.log('price', price);
-  console.log('sets', sets);
+  console.log("price", price);
+  console.log("sets", sets);
 
   console.log("cart props", props);
 
@@ -55,7 +55,7 @@ function Cart(props) {
       }}
     >
       <div className="col-lg-2 col-3">
-        <img className="product-image" src={image} />
+        <img className="product-image" src={"http://23.88.103.58" + image} />
       </div>
       <div
         className="col-lg-4 col-2 product-name"
