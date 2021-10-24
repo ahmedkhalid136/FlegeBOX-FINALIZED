@@ -233,9 +233,7 @@ export default function Body(props) {
             className="button confirmation-button"
             onClick={(e) => {
               sendData(e);
-              setorder(
-                "Thankyou for your order Your Order will be received within 7 days"
-              );
+              setorder("Thankyou for your order");
               setOrder1("Your order will be receive within 7days");
               // setTimeout( window.location.reload(), 10000)
             }}
