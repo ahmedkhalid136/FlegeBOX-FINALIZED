@@ -5,6 +5,10 @@
   color: #2faae5 !important;
   border-bottom: 2px solid #2faae5;
 }
+.headerDIV {
+  padding-left: 85px;
+  padding-right: 30px;
+}
 
 .navbarLinks {
   margin-top: 10px;
@@ -37,6 +41,9 @@
 }
 
 @media (max-width: 900px) {
+  .headerDIV {
+    padding: 0 20px;
+  }
   .navbar-nav {
     padding: 10px 0;
     margin-left: -20px !important;

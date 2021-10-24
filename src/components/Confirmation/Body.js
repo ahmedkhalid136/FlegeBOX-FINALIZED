@@ -5,6 +5,7 @@ export default function Body(props) {
   const [insuranceNumber, setinsurance] = useState("");
   const [date, setDate] = useState("");
   const [order, setorder] = useState("");
+  const [order1, setOrder1] = useState("");
   const [year, setYear] = useState("");
   const [insurance, setInsurance] = useState("");
 
@@ -47,6 +48,7 @@ export default function Body(props) {
   return (
     <div className="container" style={{ textAlign: "left" }}>
       <h2>{order}</h2>
+      <h2>{order1}</h2>
 
       <br />
 
@@ -231,7 +233,10 @@ export default function Body(props) {
             className="button confirmation-button"
             onClick={(e) => {
               sendData(e);
-              setorder("Thankyou for your order");
+              setorder(
+                "Thankyou for your order Your Order will be received within 7 days"
+              );
+              setOrder1("Your order will be receive within 7days");
               // setTimeout( window.location.reload(), 10000)
             }}
           >
