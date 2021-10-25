@@ -1,4 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
+
+import { act } from "react-dom/cjs/react-dom-test-utils.production.min";
+import Image1 from "../../Pictures/clay-banks-e6pK_snssSY-unsplash.jpg";
+import "./BlueProduct.css";
+import { CreateContext } from "../../contexts/Customcontext";
+
 //action
 import {
   ChangeQuantity,
@@ -8,38 +14,38 @@ import {
   decrease_total,
 } from "../../action/cart";
 
-import { CreateContext } from "../../contexts/Customcontext";
 //redux
 import { connect } from "react-redux";
 
-function MobileAddToCart(props) {
-  const { Name, image, pcs, getter, index, price, sets } = props;
+function BlueProduct(props) {
+  const { Name, image, pcs, index, price, sets } = props;
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
 
   const [actual, mycount] = useState(0);
 
   const [size, setSize] = useState("M");
 
+  console.log(sets);
   useEffect(() => {
-    if (actual == 0) {
+    if (sets == 0) {
       mycount(0);
       setSize("M");
     }
-  }, [actual]);
+  }, [sets]);
 
   const theObj = myArr.findIndex((obj) => obj.Name == Name);
 
   const increment = async () => {
-    if (props.total + props.price > 600) {
+    if (props.total + props.price > 600 || props.pcs == 0) {
       return;
     }
 
     props.increase_total(props.price);
     props.ChangeQuantity(index, actual + 1);
-    if (actual > 1) {
+    if (actual >= 1) {
       setvalue(actual);
       mycount(actual + 1);
-      myArr[theObj].pcs = myArr[theObj].pcs * actual;
+      myArr[theObj].pcs = myArr[theObj].pcs + pcs;
       myArr[theObj].sets = myArr[theObj].sets + 1;
     } else {
       mycount(actual + 1);
@@ -47,7 +53,7 @@ function MobileAddToCart(props) {
       setvalue(actual);
       setMyArr((myArr) => [
         ...myArr,
-        { Name, image, pcs:pcs+actual, index, size, price },
+        { Name, image, pcs: pcs, index, size, price, sets: 1 },
       ]);
     }
   };
@@ -63,8 +69,8 @@ function MobileAddToCart(props) {
       setvalue(actual);
       props.decrease_total(props.price);
 
-      myArr[theObj].pcs = myArr[theObj].pcs - actual;
-      // myArr[theObj].sets = myArr[theObj].sets - 1;
+      myArr[theObj].pcs = myArr[theObj].pcs - pcs;
+      myArr[theObj].sets = myArr[theObj].sets - 1;
       //  console.log(myArr, "my array after decrementing");
     }
     function finish() {
@@ -98,11 +104,13 @@ function MobileAddToCart(props) {
   return (
     <div>
       <div className="mobile-cart-section">
-        <img className="mobile-cart-image" src={props.image} />
+        <img
+          className="mobile-cart-image"
+          src={"http://23.88.103.58" + props.image}
+        />
         <br /> <br />
         <h6>{props.Name}</h6>
-        <p>price {props.price} </p>
-        <p>{props.pcs}</p>
+        <p>{props.pcs + " pcs"}</p>
         <div className="increment-cart">
           <button
             className={size == "S" ? "increment-buttons1" : "sizes1"}
@@ -133,9 +141,7 @@ function MobileAddToCart(props) {
         >
           -
         </button>
-        <span className="increment-buttons counter">
-          {actual}
-        </span>
+        <span className="increment-buttons counter">{actual}</span>
         <button
           disabled={props.total + props.price > 600 ? true : false}
           style={{ opacity: props.total + props.price > 600 ? 0.7 : 1 }}
@@ -163,4 +169,4 @@ export default connect(mapStateToProps, {
   decrement_cart,
   increase_total,
   decrease_total,
-})(MobileAddToCart);
+})(BlueProduct);
