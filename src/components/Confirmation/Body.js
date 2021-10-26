@@ -61,7 +61,6 @@ export default function Body(props) {
           Insurance Company for the careperson
         </p>
         <select
-          value="Insurance"
           className="option-box"
           onChange={(e) => setInsurance(e.target.value)}
         >
