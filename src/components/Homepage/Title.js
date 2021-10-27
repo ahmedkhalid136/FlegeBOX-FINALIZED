@@ -17,7 +17,7 @@ export default function Title() {
           <div>
             <div>
               <div className="row">
-                <div className="col-lg-9 col-md-9" style={{}}>
+                <div className="col-lg-9 col-md-9 col-9" style={{}}>
                   <div
                     className="hero-left-side"
                     style={{ textAlign: "left", padding: "95px 0" }}
@@ -52,7 +52,7 @@ export default function Title() {
                   </div>
                 </div>
                 <div
-                  className="col-lg-3 col-md-3"
+                  className="col-lg-3 col-md-3 col-3"
                   style={{ position: "relative" }}
                 >
                   <div className="container">
@@ -61,11 +61,11 @@ export default function Title() {
                       className="hero-girl"
                       src="./Images/girl.png"
                       style={{
-                        width: "120%",
-                        height: "500px",
+                        width: "100%",
+                        height: "400px",
                         position: "absolute",
-                        bottom: "0px",
-                        left: "-200px",
+                        bottom: "0",
+                        left: "-100px",
                       }}
                     />
                     <img
@@ -75,8 +75,8 @@ export default function Title() {
                         position: "absolute",
                         width: "80px",
                         height: "80px",
-                        right: "450.37px",
-                        top: "140.65px",
+                        left: "-100px",
+                        top: "150.65px",
                         zIndex: "100",
                       }}
                     />
@@ -87,8 +87,8 @@ export default function Title() {
                         position: "absolute",
                         width: "80px",
                         height: "80px",
-                        right: "30.37px",
-                        top: "210.65px",
+                        right: "-35px",
+                        top: "220.65px",
                         zIndex: "100",
                       }}
                     />

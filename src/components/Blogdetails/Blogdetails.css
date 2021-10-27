@@ -62,18 +62,12 @@
   padding: 0 5px;
 }
 
-@media (max-width: 500px) {
-  .styleHeader {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 750px) {
+@media (max-width: 900px) {
   .paraText {
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px !important;
     line-height: 22px;
     color: black;
     text-align: left;
@@ -92,7 +86,7 @@
     border-radius: 20px;
   }
 }
-@media (min-width: 760px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .articleImg {
     display: inline-block;
     width: 90%;
@@ -101,7 +95,7 @@
     border-radius: 20px;
   }
 }
-@media (min-width: 1025px) and (max-width: 1366px) {
+/* @media (min-width: 1025px) and (max-width: 1366px) {
   .articleImg {
     display: inline-block;
     width: 90%;
@@ -109,4 +103,4 @@
     height: 250px;
     border-radius: 20px;
   }
-}
+} */

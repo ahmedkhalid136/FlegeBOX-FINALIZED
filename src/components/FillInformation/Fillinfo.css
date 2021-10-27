@@ -159,7 +159,7 @@ input:focus {
   margin-top: 5%;
 }
 
-@media (min-width: 500px) and (max-width: 800px) {
+@media (max-width: 800px) {
   .mainDiv {
     margin-left: 10px;
     display: block !important;
@@ -276,7 +276,7 @@ input:focus {
   }
 }
 
-@media (min-width: 300px) and (max-width: 499px) {
+@media (max-width: 1000px) {
   input {
     margin-top: 5px !important;
     margin-bottom: 5px !important;

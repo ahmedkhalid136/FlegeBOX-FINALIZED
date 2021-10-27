@@ -47,20 +47,6 @@ function Bloglist() {
     console.log(Data);
   }, []);
 
-  // const data = [
-  //   {
-  //     title: "MY Blog",
-  //     content: "THIS IS OUR BLOG",
-  //     Date: "28/09/2021",
-  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  //   },
-  //   {
-  //     title: "MY Blog",
-  //     content: "THIS IS MY SECOND BLOG",
-  //     Date: "28/09/2021",
-  //     Img: "./Images/bee-naturalles-dGr9iBXZHe4-unsplash.jpg",
-  //   },
-  // ];
   return (
     <div>
       <Header title="bloglist" />
