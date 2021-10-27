@@ -6,7 +6,7 @@ export default function Title() {
   return (
     <div
       style={{
-        backgroundImage: "url('./Images/background.png')",
+        backgroundImage: "url('/Images/background.png')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
