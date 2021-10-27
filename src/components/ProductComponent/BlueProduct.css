@@ -3,6 +3,13 @@
   width: 60px;
 }
 
+.sizeButtons {
+}
+
+.increment-area {
+  text-align: right;
+}
+
 .increment-buttons {
   background-color: #2faae5 !important;
   border-radius: 10px;

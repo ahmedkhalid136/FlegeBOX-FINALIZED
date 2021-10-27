@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Works() {
   return (
-    <div className="container-fluid Works">
+    <div className="container Works">
       <h2>So einfach funktioniert MyPflegebox</h2>
       <p style={{ marginTop: "25px" }}>
         Unkompliziert und ohne versteckte Kosten - In 5 Minuten zu Ihrer

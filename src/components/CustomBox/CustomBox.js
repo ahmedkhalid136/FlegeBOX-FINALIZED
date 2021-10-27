@@ -109,7 +109,7 @@ function CustomBox(props) {
   };
 
   return (
-    <div className="container">
+    <div className="">
       <div className="row">
         <div className="col-lg-6">
           <div style={{ textAlign: "left" }}>

@@ -119,15 +119,21 @@ function BlueProduct(props) {
         />
       </div>
       <div
-        className="col-lg-4 col-3 product-name"
+        className="col-lg-2 col-3 product-name"
         style={{ textAlign: "left" }}
       >
         <h6>{props.Name}</h6>
         <p>{props.pcs} pcs</p>
       </div>
-      <div className="col-lg-6 col-6" style={{ paddingTop: "20px" }}>
+      <div
+        className="col-lg-8 col-6"
+        style={{ paddingTop: "20px", margin: "0" }}
+      >
         <div className="row">
-          <div className="col-lg-5 col-12">
+          <div
+            className="col-lg-6 col-12 sizeButtons"
+            style={{ textAlign: "right" }}
+          >
             <button
               className={size == "S" ? "increment-buttons1" : "sizes1"}
               onClick={() => changeSize("S")}
@@ -155,7 +161,10 @@ function BlueProduct(props) {
               L
             </button>
           </div>
-          <div className="col-lg-7 col-7 increment-area">
+          <div
+            className="col-lg-6 col-7 increment-area"
+            style={{ marginRight: "" }}
+          >
             <button
               className="increment-buttons"
               onClick={() => {
@@ -164,7 +173,9 @@ function BlueProduct(props) {
             >
               -
             </button>
-            <span className="increment-buttons counter">{actual}</span>
+            <div style={{ textAlign: "center", display: "inline-block" }}>
+              <span className="increment-buttons counter">{actual}</span>
+            </div>
             <button
               className="increment-buttons"
               disabled={props.total + props.price > 600 ? true : false}

@@ -29,7 +29,7 @@ function Faq() {
       <div className="titleSection1 mobile-background-color">
         <h1 className="breadcrumbs1">Hello can we help you?</h1>
       </div>
-      <div className="mainDiv1">
+      <div className="mainDiv1 container">
         <p className="questionDiv">
           <h6
             className={Color === true ? "text1" : "activeText1"}

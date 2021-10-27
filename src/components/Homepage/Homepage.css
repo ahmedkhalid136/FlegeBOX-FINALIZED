@@ -3,6 +3,11 @@
   height: 620px;
 }
 
+.home-padding {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 .title-text {
   font-family: "Merriweather", serif;
   font-size: 50px;
@@ -300,6 +305,10 @@
 }
 
 @media (max-width: 500px) {
+  .home-padding {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
   .Works {
     margin-top: -110px;
     margin-bottom: -70px;

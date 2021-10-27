@@ -14,7 +14,7 @@ export default function Header(props) {
 
   return (
     <div style={{ backgroundColor: "#ffffff" }}>
-      <div className="container-fluid headerDIV">
+      <div className="container headerDIV">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="/home">
             <img src="./Images/LOGO.svg"></img>
