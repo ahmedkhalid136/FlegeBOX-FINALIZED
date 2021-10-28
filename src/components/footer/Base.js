@@ -12,7 +12,16 @@ const ColoredLine = ({ color }) => (
 
 export default function Base() {
   return (
-    <div className="footer-base">
+    <div className="footer-base" style={{ position: "relative" }}>
+      <img
+        className="orange-pattern"
+        src="./Images/Union2.png"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+        }}
+      />
       <div className="container">
         <div className="row">
           <div className="col-lg-4">

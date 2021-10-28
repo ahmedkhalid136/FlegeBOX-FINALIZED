@@ -3,7 +3,11 @@ import React from "react";
 export default function Body() {
   return (
     <div>
-      <div className="bodySection">
+      <div className="bodySection" style={{ position: "relative" }}>
+        <img
+          src="./Images/Union.png"
+          style={{ position: "absolute", top: "0", left: "0" }}
+        />
         <h1>Why MyPflegebox ?</h1>
         <div>
           <p>
@@ -26,9 +30,7 @@ export default function Body() {
       <div className="container icon-section">
         <div className="row">
           <div className="col-lg-3">
-            <div className="icon-background">
-              <i class="fas fa-paper-plane icons blue-icons"></i>
-            </div>
+            <img src="./Images/Group 12015.png" />
             <br />
             <br />
             <h3>Reliable Delivery</h3>
@@ -38,9 +40,7 @@ export default function Body() {
             </p>
           </div>
           <div className="col-lg-3">
-            <div className="icon-background">
-              <i class="fas fa-address-card icons blue-icons"></i>
-            </div>
+            <img src="./Images/Group 12020.png" />
             <br />
             <br />
             <h3>No Formalities</h3>
@@ -50,9 +50,7 @@ export default function Body() {
             </p>
           </div>
           <div className="col-lg-3">
-            <div className="icon-background">
-              <i class="fas fa-gem icons blue-icons"></i>
-            </div>
+            <img src="./Images/Group 12014.png" />
             <br />
             <br />
             <h3>Quality</h3>
@@ -61,9 +59,7 @@ export default function Body() {
             </p>
           </div>
           <div className="col-lg-3">
-            <div className="icon-background">
-              <i class="fas fa-envelope icons blue-icons"></i>
-            </div>
+            <img src="./Images/Group 12023.png" />
             <br />
             <br />
             <h3>Prescription Free</h3>

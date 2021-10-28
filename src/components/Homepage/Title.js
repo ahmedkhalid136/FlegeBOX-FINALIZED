@@ -58,14 +58,25 @@ export default function Title() {
                   <div className="container">
                     {" "}
                     <img
+                      src="./Images/Group 34441.png"
+                      style={{
+                        position: "absolute",
+                        bottom: "60px",
+                        left: "60px",
+                        zIndex: "1000",
+                        height: "150px",
+                      }}
+                      className="orange-pattern"
+                    />
+                    <img
                       className="hero-girl"
                       src="./Images/girl.png"
                       style={{
-                        width: "100%",
-                        height: "400px",
+                        width: "140%",
+                        height: "500px",
                         position: "absolute",
                         bottom: "0",
-                        left: "-100px",
+                        left: "-100%",
                       }}
                     />
                     <img
@@ -75,8 +86,8 @@ export default function Title() {
                         position: "absolute",
                         width: "80px",
                         height: "80px",
-                        left: "-100px",
-                        top: "150.65px",
+                        left: "-60%",
+                        top: "100.65px",
                         zIndex: "100",
                       }}
                     />
@@ -87,8 +98,8 @@ export default function Title() {
                         position: "absolute",
                         width: "80px",
                         height: "80px",
-                        right: "-35px",
-                        top: "220.65px",
+                        left: "40%",
+                        top: "170.65px",
                         zIndex: "100",
                       }}
                     />

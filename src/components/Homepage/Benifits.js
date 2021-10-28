@@ -8,9 +8,10 @@ export default function Benifits() {
         <div className="row">
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background home-icon-back">
+              {/* <div className="icon-background home-icon-back">
                 <i class="fas fa-euro-sign icons blue-icons"></i>
-              </div>
+              </div> */}
+              <img src="./Images/Group 34355.png" />
               <h4>Kostenübernahme </h4>
               <p>
                 Pflegebedürftige haben einen Anspruch auf Pflegehilfsmittel im
@@ -20,9 +21,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background home-icon-back">
-                <i class="fas fa-paper-plane icons blue-icons"></i>
-              </div>
+              <img src="./Images/Group 12015.png" />
               <h4>Zuverlässige Lieferung und Qualität </h4>
               <p>
                 Wir beliefern Sie monatlich, kostenfrei und pünktlich mit
@@ -32,9 +31,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background home-icon-back">
-                <i class="fas fa-gem icons blue-icons"></i>
-              </div>
+              <img src="./Images/Group 12014.png" />
               <h4>Zuverlässige Lieferung und Qualität </h4>
               <p>
                 Sie benötigen kein Rezept und wir kümmern uns um die Beantragung
@@ -44,9 +41,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background home-icon-back">
-                <i class="fas fa-address-card icons blue-icons"></i>
-              </div>
+              <img src="./Images/Group 12020.png" />
               <h4>Ohne Vertragsbindung und Mindestlaufzeit </h4>
               <p>
                 Ihre Pflegebox hat keine Mindestlaufzeit und ist jederzeit
@@ -56,9 +51,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background home-icon-back">
-                <i class="fas fa-edit icons blue-icons"></i>
-              </div>
+              <img src="./Images/Group 12022.png" />
               <h4>Produktauswahl und Produktänderungen </h4>
               <p>
                 Wählen sie eine unserer Themenboxen oder stellen Sie ihre
@@ -68,9 +61,7 @@ export default function Benifits() {
           </div>
           <div className="col-lg-4">
             <div className="benifits-columns">
-              <div className="icon-background home-icon-back">
-                <i class="fas fa-envelope icons blue-icons"></i>
-              </div>
+              <img src="./Images/Group 12023.png" />
               <h4>Schnelle Entlastung</h4>
               <p>
                 Wir entlasten Sie und Ihre angehörigen, Sie brauchen sich um
