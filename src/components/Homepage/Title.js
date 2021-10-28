@@ -17,7 +17,7 @@ export default function Title() {
           <div>
             <div>
               <div className="row">
-                <div className="col-lg-9 col-md-9 col-9" style={{}}>
+                <div className="col-lg-9 col-md-9 col-9">
                   <div
                     className="hero-left-side"
                     style={{ textAlign: "left", padding: "95px 0" }}
@@ -121,7 +121,8 @@ export default function Title() {
         style={{ textAlign: "left", width: "100%", boxSizing: "content-box" }}
       >
         <img
-          src="./Images/car.png"
+          className="mobile-car"
+          src="./Images/car.svg"
           style={{
             position: "absolute",
             width: "50px",
@@ -131,7 +132,8 @@ export default function Title() {
           }}
         />
         <img
-          src="./Images/box.png"
+          className="mobile-box"
+          src="./Images/box.svg"
           style={{
             position: "absolute",
             width: "50px",
@@ -162,7 +164,8 @@ export default function Title() {
               </button>
             </a>
             <img
-              src="./Images/girl.svg"
+              className="mobile-girl"
+              src="./Images/girl.png"
               style={{
                 width: "303px",
                 height: "313px",

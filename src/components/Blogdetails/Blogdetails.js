@@ -14,7 +14,7 @@ function Blogdetails(props) {
 
   const getData = async () => {
     try {
-      const response = await fetch(
+      const response = await axios.get(
         `http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
         {
           headers: {
@@ -23,12 +23,14 @@ function Blogdetails(props) {
           },
         }
       );
+
       const data = await response.data.data;
+
       console.log(data, "mydata");
       await setData(data);
       console.log(Data, "my useState");
     } catch (e) {
-      console.log(e);
+      console.log("error", e);
     }
   };
   useEffect(async () => {
@@ -55,6 +57,15 @@ function Blogdetails(props) {
           <br />
           <br />
           <div className="row articleImgdiv ">
+            {Data.slice(0, 3).map((item, ind) => {
+              return (
+                <Popular
+                  title={item.title}
+                  content={item.content}
+                  image={item.picture}
+                />
+              );
+            })}
             {/* <Popular
               title={Data[0].title}
               content={Data[0].content}

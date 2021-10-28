@@ -155,12 +155,19 @@
   color: #f87433;
 }
 
+.benifits-section .col-lg-4 {
+  display: table;
+  padding-bottom: 30px;
+}
+
 .benifits-columns {
   background-color: #ffffff;
-  height: 415px;
+  /* height: 415px; */
+  display: table-cell;
   border-radius: 10px;
-  padding: 50px;
+  padding: 40px;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .benifits-columns h4 {
@@ -237,17 +244,17 @@
   }
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .hero-left-side {
     padding: 30px 0 0 30px !important;
   }
   .hero-car {
   }
   .hero-box {
-    right: 20px !important;
+    right: 20px;
   }
   .hero-girl {
-    width: 120% !important;
+    width: 100% !important;
   }
   .mobile-background-color {
     background-color: #e5e5e521;
@@ -292,9 +299,101 @@
     background-color: #2faae5;
     height: 500px;
   }
-}
+} */
 
 @media (max-width: 500px) {
+  .home-padding {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .Works {
+    margin-top: -110px;
+    margin-bottom: -70px;
+  }
+  .benifits-columns {
+    /* height: 300px; */
+  }
+  .benifits-section {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .benifits-section h1 {
+    padding-top: 30px;
+    font-size: 20px;
+  }
+  .benifits-section .row {
+    margin-top: -100px;
+  }
+  .benifits-columns h4 {
+    font-size: 16px;
+    margin: 0;
+    margin-top: -40px;
+  }
+  .benifits-columns p {
+    font-size: 14px !important;
+    margin-top: -15px;
+  }
+
+  .home-img {
+    height: 350px;
+  }
+  .home-banner {
+    background-color: #2faae5;
+    height: 200px;
+    padding: 30px 0;
+  }
+  .home-img {
+    height: 260px;
+  }
+  .home-banner div {
+    height: 220px;
+    padding-top: 30px;
+  }
+  .home-banner h2 {
+    font-size: 28px;
+  }
+  .icon-background {
+    height: 80px;
+    width: 80px;
+  }
+  .home-icon-back {
+    margin-top: -20px;
+  }
+  .icons {
+    font-size: 40px;
+  }
+  .relieve-section h1 {
+    font-size: 20px;
+  }
+  .relieve-section h4 {
+    font-size: 18px;
+  }
+  .relieve-section p {
+    font-size: 14px !important;
+  }
+  .desktop-hero-section {
+    display: none;
+  }
+  .mobile-hero-section {
+    display: block;
+  }
+}
+
+@media (max-width: 670px) and (min-width: 500px) {
+  .mobile-girl {
+    left: 0;
+    left: 170px !important;
+  }
+  .mobile-car {
+    left: 270px !important;
+    width: 90px !important;
+    height: 60px !important;
+  }
+  .mobile-box {
+    left: 450px !important;
+    width: 90px !important;
+    height: 60px !important;
+  }
   .home-padding {
     padding-right: 30px;
     padding-left: 30px;
@@ -372,7 +471,27 @@
   }
 }
 
+@media (max-width: 770px) {
+  .hero-girl {
+    height: 380px !important;
+    width: 140% !important;
+  }
+  .hero-box {
+    right: -70px !important;
+  }
+  .hero-car {
+    left: -40px !important;
+    top: 180px !important;
+  }
+}
+
 @media (max-width: 990px) {
+  .hero-left-side p {
+    font-size: 18px !important;
+  }
+  .hero-girl {
+    left: -40px !important;
+  }
   .icons-container {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -396,6 +515,6 @@
   }
   .benifits-columns p {
     padding: 0;
-    margin-top: -20px;
+    margin-top: 20px;
   }
 }
