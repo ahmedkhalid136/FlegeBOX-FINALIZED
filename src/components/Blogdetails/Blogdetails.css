@@ -62,6 +62,10 @@
   padding: 0 5px;
 }
 
+.articleImgdiv img {
+  height: 300px;
+}
+
 @media (max-width: 900px) {
   .paraText {
     font-family: Nunito Sans;

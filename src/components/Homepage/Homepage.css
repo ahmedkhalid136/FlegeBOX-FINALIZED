@@ -8,6 +8,11 @@
   padding-right: 80px;
 }
 
+.Works .row {
+  --bs-gutter-x: 0;
+  padding: 0;
+}
+
 .title-text {
   font-family: "Merriweather", serif;
   font-size: 50px;
@@ -88,6 +93,8 @@
 .Works {
   padding-top: 140px;
   padding-bottom: 140px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .Works h2 {
@@ -122,9 +129,7 @@
 
 .icons-container {
   margin-top: -80px;
-  padding-left: 100px;
   --bs-gutter-x: 0;
-  --bs-gutter-y: 0;
 }
 
 .icon-background {
