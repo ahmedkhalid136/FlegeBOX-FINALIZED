@@ -3,6 +3,11 @@
   height: 620px;
 }
 
+.orange-pattern {
+  margin-top: -20px;
+  z-index: 1;
+}
+
 .home-padding {
   padding-left: 80px;
   padding-right: 80px;
@@ -128,7 +133,7 @@
 }
 
 .icons-container {
-  margin-top: -80px;
+  margin-top: -130px;
   --bs-gutter-x: 0;
 }
 
@@ -306,7 +311,7 @@
   }
 } */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .icons-container {
     margin-top: -170px !important;
   }
@@ -387,7 +392,7 @@
   }
 }
 
-@media (max-width: 710px) and (min-width: 500px) {
+@media (max-width: 680px) and (min-width: 600px) {
   .mobile-girl {
     left: 0;
     left: 170px !important;
@@ -495,6 +500,9 @@
   .orange-pattern {
     display: none;
   }
+  .orange-pattern2 {
+    display: none;
+  }
   .benifits-columns img {
     margin-bottom: 30px;
   }
@@ -508,6 +516,9 @@
 
 @media (max-width: 990px) {
   .orange-pattern {
+    display: none;
+  }
+  .orange-pattern2 {
     display: none;
   }
   .hero-left-side p {

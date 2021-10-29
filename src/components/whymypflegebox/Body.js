@@ -5,8 +5,9 @@ export default function Body() {
     <div>
       <div className="bodySection" style={{ position: "relative" }}>
         <img
+          className="orange-pattern"
           src="./Images/Union.png"
-          style={{ position: "absolute", top: "0", left: "0" }}
+          style={{ position: "absolute", top: "0", left: "0", zIndex: "1" }}
         />
         <h1>Why MyPflegebox ?</h1>
         <div>

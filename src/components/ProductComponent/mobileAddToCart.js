@@ -18,18 +18,18 @@ import {
 import { connect } from "react-redux";
 
 function BlueProduct(props) {
-  const { Name, image, pcs, index, price, sets } = props;
+  const { Name, image, pcs, index, price, Realsize, sets } = props;
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
 
   const [actual, mycount] = useState(0);
 
-  const [size, setSize] = useState("M");
+  const [size, setSize] = useState("Medium");
 
   console.log(sets);
   useEffect(() => {
     if (sets == 0) {
       mycount(0);
-      setSize("M");
+      setSize("Medium");
     }
   }, [sets]);
 
@@ -53,7 +53,7 @@ function BlueProduct(props) {
       setvalue(actual);
       setMyArr((myArr) => [
         ...myArr,
-        { Name, image, pcs: pcs, index, size, price, sets: 1 },
+        { Name, image, pcs: pcs, index, size, price, Realsize, sets: 1 },
       ]);
     }
   };
@@ -112,24 +112,36 @@ function BlueProduct(props) {
         <h6>{props.Name}</h6>
         <p>{props.pcs + " pcs"}</p>
         <div className="increment-cart">
-          <button
-            className={size == "S" ? "increment-buttons1" : "sizes1"}
-            onClick={() => changeSize("S")}
-          >
-            S
-          </button>
-          <button
-            className={size == "M" ? "increment-buttons1" : "sizes1"}
-            onClick={() => changeSize("M")}
-          >
-            M
-          </button>
-          <button
-            className={size == "L" ? "increment-buttons1" : "sizes1"}
-            onClick={() => changeSize("L")}
-          >
-            L
-          </button>
+          {Realsize == null ? null : (
+            <div>
+              <button
+                className={size == "Small" ? "increment-buttons1" : "sizes1"}
+                onClick={() => changeSize("Small")}
+              >
+                S
+              </button>
+              <button
+                style={{
+                  backgroundColor:
+                    size == "Medium" ? "#2faae5 !important" : "#fff !important",
+                }}
+                className={size == "Medium" ? "increment-buttons1" : "sizes1"}
+                onClick={() => changeSize("Medium")}
+              >
+                M
+              </button>
+              <button
+                style={{
+                  background:
+                    size == "Large" ? "#2faae5 !important" : "#fff !important",
+                }}
+                className={size == "Large" ? "increment-buttons1" : "sizes1"}
+                onClick={() => changeSize("Large")}
+              >
+                L
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <div className="mobile-button-area">

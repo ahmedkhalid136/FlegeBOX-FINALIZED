@@ -66,7 +66,7 @@ export default function Title() {
                         zIndex: "1000",
                         height: "150px",
                       }}
-                      className="orange-pattern"
+                      className="orange-pattern2"
                     />
                     <img
                       className="hero-girl"
@@ -118,6 +118,8 @@ export default function Title() {
           height: "130px",
           padding: "20px",
           margin: "-50px 0 0 0",
+          zIndex: "1000",
+          position: "relative",
         }}
       >
         <img
@@ -209,6 +211,8 @@ export default function Title() {
             marginTop: "-25px",
             boxSizing: "content-box",
             paddingLeft: "30px",
+            zIndex: "1000",
+            position: "relative",
           }}
         >
           <img

@@ -135,11 +135,8 @@ function CustomBox(props) {
                           image={item.image}
                           index={ind}
                           price={item.standard_rate}
-                          // setter={setMyArr}
-                          // getter={myArr}
-                          // setvalue={setvalue}
-                          // myvalue={myvalue}
-                          sets={0}
+                          Realsize={item.item_size}
+                          sets={item.sets ? item.sets : 0}
                         />
                       </div>
                     </CreateContext.Provider>
@@ -163,10 +160,7 @@ function CustomBox(props) {
                         image={item.image}
                         index={ind}
                         price={item.standard_rate}
-                        // setter={setMyArr}
-                        // getter={myArr}
-                        // setvalue={setvalue}
-                        // myvalue={myvalue}
+                        Realsize={item.item_size}
                         sets={item.sets ? item.sets : 0}
                       />
                     </CreateContext.Provider>
@@ -210,6 +204,7 @@ function CustomBox(props) {
                     pcs={item.pcs}
                     image={item.image}
                     price={item.price}
+                    Realsize={item.Realsize}
                     // getter={myArr}
                     // setter={setMyArr}
                     sets={item.sets}

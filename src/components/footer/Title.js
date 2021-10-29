@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Title() {
   return (
-    <div className="footer-title" style={{ position: "relative" }}>
+    <div
+      className="footer-title"
+      style={{ position: "relative", zIndex: "1000" }}
+    >
       <div className="revert container">
         <h1>Always Reachable For You</h1>
         <br />

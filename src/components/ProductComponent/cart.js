@@ -13,7 +13,7 @@ import {
 } from "../../action/cart";
 
 function Cart(props) {
-  const { Name, image, pcs, size, sets, price } = props;
+  const { Name, image, pcs, size, sets, price, Realsize } = props;
   const [actual, mycount] = useState(0);
   const { myvalue, setvalue, myArr, setMyArr } = useContext(CreateContext);
 
@@ -64,18 +64,37 @@ function Cart(props) {
         <h6>{Name}</h6>
         <p>{pcs}pcs</p>
       </div>
-      <div className="col-lg-6 col-7" style={{ paddingTop: "20px" }}>
+      <div
+        className="col-lg-6 col-7"
+        style={{ paddingTop: "20px", display: "inline-block" }}
+      >
         <div className="increment-cart">
-          <button className={size == "S" ? "increment-buttons1" : "sizes1"}>
-            S
-          </button>
-          <button className={size == "M" ? "increment-buttons1" : "sizes1"}>
-            M
-          </button>
-          <button className={size == "L" ? "increment-buttons1" : "sizes1"}>
-            L
-          </button>
-          <div style={{ textAlign: "right", display: "inline-block" }}>
+          {Realsize == null ? null : (
+            <div style={{ display: "inline-block" }}>
+              <button
+                className={size == "Small" ? "increment-buttons1" : "sizes1"}
+              >
+                S
+              </button>
+              <button
+                className={size == "Medium" ? "increment-buttons1" : "sizes1"}
+              >
+                M
+              </button>
+              <button
+                className={size == "Large" ? "increment-buttons1" : "sizes1"}
+              >
+                L
+              </button>
+            </div>
+          )}
+
+          <div
+            style={{
+              textAlign: "right",
+              display: "inline-block",
+            }}
+          >
             <i
               style={{ cursor: "pointer" }}
               onClick={() => {

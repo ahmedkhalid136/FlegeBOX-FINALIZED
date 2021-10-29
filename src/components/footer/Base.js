@@ -63,7 +63,7 @@ export default function Base() {
             <p>
               <hr
                 style={{
-                  width: "20%",
+                  width: "15%",
                   color: "#F87433",
                   backgroundColor: "#F87433",
                   height: 3,
@@ -74,7 +74,7 @@ export default function Base() {
             </p>
             <img
               src="./Images/DHL_logo_rgb.png"
-              style={{ width: "120px", height: "40px" }}
+              style={{ width: "91px", height: "40px" }}
             />
             <hr
               className="display-rule"
@@ -103,7 +103,10 @@ export default function Base() {
                 }}
               ></hr>
             </p>
-            <img src="./Images/payment Methods.jpeg" style={{ width: "80%" }} />
+            <img
+              src="./Images/Group 12049.png"
+              style={{ width: "247px", height: "30px" }}
+            />
           </div>
         </div>
         <p>
