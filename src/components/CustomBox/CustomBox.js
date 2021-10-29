@@ -160,15 +160,14 @@ function CustomBox(props) {
                         key={ind}
                         Name={item.item_name}
                         pcs={5}
-                        image={item.website_image}
+                        image={item.image}
                         index={ind}
                         price={item.standard_rate}
-                        Sizee={item.item_size}
                         // setter={setMyArr}
                         // getter={myArr}
                         // setvalue={setvalue}
                         // myvalue={myvalue}
-                        sets={0}
+                        sets={item.sets ? item.sets : 0}
                       />
                     </CreateContext.Provider>
                   );
