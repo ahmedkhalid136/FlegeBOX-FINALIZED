@@ -130,6 +130,7 @@ export default function Title() {
           paddingLeft: "30px",
           height: "130px",
           padding: "20px",
+          paddingBottom: "22px",
           margin: "-50px 0 0 0",
           zIndex: "1000",
           position: "relative",
