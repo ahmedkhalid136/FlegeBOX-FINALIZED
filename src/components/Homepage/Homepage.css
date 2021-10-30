@@ -311,6 +311,20 @@
   }
 } */
 
+@media (max-width: 340px) {
+  body .mobile-hero-section .mobile-car {
+    top: 80% !important;
+  }
+  body .mobile-hero-section .mobile-box {
+    top: 86% !important;
+    left: 80% !important;
+  }
+  body .mobile-hero-section .mobile-girl {
+    width: 130% !important;
+    left: -3% !important;
+  }
+}
+
 @media (max-width: 473px) {
   .mobile-hero-section .mobile-car {
     top: 62% !important;

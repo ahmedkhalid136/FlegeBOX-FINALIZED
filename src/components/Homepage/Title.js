@@ -9,8 +9,19 @@ export default function Title() {
         backgroundImage: "url('/Images/home-background.png')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        position: "relative",
       }}
     >
+      <img
+        src="./Images/Title-pattern.png"
+        style={{
+          position: "absolute",
+          top: "-50px",
+          left: "0",
+          width: "100%",
+          zIndex: "1000",
+        }}
+      />
       {/* DESKTOP HERO SECTION */}
       <div className="container">
         <div className="desktop-hero-section">
@@ -44,6 +55,8 @@ export default function Title() {
                           border: "none",
                           padding: "12px 30px",
                           borderRadius: "10px",
+                          position: "relative",
+                          zIndex: "1000000",
                         }}
                       >
                         Pflegebox sichern
