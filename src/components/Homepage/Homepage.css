@@ -311,6 +311,24 @@
   }
 } */
 
+@media (max-width: 473px) {
+  .mobile-hero-section .mobile-car {
+    top: 62% !important;
+  }
+  .mobile-hero-section .mobile-box {
+    top: 70% !important;
+  }
+
+  .Works h2 {
+    font-size: 26px;
+  }
+  .iconsHeading {
+    font-size: 21px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 @media (max-width: 600px) {
   .icons-container {
     margin-top: -170px !important;
@@ -389,6 +407,13 @@
   }
   .mobile-hero-section {
     display: block;
+  }
+
+  .mobile-box {
+    top: 67% !important;
+  }
+  .mobile-car {
+    top: 60% !important;
   }
 }
 
@@ -484,18 +509,22 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 781px) and (min-width: 680px) {
   .hero-girl {
-    left: -10% !important;
-    height: 400px !important;
+    left: -70% !important;
+    height: 380px !important;
   }
   .hero-box {
     left: 110% !important;
     top: 300px !important;
+    height: 50px !important;
+    width: 50px !important;
   }
   .hero-car {
     left: 10% !important;
     top: 230px !important;
+    height: 50px !important;
+    width: 50px !important;
   }
   .orange-pattern {
     display: none;
@@ -508,9 +537,68 @@
   }
 }
 
-@media (max-width: 990px) and (min-width: 771px) {
+@media (max-width: 768px) {
   .hero-girl {
-    left: -80% !important;
+    left: -50% !important;
+    width: 250px !important;
+    height: 320px !important;
+  }
+  .hero-box {
+    left: 120% !important;
+    top: 350px !important;
+  }
+  .hero-car {
+    left: 0% !important;
+    top: 300px !important;
+  }
+}
+
+@media (max-width: 990px) and (min-width: 880px) {
+  .hero-girl {
+    left: -90% !important;
+    width: 400px !important;
+  }
+  .hero-box {
+    left: 100% !important;
+  }
+  .hero-car {
+    left: -30% !important;
+  }
+}
+
+@media (max-width: 879px) and (min-width: 845px) {
+  .hero-girl {
+    left: -90% !important;
+    width: 380px !important;
+    height: 400px !important;
+  }
+  .hero-box {
+    left: 90% !important;
+    top: 260px !important;
+  }
+  .hero-car {
+    left: -30% !important;
+    top: 180px !important;
+  }
+}
+
+@media (max-width: 845px) and (min-width: 768px) {
+  .hero-girl {
+    left: -50% !important;
+    width: 280px !important;
+    height: 350px !important;
+  }
+  .hero-box {
+    left: 90% !important;
+    top: 360px !important;
+    height: 50px !important;
+    width: 50px !important;
+  }
+  .hero-car {
+    height: 50px !important;
+    width: 50px !important;
+    left: -10% !important;
+    top: 280px !important;
   }
 }
 

@@ -76,7 +76,7 @@ export default function Title() {
                         height: "500px",
                         position: "absolute",
                         bottom: "0",
-                        left: "-100%",
+                        left: "-85%",
                       }}
                     />
                     <img
