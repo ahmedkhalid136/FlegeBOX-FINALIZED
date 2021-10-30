@@ -1,0 +1,135 @@
+.titleSection {
+  background-image: url("../../Pictures/elderly-female-smiling-with-young-female-doctor-visiting-senior-patient-woman-hospital-ward.jpg");
+  height: 400px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(17, 97, 136, 0.5);
+  background-position-y: -90px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 200px;
+}
+
+.breadcrumbs {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.bodySection {
+  padding-top: 121px;
+  background: linear-gradient(
+    180deg,
+    #dbf0fa 0%,
+    rgba(219, 240, 250, 0) 93.64%
+  );
+}
+
+.bodySection h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+}
+.bodySection div {
+  margin-top: 70px;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #919191;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.buttonDiv {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonDiv button {
+  background-color: #f87433;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+
+.icon-section {
+  padding-top: 90px;
+}
+
+.icon-section h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.ImageSection {
+  margin-bottom: 130px;
+  margin-top: 130px;
+}
+
+.secondImage {
+  margin-top: 80px;
+}
+
+.why-my-img {
+  height: 466px;
+  width: 440px;
+  border-radius: 20px;
+}
+
+.fa-check-circle {
+  margin-top: 8px;
+  color: #2faae5;
+}
+
+@media (max-width: 900px) {
+  .why-my-img {
+    width: 100%;
+    height: 702px;
+  }
+  .left-red-dot {
+    display: none;
+  }
+  p {
+    font-size: 21px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  p {
+    font-size: 16px !important;
+  }
+  .left-red-dot {
+    display: none;
+  }
+  .why-my-img {
+    width: 100%;
+    height: 312px;
+  }
+  .bodySection div {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+  }
+  .bodySection div p {
+    font-size: 16px !important;
+  }
+  .titleSection {
+    height: 200px;
+    padding-top: 100px;
+    background-position-y: 0px;
+  }
+  .bodySection h1 {
+    font-size: 23px;
+  }
+  .secondImage {
+    margin-top: 10px;
+  }
+  .buttonDiv {
+    margin-top: -30px;
+    margin-bottom: -50px;
+  }
+}

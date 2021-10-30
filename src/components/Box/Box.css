@@ -1,0 +1,467 @@
+/* Boxes */
+.fullLine {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.majorbox svg {
+  margin-top: -10px !important;
+}
+.majorbox p {
+  margin-bottom: 20px !important;
+}
+
+.boxes {
+  background: #f4f4f5;
+  border-radius: 20px;
+  height: 164px;
+  width: 100%;
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.boxes2 {
+  background: #2faae5;
+  border-radius: 20px;
+  height: 164px;
+  width: 100%;
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.boxes p {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 22px;
+}
+.boxes2 p {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+}
+
+/* Cart */
+.yourCart {
+  background-color: #edf7fd;
+  border-radius: 20px;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.yourCart h2 {
+  padding-left: 10px;
+}
+
+.boxes svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+.boxes2 svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #fff !important;
+  fill: white !important;
+}
+
+.boxes2 path {
+  fill: white;
+}
+
+/* whitePoducts */
+.textComponent {
+  text-align: left;
+}
+
+.yourCart .fa-times {
+  display: none !important;
+}
+
+.cart-h2 {
+  font-size: 24px;
+}
+
+/* Icons */
+.Icons {
+  background-color: #f4f4f5;
+  border-radius: 50%;
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.Icons2 {
+  background-color: #2faae5;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+}
+.CustomIcons {
+  background-color: #f4f4f5;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.CustomIcons2 {
+  background-color: #2faae5;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.CustomIcons2 path {
+  fill: white;
+}
+
+.RightText h2 {
+  margin-right: -70px;
+  margin-top: 5px;
+}
+
+.Icons svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.Icons2 svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  color: #fff !important;
+  fill: white !important;
+}
+
+.Icons2 path {
+  fill: white;
+}
+.CustomIcons svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.CustomIcons2 svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  color: #fff !important;
+  fill: white !important;
+}
+
+.RightText {
+  text-align: right;
+  margin-top: 15px;
+}
+.fullLine {
+  padding: 10px;
+}
+
+/* Header with 3 buttons */
+.chooseButton {
+  background: #f87433;
+  border-radius: 12px;
+  color: white;
+  border: none;
+  padding: 10px 35px;
+}
+.head {
+  margin-top: 12px;
+  margin-left: 15px;
+}
+.mobile-head {
+  display: none;
+}
+
+.mobile-fullLine {
+  display: none;
+  padding: 70px 0;
+  text-align: center;
+}
+
+@media (min-width: 500) and (max-width: 900) {
+  .mobile-fullLine {
+    display: block;
+  }
+  .desktop-head {
+    display: none;
+  }
+  .cart-h2 {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 995px) {
+  .cart-h2 {
+    font-size: 16px !important;
+    margin-bottom: 20px;
+  }
+  .custom-box-mobile {
+    text-align: center !important;
+  }
+  .majorbox p {
+    margin-top: -30px !important;
+    font-size: 15px !important;
+    padding: 0 !important;
+  }
+
+  .majorbox svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .mobile-fullLine {
+    display: block;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .desktop-head {
+    display: none;
+  }
+  .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    height: 80px;
+    width: 80px;
+  }
+  .Icons2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    height: 80px;
+    width: 80px;
+  }
+  .CustomIcons {
+    height: 80px;
+    width: 80px;
+  }
+  .CustomIcons2 {
+    height: 80px;
+    width: 80px;
+  }
+
+  .mobile-fullLine .col-6 {
+    display: block;
+  }
+  .fullLine {
+    display: none;
+  }
+
+  .Custo .head {
+    display: none;
+  }
+  .mobile-head {
+    display: block;
+  }
+  .chooseboxHead {
+    display: none;
+  }
+  /* .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  } */
+  .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  .Icons2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  .mobile-fullLine .col-6 {
+    display: block;
+  }
+  .fullLine {
+    display: none;
+  }
+
+  .Custo .head {
+    display: none;
+  }
+  .mobile-head {
+    display: block;
+  }
+  .chooseboxHead {
+    display: none;
+  }
+  .RightText h2 {
+    margin: 0;
+  }
+  .boxes {
+    height: 125px;
+  }
+  .boxes2 {
+    height: 125px;
+  }
+  .boxes p {
+    font-size: 16px;
+    bottom: -30%;
+  }
+  .boxes2 p {
+    font-size: 16px;
+    bottom: -30%;
+  }
+  .yourCart {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .mobile-fullLine h2 {
+    font-size: 18px;
+  }
+  .majorbox p {
+    margin-bottom: 20px !important;
+    font-size: 15px !important;
+    margin: 0;
+    padding: 0 !important;
+  }
+  .mobile-fullLine {
+    display: block;
+  }
+  .desktop-head {
+    display: none;
+  }
+  .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  .Icons svg {
+    height: 40px;
+    width: 40px;
+  }
+  .Icons2 svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .CustomIcons svg {
+    height: 40px;
+    width: 40px;
+  }
+  .CustomIcons2 svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .Icons2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  .mobile-fullLine .col-6 {
+    display: block;
+  }
+  .fullLine {
+    display: none;
+  }
+
+  .Custo .head {
+    display: none;
+  }
+  .mobile-head {
+    display: block;
+  }
+  .chooseboxHead {
+    display: none;
+  }
+  /* .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  } */
+  .Icons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  .Icons2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  .mobile-fullLine .col-6 {
+    display: block;
+  }
+  .fullLine {
+    display: none;
+  }
+
+  .Custo .head {
+    display: none;
+  }
+  .mobile-head {
+    display: block;
+  }
+  .chooseboxHead {
+    display: none;
+  }
+  .RightText h2 {
+    margin: 0;
+  }
+  .boxes {
+    height: 90px;
+  }
+  .boxes2 {
+    height: 90px;
+  }
+  .boxes p {
+    font-size: 16px;
+    bottom: -40%;
+  }
+  .boxes2 p {
+    font-size: 16px;
+    bottom: -40%;
+  }
+  .yourCart {
+    margin-top: 50px;
+  }
+}

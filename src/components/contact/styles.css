@@ -1,0 +1,102 @@
+h3 {
+  font-family: "Merriweather", serif;
+  font-size: 36px;
+}
+
+.titleSection {
+  background-image: url("../../Pictures/asian-elderly-couple-using-tablet-watching-tv-living-room-home-couple-enjoy-love-moment-while-lying-sofa-when-relaxed-home.jpg");
+  height: 400px;
+  box-shadow: inset 0 0 0 2000px rgba(17, 97, 136, 0.5);
+  background-position: bottom;
+  background-size: cover;
+  background-position-y: center;
+  text-align: center;
+  transform: scaleX(-1);
+}
+
+.body-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.breadcrumbs {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  transform: scaleX(-1);
+}
+
+.left-side {
+  text-align: left;
+  padding-right: 150px;
+}
+
+.right-side {
+  background: #edf7fd;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.input-field {
+  margin-top: 15px;
+  width: 100%;
+  border: 1px solid #dadadd;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.text-field {
+  width: 100%;
+  border: 1px solid #dadadd;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: #f87433;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+::placeholder {
+  color: grey;
+  padding-left: 10px;
+}
+
+.info {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.info p {
+  color: black;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .titleSection {
+    height: 200px;
+    padding-top: 100px;
+    background-position-y: 0px;
+  }
+  .left-side {
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .right-side {
+    margin-top: 40px;
+  }
+  .breadcrumbs {
+    font-size: 18px;
+  }
+}

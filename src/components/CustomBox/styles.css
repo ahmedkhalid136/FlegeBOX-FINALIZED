@@ -1,0 +1,24 @@
+.cart-right {
+  background: #edf7fd !important;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.mobile-cart {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .cart-right {
+    margin-top: 70px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .desktop-cart {
+    display: none;
+  }
+  .mobile-cart {
+    display: block;
+  }
+}

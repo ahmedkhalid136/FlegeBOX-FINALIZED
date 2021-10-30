@@ -1,0 +1,89 @@
+/* Question div */
+/* the div about the question */
+.titleSection1 {
+  background-image: url("../../Pictures/nurse-talking.jpg");
+  height: 400px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(17, 97, 136, 0.5);
+  background-position-y: -90px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 200px;
+}
+.breadcrumbs1 {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.mainDiv1 {
+  margin-top: 5%;
+  padding: 40px 0;
+}
+.questionDiv {
+  justify-content: center;
+  width: 100%;
+  background-color: #f6fbfe;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: left;
+
+  border: 1px solid #dadadd;
+}
+.answerDiv {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #fafdfe;
+  color: #70717b;
+  display: block;
+  font-size: 16px;
+}
+.text1 {
+  padding: 5px;
+  margin: 8px;
+  margin-left: 7px;
+  color: #1f3347;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+}
+.activeText1 {
+  padding: 5px;
+  margin: 8px;
+  margin-left: 7px;
+  color: #f87433;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+}
+.styleQuestion {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 700px) {
+  .answerDiv {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+  }
+  .mainDiv1 {
+    padding: 40px 30px;
+  }
+  .titleSection1 {
+    background-size: cover;
+    background-position-y: 0px;
+    height: 200px;
+  }
+  .breadcrumbs1 {
+    margin-top: -110px;
+    font-size: 27px;
+  }
+}

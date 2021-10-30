@@ -1,0 +1,408 @@
+.personalInfo {
+  background: #f6fbfe;
+  float: left;
+  text-align: left;
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px 30px 30px;
+}
+
+input {
+  width: 100%;
+  margin: 0 !important;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.styleHeading {
+  margin-top: 10px;
+}
+
+.input {
+  background: #f6fbfe;
+
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
+}
+
+/* Second Row */
+.secondDiv {
+  margin-top: 1%;
+}
+.input1 {
+  background: #f6fbfe;
+
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
+}
+.input2 {
+  background: #f6fbfe;
+
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
+}
+.input3 {
+  background: #f6fbfe;
+
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
+}
+.input4 {
+  background: #f6fbfe;
+
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 50px;
+}
+/* Care level box */
+.Carelevel {
+  background: #f6fbfe;
+  float: left;
+  text-align: left;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 9px;
+  padding: 0px 30px 30px;
+}
+.Carelevelinner {
+  text-align: center;
+}
+.Buttoncontainer {
+  margin-top: 3%;
+}
+.styleHeadingCare {
+  margin-top: 30px;
+}
+/* button component */
+.buttonDiv2 {
+  border-radius: 15px;
+  background: #f6fbfe;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #dadadd;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f3347;
+  text-transform: uppercase;
+}
+.buttonDiv3 {
+  border-radius: 15px;
+  background: #2faae5;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #dadadd;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Contact Info */
+.ContactInfo {
+  background: #f6fbfe;
+  float: left;
+  text-align: left;
+  width: 100%;
+  padding: 20px 30px 30px;
+  border-radius: 20px;
+  margin-top: 9px;
+}
+.contactContainer {
+  margin-top: 3%;
+}
+.innercontact {
+  margin-left: 0px;
+}
+.styleHeadingContact {
+}
+
+/* Note Div */
+.NoteDiv {
+  background: #f6fbfe;
+  float: left;
+  text-align: left;
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px 30px 30px;
+  margin-top: 9px;
+}
+
+.area {
+  background: #f6fbfe;
+  width: 100%;
+  border: 1px solid #dadadd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  resize: none;
+}
+.separateCheckbox {
+  margin-top: 5%;
+}
+
+@media (max-width: 800px) {
+  .mainDiv {
+    margin-left: 10px;
+    display: block !important;
+  }
+  .personalInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 100%;
+    height: 500px;
+    margin-left: 10px;
+    border-radius: 20px;
+  }
+  .Carelevel {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 85%;
+    height: 400px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .ContactInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 85%;
+    height: 300px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+
+  .separateCheckbox {
+    margin-top: 15%;
+  }
+
+  /* ******************All the input fields in information tab*************************** */
+  .input {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input1 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input2 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input3 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+  .input4 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px;
+    height: 50px;
+  }
+
+  /* button component */
+  .buttonDiv2 {
+    border-radius: 15px;
+    background: #f6fbfe;
+    width: 100%;
+    height: 10px;
+    padding: 0;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+  }
+  .buttonDiv3 {
+    border-radius: 15px;
+    background: #2faae5;
+    width: 100%;
+    height: 10px;
+    padding: 0;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1000px) {
+  input {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .personalInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin-left: 1px;
+    border-radius: 20px;
+  }
+  .Carelevel {
+    background: #f6fbfe;
+    text-align: left;
+    width: 100%;
+    margin-left: 1px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .ContactInfo {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 100%;
+    height: 210px;
+    margin-left: 1px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .NoteDiv {
+    background: #f6fbfe;
+    float: left;
+    text-align: left;
+    width: 100%;
+    height: 300px;
+    margin-left: 1px;
+    border-radius: 20px;
+    margin-top: 9px;
+  }
+  .area {
+    background: #f6fbfe;
+    width: 100%;
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .innercontact {
+    margin-left: 20px;
+  }
+  .separateCheckbox {
+    margin-top: 15%;
+  }
+
+  /* button component */
+  .buttonDiv2 {
+    border-radius: 15px;
+    background: #f6fbfe;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1f3347;
+    text-transform: uppercase;
+    margin: 15px 15px 15px 0px;
+  }
+  .buttonDiv3 {
+    border-radius: 15px;
+    background: #2faae5;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dadadd;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    margin: 15px 15px 15px 0px;
+  }
+  /* ******************All the input fields in information tab*************************** */
+  .input {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input1 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input2 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input3 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+  }
+  .input4 {
+    background: #f6fbfe;
+
+    border: 1px solid #dadadd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 50px;
+  }
+}
