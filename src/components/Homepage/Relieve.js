@@ -1,46 +1,60 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import image1 from "../../Pictures/kelly-sikkema-5R5Trsu1aIM-unsplash.jpg";
 import image2 from "../../Pictures/kelli-mcclintock-GopRYASfsOc-unsplash.jpg";
 import image3 from "../../Pictures/magic-mind-OSk4lO--UsA-unsplash.jpg";
 import image4 from "../../Pictures/girl-with-red-hat-Epw-SqZYeyw-unsplash.jpg";
+import Popular from "../Bloglist/Popular";
+
+import axios from "axios";
 
 export default function Relieve() {
+  const [Data, setData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        `http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]`,
+        {
+          headers: {
+            Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = await response.data.data;
+
+      console.log(data, "mydatas");
+      await setData(data);
+      console.log(Data, "my useState");
+    } catch (e) {
+      console.log("error", e);
+    }
+  };
+  useEffect(async () => {
+    getData();
+  }, []);
   return (
     <div className="container relieve-section">
       <div>
         <h1>Wir sind da um Sie zu entlasten </h1>
-        <p>
-          We are not only concerened with the current situation in nursing, but
-          also with the future. Fo us, the focus is on the people in care -
-          those in need of care, caregivers, nurses and family caregivers
-        </p>
       </div>
 
-      <div className="row relieve-image-section">
-        <div className="col-lg-4">
-          <img src={image1} className="relieve-image" />
-          <h4>Es soll Ihnen gut gehen</h4>
-          <p>
-            Unsere Produkte und Dienstleistungen sowie unsere Beiträge zu den
-            Themen Gesundheit und Pflege soll eben dieses bei Ihnen erreichen
-          </p>
-        </div>
-        <div className="col-lg-4">
-          <img src={image2} className="relieve-image" />
-          <h4>Wir wollen informieren</h4>
-          <p>
-            Pflegebedürftige uns Ihre Angehörigen sollen jene Leistung erfahren
-            und erwarten dürfen die Ihnen gesetzlich zustehen
-          </p>
-        </div>
-        <div className="col-lg-4">
-          <img src={image3} className="relieve-image" />
-          <h4>Sie sollen entlastet werden</h4>
-          <p>
-            Damit sie mehr Zeit für das Miteinander haben übernehmen wir alle
-            Formalitäten für Sie die anfallen.
-          </p>
-        </div>
+      <div className="row articleImgdiv ">
+        {Data.slice(0, 3).map((item, ind) => {
+          return (
+            <Popular
+              title={item.title}
+              content={item.content}
+              image={item.picture}
+            />
+          );
+        })}
+        {/* <Popular
+              title={Data[0].title}
+              content={Data[0].content}
+              image={Data[0].picture}
+            /> */}
       </div>
     </div>
   );

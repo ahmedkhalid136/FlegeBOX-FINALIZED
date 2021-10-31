@@ -254,17 +254,9 @@
   }
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
   .hero-left-side {
     padding: 30px 0 0 30px !important;
-  }
-  .hero-car {
-  }
-  .hero-box {
-    right: 20px;
-  }
-  .hero-girl {
-    width: 100% !important;
   }
   .mobile-background-color {
     background-color: #e5e5e521;
@@ -295,6 +287,9 @@
     font-size: 16px;
     margin-bottom: 20px;
   }
+  .benifits-columns img {
+    padding-bottom: 20px;
+  }
   .down-arrow {
     display: block;
     font-size: 30px;
@@ -309,7 +304,7 @@
     background-color: #2faae5;
     height: 500px;
   }
-} */
+}
 
 @media (max-width: 340px) {
   body .mobile-hero-section .mobile-car {

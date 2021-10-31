@@ -23,8 +23,26 @@ function Popular(props) {
         <p>{props.content}</p>
         <br />
         <p>
-          <i class="far fa-clock"></i> 4 MIN |{" "}
-          <i class="far fa-calendar-alt"></i> JULY 20, 2021
+          <img
+            src="./Images/timer.png"
+            style={{
+              width: "20px",
+              height: "20px",
+              marginTop: "-5px",
+              marginRight: "5px",
+            }}
+          />{" "}
+          4 MIN |{" "}
+          <img
+            src="./Images/calendar.png"
+            style={{
+              width: "20px",
+              height: "20px",
+              marginTop: "-5px",
+              marginRight: "5px",
+            }}
+          />{" "}
+          JULY 20, 2021
         </p>
       </Link>
     </div>

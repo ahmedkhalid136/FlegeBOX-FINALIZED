@@ -16,7 +16,6 @@ export default function Title() {
         src="./Images/Title-pattern.png"
         style={{
           position: "absolute",
-          top: "-50px",
           left: "0",
           width: "100%",
           zIndex: "1000",
@@ -129,8 +128,8 @@ export default function Title() {
           textAlign: "center",
           paddingLeft: "30px",
           height: "130px",
-          padding: "20px",
-          paddingBottom: "22px",
+          padding: "25px",
+          paddingBottom: "28px",
           margin: "-50px 0 0 0",
           zIndex: "1000",
           position: "relative",
