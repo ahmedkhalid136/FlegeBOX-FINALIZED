@@ -14,7 +14,7 @@ export default function Base() {
   return (
     <div className="footer-base" style={{ position: "relative" }}>
       <img
-        className="orange-pattern"
+        className="orange-pattern4"
         src="./Images/Union2.png"
         style={{
           position: "absolute",

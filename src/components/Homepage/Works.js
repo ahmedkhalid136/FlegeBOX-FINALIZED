@@ -7,7 +7,7 @@ export default function Works() {
         <img
           src="./Images/Union.png"
           style={{ position: "absolute", top: "0", left: "0" }}
-          className="orange-pattern"
+          className="orange-pattern3"
         />
         <br />
         <br />

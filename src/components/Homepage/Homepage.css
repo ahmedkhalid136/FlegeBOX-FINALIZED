@@ -8,6 +8,15 @@
   z-index: 1;
 }
 
+.orange-pattern3 {
+  margin-top: -20px;
+  z-index: 1;
+}
+.orange-pattern4 {
+  margin-top: -20px;
+  z-index: 1;
+}
+
 .home-padding {
   padding-left: 80px;
   padding-right: 80px;
@@ -255,9 +264,6 @@
 }
 
 @media (max-width: 900px) {
-  .hero-left-side {
-    padding: 30px 0 0 30px !important;
-  }
   .mobile-background-color {
     background-color: #e5e5e521;
   }
@@ -306,12 +312,12 @@
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 420px) {
   body .mobile-hero-section .mobile-car {
-    top: 80% !important;
+    top: 390px !important;
   }
   body .mobile-hero-section .mobile-box {
-    top: 86% !important;
+    top: 420px !important;
     left: 80% !important;
   }
   body .mobile-hero-section .mobile-girl {
@@ -320,12 +326,12 @@
   }
 }
 
-@media (max-width: 473px) {
+@media (max-width: 536px) {
   .mobile-hero-section .mobile-car {
-    top: 62% !important;
+    top: 330px !important;
   }
   .mobile-hero-section .mobile-box {
-    top: 70% !important;
+    top: 380px !important;
   }
 
   .Works h2 {
@@ -419,10 +425,10 @@
   }
 
   .mobile-box {
-    top: 67% !important;
+    top: 320px !important;
   }
   .mobile-car {
-    top: 60% !important;
+    top: 280px !important;
   }
 }
 
@@ -435,11 +441,13 @@
     left: 270px !important;
     width: 90px !important;
     height: 60px !important;
+    top: 280px !important;
   }
   .mobile-box {
     left: 450px !important;
     width: 90px !important;
     height: 60px !important;
+    top: 350px !important;
   }
   .home-padding {
     padding-right: 30px;
@@ -536,7 +544,7 @@
     width: 50px !important;
   }
   .orange-pattern {
-    display: none;
+    /* display: none; */
   }
   .orange-pattern2 {
     display: none;
@@ -613,11 +621,23 @@
 
 @media (max-width: 990px) {
   .orange-pattern {
-    display: none;
+    /* display: none; */
+    /* margin-top: 0 !important; */
+    width: 20%;
   }
-  .orange-pattern2 {
-    display: none;
+  .orange-pattern3 {
+    width: 100px !important;
+    margin-top: 80px;
   }
+
+  .orange-pattern4 {
+    display: block;
+    left: 80% !important;
+    transform: rotate(180deg);
+    transform: rotateY(180deg);
+    width: 20%;
+  }
+
   .hero-left-side p {
     font-size: 18px !important;
   }
