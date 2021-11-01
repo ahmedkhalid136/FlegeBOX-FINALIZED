@@ -17,10 +17,10 @@ export default function Body(props) {
 
   function sendData(event) {
     event.preventDefault();
-    fetch("http://35.84.238.24/api/method/flegeapp.utils.create_patient", {
+    fetch("http://23.88.103.58/api/method/flegeapp.utils.create_patient", {
       method: "POST",
       headers: {
-        Authorization: "token 6141d2161d30a42:b783e62c3c1518d",
+        Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -48,7 +48,7 @@ export default function Body(props) {
   return (
     <div className="container" style={{ textAlign: "left" }}>
       <h2>{order}</h2>
-      <h2>{order1}</h2>
+      <p>{order1}</p>
 
       <br />
 
@@ -233,7 +233,7 @@ export default function Body(props) {
             onClick={(e) => {
               sendData(e);
               setorder("Thankyou for your order");
-              setOrder1("Your order will be receive within 7days");
+              setOrder1("Your order will arrive at 12.08.2021");
               // setTimeout( window.location.reload(), 10000)
             }}
           >

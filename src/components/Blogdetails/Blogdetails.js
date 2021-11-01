@@ -49,7 +49,10 @@ function Blogdetails(props) {
           <i class="far fa-calendar-alt"></i> july 20,2021
         </div>
         <div>
-          <img src={props.location.aboutProps.image} className="Myimage" />
+          <img
+            src={"http://23.88.103.58/" + props.location.aboutProps.image}
+            className="Myimage"
+          />
         </div>
         <p className="paraText">{props.location.aboutProps.content}</p>
         <div className="container">

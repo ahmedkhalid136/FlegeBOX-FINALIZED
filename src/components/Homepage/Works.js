@@ -120,18 +120,20 @@ export default function Works() {
         </div>
       </div>
       <div style={{ marginBottom: "50px", marginTop: "-50px" }}>
-        <button
-          style={{
-            textTransform: "uppercase",
-            backgroundColor: "#f87433",
-            color: "white",
-            border: "none",
-            padding: "12px 30px",
-            borderRadius: "10px",
-          }}
-        >
-          Pflegebox sichern
-        </button>
+        <a href="/box">
+          <button
+            style={{
+              textTransform: "uppercase",
+              backgroundColor: "#f87433",
+              color: "white",
+              border: "none",
+              padding: "12px 30px",
+              borderRadius: "10px",
+            }}
+          >
+            Pflegebox sichern
+          </button>
+        </a>
       </div>
     </div>
   );

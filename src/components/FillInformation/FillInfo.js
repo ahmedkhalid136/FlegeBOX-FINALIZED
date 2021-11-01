@@ -198,14 +198,17 @@ function FillInfo(props) {
               />
               {Daddress ? (
                 <div>
+                  <br />
                   <input
                     className="input1"
                     placeholder="Different address"
                     onChange={(e) => props.sname(e.target.value)}
                     value={props.valSname}
                   />
-                  <br /> <br />
+                  <br />
+                  <br />
                   <input
+                    style={{ display: "block", position: "static" }}
                     className="input1"
                     placeholder="PhoneNumber"
                     onChange={(e) => props.phone(e.target.value)}

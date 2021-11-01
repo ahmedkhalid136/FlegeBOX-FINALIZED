@@ -15,12 +15,15 @@ function Popular(props) {
           },
         }}
       >
-        <img src={props.image} className="bloglist-image" />
+        <img
+          src={"http://23.88.103.58" + props.image}
+          className="bloglist-image"
+        />
         <br />
         <br />
         <h4>{props.title}</h4>
         <br />
-        <p>{props.content}</p>
+        <p>{props.content.substring(0, 90) + "..."}</p>
         <br />
         <p>
           <img
