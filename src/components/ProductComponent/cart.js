@@ -66,7 +66,11 @@ function Cart(props) {
       </div>
       <div
         className="col-lg-6 col-7"
-        style={{ paddingTop: "20px", display: "inline-block" }}
+        style={{
+          paddingTop: "20px",
+          display: "inline-block",
+          position: "relative",
+        }}
       >
         <div className="increment-cart">
           {Realsize == null ? null : (
@@ -96,7 +100,13 @@ function Cart(props) {
             }}
           >
             <i
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                right: "10px",
+                margin: "0",
+                top: "40%",
+              }}
               onClick={() => {
                 decrement();
               }}
