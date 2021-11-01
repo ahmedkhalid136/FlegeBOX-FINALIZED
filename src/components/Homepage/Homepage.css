@@ -298,7 +298,7 @@
   }
   .iconsHeading {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-top: 20px;
   }
   .benifits-columns img {
     padding-bottom: 20px;
@@ -362,16 +362,20 @@
   }
 
   .Works h2 {
-    font-size: 26px;
+    font-size: 18px;
   }
   .iconsHeading {
-    font-size: 21px;
-    padding-left: 20px;
-    padding-right: 20px;
+    font-size: 18px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
 @media (max-width: 600px) {
+  .relieve-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .footer-base .orange-pattern4 {
     display: block;
     left: 85% !important;
@@ -445,7 +449,7 @@
     font-size: 40px;
   }
   .relieve-section h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .relieve-section h4 {
     font-size: 18px;
@@ -671,8 +675,8 @@
     width: 20%;
   }
   .orange-pattern3 {
-    width: 100px !important;
-    margin-top: 80px;
+    width: 70px !important;
+    margin-top: 90px;
   }
 
   .orange-pattern4 {
