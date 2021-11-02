@@ -203,7 +203,6 @@ function FillInfo(props) {
                     className="input1"
                     placeholder="Different address"
                     onChange={(e) => props.sname(e.target.value)}
-                    value={props.valSname}
                   />
                   <br />
                   <br />
@@ -212,7 +211,6 @@ function FillInfo(props) {
                     className="input1"
                     placeholder="PhoneNumber"
                     onChange={(e) => props.phone(e.target.value)}
-                    value={props.valPhone}
                   />
                 </div>
               ) : null}

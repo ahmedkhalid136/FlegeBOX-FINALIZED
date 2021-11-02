@@ -12,7 +12,6 @@ function Contactinfo(props) {
               className="input1"
               placeholder="Phone Number"
               onChange={(e) => props.phone(e.target.value)}
-              value={props.valPhone}
             />
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">

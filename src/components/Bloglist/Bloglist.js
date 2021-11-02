@@ -53,24 +53,18 @@ function Bloglist() {
       <div className="container bloglist-title-section mobile-background-color">
         <div className="row">
           <div className="col-lg-6">
-            <img className="left-bloglist-image" src={leftimage} />
+            <img
+              className="left-bloglist-image"
+              src={"http://23.88.103.58" + Data[0].picture}
+            />
           </div>
           <div
             className="col-lg-6 right-bloglist-text"
             style={{ textAlign: "left" }}
           >
-            <h2>
-              Lorem ipsum dolor sit amet,
-              <br /> consectetur dolor consectetur
-              <br />
-              adipiscing elit sed do
-            </h2>
+            <h2>{Data[0].title}</h2>
             <br />
-            <p>
-              We want to relieve the burden on those affected so that
-              <br /> they can concentrate on the finer things in life and have
-              <br /> more time for togetherness...
-            </p>
+            <p>{Data[0].content.substring(0, 390) + "..."}</p>
             <br />
             <p>
               <img

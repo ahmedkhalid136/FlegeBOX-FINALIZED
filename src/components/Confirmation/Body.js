@@ -45,8 +45,13 @@ export default function Body(props) {
     });
   }
 
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
   return (
-    <div className="container" style={{ textAlign: "left" }}>
+    <div className="container" style={{ textAlign: "left" }} id="data-sent">
       <h2>{order}</h2>
       <p>{order1}</p>
 
@@ -226,19 +231,22 @@ export default function Body(props) {
             <i class="fas fa-arrow-left" style={{ marginRight: "5px" }}></i>
             back
           </button>
-          <button
-            disabled={!insuranceNumber || !date || !year || !insurance}
-            style={{ cursor: "pointer" }}
-            className="button confirmation-button"
-            onClick={(e) => {
-              sendData(e);
-              setorder("Thankyou for your order");
-              setOrder1("Your order will arrive at 12.08.2021");
-              // setTimeout( window.location.reload(), 10000)
-            }}
-          >
-            Order
-          </button>
+          <a href="/#data-sent">
+            <button
+              disabled={!insuranceNumber || !date || !year || !insurance}
+              style={{ cursor: "pointer" }}
+              className="button confirmation-button"
+              onClick={(e) => {
+                sendData(e);
+                setorder("Thankyou for your order");
+                setOrder1("Your order will arrive at 12.08.2021");
+                topFunction();
+                // setTimeout( window.location.reload(), 10000)
+              }}
+            >
+              Order
+            </button>
+          </a>
         </div>
       </div>
     </div>
