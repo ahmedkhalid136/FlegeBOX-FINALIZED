@@ -85,10 +85,13 @@ export default function Body(props) {
           </div>
           <div className="col-lg-4">
             <input
-              type="date"
+              type="text"
+              onFocus={(e) => {
+                e.currentTarget.type = "date";
+                e.currentTarget.focus();
+              }}
+              placeholder="Date"
               className="option-box"
-              placeholder="Date Of Birth"
-              onChange={(e) => setDate(e.target.value)}
             />
           </div>
           <div className="col-lg-4">

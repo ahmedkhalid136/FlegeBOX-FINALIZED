@@ -70,24 +70,6 @@ function FillInfo(props) {
           <div className="checkboxes">
             <h6 className="styleHeading">Personal Information</h6>
 
-            {/* <FormControlLabel
-            value="Ms"
-            control={<Checkbox color="primary" />}
-            label="Ms"
-            labelPlacement="End"
-            onClick={() => {
-              setTitle(true);
-            }}
-          />
-          <FormControlLabel
-            value="Mr"
-            control={<Checkbox color="primary" />}
-            label="Mr"
-            labelPlacement="End"
-            onClick={() => {
-              setTitle(false);
-            }}
-          /> */}
             <div style={{ textAlign: "left", marginLeft: "-20px" }}>
               <input
                 style={{
