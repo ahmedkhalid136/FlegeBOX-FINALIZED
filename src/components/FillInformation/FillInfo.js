@@ -76,7 +76,7 @@ function FillInfo(props) {
                   display: "inline",
                   width: "50px",
                   textAlign: "left",
-                  marginLeft: "20px",
+                  // marginLeft: "20px",
                   height: "13px",
                 }}
                 type="radio"
@@ -94,7 +94,7 @@ function FillInfo(props) {
                   display: "inline",
                   width: "50px",
                   textAlign: "left",
-                  marginLeft: "20px",
+                  // marginLeft: "20px",
                   height: "13px",
                 }}
                 type="radio"
