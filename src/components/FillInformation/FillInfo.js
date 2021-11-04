@@ -72,6 +72,7 @@ function FillInfo(props) {
 
             <div style={{ textAlign: "left", marginLeft: "-20px" }}>
               <input
+                className="radioButtons"
                 style={{
                   display: "inline",
                   width: "50px",
@@ -90,6 +91,7 @@ function FillInfo(props) {
                 Ms
               </label>
               <input
+                className="radioButtons"
                 style={{
                   display: "inline",
                   width: "50px",
