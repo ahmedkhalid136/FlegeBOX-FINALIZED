@@ -70,14 +70,14 @@ function FillInfo(props) {
           <div className="checkboxes">
             <h6 className="styleHeading">Personal Information</h6>
 
-            <div style={{ textAlign: "left", marginLeft: "-20px" }}>
+            <div style={{ textAlign: "left" }}>
               <input
                 style={{
-                  display: "inline",
-                  width: "50px",
+                  // display: "inline-block",
+                  width: "15px",
                   textAlign: "left",
-                  // marginLeft: "20px",
-                  height: "13px",
+                  transform: "scale(1.0)",
+                  border: "none",
                 }}
                 type="radio"
                 id="Mr"
@@ -86,14 +86,14 @@ function FillInfo(props) {
                   setTitle(false);
                 }}
               />
-              Ms
+              <span style={{ marginLeft: "8px", marginRight: "8px" }}>Ms</span>
               <input
                 style={{
-                  display: "inline",
-                  width: "50px",
+                  // display: "inline-block",
+                  width: "15px",
                   textAlign: "left",
-                  // marginLeft: "20px",
-                  height: "13px",
+                  transform: "scale(1.0)",
+                  border: "none",
                 }}
                 type="radio"
                 id="Mr"
@@ -102,7 +102,7 @@ function FillInfo(props) {
                   setTitle(false);
                 }}
               />
-              Mr
+              <span style={{ marginLeft: "8px", marginRight: "8px" }}>Mr</span>
             </div>
           </div>
           <br />
