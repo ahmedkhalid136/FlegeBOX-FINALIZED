@@ -139,7 +139,7 @@ function FillInfo(props) {
                     />
                   </div>
                   <div className="col-lg-4 col-4">
-                    <input className="input2" placeholder="City" />
+                    <input className="input2" placeholder="City" onChange={(e)=>props.city(e.target.value)} value={props.valcity} />
                   </div>
                 </div>
               </div>

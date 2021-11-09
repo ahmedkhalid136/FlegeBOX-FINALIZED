@@ -8,12 +8,34 @@ export default function Body(props) {
   const [order1, setOrder1] = useState("");
   const [year, setYear] = useState("");
   const [insurance, setInsurance] = useState("");
-
+  useEffect(() => {
+    console.log(props, "myProps");
+    console.log(insurance, "Insurance");
+    console.log(insuranceNumber, "INusance");
+    console.log(year, "year");
+    console.log(date, "date");
+  });
   let sigpad = useRef({});
 
   function clear() {
     sigpad.current.clear();
   }
+  let newArray = [
+    {
+      item_name: "",
+      quantity: "",
+      size: "",
+    },
+  ];
+  useEffect(() => {
+    
+    console.log( props.value.map(item => ({ "item_name": item.Name, "quantity": item.pcs, "size": item.size})
+    ), "Dynamic array");
+
+    // console.log(props.value[0].Name,"name of product")
+    // console.log(props.value[0].pcs,"name of product")
+    // console.log(props.value[0].size,"name of product")
+  });
 
   function sendData(event) {
     event.preventDefault();
@@ -28,21 +50,28 @@ export default function Body(props) {
         last_name: props.lname,
         title: props.title,
         street_name: props.sname,
+        street_no: "40",
         date_of_birth: date,
         zip_code: props.zip,
+        city: props.city,
         country: props.countryy,
         care_level: props.careLevel,
-        care_box: props.value,
+        care_box: props.value.map(item => ({ "item_name": item.Name, "quantity": item.pcs, "size": item.size})
+        ),
         phone_number: props.phone,
         email_address: props.email,
         insurance_company: insurance,
         insurance_number: insuranceNumber,
         year: year,
-        note: props.note,
+        note: "Patient from germany",
       }),
-    }).catch((e) => {
-      console.log(e, "error");
-    });
+    })
+      .then((res) => {
+        console.log(res.status, "response");
+      })
+      .catch((e) => {
+        console.log(e, "error");
+      });
   }
 
   function topFunction() {
@@ -92,6 +121,7 @@ export default function Body(props) {
               }}
               placeholder="Date"
               className="option-box"
+              onChange={(e) => setDate(e.target.value)}
             />
           </div>
           <div className="col-lg-4">

@@ -12,6 +12,7 @@ function Box() {
   const [careBox, setcareBox] = useState([]);
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
+  const[city,setcity]=useState("")
   const [streetName, setstreetName] = useState("");
   const [zipCode, setzipCode] = useState("");
   const [country, setCountry] = useState("");
@@ -20,7 +21,10 @@ function Box() {
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
   const [careLevel, setCareLevel] = useState("");
-
+ 
+  useEffect(()=>{
+    console.log(careBox,"my array at Box")
+  })
   return (
     <div>
       <Header />
@@ -39,6 +43,7 @@ function Box() {
             note={setNote}
             phone={setphoneNumber}
             email={setEmail}
+            city={setcity}
             // USESTATE VALUES
             valFname={firstName}
             valLname={lastName}
@@ -50,6 +55,7 @@ function Box() {
             valNote={note}
             valPhone={phoneNumber}
             valEmail={email}
+            valcity={city}
           />
         )}
         {getComp == "confirm" && (
@@ -66,6 +72,7 @@ function Box() {
             note={note}
             phone={phoneNumber}
             email={email}
+            city={city}
           />
         )}
       </div>

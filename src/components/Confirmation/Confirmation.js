@@ -59,6 +59,7 @@ export default function Confirmation(props) {
         phone={props.phone}
         email={props.email}
         carelevel={props.careLevel}
+        city={props.city}
       />
     </div>
   );

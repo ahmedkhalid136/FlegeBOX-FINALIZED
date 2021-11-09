@@ -44,7 +44,8 @@ function BlueProduct(props) {
     props.ChangeQuantity(index, actual + 1);
     if (actual >= 1) {
       setvalue(actual);
-      mycount(actual + 1);
+      // mycount(actual + 1);
+      mycount(actual => actual + 1);
       myArr[theObj].pcs = myArr[theObj].pcs + pcs;
       myArr[theObj].sets = myArr[theObj].sets + 1;
     } else {
