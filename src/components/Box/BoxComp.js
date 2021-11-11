@@ -33,14 +33,15 @@ function BoxComp(props) {
 
   useEffect(() => {
     getData();
+   
   }, []);
   var box1 =[]
   if(mainbox.length!=0){
     box1= mainbox[0].carebox_item.map((item)=>{
       return {
-        name:item.item,
+        Name:item.item,
         pcs:item.quantity,
-        img:"",
+        
         size:item.size
       }
     })
@@ -50,9 +51,9 @@ function BoxComp(props) {
   if(mainbox.length!=0){
     box2= mainbox[1].carebox_item.map((item)=>{
       return {
-        name:item.item,
+        Name:item.item,
         pcs:item.quantity,
-        img:"",
+        
         size:item.size
       }
     })
@@ -62,9 +63,9 @@ function BoxComp(props) {
   if(mainbox.length!=0){
     box3= mainbox[2].carebox_item.map((item)=>{
       return {
-        name:item.item,
+        Name:item.item,
         pcs:item.quantity,
-        img:"",
+        
         size:item.size
       }
     })
@@ -73,9 +74,9 @@ function BoxComp(props) {
   if(mainbox.length!=0){
     box4= mainbox[3].carebox_item.map((item)=>{
       return {
-        name:item.item,
+        Name:item.item,
         pcs:item.quantity,
-        img:"",
+        
         size:item.size
       }
     })
@@ -131,6 +132,21 @@ function BoxComp(props) {
     if (getBox == "box1") {
       props.box(box1);
     }
+    if (getBox == "box2") {
+      props.box(box2);
+    }
+    if (getBox == "box3") {
+      props.box(box3);
+    }
+    if (getBox == "box4") {
+      props.box(box4);
+    }
+    if (getBox == "box5") {
+      props.box(box5);
+    }
+    if (getBox == "box6") {
+      props.box(box5);
+    }
   }
   return (
     <div className="row box-section">
@@ -175,7 +191,7 @@ function BoxComp(props) {
               className={getBox2 ? "boxes" : "boxes2"}
               onClick={() => {
                 setBox("box2");
-
+                check();
                 setBox2(false);
                 setBox1(true);
                 setBox3(true);
@@ -204,7 +220,7 @@ function BoxComp(props) {
               className={getBox3 ? "boxes" : "boxes2"}
               onClick={() => {
                 setBox("box3");
-
+                check();
                 setBox3(false);
                 setBox1(true);
                 setBox2(true);
@@ -233,7 +249,7 @@ function BoxComp(props) {
             <div
               className={getBox4 ? "boxes" : "boxes2"}
               onClick={() => {
-                setBox("box1");
+                setBox("box4");
                 check();
                 setBox1(true);
                 setBox2(true);
@@ -271,7 +287,7 @@ function BoxComp(props) {
             <div
               className={getBox5 ? "boxes" : "boxes2"}
               onClick={() => {
-                setBox("box1");
+                setBox("box5");
                 check();
                 setBox1(true);
                 setBox2(true);
@@ -306,7 +322,7 @@ function BoxComp(props) {
             <div
               className={getBox6 ? "boxes" : "boxes2"}
               onClick={() => {
-                setBox("box1");
+                setBox("box6");
                 check();
                 setBox1(true);
                 setBox2(true);
@@ -345,7 +361,7 @@ function BoxComp(props) {
           {getBox == "box1" &&
             box1.map((user) => (
               <Cart1
-                Name={user.name}
+                Name={user.Name}
                 pcs={user.pcs}
                 image={user.img}
                 size={user.size}
@@ -355,7 +371,7 @@ function BoxComp(props) {
           {getBox == "box2" &&
             box2.map((user) => (
               <Cart1
-                Name={user.name}
+                Name={user.Name}
                 pcs={user.quantity}
                 image={user.img}
                 size={user.size}
@@ -365,7 +381,7 @@ function BoxComp(props) {
           {getBox == "box3" &&
             box3.map((user) => (
               <Cart1
-                Name={user.name}
+                Name={user.Name}
                 pcs={user.pcs}
                 image={user.img}
                 size={user.size}
@@ -375,7 +391,7 @@ function BoxComp(props) {
           {getBox == "box4" &&
             box4.map((user) => (
               <Cart1
-                Name={user.name}
+                Name={user.Name}
                 pcs={user.quantity}
                 image={user.img}
                 size={user.size}

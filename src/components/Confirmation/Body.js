@@ -10,6 +10,7 @@ export default function Body(props) {
   const [insurance, setInsurance] = useState("");
   useEffect(() => {
     console.log(props, "myProps");
+    console.log(props.value,"vlaue")
     console.log(insurance, "Insurance");
     console.log(insuranceNumber, "INusance");
     console.log(year, "year");
