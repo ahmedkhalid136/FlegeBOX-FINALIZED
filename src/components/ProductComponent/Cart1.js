@@ -9,11 +9,11 @@ export default function Cart(props) {
   const theObj = array.findIndex((obj) => obj.name == Name);
   useEffect(() => {
    
-    if (size == "S") {
+    if (size == "Small") {
       setBackground(!getBackground);
-    } else if (size == "M") {
+    } else if (size == "Medium") {
       setBackground2(!getBackground2);
-    } else if (size == "L") {
+    } else if (size == "Large") {
       setBackground3(!getBackground3);
     }
   }, [array]);
@@ -39,13 +39,14 @@ export default function Cart(props) {
        
       </div>
       <div className="col-lg-6 col-5" style={{ paddingTop: "20px" }}>
-        <div className="increment-cart cart1-sizes">
+       
+       {size==null?null: <div className="increment-cart cart1-sizes">
           <button
             onClick={() => {
               setBackground(!getBackground);
               setBackground3(true)
               setBackground2(true)
-              array[theObj].size="S"
+              array[theObj].size="Small"
             }}
             className={getBackground ? "sizes1" : "increment-buttons1"}
           >
@@ -56,7 +57,7 @@ export default function Cart(props) {
               setBackground2(!getBackground2);
               setBackground(true)
               setBackground3(true)
-              array[theObj].size="M"
+              array[theObj].size="Medium"
             }}
             className={getBackground2 ? "sizes1" : "increment-buttons1"}
           >
@@ -68,7 +69,7 @@ export default function Cart(props) {
               setBackground(true)
               setBackground2(true)
 
-              array[theObj].size="L"
+              array[theObj].size="Large"
              console.log(   "size is empty")
             }}
             className={getBackground3 ? "sizes1" : "increment-buttons1"}
@@ -76,7 +77,7 @@ export default function Cart(props) {
             L
           </button>
         </div>
-        <div style={{ textAlign: "right", display: "inline-block" }}>
+       } <div style={{ textAlign: "right", display: "inline-block" }}>
           <i class="fas fa-times"></i>
         </div>
       </div>

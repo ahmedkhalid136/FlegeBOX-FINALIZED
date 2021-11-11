@@ -6,7 +6,7 @@ import Cart1 from "../ProductComponent/Cart1";
 import axios from "axios";
 function BoxComp(props) {
   const [getBox, setBox] = useState("box1");
-  const [Box1, ssetBox1] = useState([]);
+  const [mainbox, setmainbox] = useState([]);
 
   const [getBox1, setBox1] = useState(false);
   const [getBox2, setBox2] = useState(true);
@@ -14,98 +14,72 @@ function BoxComp(props) {
   const [getBox4, setBox4] = useState(true);
   const [getBox5, setBox5] = useState(true);
   const [getBox6, setBox6] = useState(true);
-  let box = [];
-  const box1 = [
-    {
-      name: "K94 MASK",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-    },
 
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-    },
-  ];
-  const box2 = [
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    {
-      name: "Box2",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-    },
+  const getData = async () => {
+    const response = await axios.get(
+      `http://23.88.103.58/api/method/flegeapp.utils.get_careboxes`,
+      {
+        headers: {
+          Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const Data = await response.data.data;
+    console.log(Data, "mydata");
+    setmainbox(Data)
+    console.log(response, "my useState");
+  };
 
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-    },
-  ];
-  const box3 = [
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-    },
-    {
-      name: "Box3",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-    },
-  ];
-  const box4 = [
-    {
-      name: "Box4",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-    },
-
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-    },
-  ];
+  useEffect(() => {
+    getData();
+  }, []);
+  var box1 =[]
+  if(mainbox.length!=0){
+    box1= mainbox[0].carebox_item.map((item)=>{
+      return {
+        name:item.item,
+        pcs:item.quantity,
+        img:"",
+        size:item.size
+      }
+    })
+  }
+ 
+  var box2 =[]
+  if(mainbox.length!=0){
+    box2= mainbox[1].carebox_item.map((item)=>{
+      return {
+        name:item.item,
+        pcs:item.quantity,
+        img:"",
+        size:item.size
+      }
+    })
+  }
+ 
+  var box3 = []
+  if(mainbox.length!=0){
+    box3= mainbox[2].carebox_item.map((item)=>{
+      return {
+        name:item.item,
+        pcs:item.quantity,
+        img:"",
+        size:item.size
+      }
+    })
+  }
+  var box4 = []
+  if(mainbox.length!=0){
+    box4= mainbox[3].carebox_item.map((item)=>{
+      return {
+        name:item.item,
+        pcs:item.quantity,
+        img:"",
+        size:item.size
+      }
+    })
+  }
   const box5 = [
     {
       name: "Box5",
@@ -152,7 +126,7 @@ function BoxComp(props) {
       img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
     },
   ];
-  
+
   function check() {
     if (getBox == "box1") {
       props.box(box1);
@@ -372,7 +346,7 @@ function BoxComp(props) {
             box1.map((user) => (
               <Cart1
                 Name={user.name}
-                pcs={user.quantity}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box1}

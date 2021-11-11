@@ -8,6 +8,18 @@ import Footer from "../footer/Footer";
 import Header from "../Header/Header";
 import Popular from "./Popular";
 import axios from "axios";
+  // const response = await fetch(
+    //   'http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]',
+    //   {
+    //     method: "get",
+    //     headers: new Headers({
+    //       Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
+    //       "Content-Type": "application/json",
+    //     }),
+    //   }
+    // ).then(async (data) => {
+    //   setData(data);
+    // });
 function Bloglist() {
   const [Data, setData] = useState([]);
 
@@ -26,18 +38,7 @@ function Bloglist() {
     await setData(data);
     console.log(response, "my useState");
 
-    // const response = await fetch(
-    //   'http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]',
-    //   {
-    //     method: "get",
-    //     headers: new Headers({
-    //       Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
-    //       "Content-Type": "application/json",
-    //     }),
-    //   }
-    // ).then(async (data) => {
-    //   setData(data);
-    // });
+  
     console.log(Data);
   };
 
@@ -55,16 +56,16 @@ function Bloglist() {
           <div className="col-lg-6">
             <img
               className="left-bloglist-image"
-              src={"http://23.88.103.58" + Data[0].picture}
+              src={Data[0]? "http://23.88.103.58" + Data[0].picture:""}
             />
           </div>
           <div
             className="col-lg-6 right-bloglist-text"
             style={{ textAlign: "left" }}
           >
-            <h2>{Data[0].title}</h2>
+            <h2>{Data[0]?Data[0].title:""}</h2>
             <br />
-            <p>{Data[0].content.substring(0, 390) + "..."}</p>
+            <p>{Data[0]?Data[0].content.substring(0, 390) + "...":""}</p>
             <br />
             <p>
               <img
