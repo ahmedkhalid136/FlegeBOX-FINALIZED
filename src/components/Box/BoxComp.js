@@ -40,8 +40,7 @@ function BoxComp(props) {
     box1= mainbox[0].carebox_item.map((item)=>{
       return {
         Name:item.item,
-        pcs:item.quantity,
-        
+        pcs:item.quantity,        
         size:item.size
       }
     })
@@ -52,8 +51,7 @@ function BoxComp(props) {
     box2= mainbox[1].carebox_item.map((item)=>{
       return {
         Name:item.item,
-        pcs:item.quantity,
-        
+        pcs:item.quantity,        
         size:item.size
       }
     })
@@ -64,8 +62,7 @@ function BoxComp(props) {
     box3= mainbox[2].carebox_item.map((item)=>{
       return {
         Name:item.item,
-        pcs:item.quantity,
-        
+        pcs:item.quantity,        
         size:item.size
       }
     })

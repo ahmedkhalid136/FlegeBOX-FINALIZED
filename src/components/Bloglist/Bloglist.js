@@ -8,18 +8,7 @@ import Footer from "../footer/Footer";
 import Header from "../Header/Header";
 import Popular from "./Popular";
 import axios from "axios";
-  // const response = await fetch(
-    //   'http://23.88.103.58/api/resource/Pflege Blog Post?fields=["name","creation","title","content","picture"]',
-    //   {
-    //     method: "get",
-    //     headers: new Headers({
-    //       Authorization: "token e5bc1d9d49b103f:d545e06a0a468ad",
-    //       "Content-Type": "application/json",
-    //     }),
-    //   }
-    // ).then(async (data) => {
-    //   setData(data);
-    // });
+ 
 function Bloglist() {
   const [Data, setData] = useState([]);
 
