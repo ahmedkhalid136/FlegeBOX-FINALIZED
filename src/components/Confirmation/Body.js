@@ -10,7 +10,7 @@ export default function Body(props) {
   const [insurance, setInsurance] = useState("");
   useEffect(() => {
     console.log(props, "myProps");
-    console.log(props.value,"vlaue")
+    console.log(props.value, "vlaue");
     console.log(insurance, "Insurance");
     console.log(insuranceNumber, "INusance");
     console.log(year, "year");
@@ -29,9 +29,14 @@ export default function Body(props) {
     },
   ];
   useEffect(() => {
-    
-    console.log( props.value.map(item => ({ "item_name": item.Name, "quantity": item.pcs, "size": item.size})
-    ), "Dynamic array");
+    console.log(
+      props.value.map((item) => ({
+        item_name: item.Name,
+        quantity: item.pcs,
+        size: item.size,
+      })),
+      "Dynamic array"
+    );
 
     // console.log(props.value[0].Name,"name of product")
     // console.log(props.value[0].pcs,"name of product")
@@ -57,8 +62,11 @@ export default function Body(props) {
         city: props.city,
         country: props.countryy,
         care_level: props.careLevel,
-        care_box: props.value.map(item => ({ "item_name": item.Name, "quantity": item.pcs, "size": item.size})
-        ),
+        care_box: props.value.map((item) => ({
+          item_name: item.Name,
+          quantity: item.pcs,
+          size: item.size,
+        })),
         phone_number: props.phone,
         email_address: props.email,
         insurance_company: insurance,
@@ -233,7 +241,8 @@ export default function Body(props) {
         <div className="row">
           <div className="col-lg-6">
             <span>
-              Use your mouse, Trackpad or finger in the field above for signatur
+              Use your mouse, Trackpad or finger in the field above for
+              signature
             </span>
           </div>
           <div className="col-lg-6 confirmation-button-div">

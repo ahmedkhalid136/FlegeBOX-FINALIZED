@@ -27,56 +27,55 @@ function BoxComp(props) {
     );
     const Data = await response.data.data;
     console.log(Data, "mydata");
-    setmainbox(Data)
+    setmainbox(Data);
     console.log(response, "my useState");
   };
 
   useEffect(() => {
     getData();
-   
   }, []);
-  var box1 =[]
-  if(mainbox.length!=0){
-    box1= mainbox[0].carebox_item.map((item)=>{
+  var box1 = [];
+  if (mainbox.length != 0) {
+    box1 = mainbox[0].carebox_item.map((item) => {
       return {
-        Name:item.item,
-        pcs:item.quantity,        
-        size:item.size
-      }
-    })
+        Name: item.item,
+        pcs: item.quantity,
+        size: item.size,
+      };
+    });
   }
- 
-  var box2 =[]
-  if(mainbox.length!=0){
-    box2= mainbox[1].carebox_item.map((item)=>{
+
+  var box2 = [];
+  if (mainbox.length != 0) {
+    box2 = mainbox[1].carebox_item.map((item) => {
       return {
-        Name:item.item,
-        pcs:item.quantity,        
-        size:item.size
-      }
-    })
+        Name: item.item,
+        pcs: item.quantity,
+        size: item.size,
+      };
+    });
   }
- 
-  var box3 = []
-  if(mainbox.length!=0){
-    box3= mainbox[2].carebox_item.map((item)=>{
+
+  var box3 = [];
+  if (mainbox.length != 0) {
+    box3 = mainbox[2].carebox_item.map((item) => {
       return {
-        Name:item.item,
-        pcs:item.quantity,        
-        size:item.size
-      }
-    })
+        Name: item.item,
+        pcs: item.quantity,
+        size: item.size,
+      };
+    });
   }
-  var box4 = []
-  if(mainbox.length!=0){
-    box4= mainbox[3].carebox_item.map((item)=>{
+  var box4 = [];
+  if (mainbox.length != 0) {
+    box4 = mainbox[3].carebox_item.map((item) => {
       return {
-        Name:item.item,
-        pcs:item.quantity,
-        
-        size:item.size
-      }
-    })
+        Name: item.item,
+        pcs: item.quantity,
+
+        size: item.size,
+      };
+    });
   }
   const box5 = [
     {
@@ -369,7 +368,7 @@ function BoxComp(props) {
             box2.map((user) => (
               <Cart1
                 Name={user.Name}
-                pcs={user.quantity}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box2}
@@ -389,7 +388,7 @@ function BoxComp(props) {
             box4.map((user) => (
               <Cart1
                 Name={user.Name}
-                pcs={user.quantity}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box4}
