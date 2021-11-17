@@ -47,7 +47,7 @@ function BoxComp(props) {
 
   var box2 = [];
   if (mainbox.length != 0) {
-    box2 = mainbox[1].carebox_item.map((item) => {
+    box2 = mainbox[5].carebox_item.map((item) => {
       return {
         Name: item.item,
         pcs: item.quantity,
@@ -58,7 +58,7 @@ function BoxComp(props) {
 
   var box3 = [];
   if (mainbox.length != 0) {
-    box3 = mainbox[2].carebox_item.map((item) => {
+    box3 = mainbox[4].carebox_item.map((item) => {
       return {
         Name: item.item,
         pcs: item.quantity,
@@ -77,52 +77,28 @@ function BoxComp(props) {
       };
     });
   }
-  const box5 = [
-    {
-      name: "Box5",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-    },
+  var box5 = [];
+  if (mainbox.length != 0) {
+    box5 = mainbox[1].carebox_item.map((item) => {
+      return {
+        Name: item.item,
+        pcs: item.quantity,
 
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-    },
-  ];
-  const box6 = [
-    {
-      name: "Box6",
-      pcs: 20,
-      img: "./Images/pam-menegakis-12yQhBE8nUc-unsplash.jpg",
-    },
-    {
-      name: "hand sanitizer",
-      pcs: 20,
-      img: "./Images/neil-bates-tAZElyZEm40-unsplash.jpg",
-    },
-    {
-      name: "Gloves ",
-      pcs: 20,
-      img: "./Images/clay-banks-e6pK_snssSY-unsplash.jpg",
-    },
+        size: item.size,
+      };
+    });
+  }
+  var box6 = [];
+  if (mainbox.length != 0) {
+    box6 = mainbox[2].carebox_item.map((item) => {
+      return {
+        Name: item.item,
+        pcs: item.quantity,
 
-    {
-      name: "Oxygen tube",
-      pcs: 20,
-      img: "./Images/mockup-graphics-2WlwSXFw7Kk-unsplash.jpg",
-    },
-  ];
+        size: item.size,
+      };
+    });
+  }
 
   function check() {
     if (getBox == "box1") {
@@ -368,7 +344,7 @@ function BoxComp(props) {
             box2.map((user) => (
               <Cart1
                 Name={user.Name}
-                pcs={user.pcs}
+                pcs={user.quantity}
                 image={user.img}
                 size={user.size}
                 array={box2}
@@ -388,7 +364,7 @@ function BoxComp(props) {
             box4.map((user) => (
               <Cart1
                 Name={user.Name}
-                pcs={user.pcs}
+                pcs={user.quantity}
                 image={user.img}
                 size={user.size}
                 array={box4}
@@ -397,8 +373,8 @@ function BoxComp(props) {
           {getBox == "box5" &&
             box5.map((user) => (
               <Cart1
-                Name={user.name}
-                pcs={user.quantity}
+                Name={user.Name}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box5}
@@ -407,8 +383,8 @@ function BoxComp(props) {
           {getBox == "box6" &&
             box6.map((user) => (
               <Cart1
-                Name={user.name}
-                pcs={user.quantity}
+                Name={user.Name}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box6}
