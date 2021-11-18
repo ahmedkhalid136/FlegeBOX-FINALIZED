@@ -73,7 +73,7 @@ function Cart(props) {
         }}
       >
         <div className="increment-cart">
-          {Realsize == null ? null : (
+          {Realsize == "" ? null : (
             <div style={{ display: "inline-block" }}>
               <button
                 className={size == "Small" ? "increment-buttons1" : "sizes1"}

@@ -34,70 +34,74 @@ function BoxComp(props) {
   useEffect(() => {
     getData();
   }, []);
-  var box1 = [];
-  if (mainbox.length != 0) {
-    box1 = mainbox[0].carebox_item.map((item) => {
-      return {
-        Name: item.item,
-        pcs: item.quantity,
-        size: item.size,
-      };
-    });
-  }
+  try {
+    var box1 = [];
+    if (mainbox.length != 0) {
+      box1 = mainbox[0].carebox_item.map((item) => {
+        return {
+          Name: item.item,
+          pcs: item.quantity,
+          size: item.size,
+        };
+      });
+    }
 
-  var box2 = [];
-  if (mainbox.length != 0) {
-    box2 = mainbox[5].carebox_item.map((item) => {
-      return {
-        Name: item.item,
-        pcs: item.quantity,
-        size: item.size,
-      };
-    });
-  }
+    var box2 = [];
+    if (mainbox.length != 0) {
+      box2 = mainbox[1].carebox_item.map((item) => {
+        return {
+          Name: item.item,
+          pcs: item.quantity,
+          size: item.size,
+        };
+      });
+    }
 
-  var box3 = [];
-  if (mainbox.length != 0) {
-    box3 = mainbox[4].carebox_item.map((item) => {
-      return {
-        Name: item.item,
-        pcs: item.quantity,
-        size: item.size,
-      };
-    });
-  }
-  var box4 = [];
-  if (mainbox.length != 0) {
-    box4 = mainbox[3].carebox_item.map((item) => {
-      return {
-        Name: item.item,
-        pcs: item.quantity,
+    var box3 = [];
+    if (mainbox.length != 0) {
+      box3 = mainbox[2].carebox_item.map((item) => {
+        return {
+          Name: item.item,
+          pcs: item.quantity,
+          size: item.size,
+        };
+      });
+    }
+    var box4 = [];
+    if (mainbox.length != 0) {
+      box4 = mainbox[3].carebox_item.map((item) => {
+        return {
+          Name: item.item,
+          pcs: item.quantity,
 
-        size: item.size,
-      };
-    });
-  }
-  var box5 = [];
-  if (mainbox.length != 0) {
-    box5 = mainbox[1].carebox_item.map((item) => {
-      return {
-        Name: item.item,
-        pcs: item.quantity,
+          size: item.size,
+        };
+      });
+    }
+    var box5 = [];
+    if (mainbox.length != 0) {
+      box5 = mainbox[4].carebox_item.map((item) => {
+        return {
+          Name: item.item,
+          pcs: item.quantity,
 
-        size: item.size,
-      };
-    });
-  }
-  var box6 = [];
-  if (mainbox.length != 0) {
-    box6 = mainbox[2].carebox_item.map((item) => {
-      return {
-        Name: item.item,
-        pcs: item.quantity,
+          size: item.size,
+        };
+      });
+    }
+    var box6 = [];
+    if (mainbox.length != 0) {
+      box6 = mainbox[5].carebox_item.map((item) => {
+        return {
+          Name: item.item,
+          pcs: item.quantity,
 
-        size: item.size,
-      };
-    });
+          size: item.size,
+        };
+      });
+    }
+  } catch (e) {
+    console.log(e);
   }
 
   function check() {

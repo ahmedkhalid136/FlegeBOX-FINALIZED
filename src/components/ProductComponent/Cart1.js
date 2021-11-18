@@ -39,7 +39,7 @@ export default function Cart(props) {
         <p>{props.pcs}pcs</p>
       </div>
       <div className="col-lg-6 col-5" style={{ paddingTop: "20px" }}>
-        {size == null ? null : (
+        {size == "" ? null : (
           <div className="increment-cart cart1-sizes">
             <button
               onClick={() => {

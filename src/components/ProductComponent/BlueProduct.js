@@ -45,7 +45,7 @@ function BlueProduct(props) {
     if (actual >= 1) {
       setvalue(actual);
       // mycount(actual + 1);
-      mycount(actual => actual + 1);
+      mycount((actual) => actual + 1);
       myArr[theObj].pcs = myArr[theObj].pcs + pcs;
       myArr[theObj].sets = myArr[theObj].sets + 1;
     } else {
@@ -135,7 +135,7 @@ function BlueProduct(props) {
             className="col-lg-6 col-12 sizeButtons"
             style={{ textAlign: "right" }}
           >
-            {Realsize == null ? null : (
+            {Realsize == "" ? null : (
               <div>
                 <button
                   className={size == "Small" ? "increment-buttons1" : "sizes1"}
