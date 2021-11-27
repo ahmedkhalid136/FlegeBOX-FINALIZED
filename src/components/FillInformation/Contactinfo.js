@@ -1,5 +1,6 @@
 import React from "react";
 import "./Fillinfo.css";
+
 function Contactinfo(props) {
   return (
     <div className="ContactInfo">
@@ -11,8 +12,8 @@ function Contactinfo(props) {
             <input
               className="input1"
               placeholder="Phone Number"
-              onChange={(e) => props.phone(e.target.value)}
               required
+              onChange={(e) => props.phone(e.target.value)}
             />
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
@@ -20,8 +21,8 @@ function Contactinfo(props) {
               className="input1"
               placeholder="Email Address"
               onChange={(e) => props.email(e.target.value)}
-              value={props.valEmail}
               required
+              value={props.valEmail}
             />
           </div>
         </div>

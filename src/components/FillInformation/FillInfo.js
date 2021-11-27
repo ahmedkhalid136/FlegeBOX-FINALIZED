@@ -9,8 +9,6 @@ import Footer from "../footer/Footer";
 
 function FillInfo(props) {
   const [title, setTitle] = useState(Boolean);
-  const [checkMr, setCheckMr] = useState("");
-  const [checkMrs, setCheckMrs] = useState("");
   const [Daddress, setDaddress] = useState(false);
   title == true ? props.title("Ms") : props.title("Mr");
   useEffect(() => {
@@ -31,7 +29,7 @@ function FillInfo(props) {
   };
 
   return (
-    <div className="mainDiv">
+    <div className="mainDiv" id="top">
       <form onSubmit={handleSubmit}>
         <div style={{ marginTop: "40px" }} className="container desktop-head">
           <div className="row">
@@ -79,6 +77,7 @@ function FillInfo(props) {
                   transform: "scale(1.0)",
                   border: "none",
                 }}
+                required
                 type="radio"
                 id="Mr"
                 name="gender"
@@ -88,6 +87,7 @@ function FillInfo(props) {
               />
               <span style={{ marginLeft: "8px", marginRight: "8px" }}>Ms</span>
               <input
+                required
                 style={{
                   // display: "inline-block",
                   width: "15px",
@@ -101,6 +101,7 @@ function FillInfo(props) {
                 onClick={() => {
                   setTitle(false);
                 }}
+                checked="checked"
               />
               <span style={{ marginLeft: "8px", marginRight: "8px" }}>Mr</span>
             </div>
@@ -110,6 +111,7 @@ function FillInfo(props) {
             <div className="row">
               <div className="col-lg-6 col-sm-12 ">
                 <input
+                  required
                   className="input"
                   placeholder="Firstname"
                   onChange={(e) => {
@@ -120,6 +122,7 @@ function FillInfo(props) {
               </div>
               <div className="col-lg-6 col-sm-12">
                 <input
+                  required
                   className="input"
                   placeholder="Lastname"
                   onChange={(e) => props.lname(e.target.value)}
@@ -132,6 +135,7 @@ function FillInfo(props) {
                 <div className="row">
                   <div className="col-lg-8 col-8">
                     <input
+                      required
                       className="input1"
                       placeholder="Street Name"
                       onChange={(e) => props.sname(e.target.value)}
@@ -140,6 +144,7 @@ function FillInfo(props) {
                   </div>
                   <div className="col-lg-4 col-4">
                     <input
+                      required
                       className="input2"
                       placeholder="City"
                       onChange={(e) => props.city(e.target.value)}
@@ -152,6 +157,7 @@ function FillInfo(props) {
                 <div className="row">
                   <div className="col-lg-4 col-6">
                     <input
+                      required
                       className="input3"
                       placeholder="ZIP Code"
                       onChange={(e) => props.zip(e.target.value)}
@@ -160,6 +166,7 @@ function FillInfo(props) {
                   </div>
                   <div className="col-lg-8 col-6">
                     <input
+                      required
                       className="input4"
                       placeholder="Country"
                       onChange={(e) => props.countryy(e.target.value)}
@@ -178,6 +185,7 @@ function FillInfo(props) {
                 onClick={() => {
                   setDaddress(!Daddress);
                 }}
+                required
               />
               {Daddress ? (
                 <div>
@@ -229,21 +237,32 @@ function FillInfo(props) {
             back
           </button>
           <button
-            disabled={
-              !props.valFname ||
-              !props.valLname ||
-              !props.valPhone ||
-              !props.valEmail ||
-              !props.valCountry ||
-              !props.valSname ||
-              !props.valZip ||
-              !props.valTitle
-            }
+            // disabled={
+            //   !props.valFname ||
+            //   !props.valLname ||
+            //   !props.valPhone ||
+            //   !props.valEmail ||
+            //   !props.valCountry ||
+            //   !props.valSname ||
+            //   !props.valZip ||
+            //   !props.valTitle
+            // }
             type="submit"
             style={{ margin: "20px 0 30px" }}
             className="button confirmation-button"
             onClick={() => {
-              {
+              if (
+                !props.valFname ||
+                !props.valLname ||
+                !props.valPhone ||
+                !props.valEmail ||
+                !props.valCountry ||
+                !props.valSname ||
+                !props.valZip ||
+                !props.valTitle
+              ) {
+                return null;
+              } else {
                 props.change("confirm");
               }
             }}

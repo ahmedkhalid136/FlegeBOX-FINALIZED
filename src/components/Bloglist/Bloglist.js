@@ -36,6 +36,38 @@ function Bloglist() {
     console.log(Data);
   }, []);
 
+  function calculateDate(firstDate) {
+    var t1 = new Date(
+      parseInt(firstDate.substring(0, 4)),
+      parseInt(firstDate.substring(5, 7)),
+      parseInt(firstDate.substring(8, 10)),
+      parseInt(firstDate.substring(11, 13)),
+      parseInt(firstDate.substring(14, 16)),
+      0,
+      0
+    );
+    var t2 = new Date();
+
+    var dif = t2.getTime() - t1.getTime();
+    var Seconds_from_T1_to_T2 = dif / 1000 / 60;
+    var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
+    return Seconds_Between_Dates;
+  }
+  const monthNames = [
+    "",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   return (
     <div>
       <Header title="bloglist" />
@@ -65,7 +97,8 @@ function Bloglist() {
                   marginRight: "5px",
                 }}
               />{" "}
-              4 MIN |{" "}
+              {Math.trunc(calculateDate(Data[0] ? Data[0].creation : ""))} MIN{" "}
+              {""}
               <img
                 src="./Images/calendar.png"
                 style={{
@@ -75,7 +108,10 @@ function Bloglist() {
                   marginRight: "5px",
                 }}
               />{" "}
-              JULY 20, 2021
+              {monthNames[Data[0] ? Data[0].creation.substring(5, 7) : ""]}{" "}
+              {Data[0] ? Data[0].creation.substring(8, 10) : ""}
+              {", "}
+              {Data[0] ? Data[0].creation.substring(0, 4) : ""}
             </p>
           </div>
         </div>
@@ -93,6 +129,7 @@ function Bloglist() {
                   title={item.title}
                   content={item.content}
                   image={item.picture}
+                  creation={item.creation}
                 />
               );
             })}

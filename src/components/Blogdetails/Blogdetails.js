@@ -37,6 +37,40 @@ function Blogdetails(props) {
     getData();
   }, []);
 
+  function calculateDate(firstDate) {
+    var t1 = new Date(
+      parseInt(firstDate.substring(0, 4)),
+      parseInt(firstDate.substring(5, 7)),
+      parseInt(firstDate.substring(8, 10)),
+      parseInt(firstDate.substring(11, 13)),
+      parseInt(firstDate.substring(14, 16)),
+      0,
+      0
+    );
+    var t2 = new Date();
+
+    var dif = t2.getTime() - t1.getTime();
+    var Seconds_from_T1_to_T2 = dif / 1000 / 60;
+    var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
+    return Seconds_Between_Dates;
+  }
+
+  const monthNames = [
+    "",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <div>
       <Header title="BLOG" />
@@ -45,8 +79,25 @@ function Blogdetails(props) {
           <h1 className="styleHeader">{props.location.aboutProps.title}</h1>
         </div>
         <div className="datee">
-          <i class="far fa-clock"></i> 4 Min |{" "}
-          <i class="far fa-calendar-alt"></i> july 20,2021
+          <i class="far fa-clock"></i>{" "}
+          {Math.trunc(
+            calculateDate(
+              props.location.aboutProps.creation
+                ? props.location.aboutProps.creation
+                : ""
+            )
+          )}{" "}
+          MIN <i class="far fa-calendar-alt"></i>{" "}
+          {props.location.aboutProps.creation
+            ? monthNames[props.location.aboutProps.creation.substring(5, 7)]
+            : ""}{" "}
+          {props.location.aboutProps.creation
+            ? props.location.aboutProps.creation.substring(8, 10)
+            : ""}
+          {", "}
+          {props.location.aboutProps.creation
+            ? props.location.aboutProps.creation.substring(0, 4)
+            : ""}
         </div>
         <div>
           <img
@@ -66,6 +117,7 @@ function Blogdetails(props) {
                   title={item.title}
                   content={item.content}
                   image={item.picture}
+                  creation={item.creation}
                 />
               );
             })}

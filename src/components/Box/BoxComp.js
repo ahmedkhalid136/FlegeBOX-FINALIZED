@@ -398,12 +398,14 @@ function BoxComp(props) {
       </div>
 
       <div style={{ textAlign: "right", margin: "30px 0" }}>
-        <button
-          className="button confirmation-button"
-          onClick={() => props.change("info")}
-        >
-          continue
-        </button>
+        <a href="#top">
+          <button
+            className="button confirmation-button"
+            onClick={() => props.change("info")}
+          >
+            continue
+          </button>
+        </a>
       </div>
     </div>
   );

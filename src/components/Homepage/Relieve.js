@@ -47,6 +47,7 @@ export default function Relieve() {
               title={item.title}
               content={item.content}
               image={item.picture}
+              creation={item.creation}
             />
           );
         })}
