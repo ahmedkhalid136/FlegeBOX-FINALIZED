@@ -15,6 +15,7 @@ function Note(props) {
             onChange={(e) => props.note(e.target.value)}
             rows="10"
             value={props.valNote}
+            required
           />
         </div>
       </div>

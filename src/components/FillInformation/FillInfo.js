@@ -139,7 +139,12 @@ function FillInfo(props) {
                     />
                   </div>
                   <div className="col-lg-4 col-4">
-                    <input className="input2" placeholder="City" onChange={(e)=>props.city(e.target.value)} value={props.valcity} />
+                    <input
+                      className="input2"
+                      placeholder="City"
+                      onChange={(e) => props.city(e.target.value)}
+                      value={props.valcity}
+                    />
                   </div>
                 </div>
               </div>
@@ -181,6 +186,7 @@ function FillInfo(props) {
                     className="input1"
                     placeholder="Different address"
                     onChange={(e) => props.sname(e.target.value)}
+                    required
                   />
                   <br />
                   <br />
@@ -189,6 +195,7 @@ function FillInfo(props) {
                     className="input1"
                     placeholder="PhoneNumber"
                     onChange={(e) => props.phone(e.target.value)}
+                    required
                   />
                 </div>
               ) : null}
