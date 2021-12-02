@@ -60,16 +60,6 @@ function Popular(props) {
         <br />
         <p>
           <img
-            src="./Images/timer.png"
-            style={{
-              width: "20px",
-              height: "20px",
-              marginTop: "-5px",
-              marginRight: "5px",
-            }}
-          />{" "}
-          {Math.trunc(calculateDate(props.creation ? props.creation : ""))} MIN{" "}
-          <img
             src="./Images/calendar.png"
             style={{
               width: "20px",

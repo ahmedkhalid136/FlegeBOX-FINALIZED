@@ -42,6 +42,7 @@ function BoxComp(props) {
           Name: item.item,
           pcs: item.quantity,
           size: item.size,
+          img: "http://23.88.103.58" + item.item_image,
         };
       });
     }
@@ -53,6 +54,7 @@ function BoxComp(props) {
           Name: item.item,
           pcs: item.quantity,
           size: item.size,
+          img: "http://23.88.103.58" + item.item_image,
         };
       });
     }
@@ -64,6 +66,7 @@ function BoxComp(props) {
           Name: item.item,
           pcs: item.quantity,
           size: item.size,
+          img: "http://23.88.103.58" + item.item_image,
         };
       });
     }
@@ -73,8 +76,8 @@ function BoxComp(props) {
         return {
           Name: item.item,
           pcs: item.quantity,
-
           size: item.size,
+          img: "http://23.88.103.58" + item.item_image,
         };
       });
     }
@@ -84,8 +87,8 @@ function BoxComp(props) {
         return {
           Name: item.item,
           pcs: item.quantity,
-
           size: item.size,
+          img: "http://23.88.103.58" + item.item_image,
         };
       });
     }
@@ -97,6 +100,7 @@ function BoxComp(props) {
           pcs: item.quantity,
 
           size: item.size,
+          img: "http://23.88.103.58" + item.item_image,
         };
       });
     }
@@ -348,7 +352,7 @@ function BoxComp(props) {
             box2.map((user) => (
               <Cart1
                 Name={user.Name}
-                pcs={user.quantity}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box2}
@@ -368,7 +372,7 @@ function BoxComp(props) {
             box4.map((user) => (
               <Cart1
                 Name={user.Name}
-                pcs={user.quantity}
+                pcs={user.pcs}
                 image={user.img}
                 size={user.size}
                 array={box4}

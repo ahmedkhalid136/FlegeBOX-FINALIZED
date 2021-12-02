@@ -79,15 +79,15 @@ function Blogdetails(props) {
           <h1 className="styleHeader">{props.location.aboutProps.title}</h1>
         </div>
         <div className="datee">
-          <i class="far fa-clock"></i>{" "}
-          {Math.trunc(
-            calculateDate(
-              props.location.aboutProps.creation
-                ? props.location.aboutProps.creation
-                : ""
-            )
-          )}{" "}
-          MIN <i class="far fa-calendar-alt"></i>{" "}
+          <img
+            src="./Images/calendar.png"
+            style={{
+              width: "20px",
+              height: "20px",
+              marginTop: "-5px",
+              marginRight: "5px",
+            }}
+          />{" "}
           {props.location.aboutProps.creation
             ? monthNames[props.location.aboutProps.creation.substring(5, 7)]
             : ""}{" "}

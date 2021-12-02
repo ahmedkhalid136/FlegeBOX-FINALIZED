@@ -89,17 +89,6 @@ function Bloglist() {
             <br />
             <p>
               <img
-                src="./Images/timer.png"
-                style={{
-                  width: "20px",
-                  height: "20px",
-                  marginTop: "-5px",
-                  marginRight: "5px",
-                }}
-              />{" "}
-              {Math.trunc(calculateDate(Data[0] ? Data[0].creation : ""))} MIN{" "}
-              {""}
-              <img
                 src="./Images/calendar.png"
                 style={{
                   width: "20px",

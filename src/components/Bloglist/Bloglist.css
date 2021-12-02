@@ -6,6 +6,7 @@
 
 .bloglist-image {
   height: 400px;
+  width: 400px !important;
 }
 
 .bloglist-title-section {
